@@ -44,9 +44,9 @@ function changeSeason(season) {
         const messageText = document.createElement('div');
         messageText.classList.add('episodio-text');
         const h3 = document.createElement('h3');
-        h3.textContent = 'Otra temporada está por llegar...';
+        h3.textContent = 'Otra entrega puede llegar...';
         const p = document.createElement('p');
-        p.textContent = '¡Próximamente más episodios!';
+        p.textContent = 'No está confirmado.';
 
         messageText.appendChild(h3);
         messageText.appendChild(p);
