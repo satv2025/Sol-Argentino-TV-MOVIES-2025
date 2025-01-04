@@ -2,6 +2,7 @@
 function changeSeason(season) {
     const episodeList = document.getElementById('episode-list');
     const dropdownButton = document.querySelector('.dropdown-button'); // Obtener el botón del dropdown
+    const dropdownContent = document.querySelector('.dropdown-content'); // Obtener el contenido del dropdown
 
     // Cambiar el texto del botón a la temporada seleccionada
     if (season === 1) {
@@ -108,6 +109,10 @@ function changeSeason(season) {
             episodeList.appendChild(episodeItem);
         });
     }
+
+    // Cerrar el dropdown después de seleccionar la temporada
+    dropdownContent.style.display = 'none';
+    dropdownButton.classList.remove('open');
 }
 
 // Función para cargar un episodio
