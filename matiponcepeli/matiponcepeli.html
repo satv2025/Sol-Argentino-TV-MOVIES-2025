@@ -40,10 +40,6 @@
             <li><strong>Clasificación por edad:</strong> 12+, adolescentes, adultos, lenguaje inapropiado, delirante | Apta para mayores de 16 años</li>
         </ul>
     </section>
-
-    Géneros:Humor, hackers, fama, grandes élites, paranoia
-    Este título es:Original, delirante
-
     <!-- Contenedor del reproductor -->
     <div id="player-container" style="margin: 0 auto;">
         <video id="videoPlayer" width="100%" height="auto" controls>
@@ -55,8 +51,9 @@
     <div class="season-dropdown">
         <button class="dropdown-button">Seleccionar Temporada</button>
         <div class="dropdown-content">
+            <button class="texto" onclick="changeSeason(1)"><span id="textotemp">Pelicula 1</span></button>
             <span class="episode-count">1 episodio</span>
-            <button class="texto" onclick="changeSeason(2)"><span id="textotemp">Temporada 2</span></button>
+            <button class="texto" onclick="changeSeason(2)"><span id="textotemp">Pelicula 2</span></button>
             <span class="episode-count">coming soon</span>
         </div>
     </div>
