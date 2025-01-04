@@ -20,14 +20,14 @@ function changeSeason(season) {
             {
                 title: 'Episodio 1',
                 description: 'Pip elige un caso de homicidio para su proyecto escolar. Pero cuando empieza a investigar, descubre que para algunas personas era mejor dejarlo enterrado para siempre.',
-                videoPath: 'https://p-def3.pcloud.com/cBZbnz8UGZ0Fc4MS7ZZZ8WJuXkZQ5ZZdIRZkZfRxn5XZJQZr0ZDpZmYZdQZXYZTpZb4ZQYZM4ZRRZwYZVQZ34Zw6zJ5Z6cE1Xa8PEg4NAjYI5OgdPBWgDhzy/Asesinato%20Para%20Principiantes%20-%20T1%20E1.mp4',
+                videoPath: 'https://p-def3.pcloud.com/cBZbnz8UGZ0Fc4MS7ZZZD6fuXkZQ5ZZysRZkZfRxn5XZJQZr0ZDpZmYZdQZXYZTpZb4ZQYZM4ZRRZwYZVQZ34Zw6zJ5ZillvzBsNd2bJkAbsDdOQjR9XEAAy/Asesinato%20Para%20Principiantes%20-%20T1%20E1.mp4',
                 image: 'https://th3.pcloud.com/tLZvN9mUGZgEVZ9EWM7ZZ5TJuXkZdIRZJZZg0ZpXZ8QZP8ZHzZz1w5oOgTWKhbhpUIDwp3lSFYOWaX/ThumbE1.jpg',
                 duration: '43 min'
             },
             {
                 title: 'Episodio 2',
                 description: 'Luego de entrevistar a las mejores amigas de Andie, Pip tiene una idea más clara de quién era la víctima, pero tras reorganizar fotos viejas empieza a comprender mejor todo.',
-                videoPath: 'https://p-def8.pcloud.com/cfZtyumUGZBMHhMS7Z9EWM7ZZyMJuXkZQ5ZZdIRZZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZE5X0y859CGLmiOrKbq7yJfOxKl4y/Asesinato%20Para%20Principiantes%20-%20T1%20E2.mkv',
+                videoPath: 'https:\/\/p-def8.pcloud.com\/cBZtyumUGZBMHhMS7ZZZ3UfuXkZ2ZZysRZkZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZr6zJ5ZitqHp0QVq5mhdGIHG5visp1zFRly\/Asesinato%20Para%20Principiantes%20-%20T1%20E2.mkv',
                 image: 'https://th3.pcloud.com/tLZv39mUGZye0Z9EWM7ZZhTJuXkZdIRZJZZg0ZpXZXYZuQZc8ZocAH58INTEhXIcz0E5zz1fSmExl7/ThumbE2.jpg',
                 duration: '44 min'
             },
