@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesinato Para Principiantes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/plyr@3.6.2/dist/plyr.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dropdown.css">
+</head>
+<body>
+
+<header>
+    <h1>Asesinato para Principiantes</h1>
+</header>
+
+<main>
+    <!-- Contenedor de los datos de la serie -->
+    <section class="serie-info">
+        <h2>Datos de la Serie</h2>
+        <ul>
+            <li><strong>Sinopsis: </strong> En este thriller atrapante, una estudiante investiga, para un proyecto escolar, un caso ocurrido hace cinco años.</li>
+            <li><Strong>ES OFICIAL: </Strong> Una nueva temporada se acerca</li>
+            <li><strong>Año:</strong> 2024</li>
+            <li><strong>Temporadas:</strong> 1</li>
+            <li><strong>Episodios:</strong> 6</li>
+        </ul>
+    </section>
+    <!-- Contenedor del reproductor -->
+    <div id="player-container" style="margin: 0 auto;">
+        <video id="videoPlayer" width="100%" height="auto" controls>
+            <!-- Video inicial -->
+            <source src="episodios/Asesinato Para Principiantes - T1 E1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="season-dropdown">
+        <button class="dropdown-button">Seleccionar Temporada</button>
+        <div class="dropdown-content">
+            <button class="texto" onclick="changeSeason(1)"><span id="textotemp">Temporada 1</span></button>
+            <span class="episode-count">6 episodios</span>
+            <button class="texto" onclick="changeSeason(2)"><span id="textotemp">Temporada 2</span></button>
+            <span class="episode-count">cooming son</span>
+        </div>
+    </div>
+    <div class="episodios">
+        <h2>Lista de Episodios</h2>
+        <ul id="episode-list">
+            <!-- Los episodios se cargarán dinámicamente dependiendo de la temporada seleccionada -->
+        </ul>
+    </div>
+    
+</main>
+
+<footer>
+    <p>&copy; 2025 Sol Argentino TV. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Plyr Script -->
+<script src="https://cdn.jsdelivr.net/npm/plyr@3.6.2/dist/plyr.min.js"></script>
+<script src="dropdown.js"></script>
+<script>
+    // Inicializar Plyr
+    const player = new Plyr('#videoPlayer');
+    
+    // Función para cargar un episodio con autoplay
+    function loadEpisode(videoPath) {
+        const video = document.querySelector('#videoPlayer');
+        video.src = videoPath;
+
+        // Asegurarse de que autoplay esté habilitado en el video
+        video.autoplay = true;  // Activamos el autoplay en el elemento de video
+        video.load(); // Recargamos el video para aplicar autoplay
+
+        // Reproducir el video con Plyr
+        player.play();  
+    }
+</script>
+</body>
+</html>
