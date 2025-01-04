@@ -35,14 +35,14 @@ function changeSeason(season) {
                 duration: '43 min',
                 description: 'Pip descubre por primera vez en su vida el lado oscuro cuando va a una fiesta clandestina. Y su siguiente pista la lleva a territorio aún más peligroso.',
                 videoPath: 'https://p-def8.pcloud.com/cfZtyumUGZBMHhMS7Z9EWM7ZZyMJuXkZQ5ZZdIRZZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZE5X0y859CGLmiOrKbq7yJfOxKl4y/Asesinato%20Para%20Principiantes%20-%20T1%20E2.mkv',
-                image: 'https://th3.pcloud.com/tLZvN9mUGZgEVZ9EWM7ZZ5TJuXkZdIRZJZZg0ZpXZ8QZP8ZHzZz1w5oOgTWKhbhpUIDwp3lSFYOWaX/ThumbE1.jpg'
+                image: 'https://th3.pcloud.com/tLZ9v9mUGZqEXZ9EWM7ZZ7MJuXkZdIRZJZZg0ZpXZHQZEYZc4ZgnuD6KaYtSHOy2eMwVIV2uHF7SUV/ThumbE3.jpg'
             },
             {
                 title: 'Episodio 4',
                 duration: '44 min',
                 description: 'Pip y Ravi siguen una nueva pista que los lleva lejos de Little Kilton. Allí, descubren una valiosa prueba... y una desagradable sorpresa.',
                 videoPath: 'https://p-def8.pcloud.com/cfZtyumUGZBMHhMS7Z9EWM7ZZyMJuXkZQ5ZZdIRZZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZE5X0y859CGLmiOrKbq7yJfOxKl4y/Asesinato%20Para%20Principiantes%20-%20T1%20E2.mkv',
-                image: 'https://th3.pcloud.com/tLZu2FbUGZhV0Z9EWM7ZZWlJuXkZdIRZJZZg0ZpXZ58ZsLZn4ZFTuxEaNaKMzUisvHhGrwhjcq6z5y/ThumbE5.jpg'
+                image: 'https://th3.pcloud.com/tLZKfFbUGZmjVZ9EWM7ZZ2lJuXkZdIRZJZZg0ZpXZeQZUYZrpZT2M62EBjLeVjnBhKxhu02BFuJf8V/ThumbE4.jpg'
             },
             {
                 title: 'Episodio 5',
@@ -57,6 +57,14 @@ function changeSeason(season) {
                 description: 'La policía hace un arresto, pero Pip no está segura de que el caso esté solucionado, así que va a visitar a la única persona que podría tener respuestas.',
                 videoPath: 'https://p-def2.pcloud.com/cfZ5q9mUGZpnWhMS7Z9EWM7ZZeMJuXkZQ5ZZdIRZZG8UaoZX8ZoRZEzZoQZF4ZlYZXzZEpZtFZzFZFYZKRZQ8Z18Zntso3Nc1z6063G5MDxj6NHdIcfUk/Asesinato%20Para%20Principiantes%20-%20T1%20E6.mkv',
                 image: 'https://th3.pcloud.com/tLZDWFbUGZykXZ9EWM7ZZWlJuXkZdIRZJZZg0ZpXZMQZtpZHFZOdeFKQV72T72LRonQQdvQzSUPOPy/ThumbE6.jpg'
+            }
+        ],
+        2: [
+            {
+                title: 'Próxima temporada',
+                description: 'Otra temporada está por llegar...',
+                videoPath: '#', // No hay video para la temporada 2
+                image: '' // Imagen vacía
             }
         ]
     };
@@ -122,7 +130,7 @@ function loadEpisode(videoPath, episodeButton) {
 
     // Resetear el estilo de todos los episodios
     const allEpisodes = document.querySelectorAll('.episodio');
-    allEpisodes.forEach(ep => ep.style.backgroundColor = 'transparent');
+    allEpisodes.forEach(ep => ep.style.backgroundColor = '');  // Eliminar el fondo de todos los episodios
 
     // Cambiar el fondo del episodio seleccionado
     episodeButton.style.backgroundColor = 'rgba(74, 91, 104, 0.719)'; // Fondo translúcido
@@ -141,7 +149,7 @@ player.on('play', (event) => {
         if (videoPath === currentVideo.src) {
             ep.style.backgroundColor = 'rgba(74, 91, 104, 0.719)'; // Fondo de reproducción
         } else {
-            ep.style.backgroundColor = 'transparent'; // Restablecer fondo a transparente
+            ep.style.backgroundColor = ''; // Restablecer fondo a transparente
         }
     });
 });
@@ -150,7 +158,7 @@ player.on('play', (event) => {
 player.on('ended', (event) => {
     const allEpisodes = document.querySelectorAll('.episodio');
     allEpisodes.forEach(ep => {
-        ep.style.backgroundColor = 'transparent'; // Restablecer todos los fondos cuando el video termine
+        ep.style.backgroundColor = ''; // Restablecer todos los fondos cuando el video termine
     });
 });
 
