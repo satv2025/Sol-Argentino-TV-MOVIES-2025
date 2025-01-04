@@ -35,14 +35,14 @@ function changeSeason(season) {
                 duration: '43 min',
                 description: 'Pip descubre por primera vez en su vida el lado oscuro cuando va a una fiesta clandestina. Y su siguiente pista la lleva a territorio aún más peligroso.',
                 videoPath: 'https://p-def8.pcloud.com/cfZtyumUGZBMHhMS7Z9EWM7ZZyMJuXkZQ5ZZdIRZZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZE5X0y859CGLmiOrKbq7yJfOxKl4y/Asesinato%20Para%20Principiantes%20-%20T1%20E2.mkv',
-                image: 'https://th3.pcloud.com/tLZ9v9mUGZqEXZ9EWM7ZZ7MJuXkZdIRZJZZg0ZpXZHQZEYZc4ZgnuD6KaYtSHOy2eMwVIV2uHF7SUV/ThumbE3.jpg'
+                image: 'https://th3.pcloud.com/tLZvN9mUGZgEVZ9EWM7ZZ5TJuXkZdIRZJZZg0ZpXZ8QZP8ZHzZz1w5oOgTWKhbhpUIDwp3lSFYOWaX/ThumbE1.jpg'
             },
             {
                 title: 'Episodio 4',
                 duration: '44 min',
                 description: 'Pip y Ravi siguen una nueva pista que los lleva lejos de Little Kilton. Allí, descubren una valiosa prueba... y una desagradable sorpresa.',
                 videoPath: 'https://p-def8.pcloud.com/cfZtyumUGZBMHhMS7Z9EWM7ZZyMJuXkZQ5ZZdIRZZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZE5X0y859CGLmiOrKbq7yJfOxKl4y/Asesinato%20Para%20Principiantes%20-%20T1%20E2.mkv',
-                image: 'https://th3.pcloud.com/tLZKfFbUGZmjVZ9EWM7ZZ2lJuXkZdIRZJZZg0ZpXZeQZUYZrpZT2M62EBjLeVjnBhKxhu02BFuJf8V/ThumbE4.jpg'
+                image: 'https://th3.pcloud.com/tLZu2FbUGZhV0Z9EWM7ZZWlJuXkZdIRZJZZg0ZpXZ58ZsLZn4ZFTuxEaNaKMzUisvHhGrwhjcq6z5y/ThumbE5.jpg'
             },
             {
                 title: 'Episodio 5',
@@ -127,6 +127,32 @@ function loadEpisode(videoPath, episodeButton) {
     // Cambiar el fondo del episodio seleccionado
     episodeButton.style.backgroundColor = 'rgba(74, 91, 104, 0.719)'; // Fondo translúcido
 }
+
+// Crear instancia de Plyr y gestionar eventos
+const player = new Plyr('#videoPlayer');
+
+// Detectar cuando el video empieza a reproducirse
+player.on('play', (event) => {
+    const currentVideo = event.target;
+    const allEpisodes = document.querySelectorAll('.episodio');
+
+    allEpisodes.forEach(ep => {
+        const videoPath = ep.querySelector('button').getAttribute('data-video-path');
+        if (videoPath === currentVideo.src) {
+            ep.style.backgroundColor = 'rgba(74, 91, 104, 0.719)'; // Fondo de reproducción
+        } else {
+            ep.style.backgroundColor = 'transparent'; // Restablecer fondo a transparente
+        }
+    });
+});
+
+// Detectar cuando el video termina
+player.on('ended', (event) => {
+    const allEpisodes = document.querySelectorAll('.episodio');
+    allEpisodes.forEach(ep => {
+        ep.style.backgroundColor = 'transparent'; // Restablecer todos los fondos cuando el video termine
+    });
+});
 
 // Inicializar el texto del botón como "Seleccionar Temporada"
 document.querySelector('.dropdown-button').textContent = "Seleccionar Temporada";
