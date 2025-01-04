@@ -64,6 +64,10 @@ nav a:hover {
     border-color: #007bff; /* Cambia el borde a azul cuando se enfoca */
 }
 
+.search-form input[type="text"]::placeholder {
+    color: #007bff;
+}
+
 .search-form button {
     font-family: 'Netflix Sans';
     padding: 10px 15px;
