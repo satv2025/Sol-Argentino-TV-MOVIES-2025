@@ -151,6 +151,7 @@ h1 {
 .serie-info h2 {
     font-size: 1.5em;
     margin-bottom: 1em;
+    text-decoration: underline;
 }
 
 .serie-info ul {
@@ -158,7 +159,7 @@ h1 {
     padding: 0;
     margin: 0;
     text-align: justify;
-    color: #aaa;
+    color: #ccc;
     font-weight: 100;
 }
 
