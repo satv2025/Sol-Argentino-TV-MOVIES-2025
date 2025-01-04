@@ -5,7 +5,7 @@
 }
 
 .dropdown-button {
-    font-family: 'Montserrat';
+    font-family: ''Netflix Sans'';
     margin-top: 2.3em;
     background-color: #183347;
     border: 0.125em solid #1788db; /* 2px a 0.125em */
@@ -43,7 +43,7 @@
 }
 
 .dropdown-content {
-    font-family: 'Montserrat';
+    font-family: ''Netflix Sans'';
     display: none;
     position: absolute;
     background-color: #183347; /* Fondo igual que el del botón */
@@ -64,7 +64,7 @@
 }
 
 .dropdown-content button {
-    font-family: 'Montserrat';
+    font-family: ''Netflix Sans'';
     font-weight: 600;
     color: white;
     background: #ffffff00;
