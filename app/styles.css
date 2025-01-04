@@ -59,6 +59,10 @@ nav a:hover {
     font-weight: 700;
 }
 
+.search-form input[type="text"]::placeholder {
+    color: #007bff;
+}
+
 .search-form input[type="text"]:focus {
     border-color: #007bff; /* Cambia el borde a azul cuando se enfoca */
 }
