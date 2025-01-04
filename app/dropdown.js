@@ -21,42 +21,42 @@ function changeSeason(season) {
                 description: 'Pip elige un caso de homicidio para su proyecto escolar. Pero cuando empieza a investigar, descubre que para algunas personas era mejor dejarlo enterrado para siempre.',
                 videoPath: 'https://p-def3.pcloud.com/cBZbnz8UGZ0Fc4MS7ZZZ8WJuXkZQ5ZZdIRZkZfRxn5XZJQZr0ZDpZmYZdQZXYZTpZb4ZQYZM4ZRRZwYZVQZ34Zw6zJ5Z6cE1Xa8PEg4NAjYI5OgdPBWgDhzy/Asesinato%20Para%20Principiantes%20-%20T1%20E1.mp4',
                 image: 'https://th3.pcloud.com/tLZvN9mUGZgEVZ9EWM7ZZ5TJuXkZdIRZJZZg0ZpXZ8QZP8ZHzZz1w5oOgTWKhbhpUIDwp3lSFYOWaX/ThumbE1.jpg',
-                duration: '43 min' // Duración añadida
+                duration: '43 min' // Duración actualizada
             },
             {
                 title: 'Episodio 2',
                 description: 'Luego de entrevistar a las mejores amigas de Andie, Pip tiene una idea más clara de quién era la víctima, pero tras reorganizar fotos viejas empieza a comprender mejor todo.',
                 videoPath: 'https://p-def8.pcloud.com/cfZtyumUGZBMHhMS7Z9EWM7ZZyMJuXkZQ5ZZdIRZZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZE5X0y859CGLmiOrKbq7yJfOxKl4y/Asesinato%20Para%20Principiantes%20-%20T1%20E2.mkv',
                 image: 'https://th3.pcloud.com/tLZv39mUGZye0Z9EWM7ZZhTJuXkZdIRZJZZg0ZpXZXYZuQZc8ZocAH58INTEhXIcz0E5zz1fSmExl7/ThumbE2.jpg',
-                duration: '44 min' // Duración añadida
+                duration: '44 min' // Duración actualizada
             },
             {
                 title: 'Episodio 3',
                 description: 'Pip descubre por primera vez en su vida el lado oscuro cuando va a una fiesta clandestina. Y su siguiente pista la lleva a territorio aún más peligroso.',
                 videoPath: 'https://p-def8.pcloud.com/cfZtyumUGZBMHhMS7Z9EWM7ZZyMJuXkZQ5ZZdIRZZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZE5X0y859CGLmiOrKbq7yJfOxKl4y/Asesinato%20Para%20Principiantes%20-%20T1%20E2.mkv',
                 image: 'https://th3.pcloud.com/tLZ9v9mUGZqEXZ9EWM7ZZ7MJuXkZdIRZJZZg0ZpXZHQZEYZc4ZgnuD6KaYtSHOy2eMwVIV2uHF7SUV/ThumbE3.jpg',
-                duration: '43 min' // Duración añadida
+                duration: '43 min' // Duración actualizada
             },
             {
                 title: 'Episodio 4',
                 description: 'Pip y Ravi siguen una nueva pista que los lleva lejos de Little Kilton. Allí, descubren una valiosa prueba... y una desagradable sorpresa.',
                 videoPath: 'https://p-def8.pcloud.com/cfZtyumUGZBMHhMS7Z9EWM7ZZyMJuXkZQ5ZZdIRZZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZE5X0y859CGLmiOrKbq7yJfOxKl4y/Asesinato%20Para%20Principiantes%20-%20T1%20E2.mkv',
                 image: 'https://th3.pcloud.com/tLZKfFbUGZmjVZ9EWM7ZZ2lJuXkZdIRZJZZg0ZpXZ8QZUYZrpZT2M62EBjLeVjnBhKxhu02BFuJf8V/ThumbE4.jpg',
-                duration: '44 min' // Duración añadida
+                duration: '44 min' // Duración actualizada
             },
             {
                 title: 'Episodio 5',
                 description: 'Una impactante confesión arroja luz en la investigación. Antes de que Pip pueda decidir qué hacer, recibe otro mensaje amenazador.',
                 videoPath: 'https://p-def5.pcloud.com/cfZrA9mUGZTtWhMS7Z9EWM7ZZYMJuXkZQ5ZZdIRZZvH5kcZQYZr8Z2YZ1RZmzZjYZrRZPHZPpZlFZsQZU4ZzzZ8pZEnGrDJkEp6pBEbyhjnyEV5MTce8k/Asesinato%20Para%20Principiantes%20-%20T1%20E5.mkv',
                 image: 'https://th2.pcloud.com/tLZu2FbUGZhV0Z9EWM7ZZWlJuXkZdIRZJZZg0ZpXZ58ZsLZn4ZFTuxEaNaKMzUisvHhGrwhjcq6z5y/ThumbE5.jpg',
-                duration: '50 min' // Duración añadida
+                duration: '50 min' // Duración actualizada
             },
             {
                 title: 'Episodio 6',
                 description: 'La policía hace un arresto, pero Pip no está segura de que el caso esté solucionado, así que va a visitar a la única persona que podría tener respuestas.',
                 videoPath: 'https://p-def2.pcloud.com/cfZ5q9mUGZpnWhMS7Z9EWM7ZZeMJuXkZQ5ZZdIRZZG8UaoZX8ZoRZEzZoQZF4ZlYZXzZEpZtFZzFZFYZKRZQ8Z18Zntso3Nc1z6063G5MDxj6NHdIcfUk/Asesinato%20Para%20Principiantes%20-%20T1%20E6.mkv',
                 image: 'https://th3.pcloud.com/tLZDWFbUGZykXZ9EWM7ZZWlJuXkZdIRZJZZg0ZpXZMQZtpZHFZOdeFKQV72T72LRonQQdvQzSUPOPy/ThumbE6.jpg',
-                duration: '51 min' // Duración añadida
+                duration: '51 min' // Duración actualizada
             }
         ],
         2: [
@@ -102,6 +102,7 @@ function changeSeason(season) {
 
             const episodeInfo = document.createElement('div');
             episodeInfo.classList.add('episodio-info');
+            episodeInfo.style.position = 'relative'; // Asegurarse de que el contenedor tenga posición relativa
 
             const episodeImg = document.createElement('div');
             episodeImg.classList.add('episodio-img');
@@ -121,9 +122,11 @@ function changeSeason(season) {
             const durationDiv = document.createElement('div');
             durationDiv.classList.add('episodio-duration');
             durationDiv.style.position = 'absolute'; // Hacer que la duración esté en posición absoluta
-            durationDiv.style.top = '0'; // Posicionar en la parte superior
-            durationDiv.style.right = '0'; // Alineado a la derecha
+            durationDiv.style.top = '10px'; // Ubicación en la parte superior
+            durationDiv.style.right = '10px'; // Alineado a la derecha
             durationDiv.style.color = '#fff'; // Establecer color de la duración
+            durationDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.6)'; // Fondo oscuro para mayor contraste
+            durationDiv.style.padding = '2px 5px'; // Un pequeño padding para la duración
             durationDiv.textContent = episode.duration || 'N/A'; // Duración del episodio o "N/A" si no hay duración
 
             episodeText.appendChild(h3);
