@@ -23,12 +23,12 @@
 
 .dropdown-button::after {
     content: "▼";
-    font-size: 0.75em; /* 12px a 0.75em */
+    font-size: 1.2em;
     color: #fff;
     position: absolute;
-    right: 1.2em; /* 19.2px a 1.2em */
-    top: 50%; /* Centra verticalmente */
-    transform: translateY(-50%); /* Ajuste perfecto al centro */
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
