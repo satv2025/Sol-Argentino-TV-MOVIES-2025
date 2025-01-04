@@ -9,16 +9,37 @@
 
 body {
     font-family: 'Netflix Sans', sans-serif;
-    background-color: #293137; /* Gris oscuro como fondo */
-    color: white;
+    background-color: #293137; /* Fondo claro */
+    color: #fff; /* Texto oscuro */
     font-size: 1rem; /* Base font size = 16px */
 }
 
 header {
-    background-color: #183347; /* Azul oscuro para el header */
+    background-color: #183347; /* Header blanco */
+    padding: 1.25em; /* 20px = 1.25em */
     box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
-    padding-left: 2em;
-    height: 5em;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 1.25em; /* 20px = 1.25em */
+}
+
+nav a {
+    color: #0078D4; /* Azul para los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.125em; /* 18px = 1.125em */
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #005a9e; /* Azul más oscuro en hover */
 }
 
 main {
@@ -28,147 +49,75 @@ main {
 
 h1 {
     font-size: 2.25em; /* 36px = 2.25em */
-    bottom: -0.4em; /* 40px = 2.5em */
-    color: white;
-    position: relative;
+    margin-bottom: 2.5em; /* 40px = 2.5em */
+    color: #fff; /* Título oscuro */
 }
 
-#player-container {
-    margin-bottom: 2.5em;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #00000000; /* Fondo negro para el reproductor */
-    border-radius: 1.25em;
-}
-
-.serie-info {
-    background-color: #183347; /* Azul oscuro */
-    padding: 2em;
-    border-radius: 0.3em;
-    margin-bottom: 3em;
-    color: white;
-    width: 90%; /* Usamos porcentaje para que se ajuste al tamaño de la pantalla */
-    max-width: 71.6em; /* Establecemos un ancho máximo */
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-}
-
-/* Ajustes para pantallas más pequeñas (móviles) */
-@media (max-width: 48em) { /* 768px = 48em */
-    .serie-info {
-        padding: 1.5em;
-        width: 90%; /* Asegura que el contenedor ocupe el 90% del ancho */
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-}
-
-/* Ajustes para pantallas medianas */
-@media (max-width: 64em) { /* 1024px = 64em */
-    .serie-info {
-        width: 80%; /* Ajustamos el ancho a un 80% en pantallas medianas */
-    }
-}
-
-/* Ajustes para pantallas grandes */
-@media (min-width: 48.063em) { /* 769px = 48.063em */
-    .serie-info {
-        width: 70%; /* Mantener un ancho más pequeño en pantallas grandes */
-    }
-}
-
-.serie-info h2 {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-}
-
-.serie-info ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.serie-info li {
-    font-size: 1.125em; /* Tamaño de texto de los detalles */
-    margin-bottom: 0.75em;
-}
-
-.serie-info li strong {
-    color: #fff; /* Amarillo para los títulos */
-}
-
-.episodios {
-    margin-top: 2.5em;
-}
-
-.episodios ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.episodio-info {
-    flex-direction: row;
-    width: 46em;
-    margin: 0 auto;
-    margin-bottom: 0.7em;
-    height: 7em;
+.catalogo {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #183347; /* Fondo del contenedor del episodio */
-    color: white;
-    padding: 0.75em; /* 12px = 0.75em */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25em; /* 20px = 1.25em */
+    margin-top: 1.25em; /* 20px = 1.25em */
 }
 
-.episodio-info:hover {
-    background-color: rgba(74, 91, 104, 0.719); /* Color más translúcido en hover */
-    cursor: pointer;
-}
-
-.episodio-img {
-    flex: 1;
-    padding-right: 1.5em; /* Espacio entre imagen y texto */
-    max-width: 6em; /* Reducimos el tamaño de la imagen */
-}
-
-.episodio-img img {
-    width: 10em;
-    height: auto;
-    border-radius: 0.3em;
-    margin-top: 0.25em;
-    margin-left: -0.1em;
-}
-
-.episodio-text {
-    flex: 2;
+.pelicula {
+    background-color: #183347; /* Fondo blanco para los items */
+    border-radius: 0.3em; /* Bordes redondeados */
+    width: 100%;
+    max-width: 15em; /* 240px = 15em */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.25em; /* 20px = 1.25em */
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.3); /* Sombra negra notable en los items */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: justify;
-    padding-left: 4.7em;
-    padding-right: 0.3em;
+    justify-content: space-between;
 }
 
-.episodio-text h3 {
-    font-size: 1.125em; /* 18px = 1.125em */
-    margin-bottom: 0.5em;
+.pelicula:hover {
+    transform: translateY(-0.625em); /* 10px = 0.625em */
+    box-shadow: 0 0.3em 1.5em rgba(0, 0, 0, 0.4); /* Aumentar la sombra al pasar el cursor */
 }
 
-.episodio-text p {
+.pelicula img {
+    width: 100%;
+    height: 11.25em; /* 180px = 11.25em */
+    object-fit: cover;
+    border-radius: 0.3em 0.3em 0 0; /* Bordes redondeados solo en la parte superior */
+    margin-bottom: 0.625em; /* 10px = 0.625em */
+}
+
+.pelicula h3 {
+    font-size: 1.25em; /* 20px = 1.25em */
+    margin-bottom: 0.625em; /* 10px = 0.625em */
+    text-align: center;
+    padding: 0.19em;
+    font-weight: 600; /* Para hacerlo un poco más destacado */
+}
+
+.pelicula p {
     font-size: 0.875em; /* 14px = 0.875em */
-    color: #eee;
-    line-height: 1.4;
+    color: #fff; /* Gris oscuro para el texto */
+    margin-bottom: 1.25em; /* 20px = 1.25em */
+    text-align: justify;
+    padding: 0.9em;
 }
 
-button.episodio {
-    background: #ffffff00;
-    box-shadow: 0px;
-    border: 0px;
-    border-radius: 0.3em;
-    font-family: ''Netflix Sans'', sans-serif;
+button {
+    background-color: #0078D4;
+    color: white;
+    border: none;
+    padding: 0.625em 1.25em; /* 10px 20px = 0.625em 1.25em */
+    font-weight: bold;
+    font-size: 1em; /* 16px = 1em */
+    border-radius: 0 0 0.3em 0.3em; /* 5px = 0.3125em */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005a9e; /* Azul más oscuro en hover */
 }
 
 footer {
@@ -176,6 +125,9 @@ footer {
     text-align: center;
     padding: 1.25em; /* 20px = 1.25em */
     margin-top: 2.5em; /* 40px = 2.5em */
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
 footer p {
@@ -183,90 +135,41 @@ footer p {
     color: #fff;
 }
 
-/* Ajustes para pantallas pequeñas (móviles) */
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    footer {
+        position: relative;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        position: relative;
+        bottom: 0;
+    }
+}
+
+/* Estilos para dispositivos pequeños (móviles) */
 @media (max-width: 48em) { /* 768px = 48em */
+    .pelicula {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .catalogo {
+        flex-direction: column;
+        align-items: center;
+    }
+
     h1 {
         font-size: 1.75em; /* 28px = 1.75em */
     }
-
-    .serie-info {
-        padding: 1.5em;
-    }
-
-    .episodio-info {
-        flex-direction: column;
-        height: auto; /* Deja que el contenedor se ajuste según el contenido */
-        width: 90%; /* Ajusta el tamaño de los botones para móviles */
-        margin: 1em auto;
-    }
-
-    .episodio-img {
-        padding-right: 0;
-        margin-bottom: 1em;
-    }
-
-    .episodio-text {
-        padding-left: 0;
-    }
-
-    button.episodio {
-        border-radius: 0.3em;
-    }
 }
 
-/* Ajustes para pantallas más grandes */
+/* Estilos para pantallas grandes (por ejemplo, tabletas y escritorios grandes) */
 @media (min-width: 48.063em) { /* 769px = 48.063em */
-    #player-container {
-        width: 80%;
+    .pelicula {
+        width: 100%;
+        max-width: 18.75em; /* 300px = 18.75em */
     }
-
-    .episodio-info {
-        flex-direction: row;
-        width: 55em;
-        margin: 0 auto;
-        margin-bottom: 0.7em;
-        height: 7em;
-        border-radius: 0.3em;
-    }
-    button.episodio {
-        border-radius: 0.3em;
-    }
-}
-
-#player-container {
-    width: 870px;
-    height: 488px;
-    border-radius: 0.3em;
-    overflow: hidden; /* Para evitar que el video sobresalga del contenedor */
-}
-
-#videoPlayer {
-    width: 100%; /* Hace que el video ocupe todo el ancho del contenedor */
-    height: 100%; /* Hace que el video ocupe toda la altura del contenedor */
-    object-fit: cover; /* Asegura que el video cubra completamente el área sin distorsionarse */
-}
-
-/* Eliminar el border-radius en pantalla completa */
-.plyr--fullscreen #videoPlayer {
-    border-radius: 0 !important;
-}
-
-.plyr--fullscreen #player-container {
-    border-radius: 0 !important;
-}
-
-
-#plauer-container:fullscreen {
-    border-radius: 0 !important;
-}
-
-/* Estilo para el contador de episodios */
-.episode-count {
-    font-weight: 100;
-    font-size: 0.8em;
-    margin-left: 10em;
-    text-align: center;
-    color: #fff;
-    position: relative;
-    top: -0.7em;
 }
