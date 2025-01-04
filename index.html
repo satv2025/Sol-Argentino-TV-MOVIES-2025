@@ -10,29 +10,33 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Catálogo</a></li>
-                <li><a href="#">Mi Cuenta</a></li>
+                <li><a href="index" class="active">Inicio</a></li>
+                <!-- Eliminar los elementos "Catálogo" y "Mi Cuenta" -->
             </ul>
+            <!-- Barra de búsqueda -->
+            <form action="#" method="get" class="search-form">
+                <input type="text" id="search" name="search" placeholder="Buscar película o serie..." />
+                <button type="submit">Buscar</button>
+            </form>
         </nav>
     </header>
 
     <main>
         <h1>Bienvenidos a Mi Streaming Service</h1>
-        <p>¿Alguna vez buscaste peliculas o series gratis por internet? Bueno, llegó Sol Argentino TV MOVIES, un servicio de streaming completamente gratis, con series y peliculas nuevas, innovadoras y algunas conocidas.</p>
+        <p>¿Alguna vez buscaste películas o series gratis por internet? Bueno, llegó Sol Argentino TV MOVIES, un servicio de streaming completamente gratis, con series y películas nuevas, innovadoras y algunas conocidas.</p>
         
         <section class="catalogo">
             <!-- Película 1 -->
             <div class="pelicula">
-                <img src="file:///E:/Sol%20Argentino%20TV%20Movies%20-%202025%20Update/THUMBNAIL%20EL%20BOSQUE.png" alt="Pelicula 1">
-                <h3>El Bosque</h3>
-                <p>Años después del caso no resuelto de una adolescente texana, que la policía cerró como suicidio, su hermano decide descubrir la verdad y hacer justicia.</p>
+                <img src="maxresdefault.jpg" alt="Pelicula 1">
+                <h3>Matias Ponce - La Pelicula</h3>
+                <p>Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de youtube, o como el lo llama "Yutun", desatando una hilarante y absurda aventura.</p>
                 <button onclick="verPelicula('El Bosque')">Ver</button>
             </div>
 
             <!-- Película 2 -->
             <div class="pelicula">
-                <img src="file:///E:/Sol%20Argentino%20TV%20Movies%20-%202025%20Update/Logo%20Reite666%202.png" alt="Pelicula 10">
+                <img src="Logo Reite666 2.png" alt="Pelicula 10">
                 <h3>Reite666</h3>
                 <p>CILIO, en España, recibe un mensaje que lo obliga a regresar a Argentina para un juego macabro. Un error inesperado desata una serie de eventos perturbadores, llevándolo de vuelta a España de forma extraña.</p>
                 <button onclick="verPelicula('La Última Broma')">Ver</button>
@@ -40,10 +44,10 @@
 
             <!-- Película 3 -->
             <div class="pelicula">
-                <img src="file:///E:/Sol%20Argentino%20TV%20Movies%20-%202025%20Update/Asesinato%20para%20principiantes.jpg" alt="Pelicula 8">
+                <img src="Asesinato para principiantes.jpg" alt="Pelicula 8">
                 <h3>Asesinato para Principiantes</h3>
                 <p>En este thriller atrapante, una estudiante investiga, para un proyecto escolar, un caso ocurrido hace cinco años.</p>
-                <button onclick="verPelicula('app/app.html')">Ver</button>
+                <button onclick="verPelicula('app/app')">Ver</button>
             </div>
 
         </section>
