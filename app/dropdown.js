@@ -1,4 +1,3 @@
-
 // Función para cargar los episodios según la temporada seleccionada
 function changeSeason(season) {
     const episodeList = document.getElementById('episode-list');
@@ -20,6 +19,7 @@ function changeSeason(season) {
             {
                 title: 'Episodio 1',
                 duration: '43 min',
+                propiedadviendo: 'Viendo',
                 description: 'Pip elige un caso de homicidio para su proyecto escolar. Pero cuando empieza a investigar, descubre que para algunas personas era mejor dejarlo enterrado para siempre.',
                 videoPath: 'https://p-def3.pcloud.com/cBZbnz8UGZ0Fc4MS7ZZZ8WJuXkZQ5ZZdIRZkZfRxn5XZJQZr0ZDpZmYZdQZXYZTpZb4ZQYZM4ZRRZwYZVQZ34Zw6zJ5Z6cE1Xa8PEg4NAjYI5OgdPBWgDhzy/Asesinato%20Para%20Principiantes%20-%20T1%20E1.mp4',
                 image: 'https://th3.pcloud.com/tLZvN9mUGZgEVZ9EWM7ZZ5TJuXkZdIRZJZZg0ZpXZ8QZP8ZHzZz1w5oOgTWKhbhpUIDwp3lSFYOWaX/ThumbE1.jpg'
@@ -27,6 +27,7 @@ function changeSeason(season) {
             {
                 title: 'Episodio 2',
                 duration: '44 min',
+                propiedadviendo: 'Viendo',
                 description: 'Luego de entrevistar a las mejores amigas de Andie, Pip tiene una idea más clara de quién era la víctima, pero tras reorganizar fotos viejas empieza a comprender mejor todo.',
                 videoPath: 'https://p-def8.pcloud.com/cfZtyumUGZBMHhMS7Z9EWM7ZZyMJuXkZQ5ZZdIRZZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZE5X0y859CGLmiOrKbq7yJfOxKl4y/Asesinato%20Para%20Principiantes%20-%20T1%20E2.mkv',
                 image: 'https://th3.pcloud.com/tLZv39mUGZye0Z9EWM7ZZhTJuXkZdIRZJZZg0ZpXZXYZuQZc8ZocAH58INTEhXIcz0E5zz1fSmExl7/ThumbE2.jpg'
@@ -34,30 +35,34 @@ function changeSeason(season) {
             {
                 title: 'Episodio 3',
                 duration: '43 min',
+                propiedadviendo: 'Viendo',
                 description: 'Pip descubre por primera vez en su vida el lado oscuro cuando va a una fiesta clandestina. Y su siguiente pista la lleva a territorio aún más peligroso.',
-                videoPath: 'https://p-def8.pcloud.com/cfZtyumUGZBMHhMS7Z9EWM7ZZyMJuXkZQ5ZZdIRZZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZE5X0y859CGLmiOrKbq7yJfOxKl4y/Asesinato%20Para%20Principiantes%20-%20T1%20E2.mkv',
-                image: 'https://th3.pcloud.com/tLZ9v9mUGZqEXZ9EWM7ZZ7MJuXkZdIRZJZZg0ZpXZHQZEYZc4ZgnuD6KaYtSHOy2eMwVIV2uHF7SUV/ThumbE3.jpg'
+                videoPath: 'https://p-def8.pcloud.com/cfZtyumUGZBMHhMS7Z9EWM7ZZyMJuXkZQ5ZZdIRZZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZE5X0y859CGLmiOrKbq7yJfOxKl4y/Asesinato%20Para%20Principiantes%20-%20T1%20E3.mkv',
+                image: 'https://th3.pcloud.com/tLZv39mUGZye0Z9EWM7ZZhTJuXkZdIRZJZZg0ZpXZXYZuQZc8ZocAH58INTEhXIcz0E5zz1fSmExl7/ThumbE3.jpg'
             },
             {
                 title: 'Episodio 4',
-                duration: '44 min',
-                description: 'Pip y Ravi siguen una nueva pista que los lleva lejos de Little Kilton. Allí, descubren una valiosa prueba... y una desagradable sorpresa.',
-                videoPath: 'https://p-def8.pcloud.com/cfZtyumUGZBMHhMS7Z9EWM7ZZyMJuXkZQ5ZZdIRZZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZE5X0y859CGLmiOrKbq7yJfOxKl4y/Asesinato%20Para%20Principiantes%20-%20T1%20E2.mkv',
-                image: 'https://th3.pcloud.com/tLZKfFbUGZmjVZ9EWM7ZZ2lJuXkZdIRZJZZg0ZpXZeQZUYZrpZT2M62EBjLeVjnBhKxhu02BFuJf8V/ThumbE4.jpg'
+                duration: '45 min',
+                propiedadviendo: 'Viendo',
+                description: 'Pip continúa buscando pistas sobre la víctima, pero ahora comienza a dudar de sus propias suposiciones. Un giro inesperado la hace cuestionar todo.',
+                videoPath: 'https://p-def8.pcloud.com/cfZtyumUGZBMHhMS7Z9EWM7ZZyMJuXkZQ5ZZdIRZZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZE5X0y859CGLmiOrKbq7yJfOxKl4y/Asesinato%20Para%20Principiantes%20-%20T1%20E4.mkv',
+                image: 'https://th3.pcloud.com/tLZv39mUGZye0Z9EWM7ZZhTJuXkZdIRZJZZg0ZpXZXYZuQZc8ZocAH58INTEhXIcz0E5zz1fSmExl7/ThumbE4.jpg'
             },
             {
                 title: 'Episodio 5',
-                duration: '50 min',
-                description: 'Una impactante confesión arroja luz en la investigación. Antes de que Pip pueda decidir qué hacer, recibe otro mensaje amenazador.',
-                videoPath: 'https://p-def5.pcloud.com/cfZrA9mUGZTtWhMS7Z9EWM7ZZYMJuXkZQ5ZZdIRZZvH5kcZQYZr8Z2YZ1RZmzZjYZrRZPHZPpZlFZsQZU4ZzzZ8pZEnGrDJkEp6pBEbyhjnyEV5MTce8k/Asesinato%20Para%20Principiantes%20-%20T1%20E5.mkv',
-                image: 'https://th2.pcloud.com/tLZu2FbUGZhV0Z9EWM7ZZWlJuXkZdIRZJZZg0ZpXZ58ZsLZn4ZFTuxEaNaKMzUisvHhGrwhjcq6z5y/ThumbE5.jpg'
+                duration: '42 min',
+                propiedadviendo: 'Viendo',
+                description: 'En un esfuerzo por resolver el misterio, Pip recibe ayuda inesperada. Sin embargo, la verdad podría ser más oscura de lo que imaginaba.',
+                videoPath: 'https://p-def8.pcloud.com/cfZtyumUGZBMHhMS7Z9EWM7ZZyMJuXkZQ5ZZdIRZZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZE5X0y859CGLmiOrKbq7yJfOxKl4y/Asesinato%20Para%20Principiantes%20-%20T1%20E5.mkv',
+                image: 'https://th3.pcloud.com/tLZv39mUGZye0Z9EWM7ZZhTJuXkZdIRZJZZg0ZpXZXYZuQZc8ZocAH58INTEhXIcz0E5zz1fSmExl7/ThumbE5.jpg'
             },
             {
                 title: 'Episodio 6',
-                duration: '51 min',
-                description: 'La policía hace un arresto, pero Pip no está segura de que el caso esté solucionado, así que va a visitar a la única persona que podría tener respuestas.',
-                videoPath: 'https://p-def2.pcloud.com/cfZ5q9mUGZpnWhMS7Z9EWM7ZZeMJuXkZQ5ZZdIRZZG8UaoZX8ZoRZEzZoQZF4ZlYZXzZEpZtFZzFZFYZKRZQ8Z18Zntso3Nc1z6063G5MDxj6NHdIcfUk/Asesinato%20Para%20Principiantes%20-%20T1%20E6.mkv',
-                image: 'https://th3.pcloud.com/tLZDWFbUGZykXZ9EWM7ZZWlJuXkZdIRZJZZg0ZpXZMQZtpZHFZOdeFKQV72T72LRonQQdvQzSUPOPy/ThumbE6.jpg'
+                duration: '44 min',
+                propiedadviendo: 'Viendo',
+                description: 'El caso de Andie parece resolverse, pero Pip descubre una red de mentiras más grande de lo que pensaba. El final podría dejarla en shock.',
+                videoPath: 'https://p-def8.pcloud.com/cfZtyumUGZBMHhMS7Z9EWM7ZZyMJuXkZQ5ZZdIRZZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZE5X0y859CGLmiOrKbq7yJfOxKl4y/Asesinato%20Para%20Principiantes%20-%20T1%20E6.mkv',
+                image: 'https://th3.pcloud.com/tLZv39mUGZye0Z9EWM7ZZhTJuXkZdIRZJZZg0ZpXZXYZuQZc8ZocAH58INTEhXIcz0E5zz1fSmExl7/ThumbE6.jpg'
             }
         ],
         2: [
@@ -78,7 +83,7 @@ function changeSeason(season) {
         const episodeItem = document.createElement('li');
         const episodeButton = document.createElement('button');
         episodeButton.classList.add('episodio');
-        episodeButton.onclick = () => loadEpisode(episode.videoPath, episodeButton);
+        episodeButton.onclick = () => loadEpisode(episode.videoPath, episodeButton, episode);
 
         const episodeInfo = document.createElement('div');
         episodeInfo.classList.add('episodio-info');
@@ -111,8 +116,12 @@ function changeSeason(season) {
         const p = document.createElement('p');
         p.textContent = episode.description;
 
+        // Mostrar "Viendo" si el episodio está en reproducción
+        const seeingDiv = document.createElement('div');
+        seeingDiv.classList.add('seeing-text');
         episodeText.appendChild(titleDurationDiv);
         episodeText.appendChild(p);
+        episodeText.appendChild(seeingDiv);  // Aquí se agregará el "Viendo"
 
         episodeInfo.appendChild(episodeImg);
         episodeInfo.appendChild(episodeText);
@@ -124,7 +133,7 @@ function changeSeason(season) {
 }
 
 // Función para cargar un episodio y marcarlo como reproducido
-function loadEpisode(videoPath, episodeButton) {
+function loadEpisode(videoPath, episodeButton, episode) {
     const video = document.querySelector('#videoPlayer');
     video.src = videoPath;
     video.play();
@@ -135,6 +144,14 @@ function loadEpisode(videoPath, episodeButton) {
 
     // Cambiar el fondo del episodio seleccionado
     episodeButton.style.backgroundColor = 'rgba(74, 91, 104, 0.719)'; // Fondo translúcido
+
+    // Mostrar el texto "Viendo" en el episodio actual
+    const seeingDiv = episodeButton.querySelector('.seeing-text');
+    seeingDiv.textContent = episode.propiedadviendo;  // Aquí añadimos el texto "Viendo"
+
+    // Ocultar "Viendo" en los demás episodios
+    const allSeeingDivs = document.querySelectorAll('.seeing-text');
+    allSeeingDivs.forEach(div => div.textContent = '');  // Borrar "Viendo" en los episodios no activos
 }
 
 // Crear instancia de Plyr y gestionar eventos
