@@ -18,10 +18,10 @@ function changeSeason(season) {
         1: [
             {
                 title: 'Pelicula',
-                description: 'Pip elige un caso de homicidio para su proyecto escolar. Pero cuando empieza a investigar, descubre que para algunas personas era mejor dejarlo enterrado para siempre.',
-                videoPath: 'https://p-def3.pcloud.com/cBZbnz8UGZ0Fc4MS7ZZZ8WJuXkZQ5ZZdIRZkZfRxn5XZJQZr0ZDpZmYZdQZXYZTpZb4ZQYZM4ZRRZwYZVQZ34Zw6zJ5Z6cE1Xa8PEg4NAjYI5OgdPBWgDhzy/Asesinato%20Para%20Principiantes%20-%20T1%20E1.mp4',
-                image: 'https://th3.pcloud.com/tLZvN9mUGZgEVZ9EWM7ZZ5TJuXkZdIRZJZZg0ZpXZ8QZP8ZHzZz1w5oOgTWKhbhpUIDwp3lSFYOWaX/ThumbE1.jpg',
-                duration: '43 min' // Duración actualizada
+                description: 'Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de youtube, o como el lo llama "Yutun", desatando una hilarante y absurda aventura.',
+                videoPath: 'https://p-def7.pcloud.com/cfZqFJWUGZlPUgMS7Z9EWM7ZZTRLuXkZQ5ZZdIRZZdPbV7kZXRZr8ZDYZB4ZcpZIHZq8ZrzZ1LZz8ZBzZjQZILZjLZ9mFeJEI14FmrSQXzn406MBbiK70X/MATIAS%20PONCE%20%20LA%20PEL%C3%8DCULA.webm',
+                image: 'https://th4.pcloud.com/tLZU2ggUGZOsj7Z9EWM7ZZCfLuXkZdIRZJZZohZUzZjYZK8ZBRZkb8rdGkwMmXGQc8AE5lIC77586a7/maxresdefault.jpg',
+                duration: '60 min' // Duración actualizada
             },
         ],
         2: [
