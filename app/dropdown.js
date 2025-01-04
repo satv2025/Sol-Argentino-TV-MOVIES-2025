@@ -41,7 +41,7 @@ function changeSeason(season) {
                 title: 'Episodio 4',
                 description: 'Pip y Ravi siguen una nueva pista que los lleva lejos de Little Kilton. Allí, descubren una valiosa prueba... y una desagradable sorpresa.',
                 videoPath: 'https://p-def8.pcloud.com/cfZtyumUGZBMHhMS7Z9EWM7ZZyMJuXkZQ5ZZdIRZZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZE5X0y859CGLmiOrKbq7yJfOxKl4y/Asesinato%20Para%20Principiantes%20-%20T1%20E2.mkv',
-                image: 'https://th3.pcloud.com/tLZKfFbUGZmjVZ9EWM7ZZ2lJuXkZdIRZJZZg0ZpXZ8QZUYZrpZT2M62EBjLeVjnBhKxhu02BFuJf8V/ThumbE4.jpg',
+                image: 'https://th3.pcloud.com/tLZKfFbUGZmjVZ9EWM7ZZRzLuXkZdIRZJZZg0ZpXZUYZeQZrpZX4IXELdnr0V4SuP0kAK8f7X5xyJX/ThumbE4.jpg',
                 duration: '44 min' // Duración actualizada
             },
             {
