@@ -42,6 +42,44 @@ nav a:hover {
     color: #005a9e; /* Azul más oscuro en hover */
 }
 
+/* Estilos para la barra de búsqueda */
+.search-form {
+    display: flex;
+    justify-content: center; /* Centra la barra de búsqueda */
+    margin-top: 20px;
+}
+
+.search-form input[type="text"] {
+    width: 250px; /* Ancho del campo de texto */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px 0 0 5px; /* Bordes redondeados en la izquierda */
+    outline: none; /* Elimina el borde al enfocarse */
+}
+
+.search-form input[type="text"]:focus {
+    border-color: #007bff; /* Cambia el borde a azul cuando se enfoca */
+}
+
+.search-form button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border: 1px solid #007bff;
+    border-radius: 0 5px 5px 0; /* Bordes redondeados en la derecha */
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #0056b3; /* Fondo azul más oscuro al pasar el ratón */
+}
+
+.search-form button:focus {
+    outline: none; /* Elimina el borde del botón al hacer clic */
+}
+
 main {
     text-align: center;
     padding: 3.125em; /* 50px = 3.125em */
