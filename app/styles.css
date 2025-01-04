@@ -158,6 +158,8 @@ h1 {
     padding: 0;
     margin: 0;
     text-align: justify;
+    color: #aaa;
+    font-weight: 100;
 }
 
 .serie-info li {
@@ -166,7 +168,7 @@ h1 {
 }
 
 .serie-info li strong {
-    color: #fff; /* Amarillo para los títulos */
+    color: #fff;
 }
 
 .episodios {
