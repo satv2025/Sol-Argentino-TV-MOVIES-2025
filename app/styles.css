@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Netflix Sans', sans-serif;
+    font-family: 'Netflix Sans';
     background-color: #293137; /* Gris oscuro como fondo */
     color: white;
     font-size: 1rem; /* Base font size = 16px */
@@ -49,12 +49,13 @@ nav a:hover {
 }
 
 .search-form input[type="text"] {
-    width: 250px; /* Ancho del campo de texto */
+    width: 250px;
+    font-family: 'Netflix Sans';
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc; /* Borde gris */
-    border-radius: 5px 0 0 5px; /* Bordes redondeados en la izquierda */
-    outline: none; /* Elimina el borde al enfocarse */
+    border: 2px solid #007bff;
+    border-radius: 5px 0 0 5px;
+    outline: none;
 }
 
 .search-form input[type="text"]:focus {
@@ -62,12 +63,13 @@ nav a:hover {
 }
 
 .search-form button {
+    font-family: 'Netflix Sans';
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #007bff; /* Fondo azul */
-    color: white; /* Texto blanco */
+    background-color: #007bff;
+    color: white;
     border: 1px solid #007bff;
-    border-radius: 0 5px 5px 0; /* Bordes redondeados en la derecha */
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
 
@@ -226,7 +228,7 @@ button.episodio {
     box-shadow: 0px;
     border: 0px;
     border-radius: 0.3em;
-    font-family: 'Netflix Sans', sans-serif;
+    font-family: 'Netflix Sans';
 }
 
 footer {
