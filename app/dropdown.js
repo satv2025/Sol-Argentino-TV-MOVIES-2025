@@ -125,7 +125,7 @@ function changeSeason(season) {
             durationDiv.style.top = '10px'; // Ubicación en la parte superior
             durationDiv.style.right = '10px'; // Alineado a la derecha
             durationDiv.style.color = '#fff'; // Establecer color de la duración
-            durationDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.6)'; // Fondo oscuro para mayor contraste
+            durationDiv.style.backgroundColor = '#ffffff00';
             durationDiv.style.padding = '2px 5px'; // Un pequeño padding para la duración
             durationDiv.textContent = episode.duration || 'N/A'; // Duración del episodio o "N/A" si no hay duración
 
