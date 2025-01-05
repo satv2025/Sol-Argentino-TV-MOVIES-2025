@@ -19,7 +19,7 @@ function changeSeason(season) {
             {
                 title: 'Koshe Plostenko',
                 description: 'Koshe Plostenko, un mafioso implacable, dirige un club de lucha clandestino. Para alimentar su negocio, decide secuestrar a los luchadores de 100% Lucha y obligarlos a pelear bajo sus reglas.',
-                videoPath: 'https://download850.mediafire.com/ozulc2mnbqqgPEofI87pzVmCU4yPUoEmXEJMAkdIuW5ZILAK-oj6tlrtIUSBpJ5dOhMvJjkczbVpMqcFV32JdXWiud6dORfvekoxl-9ySTxx1RWGWjL0Txl13nGKD8AWEeJfIx5IeqLfsDv_bLbSghFFWFrb2zimheB7O1URwya600U/zugv2rkie3aj2l7/100%25+Lucha+La+Pel%C3%ADcula.mp4',
+                videoPath: 'https://download850.mediafire.com/s6g00vpifpygJGVuUOVRbc-uJwH4A_Gd2SeNExUusiW_Z52Azm9Ow5PLazZQ7aBuLeWoVm_GWbxy4j3Eb_EZKh1jCPEecciZ3lBrN5GRn5_CI8MetBE8A4JcRSPr1NP46Q96Zb6kpi7JCVrlggdecnkvT_qmn1S9kZuV4BZ6L4D6CEA/zugv2rkie3aj2l7/100%25+Lucha+La+Pel%C3%ADcula.mp4',
                 image: 'https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6',
                 duration: '80 min' // Duración actualizada
             },
