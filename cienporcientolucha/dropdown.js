@@ -19,7 +19,7 @@ function changeSeason(season) {
             {
                 title: 'Koshe Plostenko',
                 description: 'Koshe Plostenko, un mafioso implacable, dirige un club de lucha clandestino. Para alimentar su negocio, decide secuestrar a los luchadores de 100% Lucha y obligarlos a pelear bajo sus reglas.',
-                videoPath: 'blob:https://disk.yandex.com/1067de88-9627-431b-a313-e1b892e8a38a',
+                videoPath: 'https://download850.mediafire.com/ozulc2mnbqqgPEofI87pzVmCU4yPUoEmXEJMAkdIuW5ZILAK-oj6tlrtIUSBpJ5dOhMvJjkczbVpMqcFV32JdXWiud6dORfvekoxl-9ySTxx1RWGWjL0Txl13nGKD8AWEeJfIx5IeqLfsDv_bLbSghFFWFrb2zimheB7O1URwya600U/zugv2rkie3aj2l7/100%25+Lucha+La+Pel%C3%ADcula.mp4',
                 image: 'https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6',
                 duration: '80 min' // Duración actualizada
             },
@@ -28,7 +28,7 @@ function changeSeason(season) {
             {
                 title: 'El Amo De Los Clones',
                 description: 'Damián Castillo, un doctor en biotecnología, odia a su vecino Vicente Viloni. Cansado de su fama, decide crear clones de los luchadores de 100% Lucha para destruir la imagen de su ídolo de la infancia.',
-                videoPath: 'https://example.com/video2.webm', // Ruta del video para la temporada 2
+                videoPath: 'https://download1509.mediafire.com/kr7oym4cf9cg_nmKU7SoZB1n-1BGlTHAq0oFpRLUl0-0X4zST6E7OtAufJAS9Z95tphFQXrgPRjt752oXKzkTNPQRmAFCI3U_lKGez5bLHMEYy3h2CMLoXq7FbL5i8Ba0Iz1HKoFX8tBiakPCnmAO8SLpt4gfc4IAl4PF1kk6LrqYo8/x6mhhs8q3s7m7a2/100%25+Lucha+El+Amo+de+los+Clones.mp4', // Ruta del video para la temporada 2
                 image: 'https://download1528.mediafire.com/aqx8uo65ndggpmlTMXtKdXqXumyNkwt4HvoIerexHOiaDvlQCG0m0MypWtttyzfh6-wmA84KpdAIkwe3IZCUwNmtKWzwQs4gwne2h_OsJKUJePkqGlDuTDdpuvrn8B5FlcSGVPgu6GxPgAeGidBZ8tiGssQ_Q_RCF5bDYI8eCNyAaXE/492wl1oh8fakveb/lucha.webp', // Imagen para la temporada 2
                 duration: '85 min' // Duración para el episodio de la temporada 2
             }
