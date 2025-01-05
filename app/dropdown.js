@@ -21,14 +21,14 @@ function changeSeason(season) {
                 title: 'Episodio 1',
                 description: 'Pip elige un caso de homicidio para su proyecto escolar. Pero cuando empieza a investigar, descubre que para algunas personas era mejor dejarlo enterrado para siempre.',
                 videoPath: 'https://download1586.mediafire.com/j54n0tg3b5ygYBmMNk7tz0ydm-lPCR2dBJrOzgI2jKyIxyYvTso2C_s3Msj4TDUDKq5Yzr10chbhvdq9odZmRy-GuemOqFrshjKBg03HKNI0-vxurNxdYpBtePuMQtHslDU_XhBBhQpPUZiHHIyxjBTJFrYLyTgU-sp4jpJTb2ZjkR0/9iq2gagcr345fac/Asesinato+Para+Principiantes+-+T1+E1.mp4',
-                image: 'https://www.mediafire.com/convkey/8ebd/67e8toxnggmojw09g.jpgg',
+                image: 'https://www.mediafire.com/convkey/8ebd/67e8toxnggmojw09g.jpg',
                 duration: '43 min'
             },
             {
                 title: 'Episodio 2',
                 description: 'Luego de entrevistar a las mejores amigas de Andie, Pip tiene una idea más clara de quién era la víctima, pero tras reorganizar fotos viejas empieza a comprender mejor todo.',
                 videoPath: 'https://download847.mediafire.com/on2nqfd7ofcgxmq6RLsyQ2G71DoTjiP4xh_4i6eLpWkDgte8b6Q1w0VUKxzvbdz8LcEw2kbued_3uowj0x5_a3aIN45fDXRFWihKWsxX9wOaXxq85Jjh9jMOGPMZhUWDuwAmKcE2PbQh2oo_OXkw5zbIG42jYzOrLc_IiQSQzWLO1Sw/xof6urhwtqlrmwz/Asesinato+Para+Principiantes+-+T1+E2.mkv',
-                image: 'https://www.mediafire.com/convkey/88d0/o7ja6efkgc857oo9g.jpg
+                image: 'https://www.mediafire.com/convkey/88d0/o7ja6efkgc857oo9g.jpg'
 ',
                 duration: '44 min'
             },
