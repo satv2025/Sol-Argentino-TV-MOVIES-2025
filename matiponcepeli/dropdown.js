@@ -20,7 +20,7 @@ function changeSeason(season) {
             {
                 title: 'Pelicula',
                 description: 'Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de youtube, o como el lo llama "Yutun", desatando una hilarante y absurda aventura.',
-                videoPath: 'https:\/\/p-def7.pcloud.com\/cBZqFJWUGZlPUgMS7ZZZrcfuXkZ2ZZysRZkZdPbV7kZXRZr8ZDYZB4ZcpZIHZq8ZrzZ1LZz8ZBzZjQZILZjLZ78LJ5ZAHP7iSKnHVVbyCf2k1y93h9VNtNk\/MATIAS%20PONCE%20%20LA%20PEL%C3%8DCULA.webm',
+                videoPath: 'https://download1580.mediafire.com/e08upjh7oxvg7OsYrd_egq4UDyw1gb_VCqWtbVim6uzNLbyslf3U921OIVhB8k_OrR-h5CvmrR0LDl3e_lZKirdUGD79zUaRXWsH1GDOhx9_F9_f6aMJBzh6FvxWAe5t-S4426mh9dP1_uTZXQYsCKY-PoQOt8FsZD96TQb6YK7M1xc/66l6oz150o04fff/MATIAS+PONCE++LA+PEL%C3%8DCULA.webm',
                 image: 'https://th4.pcloud.com/tLZU2ggUGZOsj7Z9EWM7ZZCfLuXkZdIRZJZZohZUzZjYZK8ZBRZkb8rdGkwMmXGQc8AE5lIC77586a7/maxresdefault.jpg',
                 duration: '60 min' // Duración actualizada
             },
