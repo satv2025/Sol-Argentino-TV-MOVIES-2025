@@ -28,8 +28,7 @@ function changeSeason(season) {
                 title: 'Episodio 2',
                 description: 'Luego de entrevistar a las mejores amigas de Andie, Pip tiene una idea más clara de quién era la víctima, pero tras reorganizar fotos viejas empieza a comprender mejor todo.',
                 videoPath: 'https://download847.mediafire.com/on2nqfd7ofcgxmq6RLsyQ2G71DoTjiP4xh_4i6eLpWkDgte8b6Q1w0VUKxzvbdz8LcEw2kbued_3uowj0x5_a3aIN45fDXRFWihKWsxX9wOaXxq85Jjh9jMOGPMZhUWDuwAmKcE2PbQh2oo_OXkw5zbIG42jYzOrLc_IiQSQzWLO1Sw/xof6urhwtqlrmwz/Asesinato+Para+Principiantes+-+T1+E2.mkv',
-                image: 'https://www.mediafire.com/convkey/88d0/o7ja6efkgc857oo9g.jpg'
-',
+                image: 'https://www.mediafire.com/convkey/88d0/o7ja6efkgc857oo9g.jpg',
                 duration: '44 min'
             },
             {
