@@ -20,42 +20,42 @@ function changeSeason(season) {
             {
                 title: 'Episodio 1',
                 description: 'Pip elige un caso de homicidio para su proyecto escolar. Pero cuando empieza a investigar, descubre que para algunas personas era mejor dejarlo enterrado para siempre.',
-                videoPath: 'https:\/\/p-def3.pcloud.com\/cBZbnz8UGZ0Fc4MS7ZZZcifuXkZ2ZZysRZkZfRxn5XZJQZr0ZDpZmYZdQZXYZTpZb4ZQYZM4ZRRZwYZVQZ34Zw6zJ5Zk5PzqvSClo8dGA05gNlT65Sjphqk\/Asesinato%20Para%20Principiantes%20-%20T1%20E1.mp4',
+                videoPath: 'https://download1586.mediafire.com/j54n0tg3b5ygYBmMNk7tz0ydm-lPCR2dBJrOzgI2jKyIxyYvTso2C_s3Msj4TDUDKq5Yzr10chbhvdq9odZmRy-GuemOqFrshjKBg03HKNI0-vxurNxdYpBtePuMQtHslDU_XhBBhQpPUZiHHIyxjBTJFrYLyTgU-sp4jpJTb2ZjkR0/9iq2gagcr345fac/Asesinato+Para+Principiantes+-+T1+E1.mp4',
                 image: 'https://th3.pcloud.com/tLZvN9mUGZgEVZ9EWM7ZZ5TJuXkZdIRZJZZg0ZpXZ8QZP8ZHzZz1w5oOgTWKhbhpUIDwp3lSFYOWaX/ThumbE1.jpg',
                 duration: '43 min'
             },
             {
                 title: 'Episodio 2',
                 description: 'Luego de entrevistar a las mejores amigas de Andie, Pip tiene una idea más clara de quién era la víctima, pero tras reorganizar fotos viejas empieza a comprender mejor todo.',
-                videoPath: 'https:\/\/p-def8.pcloud.com\/cBZtyumUGZBMHhMS7ZZZ3UfuXkZ2ZZysRZkZz5E3AZTpZOQZSRZqYZGzZ2JZKHZi4ZwRZt4ZizZF8ZmLZbZr6zJ5ZitqHp0QVq5mhdGIHG5visp1zFRly\/Asesinato%20Para%20Principiantes%20-%20T1%20E2.mkv',
+                videoPath: 'https://download847.mediafire.com/on2nqfd7ofcgxmq6RLsyQ2G71DoTjiP4xh_4i6eLpWkDgte8b6Q1w0VUKxzvbdz8LcEw2kbued_3uowj0x5_a3aIN45fDXRFWihKWsxX9wOaXxq85Jjh9jMOGPMZhUWDuwAmKcE2PbQh2oo_OXkw5zbIG42jYzOrLc_IiQSQzWLO1Sw/xof6urhwtqlrmwz/Asesinato+Para+Principiantes+-+T1+E2.mkv',
                 image: 'https://th3.pcloud.com/tLZv39mUGZye0Z9EWM7ZZhTJuXkZdIRZJZZg0ZpXZXYZuQZc8ZocAH58INTEhXIcz0E5zz1fSmExl7/ThumbE2.jpg',
                 duration: '44 min'
             },
             {
                 title: 'Episodio 3',
                 description: 'Pip descubre por primera vez en su vida el lado oscuro cuando va a una fiesta clandestina. Y su siguiente pista la lleva a territorio aún más peligroso.',
-                videoPath: 'https:\/\/p-def8.pcloud.com\/cBZRkYmUGZntyhMS7ZZZBGfuXkZ2ZZysRZkZEC33IZ9FZ5QZe4ZgzZgHZuzZOpZ04ZD8ZK8ZUzZQ4ZWYZjLZo6zJ5ZMrCOymYUaLR60SYngDczAp16Xxey\/Asesinato%20Para%20Principiantes%20-%20T1%20E3.mkv',
+                videoPath: 'https://download1588.mediafire.com/p0zsgqcqfeygJi2uyk1Fkhsyp5-NEgIDUZsfAtEqL-5PT23L2H6EKdpt3GPZA8s6rgqsGWkhTGJqyCyZiYvRV2Do4EXESMV48lxPXUaah9Fnhv2G35kokgo7nNIca9ue2Ds9C7aAZGpPuB3Tc6AjQmoczIVhPOGycjZ4Xhbl-YCAkCQ/1txzus4x64ah3pl/Asesinato+Para+Principiantes+-+T1+E3.mkv',
                 image: 'https://th3.pcloud.com/tLZ9v9mUGZqEXZ9EWM7ZZ7MJuXkZdIRZJZZg0ZpXZHQZEYZc4ZgnuD6KaYtSHOy2eMwVIV2uHF7SUV/ThumbE3.jpg',
                 duration: '43 min'
             },
             {
                 title: 'Episodio 4',
                 description: 'Pip y Ravi siguen una nueva pista que los lleva lejos de Little Kilton. Allí, descubren una valiosa prueba... y una desagradable sorpresa.',
-                videoPath: 'https:\/\/p-def6.pcloud.com\/cBZkyumUGZ1gHhMS7ZZZDGfuXkZ2ZZysRZkZ6TcaAZOQZ5RZDpZmzZx8Z0HZMLZF4ZMQZ6YZ78ZuRZhYZo8Z7EzJ5ZK8icG85gwipBf1a60nqV6JrqWt4y\/Asesinato%20Para%20Principiantes%20-%20T1%20E4.mkv',
+                videoPath: 'https://download943.mediafire.com/trl60v677uigVXTLALwByG6gtGNsivcupJEEOCLg2LgJB1_cdLxeO2pX2Y1ZFBYRAYDoa38ld1dc01Ja9ztInTzKEBqpSvpvTKuRCl7r2RGPBrFxjFsJ4VY3Xo5J0BxSSWxBGhufwgIcLUPhMPoalikD-nsPP_R-rQ7fD80qBnSdW-U/40wq8vf50141yhy/Asesinato+Para+Principiantes+-+T1+E4.mkV',
                 image: 'https://th3.pcloud.com/tLZKfFbUGZmjVZ9EWM7ZZRzLuXkZdIRZJZZg0ZpXZUYZeQZrpZX4IXELdnr0V4SuP0kAK8f7X5xyJX/ThumbE4.jpg',
                 duration: '44 min'
             },
             {
                 title: 'Episodio 5',
                 description: 'Una impactante confesión arroja luz en la investigación. Antes de que Pip pueda decidir qué hacer, recibe otro mensaje amenazador.',
-                videoPath: 'https:\/\/p-def5.pcloud.com\/cBZrA9mUGZTtWhMS7ZZZTGfuXkZ2ZZysRZkZvH5kcZQYZr8Z2YZ1RZmzZjYZrRZPHZPpZlFZsQZU4ZzzZ8pZpEzJ5ZlgUUaj3VmsLlr8U4uYosFBOGX5BV\/Asesinato%20Para%20Principiantes%20-%20T1%20E5.mkv',
+                videoPath: 'https://download948.mediafire.com/4oce9wz5mmwgAx-nHSPA3XdV-EOzYmZSSLgCT9OEO5WokzQDg__5zk9UoBLuqGHO0bfXfnwzglJi9k2QOXG3xaWmn9VcV9W_24ZBERepKQqp_SbHZVzm0Vhjm5C6FWNFGKhUYKHVWUdMLuEVylmJCfnvqJyag8wa-sRFjKjMx5mBwFw/396alkj4s2sacta/Asesinato+Para+Principiantes+-+T1+E5.mkv',
                 image: 'https://th2.pcloud.com/tLZu2FbUGZhV0Z9EWM7ZZWlJuXkZdIRZJZZg0ZpXZ58ZsLZn4ZFTuxEaNaKMzUisvHhGrwhjcq6z5y/ThumbE5.jpg',
                 duration: '50 min'
             },
             {
                 title: 'Episodio 6',
                 description: 'La policía hace un arresto, pero Pip no está segura de que el caso esté solucionado, así que va a visitar a la única persona que podría tener respuestas.',
-                videoPath: 'https:\/\/p-def2.pcloud.com\/cBZ5q9mUGZpnWhMS7ZZZxGfuXkZ2ZZysRZkZG8UaoZX8ZoRZEzZoQZF4ZlYZXzZEpZtFZzFZFYZKRZQ8Z18ZHEzJ5ZsbrNmwvMqWVD9SlSsvcuipkm89RV\/Asesinato%20Para%20Principiantes%20-%20T1%20E6.mkv',
+                videoPath: 'https://download1073.mediafire.com/zgjzhnkvv4vg-JySKJId4b_t_oa4DpmGqEbeUbBWOOah-QZ-FJdRWzPbXAcHOpcC6pak_QvEaXr393VT8phKslDN7cNSMEKNjchUr5Ho-AInAgWwGRS4cgn8h6vNO45LFsqdKnt01DnfqwxwcMeeN5SbYMhtgrPzOEpH2g7ew7sw4Lg/hwv0ozye7p0g7s4/Asesinato+Para+Principiantes+-+T1+E6.mkv',
                 image: 'https://th3.pcloud.com/tLZDWFbUGZykXZ9EWM7ZZWlJuXkZdIRZJZZg0ZpXZMQZtpZHFZOdeFKQV72T72LRonQQdvQzSUPOPy/ThumbE6.jpg',
                 duration: '51 min'
             }
