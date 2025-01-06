@@ -7,13 +7,17 @@
     box-sizing: border-box;
 }
 
-body {
+body, html {
     font-family: 'Netflix Sans';
     background-color: #293137; /* Fondo claro */
     color: #fff; /* Texto oscuro */
     font-size: 1rem; /* Base font size = 16px */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
+}
 header {
     background-color: #183347; /* Header blanco */
     padding: 1.25em; /* 20px = 1.25em */
@@ -94,6 +98,7 @@ nav a:hover {
 main {
     text-align: center;
     padding: 3.125em; /* 50px = 3.125em */
+    flex-grow: 1; /* Asegura que el main ocupe el espacio restante entre el header y el footer */
 }
 
 h1 {
@@ -114,6 +119,15 @@ h1 {
     margin-top: 1.25em; /* 20px = 1.25em */
 }
 
+.pelicula img {
+    width: 100%;
+    height: 200px; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover;
+    border-radius: 0.3em 0.3em 0 0; /* Bordes redondeados solo en la parte superior */
+    margin-bottom: 0.625em; /* 10px = 0.625em */
+}
+
+/* Aseguramos que el contenedor de las películas tenga una altura fija */
 .pelicula {
     background-color: #183347; /* Fondo blanco para los items */
     border-radius: 0.3em; /* Bordes redondeados */
@@ -126,7 +140,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%; /* Para garantizar que todos los elementos se distribuyan */
+    height: 380px; /* Asegura que todas las películas tengan la misma altura */
 }
 
 .pelicula h3 {
@@ -170,7 +184,7 @@ footer {
     text-align: center;
     padding: 1.25em; /* 20px = 1.25em */
     margin-top: 2.5em; /* 40px = 2.5em */
-    position: absolute;
+    position: relative;
     width: 100%;
     bottom: 0;
 }
@@ -178,6 +192,47 @@ footer {
 footer p {
     font-size: 0.875em; /* 14px = 0.875em */
     color: #fff;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    footer {
+        position: relative;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        position: relative;
+        bottom: 0;
+    }
+}
+
+/* Estilos para dispositivos pequeños (móviles) */
+@media (max-width: 48em) { /* 768px = 48em */
+    .pelicula {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .catalogo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 1.75em; /* 28px = 1.75em */
+    }
+}
+
+/* Estilos para pantallas grandes (por ejemplo, tabletas y escritorios grandes) */
+@media (min-width: 48.063em) { /* 769px = 48.063em */
+    .pelicula {
+        width: 100%;
+        max-width: 22em; /* 300px = 18.75em */
+        height: 100%;
+        max-height: 100em;
+    }
 }
 
 /* Responsivo para pantallas pequeñas */
