@@ -102,6 +102,10 @@ h1 {
     color: #fff; /* Título oscuro */
 }
 
+h3.matiponcepeli {
+    margin-top: 2em;
+}
+
 .catalogo {
     display: flex;
     flex-wrap: wrap;
