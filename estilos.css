@@ -18,77 +18,7 @@ header {
     background-color: #183347; /* Header blanco */
     padding: 1.25em; /* 20px = 1.25em */
     box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-nav li {
-    margin: 0 1.25em; /* 20px = 1.25em */
-}
-
-nav a {
-    color: #0078D4; /* Azul para los enlaces */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.125em; /* 18px = 1.125em */
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #005a9e; /* Azul más oscuro en hover */
-}
-
-/* Estilos para la barra de búsqueda */
-.search-form {
-    display: flex;
-    justify-content: center; /* Centra la barra de búsqueda */
-    margin-top: 20px;
-}
-
-.search-form input[type="text"] {
-    width: 250px;
-    font-family: 'Netflix Sans';
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #007bff;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    font-weight: 700;
-}
-
-.search-form input[type="text"]:focus {
-    border-color: #007bff; /* Cambia el borde a azul cuando se enfoca */
-}
-
-.search-form input[type="text"]::placeholder {
-    color: #007bff;
-}
-
-.search-form button {
-    font-family: 'Netflix Sans';
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border-left: #fff;
-    border-top: 2px solid #007bff;
-    border-right: 2px solid #007bff;
-    border-bottom: 2px solid #007bff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-weight: 700;
-}
-
-.search-form button:hover {
-    background-color: #0056b3; /* Fondo azul más oscuro al pasar el ratón */
-}
-
-.search-form button:focus {
-    outline: none; /* Elimina el borde del botón al hacer clic */
+    text-align: center;
 }
 
 main {
@@ -122,6 +52,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 25em; /* 400px de altura mínima para uniformar */
 }
 
 .pelicula:hover {
@@ -131,7 +62,7 @@ h1 {
 
 .pelicula img {
     width: 100%;
-    height: 11.25em; /* 180px = 11.25em */
+    height: 11.25em; /* 180px */
     object-fit: cover;
     border-radius: 0.3em 0.3em 0 0; /* Bordes redondeados solo en la parte superior */
     margin-bottom: 0.625em; /* 10px = 0.625em */
@@ -143,6 +74,10 @@ h1 {
     text-align: center;
     padding: 0.19em;
     font-weight: 600; /* Para hacerlo un poco más destacado */
+    max-height: 3em; /* Limitar la altura del título */
+    overflow: hidden; /* Ocultar texto adicional */
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Evitar que se desborde */
 }
 
 .pelicula p {
@@ -151,6 +86,9 @@ h1 {
     margin-bottom: 1.25em; /* 20px = 1.25em */
     text-align: justify;
     padding: 0.9em;
+    max-height: 6em; /* Limitar la altura del párrafo */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Mostrar "..." si el texto es demasiado largo */
 }
 
 button {
@@ -195,10 +133,9 @@ footer p {
     }
 }
 
-/* Estilos para dispositivos pequeños (móviles) */
-@media (max-width: 48em) { /* 768px = 48em */
+@media (max-width: 48em) {
     .pelicula {
-        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+        width: 100%;
     }
 
     .catalogo {
@@ -207,14 +144,6 @@ footer p {
     }
 
     h1 {
-        font-size: 1.75em; /* 28px = 1.75em */
-    }
-}
-
-/* Estilos para pantallas grandes (por ejemplo, tabletas y escritorios grandes) */
-@media (min-width: 48.063em) { /* 769px = 48.063em */
-    .pelicula {
-        width: 100%;
-        max-width: 18.75em; /* 300px = 18.75em */
+        font-size: 1.75em;
     }
 }
