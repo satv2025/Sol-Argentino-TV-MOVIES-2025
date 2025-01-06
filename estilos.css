@@ -43,7 +43,7 @@ h1 {
 .pelicula {
     background-color: #183347; /* Fondo azul oscuro */
     border-radius: 0.3em; /* Bordes redondeados */
-    width: 15em; /* Ancho fijo: 240px */
+    width: 18em; /* Ancho aumentado: 288px */
     height: 25em; /* Altura fija: 400px */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -72,9 +72,9 @@ h1 {
     margin: 0.625em; /* Espaciado interno */
     text-align: center;
     font-weight: 600;
-    overflow: hidden; /* Ocultar texto excedente */
+    overflow: hidden; /* Evitar desbordamientos */
     white-space: nowrap; /* Evitar salto de línea */
-    text-overflow: ellipsis; /* Agregar "..." si el texto es muy largo */
+    text-overflow: ellipsis; /* Agregar "..." si el texto es demasiado largo */
 }
 
 .pelicula p {
