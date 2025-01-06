@@ -126,19 +126,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.pelicula:hover {
-    transform: translateY(-0.625em); /* 10px = 0.625em */
-    box-shadow: 0 0.3em 1.5em rgba(0, 0, 0, 0.4); /* Aumentar la sombra al pasar el cursor */
-}
-
-.pelicula img {
-    width: 100%;
-    height: 11.25em; /* 180px = 11.25em */
-    object-fit: cover;
-    border-radius: 0.3em 0.3em 0 0; /* Bordes redondeados solo en la parte superior */
-    margin-bottom: 0.625em; /* 10px = 0.625em */
+    height: 100%; /* Para garantizar que todos los elementos se distribuyan */
 }
 
 .pelicula h3 {
@@ -147,6 +135,7 @@ h1 {
     text-align: center;
     padding: 0.19em;
     font-weight: 600; /* Para hacerlo un poco más destacado */
+    flex-grow: 0; /* No debe expandirse, su altura debe ser fija */
 }
 
 .pelicula p {
@@ -155,6 +144,13 @@ h1 {
     margin-bottom: 1.25em; /* 20px = 1.25em */
     text-align: justify;
     padding: 0.9em;
+    flex-grow: 1; /* Permite que la sinopsis ocupe el espacio restante */
+    overflow: hidden; /* Evita que el texto se desborde si es muy largo */
+}
+
+.pelicula:hover {
+    transform: translateY(-0.625em); /* 10px = 0.625em */
+    box-shadow: 0 0.3em 1.5em rgba(0, 0, 0, 0.4); /* Aumentar la sombra al pasar el cursor */
 }
 
 button {
