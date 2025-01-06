@@ -20,7 +20,7 @@ function changeSeason(season) {
             {
                 title: 'Episodio 1',
                 description: 'Pip elige un caso de homicidio para su proyecto escolar. Pero cuando empieza a investigar, descubre que para algunas personas era mejor dejarlo enterrado para siempre.',
-                videoPath: 'http://192.168.1.41:8080/videos/Asesinato%20Para%20Principiantes%20-%20T1%20E1.mp4',
+                videoPath: 'http://181.24.209.242:8080/videos/Asesinato%20Para%20Principiantes%20-%20T1%20E1.mp4',
                 image: 'https://www.mediafire.com/convkey/8ebd/67e8toxnggmojw09g.jpg',
                 duration: '43 min'
             },
