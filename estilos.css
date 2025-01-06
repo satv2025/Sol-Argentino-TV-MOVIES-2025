@@ -52,7 +52,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 25em; /* 400px de altura mínima para uniformar */
+    min-height: 25em; /* Altura mínima uniforme */
 }
 
 .pelicula:hover {
@@ -62,7 +62,7 @@ h1 {
 
 .pelicula img {
     width: 100%;
-    height: 11.25em; /* 180px */
+    height: auto; /* Mostrar imagen completa */
     object-fit: cover;
     border-radius: 0.3em 0.3em 0 0; /* Bordes redondeados solo en la parte superior */
     margin-bottom: 0.625em; /* 10px = 0.625em */
@@ -74,10 +74,7 @@ h1 {
     text-align: center;
     padding: 0.19em;
     font-weight: 600; /* Para hacerlo un poco más destacado */
-    max-height: 3em; /* Limitar la altura del título */
-    overflow: hidden; /* Ocultar texto adicional */
-    text-overflow: ellipsis;
-    white-space: nowrap; /* Evitar que se desborde */
+    white-space: normal; /* Permitir texto en varias líneas */
 }
 
 .pelicula p {
@@ -86,9 +83,6 @@ h1 {
     margin-bottom: 1.25em; /* 20px = 1.25em */
     text-align: justify;
     padding: 0.9em;
-    max-height: 6em; /* Limitar la altura del párrafo */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Mostrar "..." si el texto es demasiado largo */
 }
 
 button {
@@ -108,9 +102,8 @@ footer {
     text-align: center;
     padding: 1.25em; /* 20px = 1.25em */
     margin-top: 2.5em; /* 40px = 2.5em */
-    position: absolute;
+    position: relative;
     width: 100%;
-    bottom: 0;
 }
 
 footer p {
