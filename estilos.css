@@ -155,7 +155,7 @@ h1 {
 
 button {
     background-color: #0078D400;
-    color: white;
+    color: #ffffff00;
     border: none;
     padding: 0.625em 1.25em; /* 10px 20px = 0.625em 1.25em */
     font-weight: bold;
