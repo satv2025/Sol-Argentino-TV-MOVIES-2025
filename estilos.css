@@ -23,7 +23,7 @@ header {
     box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
-header .li:active {
+header li:active {
     color: #fff;
 }
 
