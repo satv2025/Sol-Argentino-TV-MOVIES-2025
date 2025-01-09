@@ -17,29 +17,28 @@ body, html {
     flex-direction: column;
 }
 
-}
 header {
-    background-color: #183347; /* Header blanco */
-    padding: 1.25em; /* 20px = 1.25em */
-    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+    background-color: #183347; /* Fondo oscuro para el header */
+    padding: 1.25em; /* Espaciado dentro del header */
+    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
-    list-style: none;
+    justify-content: center; /* Centra los elementos del menú */
+    list-style: none; /* Elimina los puntos de lista */
 }
 
 nav li {
-    margin: 0 1.25em; /* 20px = 1.25em */
+    margin: 0 1.25em; /* Espaciado entre los elementos del menú */
 }
 
 nav a {
-    color: #0078D4; /* Azul para los enlaces */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.125em; /* 18px = 1.125em */
-    transition: color 0.3s ease;
+    color: #0078D4; /* Color azul para los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.125em; /* Tamaño de fuente para los enlaces */
+    transition: color 0.3s ease; /* Efecto suave para el cambio de color */
 }
 
 nav a:hover {
@@ -49,19 +48,19 @@ nav a:hover {
 /* Estilos para la barra de búsqueda */
 .search-form {
     display: flex;
-    justify-content: right; /* Centra la barra de búsqueda */
-    margin-top: 20px;
+    justify-content: right; /* Alinea la barra de búsqueda a la derecha */
+    margin-top: 20px; /* Espaciado superior */
 }
 
 .search-form input[type="text"] {
-    width: 250px;
-    font-family: 'Netflix Sans';
+    width: 250px; /* Ancho fijo para el input */
+    font-family: 'Netflix Sans'; /* Tipografía */
     padding: 10px;
     font-size: 16px;
-    border: 2px solid #007bff;
-    border-radius: 5px 0 0 5px;
+    border: 2px solid #007bff; /* Borde azul */
+    border-radius: 5px 0 0 5px; /* Bordes redondeados */
     outline: none;
-    font-weight: 700;
+    font-weight: 700; /* Negrita */
 }
 
 .search-form input[type="text"]:focus {
@@ -69,14 +68,14 @@ nav a:hover {
 }
 
 .search-form input[type="text"]::placeholder {
-    color: #007bff;
+    color: #007bff; /* Color del texto placeholder */
 }
 
 .search-form button {
     font-family: 'Netflix Sans';
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #007bff; /* Fondo azul */
     color: white;
     border-left: #fff;
     border-top: 2px solid #007bff;
@@ -88,12 +87,13 @@ nav a:hover {
 }
 
 .search-form button:hover {
-    background-color: #0056b3; /* Fondo azul más oscuro al pasar el ratón */
+    background-color: #0056b3; /* Fondo más oscuro en hover */
 }
 
 .search-form button:focus {
     outline: none; /* Elimina el borde del botón al hacer clic */
 }
+
 
 main {
     text-align: center;
@@ -148,7 +148,8 @@ h1 {
 }
 
 .acercadecont h1 {
-    margin-top: 2em;
+    margin-top: 0.65em;
+    margin-bottom: 0.3em;
 }
 
 .pelicula img {
