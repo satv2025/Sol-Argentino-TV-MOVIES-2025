@@ -62,37 +62,38 @@ nav a:hover {
     font-family: 'Netflix Sans'; /* Tipografía */
     padding: 10px;
     font-size: 16px;
-    border: 2px solid #007bff; /* Borde azul */
+    border: 2px solid #0078D4; /* Borde azul */
     border-radius: 5px 0 0 5px; /* Bordes redondeados */
     outline: none;
     font-weight: 700; /* Negrita */
+    color: #0078D4;
 }
 
 .search-form input[type="text"]:focus {
-    border-color: #007bff; /* Cambia el borde a azul cuando se enfoca */
+    border-color: #0078D4; /* Cambia el borde a azul cuando se enfoca */
 }
 
 .search-form input[type="text"]::placeholder {
-    color: #007bff; /* Color del texto placeholder */
+    color: #0078D4; /* Color del texto placeholder */
 }
 
 .search-form button {
     font-family: 'Netflix Sans';
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #007bff; /* Fondo azul */
+    background-color: #0078D4; /* Fondo azul */
     color: white;
     border-left: #fff;
-    border-top: 2px solid #007bff;
-    border-right: 2px solid #007bff;
-    border-bottom: 2px solid #007bff;
+    border-top: 2px solid #0078D4;
+    border-right: 2px solid #0078D4;
+    border-bottom: 2px solid #0078D4;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-weight: 700;
 }
 
 .search-form button:hover {
-    background-color: #0056b3; /* Fondo más oscuro en hover */
+    background-color: #007bff; /* Fondo más oscuro en hover */
 }
 
 .search-form button:focus {
