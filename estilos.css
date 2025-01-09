@@ -45,11 +45,15 @@ nav a:hover {
     color: #005a9e; /* Azul más oscuro en hover */
 }
 
+.logo {
+    margin-left: 2em;
+}
+
 /* Estilos para la barra de búsqueda */
 .search-form {
     display: flex;
     justify-content: right; /* Alinea la barra de búsqueda a la derecha */
-    margin-top: 20px; /* Espaciado superior */
+    margin-top: 10em; /* Espaciado superior */
 }
 
 .search-form input[type="text"] {
