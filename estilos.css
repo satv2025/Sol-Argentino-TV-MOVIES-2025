@@ -147,7 +147,7 @@ h1 {
     overflow: hidden; /* Evita que el texto se desborde si es muy largo */
 }
 
-.acercadecont h3 {
+.acercadecont h1 {
     margin-top: 2em;
 }
 
