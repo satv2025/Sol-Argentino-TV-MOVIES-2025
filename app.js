@@ -23,3 +23,23 @@ window.onclick = function(event) {
 function verPelicula(url) {
     window.location.href = url;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search'); // Campo de búsqueda
+    const peliculas = document.querySelectorAll('.pelicula'); // Todas las películas en la página
+    
+    // Función para filtrar las películas
+    searchInput.addEventListener('input', function() {
+        const query = searchInput.value.toLowerCase(); // Convierte la búsqueda a minúsculas
+        peliculas.forEach(pelicula => {
+            const title = pelicula.querySelector('h3').textContent.toLowerCase();
+            const description = pelicula.querySelector('p').textContent.toLowerCase();
+            // Si el título o la descripción coinciden con la búsqueda, muestra la película
+            if (title.includes(query) || description.includes(query)) {
+                pelicula.style.display = 'block'; // Muestra la película
+            } else {
+                pelicula.style.display = 'none'; // Oculta la película
+            }
+        });
+    });
+});
