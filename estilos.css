@@ -27,6 +27,10 @@ nav a:active {
     color: #fff;
 }
 
+header a.active {
+    color: #fff;
+}
+
 nav ul {
     display: flex;
     justify-content: center; /* Centra los elementos del menú */
