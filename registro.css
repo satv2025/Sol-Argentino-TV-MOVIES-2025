@@ -13,15 +13,15 @@ body, html {
     background-size: cover;
     background-position: center;
     color: #fff;
-    font-size: 1em;
-    height: 100%;
+    font-size: 1rem; 
+    height: 100%; 
     display: flex;
     flex-direction: column;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 1.25em;
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 1.25em; 
     text-align: center;
 }
 
@@ -32,7 +32,7 @@ header .logo {
 }
 
 main {
-    flex-grow: 1;
+    flex-grow: 1; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,12 +48,12 @@ h1 {
 }
 
 .form-container {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6); 
     padding: 2em;
     border-radius: 0.5em;
     width: 100%;
-    max-width: 25em;
-    box-shadow: 0 0 1.25em rgba(0, 0, 0, 0.7);
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
 }
 
 .form-container input {
@@ -61,12 +61,13 @@ h1 {
     padding: 1em;
     margin: 1em 0;
     border-radius: 0.5em;
-    border: 0.0625em solid #0078D4;
+    border: 1px solid #0078D4;
     background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
     font-size: 1em;
     font-weight: 600;
     font-family: 'Netflix Sans';
+    position: relative; /* Necesario para posicionar los íconos dentro de los inputs */
 }
 
 .form-container input:focus {
@@ -109,21 +110,24 @@ footer {
 .password-container input {
     width: 100%;
     padding: 1em;
+    padding-right: 2.5em; /* Deja espacio para los íconos */
     border-radius: 0.5em;
-    border: 0.0625em solid #0078D4;
+    border: 1px solid #0078D4;
     background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
     font-size: 1em;
     font-weight: 600;
 }
 
+/* Contenedor para los íconos de los ojos */
 .eye-icons {
-    display: flex;
-    justify-content: flex-end;
     position: absolute;
+    right: 10px;
     top: 50%;
-    right: 1.25em;
-    transform: translateY(-50%); /* Centra el ícono verticalmente */
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 2em; /* Esto define el tamaño del área de los íconos */
 }
 
 .eye-icons i {
@@ -132,14 +136,15 @@ footer {
     font-size: 1.5em;
 }
 
+/* Cambio de color al pasar el mouse por encima */
 .eye-icons i:hover {
     color: #005a9e;
 }
 
 #toggle-password {
-    right: 1.25em; /* Ajuste para el ícono de contraseña */
+    right: 10px; /* Posición para el ícono de contraseña */
 }
 
 #ojoconfirmar {
-    right: 1.25em; /* Ajuste para el ícono de confirmar contraseña */
+    right: 10px; /* Posición para el ícono de confirmar contraseña */
 }
