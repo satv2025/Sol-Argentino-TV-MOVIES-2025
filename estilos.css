@@ -329,6 +329,40 @@ footer p {
     font-family: 'Netflix Sans';
 }
 
+.styled-button {
+    color: #0078D4;
+    font-family: 'Netflix Sans';
+    border: #0078D4 0.2em solid;
+    width: 12%;
+    height: 48%;
+    text-align: center;
+    background: #fff;
+    font-weight: 700;
+    align-content: center;
+    border-radius: 0.3em;
+    cursor: pointer; /* Añadido para mejorar la interacción con el botón */
+}
+
+.styled-button:hover {
+    background-color: #0078D4; /* Cambio de color al pasar el ratón por encima */
+    color: white; /* Cambia el color del texto al pasar el ratón */
+}
+
+#logout-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  display: none; /* Inicialmente oculto */
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+#logout-btn:hover {
+  background-color: #d32f2f;
+}
+
 /* Media Queries para diseño responsive */
 @media (max-width: 48em) { /* Máximo 48em = 768px */
     .avisame-button {
