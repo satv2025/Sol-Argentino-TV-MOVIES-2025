@@ -21,131 +21,119 @@
             <input type="text" id="search" name="search" placeholder="Buscar película o serie..." />
             <button type="submit">Buscar</button>
         </form>
-        <div class="logo">Sol Argentino</div>
-        <div class="usuario">
-            <button id="login-btn" onclick="iniciarSesion()">Iniciar sesión</button>
-            <div id="user-info" class="user-info" style="display:none;">
-                <img id="user-avatar" src="default-avatar.jpg" alt="Avatar" class="avatar">
-                <span id="user-name">Usuario</span>
-                <button id="logout-btn" onclick="cerrarSesion()">Cerrar sesión</button>
-            </div>
-        </div>
     </nav>
 </header>
 
-    <main>
-        <div class="desc">
+<main>
+    <div class="desc">
         <h1>Bienvenidos a Sol Argentino TV MOVIES</h1>
         <p>¿Alguna vez buscaste películas o series gratis por internet? Bueno, llegó Sol Argentino TV MOVIES, un servicio de streaming completamente gratis, con series y películas nuevas, innovadoras y algunas conocidas.</p>
-        </div>
-
-        <h4><strong>Estrenos Enero 2025:</strong> Gladiador [Saga Completa], Círculo, De noche con el diablo, Lo que hay dentro y Club De Buceo. Más contenido en marzo, junio y noviembre.</h4>
-
-<section class="catalogo">
-    <!-- Película 1 -->
-    <a href="matiponcepeli/matiponcepeli" style="text-decoration: none; color: inherit;">
-        <div class="pelicula">
-            <img src="maxresdefault.jpg" alt="Pelicula 1">
-            <h3 class="matiponcepelii">Matias Ponce - La Pelicula</h3>
-            <p>Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de youtube, o como el lo llama "Yutun", desatando una hilarante y absurda aventura.</p>
-            <button></button>
-        </div>
-    </a>
-
-    <!-- Película 2 -->
-    <a href="cienporcientolucha/cienporcientolucha" style="text-decoration: none; color: inherit;">
-        <div class="pelicula">
-            <img src="https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6" alt="Pelicula 10">
-            <h3>100%Lucha - Las Peliculas</h3>
-            <p>Los productores detrás del famoso programa emitido desde 2006 a 2011, 100%Lucha, decidieron hacerle peliculas.</p>
-            <button></button>
-        </div>
-    </a>
-
-    <!-- Película 3 -->
-    <a href="app/app" style="text-decoration: none; color: inherit;">
-        <div class="pelicula">
-            <img src="Asesinato para principiantes.jpg" alt="Pelicula 8">
-            <h3>Asesinato para Principiantes</h3>
-            <p>En este thriller atrapante, una estudiante investiga, para un proyecto escolar, un caso ocurrido hace cinco años.</p>
-            <button></button>
-        </div>
-    </a>
-
-    <div class="pelicula" data-pelicula="Gladiador">
-        <img src="https://www.filmonpaper.com/wp-content/uploads/2011/05/Gladiator_onesheet_advance_USA-3.jpg" alt="Gladiador">
-        <h3>Gladiador 1 y 2</h3>
-        <p>Tras ser traicionado por el emperador Cómodo, Máximo escapa de la muerte y regresa a Roma como gladiador para vengar a su familia. Mientras tanto, Lucio, con el futuro del imperio en juego, busca fuerza y honor en el Coliseo.</p>
-        <button id="Gladiador-show-button" class="avisame-button" onclick="mostrarFormulario('Gladiador')">
-            <span class="bell-icon">🔔</span> Avisame
-        </button>
-        <form id="Gladiador-form" class="subscription-form" style="display: none;">
-            <input type="email" id="Gladiador-email" placeholder="Introduce tu correo" required>
-            <button type="button" onclick="activarRecordatorio('Gladiador')">Confirmar</button>
-        </form>
     </div>
-    
-    <div class="pelicula" data-pelicula="Circulo">
-        <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWkKaNnH12cA-5dPbSUFVwXAIpVj2k-lkjr7n-qs0nwDQtsYtBTeCVVXryp55cUvU-lVUFU6y1sX_2Zi4GpdOmX45TSbSp68KaI.webp?r=c8c" alt="Circulo">
-        <h3>Círculo</h3>
-        <p>Un grupo de extraños que espera ser ejecutado se enfrenta a la horrible tarea de tener que elegir a un miembro del grupo como único sobreviviente.</p>
-        <button id="Circulo-show-button" class="avisame-button" onclick="mostrarFormulario('Circulo')">
-            <span class="bell-icon">🔔</span> Avisame
-        </button>
-        <form id="Circulo-form" class="subscription-form" style="display: none;">
-            <input type="email" id="Circulo-email" placeholder="Introduce tu correo" required>
-            <button type="button" onclick="activarRecordatorio('Circulo')">Confirmar</button>
-        </form>
-    </div>
-    
-    <div class="pelicula" data-pelicula="DeNocheConElDiablo">
-        <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSL6xo1_leIgcK23yxF8HomLRG-7qauDtwCIh9E4lohN-OtCrapYkbN7cygU68rDXbm0sYyQ8anNahb4-1BOrK9SWTpXXf65lNA.webp?r=156" alt="De Noche Con El Diablo">
-        <h3>De Noche Con El Diablo</h3>
-        <p>En Halloween de 1977, un programa de entrevistas nocturno hace una atrevida transmisión en vivo para evitar ser cancelado..., pero una presencia demoníaca se apodera del estudio.</p>
-        <button id="DeNocheConElDiablo-show-button" class="avisame-button" onclick="mostrarFormulario('DeNocheConElDiablo')">
-            <span class="bell-icon">🔔</span> Avisame
-        </button>
-        <form id="DeNocheConElDiablo-form" class="subscription-form" style="display: none;">
-            <input type="email" id="DeNocheConElDiablo-email" placeholder="Introduce tu correo" required>
-            <button type="button" onclick="activarRecordatorio('DeNocheConElDiablo')">Confirmar</button>
-        </form>
-    </div>
-    
-    <div class="pelicula" data-pelicula="LoQueHayDentro">
-        <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABUmsZa7Q2fTKckLzs3bp0NF1ldVM9mUFPv7SAddwMCBO_VT1Um3fw95qhSVtx24rZAvOZksZmoOz6adFIb8bH98goefawrf3P3S6JIiY9uilt-3CDC3saqPxMtqDKtPC6CDF.jpg?r=53f" alt="Lo Que Hay Dentro">
-        <h3>Lo Que Hay Dentro</h3>
-        <p>Un juego en una fiesta pasa de delirante a retorcido en este thriller único en su género, ideal si te gusta que te «revuelvan el cerebro, lo batan y lo mezclen» (Deadline).</p>
-        <button id="LoQueHayDentro-show-button" class="avisame-button" onclick="mostrarFormulario('LoQueHayDentro')">
-            <span class="bell-icon">🔔</span> Avisame
-        </button>
-        <form id="LoQueHayDentro-form" class="subscription-form" style="display: none;">
-            <input type="email" id="LoQueHayDentro-email" placeholder="Introduce tu correo" required>
-            <button type="button" onclick="activarRecordatorio('LoQueHayDentro')">Confirmar</button>
-        </form>
-    </div>
-    
-    <div class="pelicula" data-pelicula="ClubDeBuceo">
-        <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZh5RY7tYs_2iPCgrBOQ-uPdlZqVxTnbHqlBjBg0ro_fWrMNMZw6hhMwQML9RZ6gFILLyYq27jYgSd8nrH3-PMQwB_PWUCNE38BgYhe1dXqjOISN0xRE5aiFzGVKTYHF43r6.jpg?r=f2e" alt="Club De Buceo">
-        <h3>Club De Buceo</h3>
-        <p>Un misterio desconcertante se fusiona con cientos de años de historia en esta serie para fans del suspenso sobre una buzo adolescente desaparecida y sus fieles amigas.</p>
-        <button id="ClubDeBuceo-show-button" class="avisame-button" onclick="mostrarFormulario('ClubDeBuceo')">
-            <span class="bell-icon">🔔</span> Avisame
-        </button>
-        <form id="ClubDeBuceo-form" class="subscription-form" style="display: none;">
-            <input type="email" id="ClubDeBuceo-email" placeholder="Introduce tu correo" required>
-            <button type="button" onclick="activarRecordatorio('ClubDeBuceo')">Confirmar</button>
-        </form>
-    </div>      
 
-    </section>
+    <h4><strong>Estrenos Enero 2025:</strong> Gladiador [Saga Completa], Círculo, De noche con el diablo, Lo que hay dentro y Club De Buceo. Más contenido en marzo, junio y noviembre.</h4>
 
+    <section class="catalogo">
+      <!-- Película 1 -->
+      <a href="matiponcepeli/matiponcepeli" style="text-decoration: none; color: inherit;">
+          <div class="pelicula">
+              <img src="maxresdefault.jpg" alt="Pelicula 1">
+              <h3 class="matiponcepelii">Matias Ponce - La Pelicula</h3>
+              <p>Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de youtube, o como el lo llama "Yutun", desatando una hilarante y absurda aventura.</p>
+              <button></button>
+          </div>
+      </a>
+  
+      <!-- Película 2 -->
+      <a href="cienporcientolucha/cienporcientolucha" style="text-decoration: none; color: inherit;">
+          <div class="pelicula">
+              <img src="https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6" alt="Pelicula 10">
+              <h3>100%Lucha - Las Peliculas</h3>
+              <p>Los productores detrás del famoso programa emitido desde 2006 a 2011, 100%Lucha, decidieron hacerle peliculas.</p>
+              <button></button>
+          </div>
+      </a>
+  
+      <!-- Película 3 -->
+      <a href="app/app" style="text-decoration: none; color: inherit;">
+          <div class="pelicula">
+              <img src="Asesinato para principiantes.jpg" alt="Pelicula 8">
+              <h3>Asesinato para Principiantes</h3>
+              <p>En este thriller atrapante, una estudiante investiga, para un proyecto escolar, un caso ocurrido hace cinco años.</p>
+              <button></button>
+          </div>
+      </a>
+  
+      <div class="pelicula" data-pelicula="Gladiador">
+          <img src="https://www.filmonpaper.com/wp-content/uploads/2011/05/Gladiator_onesheet_advance_USA-3.jpg" alt="Gladiador">
+          <h3>Gladiador 1 y 2</h3>
+          <p>Tras ser traicionado por el emperador Cómodo, Máximo escapa de la muerte y regresa a Roma como gladiador para vengar a su familia. Mientras tanto, Lucio, con el futuro del imperio en juego, busca fuerza y honor en el Coliseo.</p>
+          <button id="Gladiador-show-button" class="avisame-button" onclick="mostrarFormulario('Gladiador')">
+              <span class="bell-icon">🔔</span> Avisame
+          </button>
+          <form id="Gladiador-form" class="subscription-form" style="display: none;">
+              <input type="email" id="Gladiador-email" placeholder="Introduce tu correo" required>
+              <button type="button" onclick="activarRecordatorio('Gladiador')">Confirmar</button>
+          </form>
+      </div>
+      
+      <div class="pelicula" data-pelicula="Circulo">
+          <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWkKaNnH12cA-5dPbSUFVwXAIpVj2k-lkjr7n-qs0nwDQtsYtBTeCVVXryp55cUvU-lVUFU6y1sX_2Zi4GpdOmX45TSbSp68KaI.webp?r=c8c" alt="Circulo">
+          <h3>Círculo</h3>
+          <p>Un grupo de extraños que espera ser ejecutado se enfrenta a la horrible tarea de tener que elegir a un miembro del grupo como único sobreviviente.</p>
+          <button id="Circulo-show-button" class="avisame-button" onclick="mostrarFormulario('Circulo')">
+              <span class="bell-icon">🔔</span> Avisame
+          </button>
+          <form id="Circulo-form" class="subscription-form" style="display: none;">
+              <input type="email" id="Circulo-email" placeholder="Introduce tu correo" required>
+              <button type="button" onclick="activarRecordatorio('Circulo')">Confirmar</button>
+          </form>
+      </div>
+      
+      <div class="pelicula" data-pelicula="DeNocheConElDiablo">
+          <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSL6xo1_leIgcK23yxF8HomLRG-7qauDtwCIh9E4lohN-OtCrapYkbN7cygU68rDXbm0sYyQ8anNahb4-1BOrK9SWTpXXf65lNA.webp?r=156" alt="De Noche Con El Diablo">
+          <h3>De Noche Con El Diablo</h3>
+          <p>En Halloween de 1977, un programa de entrevistas nocturno hace una atrevida transmisión en vivo para evitar ser cancelado..., pero una presencia demoníaca se apodera del estudio.</p>
+          <button id="DeNocheConElDiablo-show-button" class="avisame-button" onclick="mostrarFormulario('DeNocheConElDiablo')">
+              <span class="bell-icon">🔔</span> Avisame
+          </button>
+          <form id="DeNocheConElDiablo-form" class="subscription-form" style="display: none;">
+              <input type="email" id="DeNocheConElDiablo-email" placeholder="Introduce tu correo" required>
+              <button type="button" onclick="activarRecordatorio('DeNocheConElDiablo')">Confirmar</button>
+          </form>
+      </div>
+      
+      <div class="pelicula" data-pelicula="LoQueHayDentro">
+          <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABUmsZa7Q2fTKckLzs3bp0NF1ldVM9mUFPv7SAddwMCBO_VT1Um3fw95qhSVtx24rZAvOZksZmoOz6adFIb8bH98goefawrf3P3S6JIiY9uilt-3CDC3saqPxMtqDKtPC6CDF.jpg?r=53f" alt="Lo Que Hay Dentro">
+          <h3>Lo Que Hay Dentro</h3>
+          <p>Un juego en una fiesta pasa de delirante a retorcido en este thriller único en su género, ideal si te gusta que te «revuelvan el cerebro, lo batan y lo mezclen» (Deadline).</p>
+          <button id="LoQueHayDentro-show-button" class="avisame-button" onclick="mostrarFormulario('LoQueHayDentro')">
+              <span class="bell-icon">🔔</span> Avisame
+          </button>
+          <form id="LoQueHayDentro-form" class="subscription-form" style="display: none;">
+              <input type="email" id="LoQueHayDentro-email" placeholder="Introduce tu correo" required>
+              <button type="button" onclick="activarRecordatorio('LoQueHayDentro')">Confirmar</button>
+          </form>
+      </div>
+      
+      <div class="pelicula" data-pelicula="ClubDeBuceo">
+          <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZh5RY7tYs_2iPCgrBOQ-uPdlZqVxTnbHqlBjBg0ro_fWrMNMZw6hhMwQML9RZ6gFILLyYq27jYgSd8nrH3-PMQwB_PWUCNE38BgYhe1dXqjOISN0xRE5aiFzGVKTYHF43r6.jpg?r=f2e" alt="Club De Buceo">
+          <h3>Club De Buceo</h3>
+          <p>Un misterio desconcertante se fusiona con cientos de años de historia en esta serie para fans del suspenso sobre una buzo adolescente desaparecida y sus fieles amigas.</p>
+          <button id="ClubDeBuceo-show-button" class="avisame-button" onclick="mostrarFormulario('ClubDeBuceo')">
+              <span class="bell-icon">🔔</span> Avisame
+          </button>
+          <form id="ClubDeBuceo-form" class="subscription-form" style="display: none;">
+              <input type="email" id="ClubDeBuceo-email" placeholder="Introduce tu correo" required>
+              <button type="button" onclick="activarRecordatorio('ClubDeBuceo')">Confirmar</button>
+          </form>
+      </div>      
+  
+      </section>
+      </main>
 
-        </section>
-    </main>
-
-    <footer>
-        <p>Sol Argentino TV MOVIES 2025 &copy; - Todos Los Derechos Reservados</p>
-    </footer>
+<footer>
+    <p>Sol Argentino TV MOVIES 2025 &copy; - Todos Los Derechos Reservados</p>
+</footer>
 
 <script>
 // Función para obtener la IP pública del usuario usando la API ipify
@@ -266,145 +254,25 @@ window.onload = function() {
     const userAvatar = document.getElementById('user-avatar');
 
     if (user) {
-      // Usuario autenticado, mostrar la información
-      loginBtn.style.display = 'none';
+      // Si el usuario está autenticado, mostrar su nombre
+      userName.textContent = user.displayName || "Usuario";
       userInfo.style.display = 'block';
-      userName.textContent = user.displayName || 'Usuario';
-      userAvatar.src = user.photoURL || 'default-avatar.jpg'; // Foto de perfil si existe
-
-      // Buscar información adicional en la base de datos si es necesario
-      const userRef = ref(db, 'users/' + user.uid);
-      get(userRef).then((snapshot) => {
-        if (snapshot.exists()) {
-          const userData = snapshot.val();
-          userName.textContent = userData.name || user.displayName;
-          // Puedes añadir más campos si es necesario, como el avatar, etc.
-        }
-      }).catch((error) => {
-        console.error('Error al obtener datos del usuario:', error);
-      });
+      loginBtn.style.display = 'none';
     } else {
-      // No hay usuario autenticado, mostrar el botón de login
-      loginBtn.style.display = 'block';
       userInfo.style.display = 'none';
+      loginBtn.style.display = 'block';
     }
   });
 
   // Función para cerrar sesión
   function cerrarSesion() {
     signOut(auth).then(() => {
-      window.location.href = 'index.html'; // Redirigir a la página de inicio o login
+      console.log("Sesión cerrada.");
     }).catch((error) => {
-      console.error('Error al cerrar sesión:', error);
+      console.error("Error al cerrar sesión:", error);
     });
-  }
-
-  // Función para iniciar sesión (esto puede llevar a un sistema de login con Firebase Auth)
-  function iniciarSesion() {
-    window.location.href = 'login.html'; // Redirige al formulario de login
   }
 </script>
 
-<script type="module">
-  // Importar Firebase
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-  import { 
-      getAuth, 
-      createUserWithEmailAndPassword, 
-      signInWithEmailAndPassword, 
-      onAuthStateChanged, 
-      updateProfile 
-  } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
-  
-  // Configuración de Firebase
-  const firebaseConfig = {
-      apiKey: "AIzaSyC051GQ3n7Lzj9M_FFXZbv8578BZZvTFRs",
-      authDomain: "sol-argentino-tv-movies.firebaseapp.com",
-      projectId: "sol-argentino-tv-movies",
-      storageBucket: "sol-argentino-tv-movies.firebasestorage.app",
-      messagingSenderId: "965356127011",
-      appId: "1:965356127011:web:eb197c18ea061393680296",
-      measurementId: "G-NB04NX5BZM"
-  };
-  
-  // Inicializar Firebase
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-  
-  // Elementos del DOM
-  const registerForm = document.getElementById('register-form');
-  const loginForm = document.getElementById('login-form');
-  const header = document.querySelector('header nav ul');
-  
-  // Función para actualizar el header con el username del usuario
-  function updateHeaderWithUsername(user) {
-      const username = user.displayName || "Usuario";
-  
-      // Eliminar cualquier username existente en el header
-      const existingUsername = document.querySelector('.username-header');
-      if (existingUsername) {
-          existingUsername.remove();
-      }
-  
-      // Crear nuevo elemento para mostrar el username
-      const usernameElement = document.createElement('li');
-      usernameElement.className = 'username-header';
-      usernameElement.textContent = `Bienvenido, ${username}`;
-      header.appendChild(usernameElement);
-  }
-  
-  // Escuchar cambios en el estado de autenticación
-  onAuthStateChanged(auth, (user) => {
-      if (user) {
-          updateHeaderWithUsername(user);
-      } else {
-          // Eliminar username si el usuario no está autenticado
-          const usernameElement = document.querySelector('.username-header');
-          if (usernameElement) {
-              usernameElement.remove();
-          }
-      }
-  });
-  
-  // Registro de usuario
-  registerForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-  
-      const email = event.target.email.value;
-      const password = event.target.password.value;
-      const displayName = event.target.username.value; // Nuevo campo para el nombre de usuario
-  
-      createUserWithEmailAndPassword(auth, email, password)
-          .then((userCredential) => {
-              // Actualizar el perfil del usuario con el nombre
-              const user = userCredential.user;
-              return updateProfile(user, { displayName });
-          })
-          .then(() => {
-              console.log('Usuario registrado y nombre configurado');
-          })
-          .catch((error) => {
-              console.error('Error al registrar:', error.message);
-          });
-  });
-  
-  // Inicio de sesión
-  loginForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-  
-      const email = event.target.email.value;
-      const password = event.target.password.value;
-  
-      signInWithEmailAndPassword(auth, email, password)
-          .then((userCredential) => {
-              console.log('Usuario autenticado:', userCredential.user);
-          })
-          .catch((error) => {
-              console.error('Error al iniciar sesión:', error.message);
-          });
-  });
-  </script>
-
-<script src="app.js"></script>
 </body>
 </html>
