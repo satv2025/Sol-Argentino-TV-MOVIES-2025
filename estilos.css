@@ -266,76 +266,109 @@ footer p {
     color: #fff;
 }
 
-/* Estilos básicos del formulario */
+/* Estilos básicos del botón */
+.avisame-button {
+    display: flex;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5em 1em; /* Usando 'em' para que sea más responsive */
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 0 0 0.3em 0.3em; /* Border-radius especificado */
+    transition: all 0.3s ease;
+}
+
+.avisame-button .bell-icon {
+    margin-right: 0.5em; /* Espacio entre el ícono de la campana y el texto */
+}
+
+/* Formulario de suscripción */
 .subscription-form {
     margin-top: 1em;
     display: flex;
     flex-direction: column;
     gap: 0.5em; /* Espacio entre los campos del formulario */
-    padding: 1em;
-    border-radius: 0 0 0.3em 0.3em; /* Aplicando el border-radius especificado */
-    background-color: #f8f9fa; /* Color de fondo para el formulario */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para el formulario */
 }
 
 .subscription-form input {
-    padding: 0.6em;
+    padding: 0.5em;
     border-radius: 0.3em;
     border: 1px solid #ccc;
     font-size: 1em;
-    width: 100%; /* Asegura que el input ocupe el ancho completo */
 }
 
 .subscription-form button {
     background-color: #28a745;
     color: white;
     border: none;
-    padding: 0.6em 1em;
+    padding: 0.5em 1em;
     font-size: 1em;
     cursor: pointer;
     border-radius: 0.3em;
-    transition: background-color 0.3s ease;
 }
 
-.subscription-form button:hover {
-    background-color: #218838;
+/* Estilo cuando el botón está en estado "Activado" */
+.avisame-button.active {
+    background-color: #28a745;
+    cursor: default;
+}
+
+.avisame-button.active .bell-icon {
+    /* Sin animación, la campana es estática */
 }
 
 /* Media Queries para diseño responsive */
 @media (max-width: 48em) { /* Máximo 48em = 768px */
+    .avisame-button {
+        font-size: 0.9em;
+        padding: 0.4em 0.8em;
+    }
+
+    .avisame-button .bell-icon {
+        margin-right: 0.3em;
+    }
+
     .subscription-form {
-        padding: 0.8em;
         gap: 0.4em;
     }
 
     .subscription-form input {
         font-size: 0.9em;
-        padding: 0.5em;
+        padding: 0.4em;
     }
 
     .subscription-form button {
         font-size: 0.9em;
-        padding: 0.5em 1em;
+        padding: 0.4em 0.8em;
     }
 }
 
 @media (max-width: 30em) { /* Máximo 30em = 480px */
+    .avisame-button {
+        font-size: 0.8em;
+        padding: 0.3em 0.6em;
+    }
+
+    .avisame-button .bell-icon {
+        margin-right: 0.3em;
+    }
+
     .subscription-form {
-        padding: 0.6em;
         gap: 0.3em;
     }
 
     .subscription-form input {
         font-size: 0.8em;
-        padding: 0.4em;
+        padding: 0.3em;
     }
 
     .subscription-form button {
         font-size: 0.8em;
-        padding: 0.4em 0.8em;
+        padding: 0.3em 0.6em;
     }
 }
-
 
 /* Responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
