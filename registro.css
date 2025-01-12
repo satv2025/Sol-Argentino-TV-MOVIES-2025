@@ -74,6 +74,7 @@ h1 {
     outline: none;
 }
 
+/* Estilos específicos para el botón de enviar (botón del formulario) */
 .form-container button {
     background-color: #0078D4;
     color: #fff;
@@ -116,8 +117,15 @@ footer {
     color: #fff;
     font-size: 1em;
     font-weight: 600;
+    font-family: 'Netflix Sans';
 }
 
+.password-container input:focus {
+    border-color: #0078D4;
+    outline: none;
+}
+
+/* Estilo para el botón de "ojo" (toggle de la contraseña) */
 .password-toggle {
     position: absolute;
     right: 10px;
