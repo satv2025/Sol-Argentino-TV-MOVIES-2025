@@ -287,6 +287,8 @@ footer p {
     cursor: pointer;
     border-radius: 0 0 0.3em 0.3em; /* Border-radius especificado */
     transition: all 0.3s ease;
+    font-family: 'Netflix Sans';
+    justify-content: center;
 }
 
 .avisame-button .bell-icon {
@@ -305,6 +307,7 @@ footer p {
     display: flex;
     flex-direction: column;
     gap: 0.5em; /* Espacio entre los campos del formulario */
+    font-family: 'Netflix Sans';
 }
 
 .subscription-form input {
@@ -312,6 +315,7 @@ footer p {
     border-radius: 0.3em;
     border: 1px solid #ccc;
     font-size: 1em;
+    font-family: 'Netflix Sans';
 }
 
 .subscription-form button {
@@ -322,6 +326,7 @@ footer p {
     font-size: 1em;
     cursor: pointer;
     border-radius: 0.3em;
+    font-family: 'Netflix Sans';
 }
 
 /* Media Queries para diseño responsive */
