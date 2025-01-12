@@ -359,8 +359,10 @@ footer p {
     font-weight: 700;
     align-content: center;
     border-radius: 0.3em;
-    cursor: pointer; /* Añadido para mejorar la interacción con el botón */
-}
+    cursor: pointer;
+    position: relative;
+    top: -2.9em;
+    left: 14.4em;
 }
 
 #logout-btn:hover {
