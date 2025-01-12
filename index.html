@@ -6,6 +6,7 @@
   <title>Registro - Sol Argentino TV MOVIES</title>
   <link rel="stylesheet" href="registro.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Agregar Font Awesome -->
+  <link rel="icon" href="SolArgentinoTVMOVIES.ico" type="image/x-icon">
 </head>
 <body>
   <header>
@@ -15,25 +16,28 @@
   <main>
     <h1>Formulario de Registro</h1>
     <form id="registro-form" class="form-container">
-        <input type="email" id="email" placeholder="Correo electrónico" required>
+        <div class="form-container">
+            <input type="email" id="email" placeholder="Correo electrónico" required>
         
-        <!-- Contraseña -->
-        <div class="password-container">
-            <input type="password" id="password" placeholder="Contraseña" required>
-        </div>
-        <button type="button" id="toggle-password" class="password-toggle">
-        </button>
+            <!-- Contraseña -->
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Contraseña" required>
+            </div>
         
-        <!-- Confirmar Contraseña -->
-        <div class="password-container">
-            <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
-        </div>
-
-        <button type="submit">Registrarse</button>
+            <!-- Confirmar Contraseña -->
+            <div class="password-container">
+                <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
+            </div>
+        
+            <button type="submit">Registrarse</button>
+        </div>     
     </form>
-    <button type="button" id="toggle-confirm-password" class="password-toggle">
-        <i class="fas fa-eye"></i>
-    </button>
+
+    <!-- Íconos de ojo fuera del formulario -->
+    <div class="eye-icons">
+        <i class="fas fa-eye" id="toggle-password"></i> <!-- Ícono de ojo para la contraseña -->
+        <i class="fas fa-eye" id="ojoconfirmar"></i> <!-- Ícono de ojo para la confirmación de contraseña -->
+    </div>
 </main>
 
   <footer>
@@ -58,7 +62,7 @@
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
     const auth = getAuth(app);
-  
+    
     const registroForm = document.getElementById('registro-form');
     registroForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -75,7 +79,7 @@
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           console.log('Usuario registrado:', userCredential.user);
-          window.location.href = 'catalogo.html'; // Redirigir al catálogo
+          window.location.href = 'catalogo.html';
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -90,22 +94,19 @@
       const passwordField = document.getElementById('password');
       const passwordFieldType = passwordField.type === 'password' ? 'text' : 'password';
       passwordField.type = passwordFieldType;
-  
       // Cambiar el ícono
-      const icon = document.getElementById('toggle-password').querySelector('i');
+      const icon = document.getElementById('toggle-password');
       icon.classList.toggle('fa-eye-slash');
     });
   
-    // Función para alternar la visibilidad de la contraseña de confirmación
-    document.getElementById('toggle-confirm-password').addEventListener('click', () => {
+    document.getElementById('ojoconfirmar').addEventListener('click', () => {
       const confirmPasswordField = document.getElementById('confirm-password');
       const confirmPasswordFieldType = confirmPasswordField.type === 'password' ? 'text' : 'password';
       confirmPasswordField.type = confirmPasswordFieldType;
-  
       // Cambiar el ícono
-      const icon = document.getElementById('toggle-confirm-password').querySelector('i');
+      const icon = document.getElementById('ojoconfirmar');
       icon.classList.toggle('fa-eye-slash');
     });
-  </script>  
+  </script>
 </body>
 </html>
