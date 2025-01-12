@@ -13,7 +13,7 @@ body, html {
     background-size: cover;
     background-position: center;
     color: #fff;
-    font-size: 1em; /* Usamos em para la base del tamaño de fuente */
+    font-size: 1em;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -42,7 +42,7 @@ main {
 }
 
 h1 {
-    font-size: 2.25em; /* Usamos em para asegurar un tamaño adecuado */
+    font-size: 2.25em;
     color: #fff;
     margin-bottom: 1.5em;
 }
@@ -52,8 +52,8 @@ h1 {
     padding: 2em;
     border-radius: 0.5em;
     width: 100%;
-    max-width: 25em; /* Cambié el valor de px a em */
-    box-shadow: 0 0 1.25em rgba(0, 0, 0, 0.7); /* Usamos em para las sombras */
+    max-width: 25em;
+    box-shadow: 0 0 1.25em rgba(0, 0, 0, 0.7);
 }
 
 .form-container input {
@@ -61,7 +61,7 @@ h1 {
     padding: 1em;
     margin: 1em 0;
     border-radius: 0.5em;
-    border: 0.0625em solid #0078D4; /* Cambié el valor a em */
+    border: 0.0625em solid #0078D4;
     background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
     font-size: 1em;
@@ -110,7 +110,7 @@ footer {
     width: 100%;
     padding: 1em;
     border-radius: 0.5em;
-    border: 0.0625em solid #0078D4; /* Usamos em para los bordes */
+    border: 0.0625em solid #0078D4;
     background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
     font-size: 1em;
@@ -119,28 +119,27 @@ footer {
 
 .eye-icons {
     display: flex;
-    justify-content: space-between;
-    max-width: 25em; /* Usamos em en vez de px */
-    margin: 1em auto;
-    padding: 0 1em;
+    justify-content: flex-end;
+    position: absolute;
+    top: 50%;
+    right: 1.25em;
+    transform: translateY(-50%); /* Centra el ícono verticalmente */
 }
 
 .eye-icons i {
     cursor: pointer;
     color: #0078D4;
     font-size: 1.5em;
-    position: absolute;
-    margin-top: -19.2em; /* Posición hacia arriba */
-}
-
-#toggle-password {
-    right: 1.25em; /* Ajustamos a em */
-}
-
-#ojoconfirmar {
-    right: 1.25em; /* Ajustamos a em */
 }
 
 .eye-icons i:hover {
     color: #005a9e;
+}
+
+#toggle-password {
+    right: 1.25em; /* Ajuste para el ícono de contraseña */
+}
+
+#ojoconfirmar {
+    right: 1.25em; /* Ajuste para el ícono de confirmar contraseña */
 }
