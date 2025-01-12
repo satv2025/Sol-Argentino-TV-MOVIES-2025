@@ -9,19 +9,20 @@
     <link rel="icon" href="SolArgentinoTVMOVIES.ico" type="image/x-icon">
     <header>
       <nav>
-          <ul>
-              <li><a href="index" class="inicio active">Inicio</a></li>
-              <li><a href="proximamente">Próximamente</a></li>
-              <li><a href="acercade">Acerca De</a></li>
-              <li class="logo">SATVMOVIES</li>
-              <li><span id="user-nick"></span></li> <!-- Aquí aparecerá el nombre del usuario -->
-          </ul>
-          <form action="#" method="get" class="search-form">
-              <input type="text" id="search" name="search" placeholder="Buscar película o serie..." />
-              <button type="submit">Buscar</button>
-          </form>
+        <ul>
+          <li><a href="index" class="inicio active">Inicio</a></li>
+          <li><a href="proximamente">Próximamente</a></li>
+          <li><a href="acercade">Acerca De</a></li>
+          <li class="logo">SATVMOVIES</li>
+        </ul>
+        <form action="#" method="get" class="search-form">
+          <input type="text" id="search" name="search" placeholder="Buscar película o serie..." />
+          <button type="submit">Buscar</button>
+        </form>
       </nav>
-  </header>  
+      <!-- Mostrar el nombre del usuario aquí -->
+      <div id="user-nick">Usuario No Identificado</div>
+    </header>    
 
 <main>
     <div class="desc">
@@ -136,7 +137,8 @@
 
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-  import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"; 
+  import { getAuth, onAuthStateChanged, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
 
   // Configuración de Firebase
   const firebaseConfig = {
@@ -153,16 +155,46 @@
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
 
+  // Función para manejar el inicio de sesión con Google
+  const googleSignIn = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+      console.log("Usuario autenticado con Google.");
+    } catch (error) {
+      console.error("Error en el inicio de sesión: ", error);
+    }
+  };
+
   // Detectar el estado de autenticación del usuario
   onAuthStateChanged(auth, (user) => {
     const userNick = document.getElementById('user-nick');
-
     if (user) {
       // Si el usuario está autenticado, mostrar su nombre (nick)
       userNick.textContent = user.displayName || 'Usuario No Identificado';
     } else {
-      // Si no hay un usuario autenticado, mostrar mensaje por defecto
+      // Si no hay un usuario autenticado, mostrar "Iniciar sesión"
       userNick.textContent = 'Iniciar sesión';
+    }
+  });
+</script>
+
+<script type="module">
+  import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+
+  // Obtener la instancia de autenticación de Firebase
+  const auth = getAuth();
+
+  // Detectar el estado de autenticación
+  onAuthStateChanged(auth, (user) => {
+    const userNick = document.getElementById('user-nick');  // Donde mostrarás el nombre del usuario
+
+    if (user) {
+      // Si el usuario está autenticado, mostrar su nombre o correo
+      userNick.textContent = user.displayName || user.email;  // Si el displayName está vacío, usar el email
+    } else {
+      // Si el usuario no está autenticado, mostrar "Usuario No Identificado"
+      userNick.textContent = 'Usuario No Identificado';
     }
   });
 </script>
