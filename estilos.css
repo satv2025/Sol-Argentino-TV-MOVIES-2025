@@ -282,51 +282,27 @@ footer p {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 0.5em 1em; /* Usando 'em' para que sea más responsive */
+    padding: 0.5em 1em;
     font-size: 1em;
     cursor: pointer;
-    border-radius: 0 0 0.3em 0.3em; /* Border-radius especificado */
+    border-radius: 0 0 0.3em 0.3em;
     transition: all 0.3s ease;
 }
 
 .avisame-button .bell-icon {
-    margin-right: 0.5em; /* Espacio entre el ícono de la campana y el texto */
-}
-
-/* Formulario de suscripción */
-.subscription-form {
-    margin-top: 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em; /* Espacio entre los campos del formulario */
-}
-
-.subscription-form input {
-    padding: 0.5em;
-    border-radius: 0.3em;
-    border: 1px solid #ccc;
-    font-size: 1em;
-}
-
-.subscription-form button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 0.5em 1em;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 0.3em;
+    margin-right: 0.5em;
 }
 
 /* Estilo cuando el botón está en estado "Activado" */
 .avisame-button.active {
-    background-color: #28a745;
+    background-color: #28a745; /* Verde para indicar activado */
     cursor: default;
 }
 
 .avisame-button.active .bell-icon {
     /* Sin animación, la campana es estática */
 }
+
 
 /* Media Queries para diseño responsive */
 @media (max-width: 48em) { /* Máximo 48em = 768px */
