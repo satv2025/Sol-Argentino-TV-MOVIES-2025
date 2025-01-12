@@ -74,7 +74,6 @@ h1 {
     outline: none;
 }
 
-/* Estilos específicos para el botón de enviar (botón del formulario) */
 .form-container button {
     background-color: #0078D4;
     color: #fff;
@@ -117,36 +116,81 @@ footer {
     color: #fff;
     font-size: 1em;
     font-weight: 600;
-    font-family: 'Netflix Sans';
 }
 
-.password-container input:focus {
-    border-color: #0078D4;
-    outline: none;
-}
-
-/* Estilo para el botón de "ojo" (toggle de la contraseña) */
+/* Estilo para el botón del ojo (fuera del formulario, pero visualmente dentro del campo) */
 .password-toggle {
     position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 10px; /* Alineado a la derecha */
+    top: 50%; /* Centrado verticalmente */
+    transform: translateY(-50%); /* Ajuste de alineación vertical */
     background: transparent;
     border: none;
     color: #0078D4;
     font-weight: bold;
     cursor: pointer;
     font-size: 1.3em;
+    z-index: 1; /* Asegura que el botón esté por encima del campo de entrada */
 }
 
+/* Ajuste del icono del ojo */
 .password-toggle i {
-    font-size: 1.3em; /* Ajusta el tamaño del ícono */
+    font-size: 1.3em;
 }
 
+/* Estilo cuando el botón del ojo se pasa por encima */
 .password-toggle:hover {
     color: #005a9e;
 }
 
+/* Cambiar el color del ícono cuando la contraseña está visible */
 .password-toggle .fa-eye-slash {
-    color: #ff6347; /* Cambia color cuando la contraseña está visible */
+    color: #ff6347; 
+}
+
+/* Estilo para el formulario y el botón de registro */
+.form-container {
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 2em;
+    border-radius: 0.5em;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.form-container input {
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 0.5em;
+    border: 1px solid #0078D4;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    font-family: 'Netflix Sans';
+}
+
+.form-container input:focus {
+    border-color: #0078D4;
+    outline: none;
+}
+
+/* El botón de registro */
+.form-container button {
+    background-color: #0078D4;
+    color: #fff;
+    border: none;
+    padding: 1em;
+    width: 100%;
+    border-radius: 0.5em;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Netflix Sans';
+}
+
+.form-container button:hover {
+    background-color: #005a9e;
 }
