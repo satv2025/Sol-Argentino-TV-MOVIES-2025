@@ -226,13 +226,14 @@ function activarRecordatorio(pelicula) {
 // Función para mostrar el formulario al hacer clic en el botón
 function mostrarFormulario(pelicula) {
   var form = document.getElementById(pelicula + '-form');
-  var button = document.getElementById(pelicula + '-show-button');
+  var button = document.querySelector('#' + pelicula + '-show-button');  // Solo afecta al botón de esa película
 
   // Mostrar el formulario
   form.style.display = 'flex';
 
-  // Ocultar el botón de "Avisame"
-  button.style.display = 'none';
+  // Cambiar el texto del botón "Avisame" al formulario (opcional)
+  var btnAvisame = button || document.querySelector('#' + pelicula + '-button');
+  btnAvisame.style.display = 'none';  // Ocultar el botón original de Avisame
 }
 
 // Función para verificar si el recordatorio ya está activado al cargar la página
