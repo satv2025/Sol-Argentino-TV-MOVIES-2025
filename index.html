@@ -15,40 +15,44 @@
   
   <main>
     <h1>Formulario de Registro</h1>
-    <form id="registro-form" class="form-container">
+    <div id="form-wrapper">
+      <form id="registro-form" class="form-container">
         <div class="form-container">
-            <input type="email" id="email" placeholder="Correo electrónico" required>
-            
-            <!-- Nickname -->
-            <input type="text" id="nickname" placeholder="Nombre de Usuario" required>
-        
-            <!-- Contraseña -->
-            <div class="password-container">
-                <input type="password" id="password" placeholder="Contraseña" required>
-                <i class="fas fa-eye" id="toggle-password"></i> <!-- Ícono de ojo para la contraseña -->
-            </div>
-        
-            <!-- Confirmar Contraseña -->
-            <div class="password-container">
-                <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
-                <i class="fas fa-eye" id="ojoconfirmar"></i> <!-- Ícono de ojo para la confirmación de contraseña -->
-            </div>
-        
-            <button type="submit">Registrarse</button>
+          <input type="email" id="email" placeholder="Correo electrónico" required>
+          
+          <!-- Nickname -->
+          <input type="text" id="nickname" placeholder="Nombre de Usuario" required>
+      
+          <!-- Contraseña -->
+          <div class="password-container">
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <i class="fas fa-eye" id="toggle-password"></i> <!-- Ícono de ojo para la contraseña -->
+          </div>
+      
+          <!-- Confirmar Contraseña -->
+          <div class="password-container">
+            <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
+            <i class="fas fa-eye" id="ojoconfirmar"></i> <!-- Ícono de ojo para la confirmación de contraseña -->
+          </div>
+      
+          <button type="submit">Registrarse</button>
+          
+          <!-- Botón para iniciar sesión -->
+          <button type="button" id="login-button">¿Ya tienes una cuenta? Inicia sesión</button>
         </div>     
-    </form>
-</main>
+      </form>
+    </div>
+  </main>
 
   <footer>
     <p>&copy; 2025 Sol Argentino TV MOVIES - Todos los derechos reservados</p>
   </footer>
 
   <script type="module">
-    // Importando Firebase y la funcionalidad necesaria
+    // Importar Firebase y funcionalidades necesarias
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
-    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
-  
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+
     // Configuración de Firebase
     const firebaseConfig = {
       apiKey: "AIzaSyC051GQ3n7Lzj9M_FFXZbv8578BZZvTFRs",
@@ -59,64 +63,90 @@
       appId: "1:965356127011:web:eb197c18ea061393680296",
       measurementId: "G-NB04NX5BZM"
     };
-  
-    // Inicialización de Firebase
+
+    // Inicializar Firebase
     const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
     const auth = getAuth(app);
-  
+
     // Referencia al formulario
     const registroForm = document.getElementById('registro-form');
-    registroForm.addEventListener('submit', (e) => {
+    registroForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-  
+
       const email = document.getElementById('email').value;
-      const nickname = document.getElementById('nickname').value;
       const password = document.getElementById('password').value;
       const confirmPassword = document.getElementById('confirm-password').value;
-  
+
       // Validar que las contraseñas coincidan
       if (password !== confirmPassword) {
         alert('Las contraseñas no coinciden');
         return;
       }
-  
-      // Crear usuario en Firebase
-      createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          console.log('Usuario registrado:', userCredential.user);
-          window.location.href = 'catalogo.html'; // Redirigir al catálogo
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
+
+      try {
+        // Intentar crear el usuario
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        console.log('Usuario registrado:', userCredential.user);
+        alert('¡Registro exitoso!');
+        window.location.href = 'catalogo.html'; // Redirigir al catálogo
+      } catch (error) {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+
+        if (errorCode === 'auth/email-already-in-use') {
+          alert('El correo ya está registrado. Por favor, inicia sesión.');
+        } else {
           console.error(`Error (${errorCode}): ${errorMessage}`);
           alert(`Error: ${errorMessage}`);
-        });
+        }
+      }
     });
-  
-    // Función para alternar la visibilidad de la contraseña
-    document.getElementById('toggle-password').addEventListener('click', () => {
-      const passwordField = document.getElementById('password');
-      const passwordFieldType = passwordField.type === 'password' ? 'text' : 'password';
-      passwordField.type = passwordFieldType;
-  
-      // Cambiar el ícono de ojo
-      const icon = document.getElementById('toggle-password');
-      icon.classList.toggle('fa-eye-slash'); // Cambio al ícono de ojo tachado
-      icon.classList.toggle('fa-eye'); // Cambio al ícono de ojo abierto
-    });
-  
-    // Función para alternar la visibilidad de la confirmación de la contraseña
-    document.getElementById('ojoconfirmar').addEventListener('click', () => {
-      const confirmPasswordField = document.getElementById('confirm-password');
-      const confirmPasswordFieldType = confirmPasswordField.type === 'password' ? 'text' : 'password';
-      confirmPasswordField.type = confirmPasswordFieldType;
-  
-      // Cambiar el ícono de ojo
-      const icon = document.getElementById('ojoconfirmar');
-      icon.classList.toggle('fa-eye-slash'); // Cambio al ícono de ojo tachado
-      icon.classList.toggle('fa-eye'); // Cambio al ícono de ojo abierto
+
+    // Cargar el formulario de inicio de sesión dinámicamente
+    const loginButton = document.getElementById('login-button');
+    loginButton.addEventListener('click', () => {
+      const formWrapper = document.getElementById('form-wrapper');
+      formWrapper.innerHTML = `
+        <h1>Inicio de Sesión</h1>
+        <form id="login-form" class="form-container">
+          <div class="form-container">
+            <input type="email" id="login-email" placeholder="Correo electrónico" required>
+            <div class="password-container">
+              <input type="password" id="login-password" placeholder="Contraseña" required>
+              <i class="fas fa-eye" id="toggle-login-password"></i>
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+          </div>
+        </form>
+      `;
+
+      // Añadir funcionalidad al nuevo formulario
+      const loginForm = document.getElementById('login-form');
+      loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
+
+        try {
+          const userCredential = await signInWithEmailAndPassword(auth, email, password);
+          console.log('Usuario autenticado:', userCredential.user);
+          alert('Inicio de sesión exitoso');
+          window.location.href = 'catalogo.html'; // Redirigir al catálogo
+        } catch (error) {
+          console.error('Error al iniciar sesión:', error.message);
+          alert('Error al iniciar sesión: ' + error.message);
+        }
+      });
+
+      // Alternar visibilidad de contraseña
+      const togglePassword = document.getElementById('toggle-login-password');
+      togglePassword.addEventListener('click', () => {
+        const passwordField = document.getElementById('login-password');
+        const passwordFieldType = passwordField.type === 'password' ? 'text' : 'password';
+        passwordField.type = passwordFieldType;
+        togglePassword.classList.toggle('fa-eye-slash');
+        togglePassword.classList.toggle('fa-eye');
+      });
     });
   </script>
 </body>
