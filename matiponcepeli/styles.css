@@ -8,13 +8,13 @@
 
 body {
     font-family: 'Netflix Sans';
-    background-color: #293137; /* Gris oscuro como fondo */
+    background-image: url('https://movies.solargentinotv.com.ar/—Pngtree—black background texture advertising_1911402.png');
     color: white;
     font-size: 1rem; /* Base font size = 16px */
 }
 
 header {
-    background-color: #183347; /* Header blanco */
+    background-image: url('https://movies.solargentinotv.com.ar/—Pngtree—black background texture advertising_1911402.png');
     padding: 1.25em; /* 20px = 1.25em */
     box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
 }
@@ -244,7 +244,7 @@ button.episodio {
 }
 
 footer {
-    background-color: #183347; /* Fondo blanco */
+    background-image: url('https://movies.solargentinotv.com.ar/—Pngtree—black background texture advertising_1911402.png');
     text-align: center;
     padding: 1.25em; /* 20px = 1.25em */
     margin-top: 2.5em; /* 40px = 2.5em */

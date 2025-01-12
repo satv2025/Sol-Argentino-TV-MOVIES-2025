@@ -139,26 +139,77 @@
     </footer>
 
     <script>
-// Función para mostrar el formulario de suscripción al hacer clic en el botón
-function toggleSubscriptionForm(pelicula) {
-    var form = document.getElementById(pelicula + '-form');
-    form.style.display = form.style.display === 'none' ? 'block' : 'none';
+// Función para obtener la IP pública del usuario
+function obtenerIP() {
+  return fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => data.ip)
+    .catch(error => {
+      console.error('Error al obtener la IP:', error);
+      return null;
+    });
 }
 
-// Función para activar el recordatorio y cambiar el texto del botón
-function activateReminder(pelicula) {
-    var email = document.getElementById(pelicula + '-email').value;
+// Función para detectar el dispositivo utilizando el userAgent
+function detectarDispositivo(userAgent) {
+  if (/mobile/i.test(userAgent)) {
+    return 'Dispositivo móvil';
+  } else if (/tablet/i.test(userAgent)) {
+    return 'Tablet';
+  } else if (/desktop/i.test(userAgent)) {
+    return 'Computadora de escritorio';
+  } else {
+    return 'Dispositivo desconocido';
+  }
+}
+
+// Función que activa el recordatorio para la película
+function activarRecordatorio(pelicula) {
+  var email = document.getElementById(pelicula + '-email').value;
+  
+  if (email) {
+    // Obtener la IP y el dispositivo del usuario
+    obtenerIP().then(ip => {
+      const dispositivo = detectarDispositivo(navigator.userAgent);
+      
+      // Guardar en localStorage los datos
+      localStorage.setItem(pelicula + '-email', email);
+      localStorage.setItem(pelicula + '-ip', ip || 'Desconocida');
+      localStorage.setItem(pelicula + '-dispositivo', dispositivo);
+      
+      // Cambiar el texto del botón y mostrar la notificación
+      var button = document.getElementById(pelicula + '-button');
+      button.innerHTML = '<span class="bell-icon">🔔</span> Recordatorio Activado';
+      button.disabled = true;
+
+      // Agregar notificación dentro de la tarjeta
+      var notification = document.createElement('p');
+      notification.textContent = 'Recordatorio activado para: ' + email + ' (' + dispositivo + ')';
+      document.getElementById(pelicula + '-form').appendChild(notification);
+    });
+  } else {
+    alert('Por favor, introduce un correo electrónico válido.');
+  }
+}
+
+// Función para verificar si el recordatorio ya está activado al cargar la página
+window.onload = function() {
+  var peliculas = ['Gladiador', 'Circulo', 'DeNocheConElDiablo', 'LoQueHayDentro', 'ClubDeBuceo'];
+  
+  peliculas.forEach(function(pelicula) {
+    var email = localStorage.getItem(pelicula + '-email');
     
     if (email) {
-        alert('Recordatorio activado para: ' + email);
-        
-        var button = document.getElementById(pelicula + '-button');
-        button.innerHTML = '<span class="bell-icon">🔔</span> Recordatorio Activado';
-        button.disabled = true;
-    } else {
-        alert('Por favor, introduce un correo electrónico válido.');
+      var button = document.getElementById(pelicula + '-button');
+      button.innerHTML = '<span class="bell-icon">🔔</span> Recordatorio Activado';
+      button.disabled = true;
+      
+      var notification = document.createElement('p');
+      notification.textContent = 'Recordatorio activado para: ' + email;
+      document.getElementById(pelicula + '-form').appendChild(notification);
     }
-}
+  });
+};
     </script>
     <script src="app.js"></script>
 </body>
