@@ -54,7 +54,7 @@
     </a>
 
     <!-- Película 3 -->
-    <a style="text-decoration: none; color: inherit;">
+    <a href="app/app" style="text-decoration: none; color: inherit;">
         <div class="pelicula">
             <img src="Asesinato para principiantes.jpg" alt="Pelicula 8">
             <h3>Asesinato para Principiantes</h3>
@@ -139,18 +139,20 @@
     </footer>
 
     <script>
-// Función para obtener la IP pública del usuario
+// Función para obtener la IP pública del usuario usando la API ipify
 function obtenerIP() {
   return fetch('https://api.ipify.org?format=json')
-    .then(response => response.json())
-    .then(data => data.ip)
+    .then(response => response.json())  // Convertir la respuesta a formato JSON
+    .then(data => {
+      return data.ip;  // Retornar la IP pública del usuario
+    })
     .catch(error => {
       console.error('Error al obtener la IP:', error);
-      return null;
+      return null;  // Si hay error, retornamos null
     });
 }
 
-// Función para detectar el dispositivo utilizando el userAgent
+// Función para detectar el dispositivo del usuario (móvil, tablet, computadora)
 function detectarDispositivo(userAgent) {
   if (/mobile/i.test(userAgent)) {
     return 'Dispositivo móvil';
@@ -166,23 +168,23 @@ function detectarDispositivo(userAgent) {
 // Función que activa el recordatorio para la película
 function activarRecordatorio(pelicula) {
   var email = document.getElementById(pelicula + '-email').value;
-  
+
   if (email) {
     // Obtener la IP y el dispositivo del usuario
     obtenerIP().then(ip => {
       const dispositivo = detectarDispositivo(navigator.userAgent);
-      
-      // Guardar en localStorage los datos
+
+      // Guardar en localStorage los datos del recordatorio
       localStorage.setItem(pelicula + '-email', email);
       localStorage.setItem(pelicula + '-ip', ip || 'Desconocida');
       localStorage.setItem(pelicula + '-dispositivo', dispositivo);
-      
-      // Cambiar el texto del botón y mostrar la notificación
+
+      // Cambiar el texto del botón a "Recordatorio Activado" y deshabilitar el botón
       var button = document.getElementById(pelicula + '-button');
       button.innerHTML = '<span class="bell-icon">🔔</span> Recordatorio Activado';
       button.disabled = true;
 
-      // Agregar notificación dentro de la tarjeta
+      // Agregar una notificación dentro de la tarjeta
       var notification = document.createElement('p');
       notification.textContent = 'Recordatorio activado para: ' + email + ' (' + dispositivo + ')';
       document.getElementById(pelicula + '-form').appendChild(notification);
@@ -195,7 +197,7 @@ function activarRecordatorio(pelicula) {
 // Función para verificar si el recordatorio ya está activado al cargar la página
 window.onload = function() {
   var peliculas = ['Gladiador', 'Circulo', 'DeNocheConElDiablo', 'LoQueHayDentro', 'ClubDeBuceo'];
-  
+
   peliculas.forEach(function(pelicula) {
     var email = localStorage.getItem(pelicula + '-email');
     
@@ -203,7 +205,7 @@ window.onload = function() {
       var button = document.getElementById(pelicula + '-button');
       button.innerHTML = '<span class="bell-icon">🔔</span> Recordatorio Activado';
       button.disabled = true;
-      
+
       var notification = document.createElement('p');
       notification.textContent = 'Recordatorio activado para: ' + email;
       document.getElementById(pelicula + '-form').appendChild(notification);
