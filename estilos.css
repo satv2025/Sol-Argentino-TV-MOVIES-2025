@@ -343,11 +343,6 @@ footer p {
     cursor: pointer; /* Añadido para mejorar la interacción con el botón */
 }
 
-#user-nick:hover {
-    background-color: #0078D4; /* Cambio de color al pasar el ratón por encima */
-    color: white; /* Cambia el color del texto al pasar el ratón */
-}
-
 #logout-btn {
     color: #0078D4;
     font-family: 'Netflix Sans';
@@ -361,8 +356,11 @@ footer p {
     border-radius: 0.3em;
     cursor: pointer;
     position: relative;
-    top: -3.54em;
+    top: -2.3em;
     left: 14.4em;
+    justify-content: center;
+    text-align: center;
+    display: grid;
 }
 
 #logout-btn:hover {

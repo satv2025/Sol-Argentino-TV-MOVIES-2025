@@ -239,5 +239,63 @@
   }
 </script>
 
+<script>
+  // Inicializar Firebase
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+
+// Configuración de Firebase (reemplaza con tu propia configuración)
+const firebaseConfig = {
+  apiKey: "AIzaSyC051GQ3n7Lzj9M_FFXZbv8578BZZvTFRs",
+  authDomain: "sol-argentino-tv-movies.firebaseapp.com",
+  projectId: "sol-argentino-tv-movies",
+  storageBucket: "sol-argentino-tv-movies.firebasestorage.app",
+  messagingSenderId: "965356127011",
+  appId: "1:965356127011:web:eb197c18ea061393680296",
+  measurementId: "G-NB04NX5BZM"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+// Mostrar nombre de usuario y configurar el botón
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // Si el usuario está autenticado, mostrar el nombre de usuario
+    const userButton = document.getElementById("firebase-user-button");
+    userButton.textContent = user.displayName || "Usuario"; // Usa el nombre de usuario de Firebase o un texto por defecto
+    
+    // Mostrar el menú
+    const menu = document.getElementById("user-menu");
+    menu.style.display = "block";
+    
+    // Lógica para cerrar sesión
+    document.getElementById("logout-btn").addEventListener("click", () => {
+      signOut(auth).then(() => {
+        console.log("Sesión cerrada.");
+        // Redirigir al index (login)
+        window.location.href = "index";  // Redirige al login (index.html)
+      }).catch((error) => {
+        console.error("Error al cerrar sesión:", error);
+      });
+    });
+  } else {
+    // Si no hay usuario, mostrar el botón de inicio de sesión
+    const userButton = document.getElementById("firebase-user-button");
+    userButton.textContent = "Iniciar sesión";
+    // Aquí puedes redirigir o mostrar el formulario de login si es necesario
+  }
+});
+
+// Función para alternar el estado del menú
+function toggleMenu() {
+  var menu = document.getElementById("user-menu");
+  menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "block" : "none";
+}
+
+// Hacer que el botón del nick sea interactivo
+document.getElementById("firebase-user-button").addEventListener("click", toggleMenu);
+</script>
+
 </body>
 </html>
