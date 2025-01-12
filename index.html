@@ -139,6 +139,32 @@
     </footer>
 
 <script>
+// Función para obtener la IP pública del usuario usando la API ipify
+function obtenerIP() {
+  return fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())  // Convertir la respuesta a formato JSON
+    .then(data => {
+      return data.ip;  // Retornar la IP pública del usuario
+    })
+    .catch(error => {
+      console.error('Error al obtener la IP:', error);
+      return null;  // Si hay error, retornamos null
+    });
+}
+
+// Función para detectar el dispositivo del usuario (móvil, tablet, computadora)
+function detectarDispositivo(userAgent) {
+  if (/mobile/i.test(userAgent)) {
+    return 'Dispositivo móvil';
+  } else if (/tablet/i.test(userAgent)) {
+    return 'Tablet';
+  } else if (/desktop/i.test(userAgent)) {
+    return 'Computadora de escritorio';
+  } else {
+    return 'Dispositivo desconocido';
+  }
+}
+
 // Función que activa el recordatorio para la película
 function activarRecordatorio(pelicula) {
   var email = document.getElementById(pelicula + '-email').value;
@@ -162,12 +188,6 @@ function activarRecordatorio(pelicula) {
       // Ocultar el formulario
       var form = document.getElementById(pelicula + '-form');
       form.style.display = 'none';
-
-      // Agregar una notificación dentro de la tarjeta (sin mostrar el correo electrónico)
-      var card = document.querySelector('.pelicula[data-pelicula="' + pelicula + '"]');
-      var notification = document.createElement('p');
-      notification.textContent = 'Recordatorio activado';  // Solo muestra "Recordatorio activado"
-      card.appendChild(notification);
     });
   } else {
     alert('Por favor, introduce un correo electrónico válido.');
@@ -203,10 +223,6 @@ window.onload = function() {
       button.innerHTML = '<span class="bell-icon">🔔</span> Recordatorio Activado';
       button.classList.add('recordatorio-activado');
       button.disabled = true;
-
-      var notification = document.createElement('p');
-      notification.textContent = 'Recordatorio activado';
-      document.querySelector('.pelicula[data-pelicula="' + pelicula + '"]').appendChild(notification);
     }
   });
 };
