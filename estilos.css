@@ -329,7 +329,7 @@ footer p {
     font-family: 'Netflix Sans';
 }
 
-.styled-button {
+#user-nick {
     color: #0078D4;
     font-family: 'Netflix Sans';
     border: #0078D4 0.2em solid;
@@ -343,7 +343,7 @@ footer p {
     cursor: pointer; /* Añadido para mejorar la interacción con el botón */
 }
 
-.styled-button:hover {
+#user-nick:hover {
     background-color: #0078D4; /* Cambio de color al pasar el ratón por encima */
     color: white; /* Cambia el color del texto al pasar el ratón */
 }
