@@ -15,8 +15,17 @@
     <h1>Formulario de Registro</h1>
     <form id="registro-form" class="form-container">
       <input type="email" id="email" placeholder="Correo electrónico" required>
-      <input type="password" id="password" placeholder="Contraseña" required>
-      <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
+      
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button type="button" id="toggle-password" class="password-toggle">Ver</button>
+      </div>
+      
+      <div class="password-container">
+        <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
+        <button type="button" id="toggle-confirm-password" class="password-toggle">Ver</button>
+      </div>
+
       <button type="submit">Registrarse</button>
     </form>
   </main>
@@ -68,6 +77,19 @@
           console.error(`Error (${errorCode}): ${errorMessage}`);
           alert(`Error: ${errorMessage}`);
         });
+    });
+
+    // Función para alternar la visibilidad de la contraseña
+    document.getElementById('toggle-password').addEventListener('click', () => {
+      const passwordField = document.getElementById('password');
+      const passwordFieldType = passwordField.type === 'password' ? 'text' : 'password';
+      passwordField.type = passwordFieldType;
+    });
+
+    document.getElementById('toggle-confirm-password').addEventListener('click', () => {
+      const confirmPasswordField = document.getElementById('confirm-password');
+      const confirmPasswordFieldType = confirmPasswordField.type === 'password' ? 'text' : 'password';
+      confirmPasswordField.type = confirmPasswordFieldType;
     });
   </script>
 </body>
