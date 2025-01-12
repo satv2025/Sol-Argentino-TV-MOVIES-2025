@@ -65,7 +65,7 @@
 
     <div class="pelicula" data-pelicula="Gladiador">
         <img src="https://www.filmonpaper.com/wp-content/uploads/2011/05/Gladiator_onesheet_advance_USA-3.jpg" alt="Gladiador">
-        <h3>Gladiador</h3>
+        <h3>Gladiador 1 y 2</h3>
         <p>Tras ser traicionado por el emperador Cómodo, Máximo escapa de la muerte y regresa a Roma como gladiador para vengar a su familia. Mientras tanto, Lucio, con el futuro del imperio en juego, busca fuerza y honor en el Coliseo.</p>
         <button id="Gladiador-show-button" class="avisame-button" onclick="mostrarFormulario('Gladiador')">
             <span class="bell-icon">🔔</span> Avisame
@@ -139,32 +139,6 @@
     </footer>
 
 <script>
-// Función para obtener la IP pública del usuario usando la API ipify
-function obtenerIP() {
-  return fetch('https://api.ipify.org?format=json')
-    .then(response => response.json())  // Convertir la respuesta a formato JSON
-    .then(data => {
-      return data.ip;  // Retornar la IP pública del usuario
-    })
-    .catch(error => {
-      console.error('Error al obtener la IP:', error);
-      return null;  // Si hay error, retornamos null
-    });
-}
-
-// Función para detectar el dispositivo del usuario
-function detectarDispositivo(userAgent) {
-  if (/mobile/i.test(userAgent)) {
-    return 'Dispositivo móvil';
-  } else if (/tablet/i.test(userAgent)) {
-    return 'Tablet';
-  } else if (/desktop/i.test(userAgent)) {
-    return 'Computadora de escritorio';
-  } else {
-    return 'Dispositivo desconocido';
-  }
-}
-
 // Función que activa el recordatorio para la película
 function activarRecordatorio(pelicula) {
   var email = document.getElementById(pelicula + '-email').value;
@@ -189,55 +163,16 @@ function activarRecordatorio(pelicula) {
       var form = document.getElementById(pelicula + '-form');
       form.style.display = 'none';
 
-      // Agregar una notificación dentro de la tarjeta
+      // Agregar una notificación dentro de la tarjeta (sin mostrar el correo electrónico)
       var card = document.querySelector('.pelicula[data-pelicula="' + pelicula + '"]');
       var notification = document.createElement('p');
-      notification.textContent = 'Recordatorio activado para: ' + email + ' (' + dispositivo + ')';
+      notification.textContent = 'Recordatorio activado';  // Solo muestra "Recordatorio activado"
       card.appendChild(notification);
     });
   } else {
     alert('Por favor, introduce un correo electrónico válido.');
   }
 }
-
-// Función para mostrar el formulario al hacer clic en el botón
-function mostrarFormulario(pelicula) {
-  // Ocultar todos los formularios
-  var formularios = document.querySelectorAll('.subscription-form');
-  formularios.forEach(function(form) {
-    form.style.display = 'none';
-  });
-
-  // Mostrar el formulario correspondiente
-  var form = document.getElementById(pelicula + '-form');
-  form.style.display = 'flex';
-
-  // Ocultar el botón "Avisame"
-  var button = document.getElementById(pelicula + '-show-button');
-  button.style.display = 'none';
-}
-
-// Función para verificar si el recordatorio ya está activado al cargar la página
-window.onload = function() {
-  var peliculas = ['Gladiador', 'Circulo', 'DeNocheConElDiablo', 'LoQueHayDentro', 'ClubDeBuceo'];
-
-  peliculas.forEach(function(pelicula) {
-    var email = localStorage.getItem(pelicula + '-email');
-    
-    if (email) {
-      var button = document.getElementById(pelicula + '-show-button');
-      button.innerHTML = '<span class="bell-icon">🔔</span> Recordatorio Activado';
-      button.classList.add('recordatorio-activado');
-      button.disabled = true;
-
-      // Mostrar la notificación fuera del formulario, directamente en la tarjeta
-      var card = document.querySelector('.pelicula[data-pelicula="' + pelicula + '"]');
-      var notification = document.createElement('p');
-      notification.textContent = 'Recordatorio activado para: ' + email;
-      card.appendChild(notification);
-    }
-  });
-};
 </script>
     <script src="app.js"></script>
 </body>
