@@ -63,90 +63,70 @@
         </div>
     </a>
 
-    <div class="pelicula">
-        <img src="https://www.filmonpaper.com/wp-content/uploads/2011/05/Gladiator_onesheet_advance_USA-3.jpg" alt="Pelicula 1">
-        <h3 class="gladiador">Gladiador 1 y 2</h3>
-        <p>Tras ser traicionado por el emperador Cómodo, Máximo escapa de la muerte y regresa a Roma como gladiador para vengar a su familia. Mientras tanto, Lucio, con el futuro del imperio en juego, busca fuerza y honor en el Coliseo.</p>
-        <button type="button" class="avisame-button" id="Gladiador-show-button" onclick="mostrarFormulario('Gladiador')">
+    <div class="pelicula" data-pelicula="Gladiador">
+        <img src="gladiador.jpg" alt="Gladiador">
+        <h3>Gladiador</h3>
+        <p>Un general romano es traicionado y obligado a luchar como gladiador.</p>
+        <button id="Gladiador-show-button" class="avisame-button" onclick="mostrarFormulario('Gladiador')">
             <span class="bell-icon">🔔</span> Avisame
         </button>
-    
-        <!-- Formulario de suscripción para Gladiador -->
         <form id="Gladiador-form" class="subscription-form" style="display: none;">
             <input type="email" id="Gladiador-email" placeholder="Introduce tu correo" required>
-            <button type="button" id="Gladiador-button" class="avisame-button" onclick="activarRecordatorio('Gladiador')">
-                <span class="bell-icon">🔔</span> Confirmar
-            </button>
+            <button type="button" onclick="activarRecordatorio('Gladiador')">Confirmar</button>
         </form>
     </div>
     
-    <div class="pelicula">
-        <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWkKaNnH12cA-5dPbSUFVwXAIpVj2k-lkjr7n-qs0nwDQtsYtBTeCVVXryp55cUvU-lVUFU6y1sX_2Zi4GpdOmX45TSbSp68KaI.webp?r=c8c" alt="Pelicula 2">
-        <h3 class="circulo">Círculo</h3>
-        <p>Un grupo de extraños que espera ser ejecutado se enfrenta a la horrible tarea de tener que elegir a un miembro del grupo como único sobreviviente.</p>
-        <button type="button" class="avisame-button" id="Circulo-show-button" onclick="mostrarFormulario('Circulo')">
+    <div class="pelicula" data-pelicula="Circulo">
+        <img src="circulo.jpg" alt="Circulo">
+        <h3>El Círculo</h3>
+        <p>Un joven se une a una poderosa empresa tecnológica que promete cambiar el mundo, pero pronto descubre los oscuros secretos detrás de ella.</p>
+        <button id="Circulo-show-button" class="avisame-button" onclick="mostrarFormulario('Circulo')">
             <span class="bell-icon">🔔</span> Avisame
         </button>
-    
-        <!-- Formulario de suscripción para El Círculo -->
         <form id="Circulo-form" class="subscription-form" style="display: none;">
             <input type="email" id="Circulo-email" placeholder="Introduce tu correo" required>
-            <button type="button" id="Circulo-button" class="avisame-button" onclick="activarRecordatorio('Circulo')">
-                <span class="bell-icon">🔔</span> Confirmar
-            </button>
+            <button type="button" onclick="activarRecordatorio('Circulo')">Confirmar</button>
         </form>
     </div>
     
-    <div class="pelicula">
-        <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSL6xo1_leIgcK23yxF8HomLRG-7qauDtwCIh9E4lohN-OtCrapYkbN7cygU68rDXbm0sYyQ8anNahb4-1BOrK9SWTpXXf65lNA.webp?r=156" alt="Pelicula 3">
-        <h3 class="denocheconeldiablo">De Noche Con El Diablo</h3>
-        <p>En Halloween de 1977, un programa de entrevistas nocturno hace una atrevida transmisión en vivo para evitar ser cancelado..., pero una presencia demoníaca se apodera del estudio.</p>
-        <button type="button" class="avisame-button" id="DeNocheConElDiablo-show-button" onclick="mostrarFormulario('DeNocheConElDiablo')">
+    <div class="pelicula" data-pelicula="DeNocheConElDiablo">
+        <img src="denocheconeldiablo.jpg" alt="De Noche Con El Diablo">
+        <h3>De Noche Con El Diablo</h3>
+        <p>Un grupo de amigos se enfrenta a sus peores pesadillas en una noche de terror y misterio.</p>
+        <button id="DeNocheConElDiablo-show-button" class="avisame-button" onclick="mostrarFormulario('DeNocheConElDiablo')">
             <span class="bell-icon">🔔</span> Avisame
         </button>
-    
-        <!-- Formulario de suscripción para De Noche Con El Diablo -->
         <form id="DeNocheConElDiablo-form" class="subscription-form" style="display: none;">
             <input type="email" id="DeNocheConElDiablo-email" placeholder="Introduce tu correo" required>
-            <button type="button" id="DeNocheConElDiablo-button" class="avisame-button" onclick="activarRecordatorio('DeNocheConElDiablo')">
-                <span class="bell-icon">🔔</span> Confirmar
-            </button>
+            <button type="button" onclick="activarRecordatorio('DeNocheConElDiablo')">Confirmar</button>
         </form>
     </div>
     
-    <div class="pelicula">
-        <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABUmsZa7Q2fTKckLzs3bp0NF1ldVM9mUFPv7SAddwMCBO_VT1Um3fw95qhSVtx24rZAvOZksZmoOz6adFIb8bH98goefawrf3P3S6JIiY9uilt-3CDC3saqPxMtqDKtPC6CDF.jpg?r=53f" alt="Pelicula 4">
-        <h3 class="loquehaydentro">Lo Que Hay Dentro</h3>
-        <p>Su viejo amigo Forbes les promete un juego inédito. Al principio, es divertido. Después, aterrador. Y a medida que la noche se sumerge en el caos, ya nadie queda a salvo.</p>
-        <button type="button" class="avisame-button" id="LoQueHayDentro-show-button" onclick="mostrarFormulario('LoQueHayDentro')">
+    <div class="pelicula" data-pelicula="LoQueHayDentro">
+        <img src="loquehaydentro.jpg" alt="Lo Que Hay Dentro">
+        <h3>Lo Que Hay Dentro</h3>
+        <p>Una película de suspense psicológico sobre un hombre atrapado en su propio hogar mientras intenta descubrir la verdad detrás de eventos misteriosos.</p>
+        <button id="LoQueHayDentro-show-button" class="avisame-button" onclick="mostrarFormulario('LoQueHayDentro')">
             <span class="bell-icon">🔔</span> Avisame
         </button>
-    
-        <!-- Formulario de suscripción para Lo Que Hay Dentro -->
         <form id="LoQueHayDentro-form" class="subscription-form" style="display: none;">
             <input type="email" id="LoQueHayDentro-email" placeholder="Introduce tu correo" required>
-            <button type="button" id="LoQueHayDentro-button" class="avisame-button" onclick="activarRecordatorio('LoQueHayDentro')">
-                <span class="bell-icon">🔔</span> Confirmar
-            </button>
+            <button type="button" onclick="activarRecordatorio('LoQueHayDentro')">Confirmar</button>
         </form>
     </div>
     
-    <div class="pelicula">
-        <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZh5RY7tYs_2iPCgrBOQ-uPdlZqVxTnbHqlBjBg0ro_fWrMNMZw6hhMwQML9RZ6gFILLyYq27jYgSd8nrH3-PMQwB_PWUCNE38BgYhe1dXqjOISN0xRE5aiFzGVKTYHF43r6.jpg?r=f2e" alt="Pelicula 5">
-        <h3 class="clubdebuceo">Club De Buceo</h3>
-        <p>Un misterio desconcertante se fusiona con cientos de años de historia en esta serie para fans del suspenso sobre una buzo adolescente desaparecida y sus fieles amigas.</p>
-        <button type="button" class="avisame-button" id="ClubDeBuceo-show-button" onclick="mostrarFormulario('ClubDeBuceo')">
+    <div class="pelicula" data-pelicula="ClubDeBuceo">
+        <img src="clubdebuceo.jpg" alt="Club De Buceo">
+        <h3>Club De Buceo</h3>
+        <p>Un grupo de buzos aficionados se embarca en una peligrosa aventura submarina que los lleva a descubrir secretos ocultos en las profundidades.</p>
+        <button id="ClubDeBuceo-show-button" class="avisame-button" onclick="mostrarFormulario('ClubDeBuceo')">
             <span class="bell-icon">🔔</span> Avisame
         </button>
-    
-        <!-- Formulario de suscripción para Club De Buceo -->
         <form id="ClubDeBuceo-form" class="subscription-form" style="display: none;">
             <input type="email" id="ClubDeBuceo-email" placeholder="Introduce tu correo" required>
-            <button type="button" id="ClubDeBuceo-button" class="avisame-button" onclick="activarRecordatorio('ClubDeBuceo')">
-                <span class="bell-icon">🔔</span> Confirmar
-            </button>
+            <button type="button" onclick="activarRecordatorio('ClubDeBuceo')">Confirmar</button>
         </form>
-    </div>    
+    </div>      
 
     </section>
 
@@ -210,9 +190,10 @@ function activarRecordatorio(pelicula) {
       form.style.display = 'none';
 
       // Agregar una notificación dentro de la tarjeta
+      var card = document.querySelector('.pelicula[data-pelicula="' + pelicula + '"]');
       var notification = document.createElement('p');
       notification.textContent = 'Recordatorio activado para: ' + email + ' (' + dispositivo + ')';
-      document.getElementById(pelicula + '-form').appendChild(notification);
+      card.appendChild(notification);
     });
   } else {
     alert('Por favor, introduce un correo electrónico válido.');
@@ -249,9 +230,11 @@ window.onload = function() {
       button.classList.add('recordatorio-activado');
       button.disabled = true;
 
+      // Mostrar la notificación fuera del formulario, directamente en la tarjeta
+      var card = document.querySelector('.pelicula[data-pelicula="' + pelicula + '"]');
       var notification = document.createElement('p');
       notification.textContent = 'Recordatorio activado para: ' + email;
-      document.getElementById(pelicula + '-form').appendChild(notification);
+      card.appendChild(notification);
     }
   });
 };

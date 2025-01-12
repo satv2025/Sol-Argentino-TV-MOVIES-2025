@@ -282,15 +282,15 @@ footer p {
     background-color: #0078D4;
     color: white;
     border: none;
-    padding: 0.5em 1em;
+    padding: 0.5em 1em; /* Usando 'em' para que sea más responsive */
     font-size: 1em;
     cursor: pointer;
-    border-radius: 0 0 0.3em 0.3em;
+    border-radius: 0 0 0.3em 0.3em; /* Border-radius especificado */
     transition: all 0.3s ease;
 }
 
 .avisame-button .bell-icon {
-    margin-right: 0.5em;
+    margin-right: 0.5em; /* Espacio entre el ícono de la campana y el texto */
 }
 
 /* Estilo cuando el botón está en estado "Activado" */
@@ -304,8 +304,7 @@ footer p {
     margin-top: 1em;
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
-    display: none; /* Formulario oculto por defecto */
+    gap: 0.5em; /* Espacio entre los campos del formulario */
 }
 
 .subscription-form input {
@@ -323,6 +322,119 @@ footer p {
     font-size: 1em;
     cursor: pointer;
     border-radius: 0.3em;
+}
+
+/* Media Queries para diseño responsive */
+@media (max-width: 48em) { /* Máximo 48em = 768px */
+    .avisame-button {
+        font-size: 0.9em;
+        padding: 0.4em 0.8em;
+    }
+
+    .avisame-button .bell-icon {
+        margin-right: 0.3em;
+    }
+
+    .subscription-form {
+        gap: 0.4em;
+    }
+
+    .subscription-form input {
+        font-size: 0.9em;
+        padding: 0.4em;
+    }
+
+    .subscription-form button {
+        font-size: 0.9em;
+        padding: 0.4em 0.8em;
+    }
+}
+
+@media (max-width: 30em) { /* Máximo 30em = 480px */
+    .avisame-button {
+        font-size: 0.8em;
+        padding: 0.3em 0.6em;
+    }
+
+    .avisame-button .bell-icon {
+        margin-right: 0.3em;
+    }
+
+    .subscription-form {
+        gap: 0.3em;
+    }
+
+    .subscription-form input {
+        font-size: 0.8em;
+        padding: 0.3em;
+    }
+
+    .subscription-form button {
+        font-size: 0.8em;
+        padding: 0.3em 0.6em;
+    }
+}
+
+/* Añadido para la notificación de recordatorio activado */
+.pelicula p {
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 1rem;
+    background-color: #28a745;
+    padding: 0.5em;
+    border-radius: 0.3em;
+    text-align: center;
+}
+
+/* Media Queries para diseño responsive */
+@media (max-width: 48em) { /* Máximo 48em = 768px */
+    .avisame-button {
+        font-size: 0.9em;
+        padding: 0.4em 0.8em;
+    }
+
+    .avisame-button .bell-icon {
+        margin-right: 0.3em;
+    }
+
+    .subscription-form {
+        gap: 0.4em;
+    }
+
+    .subscription-form input {
+        font-size: 0.9em;
+        padding: 0.4em;
+    }
+
+    .subscription-form button {
+        font-size: 0.9em;
+        padding: 0.4em 0.8em;
+    }
+}
+
+@media (max-width: 30em) { /* Máximo 30em = 480px */
+    .avisame-button {
+        font-size: 0.8em;
+        padding: 0.3em 0.6em;
+    }
+
+    .avisame-button .bell-icon {
+        margin-right: 0.3em;
+    }
+
+    .subscription-form {
+        gap: 0.3em;
+    }
+
+    .subscription-form input {
+        font-size: 0.8em;
+        padding: 0.3em;
+    }
+
+    .subscription-form button {
+        font-size: 0.8em;
+        padding: 0.3em 0.6em;
+    }
 }
 
 /* Media Queries para diseño responsive */
