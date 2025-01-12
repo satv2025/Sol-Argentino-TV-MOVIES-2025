@@ -334,7 +334,7 @@ footer p {
     font-family: 'Netflix Sans';
     border: #0078D4 0.2em solid;
     width: 12%;
-    height: 48%;
+    height: 32%;
     text-align: center;
     background: #fff;
     font-weight: 700;
@@ -353,7 +353,7 @@ footer p {
     font-family: 'Netflix Sans';
     border: #0078D4 0.2em solid;
     width: 12%;
-    height: 48%;
+    height: 32%;
     text-align: center;
     background: #fff;
     font-weight: 700;
@@ -361,7 +361,7 @@ footer p {
     border-radius: 0.3em;
     cursor: pointer;
     position: relative;
-    top: -2.9em;
+    top: -3.54em;
     left: 14.4em;
 }
 
