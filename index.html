@@ -173,6 +173,43 @@ function activarRecordatorio(pelicula) {
     alert('Por favor, introduce un correo electrónico válido.');
   }
 }
+
+// Función para mostrar el formulario al hacer clic en el botón "Avísame"
+function mostrarFormulario(pelicula) {
+  // Ocultar todos los formularios de otras películas
+  var formularios = document.querySelectorAll('.subscription-form');
+  formularios.forEach(function(form) {
+    form.style.display = 'none';
+  });
+
+  // Mostrar el formulario correspondiente al hacer clic en "Avísame"
+  var form = document.getElementById(pelicula + '-form');
+  form.style.display = 'flex';
+
+  // Ocultar el botón "Avísame" después de hacer clic
+  var button = document.getElementById(pelicula + '-show-button');
+  button.style.display = 'none';
+}
+
+// Función para verificar si el recordatorio ya está activado al cargar la página
+window.onload = function() {
+  var peliculas = ['Gladiador', 'Circulo', 'DeNocheConElDiablo', 'LoQueHayDentro', 'ClubDeBuceo'];
+
+  peliculas.forEach(function(pelicula) {
+    var email = localStorage.getItem(pelicula + '-email');
+    
+    if (email) {
+      var button = document.getElementById(pelicula + '-show-button');
+      button.innerHTML = '<span class="bell-icon">🔔</span> Recordatorio Activado';
+      button.classList.add('recordatorio-activado');
+      button.disabled = true;
+
+      var notification = document.createElement('p');
+      notification.textContent = 'Recordatorio activado';
+      document.querySelector('.pelicula[data-pelicula="' + pelicula + '"]').appendChild(notification);
+    }
+  });
+};
 </script>
     <script src="app.js"></script>
 </body>
