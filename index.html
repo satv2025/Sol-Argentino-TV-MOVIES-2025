@@ -18,6 +18,9 @@
     <form id="registro-form" class="form-container">
         <div class="form-container">
             <input type="email" id="email" placeholder="Correo electrónico" required>
+            
+            <!-- Nickname -->
+            <input type="text" id="nickname" placeholder="Nombre de Usuario" required>
         
             <!-- Contraseña -->
             <div class="password-container">
@@ -68,6 +71,7 @@
       e.preventDefault();
   
       const email = document.getElementById('email').value;
+      const nickname = document.getElementById('nickname').value;
       const password = document.getElementById('password').value;
       const confirmPassword = document.getElementById('confirm-password').value;
   
