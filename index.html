@@ -15,23 +15,27 @@
   <main>
     <h1>Formulario de Registro</h1>
     <form id="registro-form" class="form-container">
-      <input type="email" id="email" placeholder="Correo electrónico" required>
-      
-      <div class="password-container">
-        <input type="password" id="password" placeholder="Contraseña" required>
-        <button type="button" id="toggle-password" class="password-toggle">
-          <i class="fas fa-eye"></i> <!-- Ícono de ojo -->
-        </button>
-      </div>
-      
-      <div class="password-container">
-        <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
-        <button type="button" id="toggle-confirm-password" class="password-toggle">
-          <i class="fas fa-eye"></i> <!-- Ícono de ojo -->
-        </button>
-      </div>
-
-      <button type="submit">Registrarse</button>
+        <div class="form-container">
+            <input type="email" id="email" placeholder="Correo electrónico" required>
+        
+            <!-- Contraseña -->
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <button type="button" id="toggle-password" class="password-toggle">
+                    <i class="fas fa-eye"></i> <!-- Ícono de ojo -->
+                </button>
+            </div>
+        
+            <!-- Confirmar Contraseña -->
+            <div class="password-container">
+                <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
+                <button type="button" id="toggle-confirm-password" class="password-toggle">
+                    <i class="fas fa-eye"></i> <!-- Ícono de ojo -->
+                </button>
+            </div>
+        
+            <button type="submit">Registrarse</button>
+        </div>        
     </form>
   </main>
 

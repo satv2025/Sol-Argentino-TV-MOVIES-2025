@@ -99,10 +99,23 @@ footer {
     color: #fff;
 }
 
-/* Estilo para los botones de ver/ocultar contraseñas */
+/* Estilo para los contenedores de contraseña */
 .password-container {
     position: relative;
     width: 100%;
+    margin: 1em 0;
+}
+
+.password-container input {
+    width: 100%;
+    padding: 1em;
+    padding-right: 40px; /* Deja espacio para el ícono del ojo */
+    border-radius: 0.5em;
+    border: 1px solid #0078D4;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 .password-toggle {
@@ -116,18 +129,16 @@ footer {
     font-weight: bold;
     cursor: pointer;
     font-size: 1.3em;
-    transition: color 0.3s;
 }
 
 .password-toggle i {
-    font-size: 1.3em;
+    font-size: 1.3em; /* Ajusta el tamaño del ícono */
 }
 
 .password-toggle:hover {
     color: #005a9e;
 }
 
-/* Estilo para el ícono cuando está activo (cuando se muestra la contraseña) */
 .password-toggle .fa-eye-slash {
-    color: #ff6347; /* Color rojo para indicar que está visible */
+    color: #ff6347; /* Cambia color cuando la contraseña está visible */
 }
