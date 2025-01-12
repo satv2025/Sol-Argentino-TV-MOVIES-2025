@@ -7,22 +7,21 @@
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="slidebar.css">
     <link rel="icon" href="SolArgentinoTVMOVIES.ico" type="image/x-icon">
-</head>
-<body>
-  <header>
-    <nav>
-        <ul>
-            <li><a href="index" class="inicio active">Inicio</a></li>
-            <li><a href="proximamente">Próximamente</a></li>
-            <li><a href="acercade">Acerca De</a></li>
-            <li class="logo">SATVMOVIES</li>
-        </ul>
-        <form action="#" method="get" class="search-form">
-            <input type="text" id="search" name="search" placeholder="Buscar película o serie..." />
-            <button type="submit">Buscar</button>
-        </form>
-    </nav>
-</header>
+    <header>
+      <nav>
+          <ul>
+              <li><a href="index" class="inicio active">Inicio</a></li>
+              <li><a href="proximamente">Próximamente</a></li>
+              <li><a href="acercade">Acerca De</a></li>
+              <li class="logo">SATVMOVIES</li>
+              <li><span id="user-nick"></span></li> <!-- Aquí aparecerá el nombre del usuario -->
+          </ul>
+          <form action="#" method="get" class="search-form">
+              <input type="text" id="search" name="search" placeholder="Buscar película o serie..." />
+              <button type="submit">Buscar</button>
+          </form>
+      </nav>
+  </header>  
 
 <main>
     <div class="desc">
@@ -135,100 +134,9 @@
     <p>Sol Argentino TV MOVIES 2025 &copy; - Todos Los Derechos Reservados</p>
 </footer>
 
-<script>
-// Función para obtener la IP pública del usuario usando la API ipify
-function obtenerIP() {
-  return fetch('https://api.ipify.org?format=json')
-    .then(response => response.json())  // Convertir la respuesta a formato JSON
-    .then(data => {
-      return data.ip;  // Retornar la IP pública del usuario
-    })
-    .catch(error => {
-      console.error('Error al obtener la IP:', error);
-      return null;  // Si hay error, retornamos null
-    });
-}
-
-// Función para detectar el dispositivo del usuario (móvil, tablet, computadora)
-function detectarDispositivo(userAgent) {
-  if (/mobile/i.test(userAgent)) {
-    return 'Dispositivo móvil';
-  } else if (/tablet/i.test(userAgent)) {
-    return 'Tablet';
-  } else if (/desktop/i.test(userAgent)) {
-    return 'Computadora de escritorio';
-  } else {
-    return 'Dispositivo desconocido';
-  }
-}
-
-// Función que activa el recordatorio para la película
-function activarRecordatorio(pelicula) {
-  var email = document.getElementById(pelicula + '-email').value;
-
-  if (email) {
-    // Obtener la IP y el dispositivo del usuario
-    obtenerIP().then(ip => {
-      const dispositivo = detectarDispositivo(navigator.userAgent);
-
-      // Guardar en localStorage los datos del recordatorio
-      localStorage.setItem(pelicula + '-email', email);
-      localStorage.setItem(pelicula + '-ip', ip || 'Desconocida');
-      localStorage.setItem(pelicula + '-dispositivo', dispositivo);
-
-      // Cambiar el texto del botón a "Recordatorio Activado" y deshabilitarlo
-      var button = document.getElementById(pelicula + '-show-button');
-      button.innerHTML = '<span class="bell-icon">🔔</span> Recordatorio Activado';
-      button.classList.add('recordatorio-activado');
-      button.disabled = true;
-
-      // Ocultar el formulario
-      var form = document.getElementById(pelicula + '-form');
-      form.style.display = 'none';
-    });
-  } else {
-    alert('Por favor, introduce un correo electrónico válido.');
-  }
-}
-
-// Función para mostrar el formulario al hacer clic en el botón "Avísame"
-function mostrarFormulario(pelicula) {
-  // Ocultar todos los formularios de otras películas
-  var formularios = document.querySelectorAll('.subscription-form');
-  formularios.forEach(function(form) {
-    form.style.display = 'none';
-  });
-
-  // Mostrar el formulario correspondiente al hacer clic en "Avísame"
-  var form = document.getElementById(pelicula + '-form');
-  form.style.display = 'flex';
-
-  // Ocultar el botón "Avísame" después de hacer clic
-  var button = document.getElementById(pelicula + '-show-button');
-  button.style.display = 'none';
-}
-
-// Función para verificar si el recordatorio ya está activado al cargar la página
-window.onload = function() {
-  var peliculas = ['Gladiador', 'Circulo', 'DeNocheConElDiablo', 'LoQueHayDentro', 'ClubDeBuceo'];
-
-  peliculas.forEach(function(pelicula) {
-    var email = localStorage.getItem(pelicula + '-email');
-    
-    if (email) {
-      var button = document.getElementById(pelicula + '-show-button');
-      button.innerHTML = '<span class="bell-icon">🔔</span> Recordatorio Activado';
-      button.classList.add('recordatorio-activado');
-      button.disabled = true;
-    }
-  });
-};
-</script>
-
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-  import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"; 
-  import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+  import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"; 
 
   // Configuración de Firebase
   const firebaseConfig = {
@@ -241,37 +149,22 @@ window.onload = function() {
     measurementId: "G-NB04NX5BZM"
   };
 
+  // Inicializar Firebase
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
-  const db = getDatabase(app);
 
-  // Obtener el estado de autenticación del usuario
+  // Detectar el estado de autenticación del usuario
   onAuthStateChanged(auth, (user) => {
-    const loginBtn = document.getElementById('login-btn');
-    const userInfo = document.getElementById('user-info');
-    const logoutBtn = document.getElementById('logout-btn');
-    const userName = document.getElementById('user-name');
-    const userAvatar = document.getElementById('user-avatar');
+    const userNick = document.getElementById('user-nick');
 
     if (user) {
-      // Si el usuario está autenticado, mostrar su nombre
-      userName.textContent = user.displayName || "Usuario";
-      userInfo.style.display = 'block';
-      loginBtn.style.display = 'none';
+      // Si el usuario está autenticado, mostrar su nombre (nick)
+      userNick.textContent = user.displayName || 'Usuario No Identificado';
     } else {
-      userInfo.style.display = 'none';
-      loginBtn.style.display = 'block';
+      // Si no hay un usuario autenticado, mostrar mensaje por defecto
+      userNick.textContent = 'Iniciar sesión';
     }
   });
-
-  // Función para cerrar sesión
-  function cerrarSesion() {
-    signOut(auth).then(() => {
-      console.log("Sesión cerrada.");
-    }).catch((error) => {
-      console.error("Error al cerrar sesión:", error);
-    });
-  }
 </script>
 
 </body>
