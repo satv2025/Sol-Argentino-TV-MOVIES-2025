@@ -221,22 +221,6 @@
       logoutBtn.style.display = 'none'; // Ocultar el botón de cierre de sesión si no hay usuario
     }
   });
-
-  // Función para manejar el cierre de sesión
-  const logoutUser = async () => {
-    try {
-      await signOut(auth);  // Cerrar sesión
-      console.log("Usuario cerrado sesión.");
-    } catch (error) {
-      console.error("Error al cerrar sesión: ", error);
-    }
-  };
-
-  // Evento del botón de cierre de sesión
-  const logoutBtn = document.getElementById('logout-btn');
-  if (logoutBtn) {
-    logoutBtn.addEventListener('click', logoutUser);
-  }
 </script>
 
 <script>
@@ -258,11 +242,16 @@ const logoutUser = async () => {
   }
 };
 
-// Asignar el evento de clic para el botón de cierre de sesión
-const logoutBtn = document.getElementById('logout-btn');
-if (logoutBtn) {
-  logoutBtn.addEventListener('click', logoutUser);
-}
+// Asegurarse de que el botón de logout esté disponible en el DOM antes de agregar el evento
+window.addEventListener('DOMContentLoaded', () => {
+  const logoutBtn = document.getElementById('logout-btn');
+  
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', logoutUser);  // Asignar el evento de clic para el logout
+  } else {
+    console.warn("No se encontró el botón de cerrar sesión.");
+  }
+});
 </script>
 
 </body>
