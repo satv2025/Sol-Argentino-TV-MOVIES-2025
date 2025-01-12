@@ -300,17 +300,13 @@ footer p {
     cursor: default;
 }
 
-.avisame-button.active .bell-icon {
-    /* Sin animación, la campana es estática */
-}
-
 /* Formulario de suscripción */
 .subscription-form {
     margin-top: 1em;
     display: flex;
     flex-direction: column;
-    gap: 0.5em; /* Espacio entre los campos del formulario */
-    display: none; /* Ocultar el formulario por defecto */
+    gap: 0.5em;
+    display: none; /* Formulario oculto por defecto */
 }
 
 .subscription-form input {
