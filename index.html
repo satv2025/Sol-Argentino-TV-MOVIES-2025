@@ -4,24 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro - Sol Argentino TV MOVIES</title>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="registro.css">
 </head>
 <body>
-  <h1>Formulario de Registro</h1>
-  <form id="registro-form">
-    <input type="email" id="email" placeholder="Correo electrónico" required>
-    <input type="password" id="password" placeholder="Contraseña" required>
-    <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
-    <button type="submit">Registrarse</button>
-  </form>
+  <header>
+    <div class="logo">Sol Argentino</div>
+  </header>
+  
+  <main>
+    <h1>Formulario de Registro</h1>
+    <form id="registro-form" class="form-container">
+      <input type="email" id="email" placeholder="Correo electrónico" required>
+      <input type="password" id="password" placeholder="Contraseña" required>
+      <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
+      <button type="submit">Registrarse</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sol Argentino TV MOVIES - Todos los derechos reservados</p>
+  </footer>
 
   <script type="module">
-    // Import the functions you need from the SDKs
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
-    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"; // Agregar la importación para autenticación
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"; 
     
-    // Tu configuración de Firebase
     const firebaseConfig = {
       apiKey: "AIzaSyC051GQ3n7Lzj9M_FFXZbv8578BZZvTFRs",
       authDomain: "sol-argentino-tv-movies.firebaseapp.com",
@@ -32,39 +40,29 @@
       measurementId: "G-NB04NX5BZM"
     };
 
-    // Inicializar Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
-    const auth = getAuth(app); // Inicializar autenticación
+    const auth = getAuth(app);
     
-    // Seleccionar el formulario
     const registroForm = document.getElementById('registro-form');
-
-    // Manejar el evento de envío del formulario
     registroForm.addEventListener('submit', (e) => {
-      e.preventDefault(); // Prevenir que la página se recargue
-
+      e.preventDefault();
+      
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
       const confirmPassword = document.getElementById('confirm-password').value;
 
-      // Validar que las contraseñas coincidan
       if (password !== confirmPassword) {
         alert('Las contraseñas no coinciden');
         return;
       }
 
-      // Crear el usuario con Firebase Authentication
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-          // Registro exitoso
           console.log('Usuario registrado:', userCredential.user);
-
-          // Redirigir a catalogo.html
           window.location.href = 'catalogo.html';
         })
         .catch((error) => {
-          // Error al registrar
           const errorCode = error.code;
           const errorMessage = error.message;
           console.error(`Error (${errorCode}): ${errorMessage}`);
