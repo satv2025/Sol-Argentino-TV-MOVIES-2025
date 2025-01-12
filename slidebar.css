@@ -5,7 +5,10 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent; /* Sin fondo para la pista */
+    background-image: url('https://movies.solargentinotv.com.ar/—Pngtree—black background texture advertising_1911402.png');
+    background-size: cover; /* Asegura que la imagen cubra todo el track */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 ::-webkit-scrollbar-thumb {

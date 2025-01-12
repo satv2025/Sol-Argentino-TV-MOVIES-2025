@@ -250,6 +250,8 @@ button {
 
 footer {
     background-image: url('https://movies.solargentinotv.com.ar/—Pngtree—black background texture advertising_1911402.png');
+    background-size: cover; /* Asegura que la imagen cubra todo el footer */
+    background-position: center; /* Centra la imagen */
     text-align: center;
     padding: 1.25em; /* 20px = 1.25em */
     margin-top: 2.5em; /* 40px = 2.5em */
