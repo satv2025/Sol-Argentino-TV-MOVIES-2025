@@ -375,17 +375,6 @@ footer p {
     }
 }
 
-/* Añadido para la notificación de recordatorio activado */
-.pelicula p {
-    color: #fff;
-    font-size: 1rem;
-    margin-top: 1rem;
-    background-color: #28a745;
-    padding: 0.5em;
-    border-radius: 0.3em;
-    text-align: center;
-}
-
 /* Media Queries para diseño responsive */
 @media (max-width: 48em) { /* Máximo 48em = 768px */
     .avisame-button {
