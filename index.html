@@ -41,77 +41,79 @@
   </footer>
 
   <script type="module">
-// Importando Firebase y la funcionalidad necesaria
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
-
-// Configuración de Firebase
-const firebaseConfig = {
-    apiKey: "AIzaSyC051GQ3n7Lzj9M_FFXZbv8578BZZvTFRs",
-    authDomain: "sol-argentino-tv-movies.firebaseapp.com",
-    projectId: "sol-argentino-tv-movies",
-    storageBucket: "sol-argentino-tv-movies.firebasestorage.app",
-    messagingSenderId: "965356127011",
-    appId: "1:965356127011:web:eb197c18ea061393680296",
-    measurementId: "G-NB04NX5BZM"
-};
-
-// Inicialización de Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const auth = getAuth(app);
-
-// Referencia al formulario
-const registroForm = document.getElementById('registro-form');
-registroForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirm-password').value;
-
-    // Validar que las contraseñas coincidan
-    if (password !== confirmPassword) {
+    // Importando Firebase y la funcionalidad necesaria
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+  
+    // Configuración de Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyC051GQ3n7Lzj9M_FFXZbv8578BZZvTFRs",
+      authDomain: "sol-argentino-tv-movies.firebaseapp.com",
+      projectId: "sol-argentino-tv-movies",
+      storageBucket: "sol-argentino-tv-movies.firebasestorage.app",
+      messagingSenderId: "965356127011",
+      appId: "1:965356127011:web:eb197c18ea061393680296",
+      measurementId: "G-NB04NX5BZM"
+    };
+  
+    // Inicialización de Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth(app);
+  
+    // Referencia al formulario
+    const registroForm = document.getElementById('registro-form');
+    registroForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+  
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+  
+      // Validar que las contraseñas coincidan
+      if (password !== confirmPassword) {
         alert('Las contraseñas no coinciden');
         return;
-    }
-
-    // Crear usuario en Firebase
-    createUserWithEmailAndPassword(auth, email, password)
+      }
+  
+      // Crear usuario en Firebase
+      createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            console.log('Usuario registrado:', userCredential.user);
-            window.location.href = 'catalogo.html'; // Redirigir al catálogo
+          console.log('Usuario registrado:', userCredential.user);
+          window.location.href = 'catalogo.html'; // Redirigir al catálogo
         })
         .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.error(`Error (${errorCode}): ${errorMessage}`);
-            alert(`Error: ${errorMessage}`);
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.error(`Error (${errorCode}): ${errorMessage}`);
+          alert(`Error: ${errorMessage}`);
         });
-});
-
-// Función para alternar la visibilidad de la contraseña
-document.getElementById('toggle-password').addEventListener('click', () => {
-    const passwordField = document.getElementById('password');
-    const passwordFieldType = passwordField.type === 'password' ? 'text' : 'password';
-    passwordField.type = passwordFieldType;
-
-    // Cambiar el ícono de ojo
-    const icon = document.getElementById('toggle-password').querySelector('i');
-    icon.classList.toggle('fa-eye-slash');
-});
-
-// Función para alternar la visibilidad de la confirmación de la contraseña
-document.getElementById('ojoconfirmar').addEventListener('click', () => {
-    const confirmPasswordField = document.getElementById('confirm-password');
-    const confirmPasswordFieldType = confirmPasswordField.type === 'password' ? 'text' : 'password';
-    confirmPasswordField.type = confirmPasswordFieldType;
-
-    // Cambiar el ícono de ojo
-    const icon = document.getElementById('ojoconfirmar').querySelector('i');
-    icon.classList.toggle('fa-eye-slash');
-});
-  </script>
+    });
+  
+    // Función para alternar la visibilidad de la contraseña
+    document.getElementById('toggle-password').addEventListener('click', () => {
+      const passwordField = document.getElementById('password');
+      const passwordFieldType = passwordField.type === 'password' ? 'text' : 'password';
+      passwordField.type = passwordFieldType;
+  
+      // Cambiar el ícono de ojo
+      const icon = document.getElementById('toggle-password').querySelector('i');
+      icon.classList.toggle('fa-eye-slash'); // Cambio al ícono de ojo tachado
+      icon.classList.toggle('fa-eye'); // Cambio al ícono de ojo abierto
+    });
+  
+    // Función para alternar la visibilidad de la confirmación de la contraseña
+    document.getElementById('ojoconfirmar').addEventListener('click', () => {
+      const confirmPasswordField = document.getElementById('confirm-password');
+      const confirmPasswordFieldType = confirmPasswordField.type === 'password' ? 'text' : 'password';
+      confirmPasswordField.type = confirmPasswordFieldType;
+  
+      // Cambiar el ícono de ojo
+      const icon = document.getElementById('ojoconfirmar').querySelector('i');
+      icon.classList.toggle('fa-eye-slash'); // Cambio al ícono de ojo tachado
+      icon.classList.toggle('fa-eye'); // Cambio al ícono de ojo abierto
+    });
+  </script>  
 </body>
 </html>
