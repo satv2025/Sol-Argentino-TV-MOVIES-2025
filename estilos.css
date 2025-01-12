@@ -130,6 +130,7 @@ h1 {
     grid-template-columns: repeat(5, 1fr); /* 5 elementos por fila */
     gap: 1.25em; /* Espacio entre las tarjetas */
     margin-top: 1.25em;
+    justify-content: center;
 }
 
 .acercadecont {
