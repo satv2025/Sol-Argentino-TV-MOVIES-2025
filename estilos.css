@@ -26,17 +26,26 @@ header {
 h1 {
     font-size: 2.25em; /* 36px = 2.25em */
     margin-bottom: 2.5em; /* 40px = 2.5em */
-    color: #fff; /* Título oscuro */
+    color: #fff; /* Color blanco para el título */
+    text-align: center; /* Centrado del título */
 }
 
 .desc {
     margin-top: 1.5em; /* Espaciado por encima de la descripción */
     font-size: 1.125em; /* Tamaño de fuente ligeramente mayor */
     color: #ddd; /* Color claro para la descripción */
+    text-align: center; /* Centrado del texto de la descripción */
+    padding: 0 20px; /* Espaciado interno para que no toque los bordes */
+}
+
+.desc p {
+    line-height: 1.5; /* Espaciado entre las líneas del párrafo */
+    max-width: 800px; /* Ancho máximo para mejorar legibilidad */
+    margin: 0 auto; /* Centrado del párrafo */
 }
 
 h4 {
-    font-size: 2em;
+    font-size: 1.2em;
 }
 nav a:active {
     color: #fff;
