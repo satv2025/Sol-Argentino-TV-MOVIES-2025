@@ -21,8 +21,16 @@
                 <input type="text" id="search" name="search" placeholder="Buscar película o serie..." />
                 <button type="submit">Buscar</button>
             </form>
-        </nav>
-    </header>
+            <!-- Agregar el botón de inicio de sesión o la imagen de usuario -->
+            <div class="usuario">
+              <button id="login-btn" onclick="iniciarSesion()">Iniciar sesión</button>
+              <div id="user-info" class="user-info" style="display:none;">
+                  <img id="user-avatar" src="default-avatar.jpg" alt="Avatar" class="avatar">
+                  <span id="user-name">Usuario</span>
+              </div>
+          </div>
+      </nav>
+  </header>
 
     <main>
         <div class="desc">
@@ -227,6 +235,42 @@ window.onload = function() {
   });
 };
 </script>
+
+<script>
+  // Función para verificar si el usuario está logueado
+  function verificarSesion() {
+      const usuario = localStorage.getItem('usuario');
+      const avatar = localStorage.getItem('avatar');
+  
+      if (usuario && avatar) {
+          // Si está logueado, mostrar su nombre y avatar
+          document.getElementById('user-info').style.display = 'block';
+          document.getElementById('user-name').textContent = usuario;
+          document.getElementById('user-avatar').src = avatar;
+          document.getElementById('login-btn').style.display = 'none';
+      } else {
+          // Si no está logueado, mostrar el botón de inicio de sesión
+          document.getElementById('user-info').style.display = 'none';
+          document.getElementById('login-btn').style.display = 'inline-block';
+      }
+  }
+  
+  // Función para simular el inicio de sesión
+  function iniciarSesion() {
+      // Simular que el usuario ingresa con su nombre y avatar
+      const usuario = prompt("Introduce tu nombre:");
+      const avatar = prompt("Introduce la URL de tu avatar:");
+  
+      if (usuario && avatar) {
+          localStorage.setItem('usuario', usuario);
+          localStorage.setItem('avatar', avatar);
+          verificarSesion(); // Verificar sesión nuevamente
+      }
+  }
+  
+  // Llamar la función para verificar la sesión cuando se carga la página
+  window.onload = verificarSesion;
+  </script>
     <script src="app.js"></script>
 </body>
 </html>
