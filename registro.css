@@ -13,15 +13,15 @@ body, html {
     background-size: cover;
     background-position: center;
     color: #fff;
-    font-size: 1rem; 
-    height: 100%; 
+    font-size: 1em; /* Usamos em para la base del tamaño de fuente */
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.6); 
-    padding: 1.25em; 
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1.25em;
     text-align: center;
 }
 
@@ -32,7 +32,7 @@ header .logo {
 }
 
 main {
-    flex-grow: 1; 
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,18 +42,18 @@ main {
 }
 
 h1 {
-    font-size: 2.25em;
+    font-size: 2.25em; /* Usamos em para asegurar un tamaño adecuado */
     color: #fff;
     margin-bottom: 1.5em;
 }
 
 .form-container {
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 2em;
     border-radius: 0.5em;
     width: 100%;
-    max-width: 400px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    max-width: 25em; /* Cambié el valor de px a em */
+    box-shadow: 0 0 1.25em rgba(0, 0, 0, 0.7); /* Usamos em para las sombras */
 }
 
 .form-container input {
@@ -61,7 +61,7 @@ h1 {
     padding: 1em;
     margin: 1em 0;
     border-radius: 0.5em;
-    border: 1px solid #0078D4;
+    border: 0.0625em solid #0078D4; /* Cambié el valor a em */
     background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
     font-size: 1em;
@@ -110,7 +110,7 @@ footer {
     width: 100%;
     padding: 1em;
     border-radius: 0.5em;
-    border: 1px solid #0078D4;
+    border: 0.0625em solid #0078D4; /* Usamos em para los bordes */
     background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
     font-size: 1em;
@@ -120,7 +120,7 @@ footer {
 .eye-icons {
     display: flex;
     justify-content: space-between;
-    max-width: 400px;
+    max-width: 25em; /* Usamos em en vez de px */
     margin: 1em auto;
     padding: 0 1em;
 }
@@ -129,30 +129,16 @@ footer {
     cursor: pointer;
     color: #0078D4;
     font-size: 1.5em;
+    position: absolute;
+    margin-top: -19.2em; /* Posición hacia arriba */
 }
 
-.eye-icons i:hover {
-    color: #005a9e;
+#toggle-password {
+    right: 1.25em; /* Ajustamos a em */
 }
 
-/* Ajuste para el ícono del ojo */
-.password-container input:focus {
-    border-color: #0078D4;
-    outline: none;
-}
-
-/* Estilo para los íconos fuera del formulario */
-.eye-icons {
-    display: flex;
-    justify-content: space-between;
-    max-width: 400px;
-    margin: 1em auto;
-}
-
-.eye-icons i {
-    cursor: pointer;
-    color: #0078D4;
-    font-size: 1.5em;
+#ojoconfirmar {
+    right: 1.25em; /* Ajustamos a em */
 }
 
 .eye-icons i:hover {
