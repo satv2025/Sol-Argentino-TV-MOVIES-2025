@@ -1,232 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sol Argentino TV MOVIES</title>
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="slidebar.css">
-    <link rel="icon" href="SolArgentinoTVMOVIES.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - Sol Argentino TV MOVIES</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index" class="inicio active">Inicio</a></li>
-                <li><a href="proximamente">Próximamente</a></li>
-                <li><a href="acercade">Acerca De</a></li>
-                <li class="logo">SATVMOVIES</li>
-            </ul>
-            <form action="#" method="get" class="search-form">
-                <input type="text" id="search" name="search" placeholder="Buscar película o serie..." />
-                <button type="submit">Buscar</button>
-            </form>
-        </nav>
-    </header>
+  <h1>Formulario de Registro</h1>
+  <form id="registro-form">
+    <input type="email" id="email" placeholder="Correo electrónico" required>
+    <input type="password" id="password" placeholder="Contraseña" required>
+    <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
+    <button type="submit">Registrarse</button>
+  </form>
 
-    <main>
-        <div class="desc">
-        <h1>Bienvenidos a Sol Argentino TV MOVIES</h1>
-        <p>¿Alguna vez buscaste películas o series gratis por internet? Bueno, llegó Sol Argentino TV MOVIES, un servicio de streaming completamente gratis, con series y películas nuevas, innovadoras y algunas conocidas.</p>
-        </div>
-
-        <h4><strong>Estrenos Enero 2025:</strong> Gladiador [Saga Completa], Círculo, De noche con el diablo, Lo que hay dentro y Club De Buceo. Más contenido en marzo, junio y noviembre.</h4>
-
-<section class="catalogo">
-    <!-- Película 1 -->
-    <a href="matiponcepeli/matiponcepeli" style="text-decoration: none; color: inherit;">
-        <div class="pelicula">
-            <img src="maxresdefault.jpg" alt="Pelicula 1">
-            <h3 class="matiponcepelii">Matias Ponce - La Pelicula</h3>
-            <p>Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de youtube, o como el lo llama "Yutun", desatando una hilarante y absurda aventura.</p>
-            <button></button>
-        </div>
-    </a>
-
-    <!-- Película 2 -->
-    <a href="cienporcientolucha/cienporcientolucha" style="text-decoration: none; color: inherit;">
-        <div class="pelicula">
-            <img src="https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6" alt="Pelicula 10">
-            <h3>100%Lucha - Las Peliculas</h3>
-            <p>Los productores detrás del famoso programa emitido desde 2006 a 2011, 100%Lucha, decidieron hacerle peliculas.</p>
-            <button></button>
-        </div>
-    </a>
-
-    <!-- Película 3 -->
-    <a href="app/app" style="text-decoration: none; color: inherit;">
-        <div class="pelicula">
-            <img src="Asesinato para principiantes.jpg" alt="Pelicula 8">
-            <h3>Asesinato para Principiantes</h3>
-            <p>En este thriller atrapante, una estudiante investiga, para un proyecto escolar, un caso ocurrido hace cinco años.</p>
-            <button></button>
-        </div>
-    </a>
-
-    <div class="pelicula" data-pelicula="Gladiador">
-        <img src="https://www.filmonpaper.com/wp-content/uploads/2011/05/Gladiator_onesheet_advance_USA-3.jpg" alt="Gladiador">
-        <h3>Gladiador 1 y 2</h3>
-        <p>Tras ser traicionado por el emperador Cómodo, Máximo escapa de la muerte y regresa a Roma como gladiador para vengar a su familia. Mientras tanto, Lucio, con el futuro del imperio en juego, busca fuerza y honor en el Coliseo.</p>
-        <button id="Gladiador-show-button" class="avisame-button" onclick="mostrarFormulario('Gladiador')">
-            <span class="bell-icon">🔔</span> Avisame
-        </button>
-        <form id="Gladiador-form" class="subscription-form" style="display: none;">
-            <input type="email" id="Gladiador-email" placeholder="Introduce tu correo" required>
-            <button type="button" onclick="activarRecordatorio('Gladiador')">Confirmar</button>
-        </form>
-    </div>
+  <script type="module">
+    // Import the functions you need from the SDKs
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"; // Agregar la importación para autenticación
     
-    <div class="pelicula" data-pelicula="Circulo">
-        <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWkKaNnH12cA-5dPbSUFVwXAIpVj2k-lkjr7n-qs0nwDQtsYtBTeCVVXryp55cUvU-lVUFU6y1sX_2Zi4GpdOmX45TSbSp68KaI.webp?r=c8c" alt="Circulo">
-        <h3>Círculo</h3>
-        <p>Un grupo de extraños que espera ser ejecutado se enfrenta a la horrible tarea de tener que elegir a un miembro del grupo como único sobreviviente.</p>
-        <button id="Circulo-show-button" class="avisame-button" onclick="mostrarFormulario('Circulo')">
-            <span class="bell-icon">🔔</span> Avisame
-        </button>
-        <form id="Circulo-form" class="subscription-form" style="display: none;">
-            <input type="email" id="Circulo-email" placeholder="Introduce tu correo" required>
-            <button type="button" onclick="activarRecordatorio('Circulo')">Confirmar</button>
-        </form>
-    </div>
+    // Tu configuración de Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyC051GQ3n7Lzj9M_FFXZbv8578BZZvTFRs",
+      authDomain: "sol-argentino-tv-movies.firebaseapp.com",
+      projectId: "sol-argentino-tv-movies",
+      storageBucket: "sol-argentino-tv-movies.firebasestorage.app",
+      messagingSenderId: "965356127011",
+      appId: "1:965356127011:web:eb197c18ea061393680296",
+      measurementId: "G-NB04NX5BZM"
+    };
+
+    // Inicializar Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth(app); // Inicializar autenticación
     
-    <div class="pelicula" data-pelicula="DeNocheConElDiablo">
-        <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSL6xo1_leIgcK23yxF8HomLRG-7qauDtwCIh9E4lohN-OtCrapYkbN7cygU68rDXbm0sYyQ8anNahb4-1BOrK9SWTpXXf65lNA.webp?r=156" alt="De Noche Con El Diablo">
-        <h3>De Noche Con El Diablo</h3>
-        <p>En Halloween de 1977, un programa de entrevistas nocturno hace una atrevida transmisión en vivo para evitar ser cancelado..., pero una presencia demoníaca se apodera del estudio.</p>
-        <button id="DeNocheConElDiablo-show-button" class="avisame-button" onclick="mostrarFormulario('DeNocheConElDiablo')">
-            <span class="bell-icon">🔔</span> Avisame
-        </button>
-        <form id="DeNocheConElDiablo-form" class="subscription-form" style="display: none;">
-            <input type="email" id="DeNocheConElDiablo-email" placeholder="Introduce tu correo" required>
-            <button type="button" onclick="activarRecordatorio('DeNocheConElDiablo')">Confirmar</button>
-        </form>
-    </div>
-    
-    <div class="pelicula" data-pelicula="LoQueHayDentro">
-        <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABUmsZa7Q2fTKckLzs3bp0NF1ldVM9mUFPv7SAddwMCBO_VT1Um3fw95qhSVtx24rZAvOZksZmoOz6adFIb8bH98goefawrf3P3S6JIiY9uilt-3CDC3saqPxMtqDKtPC6CDF.jpg?r=53f" alt="Lo Que Hay Dentro">
-        <h3>Lo Que Hay Dentro</h3>
-        <p>Un juego en una fiesta pasa de delirante a retorcido en este thriller único en su género, ideal si te gusta que te «revuelvan el cerebro, lo batan y lo mezclen» (Deadline).</p>
-        <button id="LoQueHayDentro-show-button" class="avisame-button" onclick="mostrarFormulario('LoQueHayDentro')">
-            <span class="bell-icon">🔔</span> Avisame
-        </button>
-        <form id="LoQueHayDentro-form" class="subscription-form" style="display: none;">
-            <input type="email" id="LoQueHayDentro-email" placeholder="Introduce tu correo" required>
-            <button type="button" onclick="activarRecordatorio('LoQueHayDentro')">Confirmar</button>
-        </form>
-    </div>
-    
-    <div class="pelicula" data-pelicula="ClubDeBuceo">
-        <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZh5RY7tYs_2iPCgrBOQ-uPdlZqVxTnbHqlBjBg0ro_fWrMNMZw6hhMwQML9RZ6gFILLyYq27jYgSd8nrH3-PMQwB_PWUCNE38BgYhe1dXqjOISN0xRE5aiFzGVKTYHF43r6.jpg?r=f2e" alt="Club De Buceo">
-        <h3>Club De Buceo</h3>
-        <p>Un misterio desconcertante se fusiona con cientos de años de historia en esta serie para fans del suspenso sobre una buzo adolescente desaparecida y sus fieles amigas.</p>
-        <button id="ClubDeBuceo-show-button" class="avisame-button" onclick="mostrarFormulario('ClubDeBuceo')">
-            <span class="bell-icon">🔔</span> Avisame
-        </button>
-        <form id="ClubDeBuceo-form" class="subscription-form" style="display: none;">
-            <input type="email" id="ClubDeBuceo-email" placeholder="Introduce tu correo" required>
-            <button type="button" onclick="activarRecordatorio('ClubDeBuceo')">Confirmar</button>
-        </form>
-    </div>      
+    // Seleccionar el formulario
+    const registroForm = document.getElementById('registro-form');
 
-    </section>
+    // Manejar el evento de envío del formulario
+    registroForm.addEventListener('submit', (e) => {
+      e.preventDefault(); // Prevenir que la página se recargue
 
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
 
-        </section>
-    </main>
+      // Validar que las contraseñas coincidan
+      if (password !== confirmPassword) {
+        alert('Las contraseñas no coinciden');
+        return;
+      }
 
-    <footer>
-        <p>Sol Argentino TV MOVIES 2025 &copy; - Todos Los Derechos Reservados</p>
-    </footer>
+      // Crear el usuario con Firebase Authentication
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Registro exitoso
+          console.log('Usuario registrado:', userCredential.user);
 
-<script>
-// Función para obtener la IP pública del usuario usando la API ipify
-function obtenerIP() {
-  return fetch('https://api.ipify.org?format=json')
-    .then(response => response.json())  // Convertir la respuesta a formato JSON
-    .then(data => {
-      return data.ip;  // Retornar la IP pública del usuario
-    })
-    .catch(error => {
-      console.error('Error al obtener la IP:', error);
-      return null;  // Si hay error, retornamos null
+          // Redirigir a catalogo.html
+          window.location.href = 'catalogo.html';
+        })
+        .catch((error) => {
+          // Error al registrar
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.error(`Error (${errorCode}): ${errorMessage}`);
+          alert(`Error: ${errorMessage}`);
+        });
     });
-}
-
-// Función para detectar el dispositivo del usuario (móvil, tablet, computadora)
-function detectarDispositivo(userAgent) {
-  if (/mobile/i.test(userAgent)) {
-    return 'Dispositivo móvil';
-  } else if (/tablet/i.test(userAgent)) {
-    return 'Tablet';
-  } else if (/desktop/i.test(userAgent)) {
-    return 'Computadora de escritorio';
-  } else {
-    return 'Dispositivo desconocido';
-  }
-}
-
-// Función que activa el recordatorio para la película
-function activarRecordatorio(pelicula) {
-  var email = document.getElementById(pelicula + '-email').value;
-
-  if (email) {
-    // Obtener la IP y el dispositivo del usuario
-    obtenerIP().then(ip => {
-      const dispositivo = detectarDispositivo(navigator.userAgent);
-
-      // Guardar en localStorage los datos del recordatorio
-      localStorage.setItem(pelicula + '-email', email);
-      localStorage.setItem(pelicula + '-ip', ip || 'Desconocida');
-      localStorage.setItem(pelicula + '-dispositivo', dispositivo);
-
-      // Cambiar el texto del botón a "Recordatorio Activado" y deshabilitarlo
-      var button = document.getElementById(pelicula + '-show-button');
-      button.innerHTML = '<span class="bell-icon">🔔</span> Recordatorio Activado';
-      button.classList.add('recordatorio-activado');
-      button.disabled = true;
-
-      // Ocultar el formulario
-      var form = document.getElementById(pelicula + '-form');
-      form.style.display = 'none';
-    });
-  } else {
-    alert('Por favor, introduce un correo electrónico válido.');
-  }
-}
-
-// Función para mostrar el formulario al hacer clic en el botón "Avísame"
-function mostrarFormulario(pelicula) {
-  // Ocultar todos los formularios de otras películas
-  var formularios = document.querySelectorAll('.subscription-form');
-  formularios.forEach(function(form) {
-    form.style.display = 'none';
-  });
-
-  // Mostrar el formulario correspondiente al hacer clic en "Avísame"
-  var form = document.getElementById(pelicula + '-form');
-  form.style.display = 'flex';
-
-  // Ocultar el botón "Avísame" después de hacer clic
-  var button = document.getElementById(pelicula + '-show-button');
-  button.style.display = 'none';
-}
-
-// Función para verificar si el recordatorio ya está activado al cargar la página
-window.onload = function() {
-  var peliculas = ['Gladiador', 'Circulo', 'DeNocheConElDiablo', 'LoQueHayDentro', 'ClubDeBuceo'];
-
-  peliculas.forEach(function(pelicula) {
-    var email = localStorage.getItem(pelicula + '-email');
-    
-    if (email) {
-      var button = document.getElementById(pelicula + '-show-button');
-      button.innerHTML = '<span class="bell-icon">🔔</span> Recordatorio Activado';
-      button.classList.add('recordatorio-activado');
-      button.disabled = true;
-    }
-  });
-};
-</script>
-    <script src="app.js"></script>
+  </script>
 </body>
 </html>
