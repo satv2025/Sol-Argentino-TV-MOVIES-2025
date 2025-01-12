@@ -1,0 +1,52 @@
+/* Barra de desplazamiento para navegadores basados en WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+    height: 12px; /* Ancho para el desplazamiento horizontal */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Sin fondo para la pista */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #183347; /* Color de la barra */
+    border-radius: 0.3em; /* Bordes redondeados */
+    border: 3px solid transparent; /* Sin borde visible */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #005a9e; /* Color cuando se pasa el cursor */
+}
+
+/* Compatibilidad con Firefox */
+* {
+    scrollbar-width: thin; /* Barra de desplazamiento delgada */
+    scrollbar-color: #183347 transparent; /* Color de la barra y fondo transparente */
+}
+
+/* Para navegadores que no soportan los WebKit, pero son modernos (Edge, etc.) */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #183347 transparent; /* Color para el pulgar y pista */
+}
+
+/* Estilo responsivo para asegurar que la barra se ajuste en pantallas pequeñas */
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 8px; /* Ancho reducido para pantallas pequeñas */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 0.25em; /* Bordes más pequeños en pantallas pequeñas */
+    }
+
+    * {
+        scrollbar-width: auto; /* En pantallas pequeñas se ajusta automáticamente */
+    }
+}
+
+@media (max-width: 480px) {
+    ::-webkit-scrollbar {
+        width: 6px; /* Ancho aún más reducido para dispositivos móviles */
+    }
+}
