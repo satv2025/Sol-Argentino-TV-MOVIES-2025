@@ -287,7 +287,6 @@ footer p {
     cursor: pointer;
     border-radius: 0 0 0.3em 0.3em;
     transition: all 0.3s ease;
-    justify-content: center;
 }
 
 .avisame-button .bell-icon {
@@ -296,8 +295,8 @@ footer p {
 
 /* Estilo cuando el botón está en estado "Activado" */
 .avisame-button.recordatorio-activado {
-    background-color: #fff; /* Fondo blanco */
-    color: #000; /* Texto negro */
+    background-color: #fff;
+    color: #000;
 }
 
 /* Formulario de suscripción */
@@ -324,11 +323,6 @@ footer p {
     font-size: 1em;
     cursor: pointer;
     border-radius: 0.3em;
-}
-
-/* Formulario visible */
-.subscription-form.visible {
-    display: flex;  /* Solo se muestra cuando es visible */
 }
 
 /* Media Queries para diseño responsive */

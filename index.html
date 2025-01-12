@@ -64,9 +64,9 @@
     </a>
 
     <div class="pelicula">
-        <img src="maxresdefault.jpg" alt="Pelicula 1">
-        <h3 class="gladiador">Gladiador</h3>
-        <p>Un general romano debe enfrentarse a los imperios que lo traicionaron, luchando por la venganza y la justicia.</p>
+        <img src="https://www.filmonpaper.com/wp-content/uploads/2011/05/Gladiator_onesheet_advance_USA-3.jpg" alt="Pelicula 1">
+        <h3 class="gladiador">Gladiador 1 y 2</h3>
+        <p>Tras ser traicionado por el emperador Cómodo, Máximo escapa de la muerte y regresa a Roma como gladiador para vengar a su familia. Mientras tanto, Lucio, con el futuro del imperio en juego, busca fuerza y honor en el Coliseo.</p>
         <button type="button" class="avisame-button" id="Gladiador-show-button" onclick="mostrarFormulario('Gladiador')">
             <span class="bell-icon">🔔</span> Avisame
         </button>
@@ -162,7 +162,7 @@
 // Función para obtener la IP pública del usuario usando la API ipify
 function obtenerIP() {
   return fetch('https://api.ipify.org?format=json')
-    .then(response => response.json())
+    .then(response => response.json())  // Convertir la respuesta a formato JSON
     .then(data => {
       return data.ip;  // Retornar la IP pública del usuario
     })
