@@ -252,7 +252,7 @@
     if (user) {
       // Si el usuario está autenticado, mostrar su nombre o correo
       userNick.textContent = user.displayName || user.email;
-      logoutBtn.style.display = 'block'; // Mostrar el botón de cerrar sesión
+      logoutBtn.style.display = ''; // Mostrar el botón de cerrar sesión
     } else {
       // Si no hay un usuario autenticado, mostrar "Usuario No Identificado"
       userNick.textContent = 'Usuario No Identificado';
