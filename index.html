@@ -217,6 +217,18 @@ window.onload = function() {
     }
   });
 };
+
+function activarRecordatorio() {
+    const emailInput = document.querySelector('.subscription-form input');
+    const email = emailInput.value;
+
+    if (email) {
+        alert('Recordatorio activado para: ' + email);
+        // Aquí agregas la lógica para almacenar el email o activar la funcionalidad
+    } else {
+        alert('Por favor, introduce un correo válido.');
+    }
+}
     </script>
     <script src="app.js"></script>
 </body>

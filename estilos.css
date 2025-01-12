@@ -8,15 +8,24 @@
 }
 
 body, html {
-    font-family: 'Netflix Sans';
+    font-family: 'Netflix Sans', sans-serif;
     background-image: url('https://movies.solargentinotv.com.ar/—Pngtree—black background texture advertising_1911402.png');
-    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
-    background-position: center; /* Centra la imagen */
-    color: #fff; /* Texto oscuro */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
     font-size: 1rem; /* Base font size = 16px */
-    height: 100%;
+    height: 100%; /* Asegura que ocupe todo el alto de la pantalla */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
     display: flex;
     flex-direction: column;
+}
+
+main {
+    flex-grow: 1; /* Hace que el contenedor principal ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    gap: 1em; /* Espacio entre las filas */
 }
 
 header {
