@@ -7,6 +7,42 @@
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="slidebar.css">
     <link rel="icon" href="SolArgentinoTVMOVIES.ico" type="image/x-icon">
+    <style>
+      .styled-button {
+    color: #0078D4;
+    font-family: 'Netflix Sans';
+    border: #0078D4 0.2em solid;
+    width: 12%;
+    height: 48%;
+    text-align: center;
+    background: #fff;
+    font-weight: 700;
+    align-content: center;
+    border-radius: 0.3em;
+    cursor: pointer; /* Añadido para mejorar la interacción con el botón */
+}
+
+.styled-button:hover {
+    background-color: #0078D4; /* Cambio de color al pasar el ratón por encima */
+    color: white; /* Cambia el color del texto al pasar el ratón */
+}
+
+#logout-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  display: none; /* Inicialmente oculto */
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+#logout-btn:hover {
+  background-color: #d32f2f;
+}
+    </style>
+  </head>
     <header>
       <nav>
         <ul>
@@ -22,6 +58,7 @@
       </nav>
       <!-- Mostrar el nombre del usuario aquí -->
       <div id="user-nick">Usuario No Identificado</div>
+      <button id="logout-btn">Cerrar sesión</button>
     </header>    
 
 <main>
@@ -197,6 +234,44 @@
       userNick.textContent = 'Usuario No Identificado';
     }
   });
+</script>
+
+<script type="module">
+  import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+
+  const auth = getAuth();
+
+  // Detectar el estado de autenticación
+  onAuthStateChanged(auth, (user) => {
+    const userNick = document.getElementById('user-nick');
+    const logoutBtn = document.getElementById('logout-btn'); // Obtener el botón de cierre de sesión
+
+    if (user) {
+      // Si el usuario está autenticado, mostrar su nombre o correo
+      userNick.textContent = user.displayName || user.email;
+      logoutBtn.style.display = 'block'; // Mostrar el botón de cierre de sesión
+    } else {
+      // Si no hay un usuario autenticado, mostrar "Usuario No Identificado"
+      userNick.textContent = 'Usuario No Identificado';
+      logoutBtn.style.display = 'none'; // Ocultar el botón de cierre de sesión si no hay usuario
+    }
+  });
+
+  // Función para manejar el cierre de sesión
+  const logoutUser = async () => {
+    try {
+      await signOut(auth);  // Cerrar sesión
+      console.log("Usuario cerrado sesión.");
+    } catch (error) {
+      console.error("Error al cerrar sesión: ", error);
+    }
+  };
+
+  // Evento del botón de cierre de sesión
+  const logoutBtn = document.getElementById('logout-btn');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', logoutUser);
+  }
 </script>
 
 </body>
