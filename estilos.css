@@ -126,12 +126,10 @@ h1 {
 }
 
 .catalogo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em; /* Ajusta el espacio entre elementos */
-    margin-top: 1.25em; /* 20px = 1.25em */
-    max-width: calc(22em * 5 + 4em); /* Calcula el ancho total para 5 elementos más el espacio entre ellos */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 elementos por fila */
+    gap: 1.25em; /* Espacio entre las tarjetas */
+    margin-top: 1.25em;
 }
 
 .acercadecont {
