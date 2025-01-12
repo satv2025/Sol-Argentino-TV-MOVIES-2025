@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro - Sol Argentino TV MOVIES</title>
   <link rel="stylesheet" href="registro.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Agregar Font Awesome -->
 </head>
 <body>
   <header>
@@ -18,12 +19,16 @@
       
       <div class="password-container">
         <input type="password" id="password" placeholder="Contraseña" required>
-        <button type="button" id="toggle-password" class="password-toggle">Ver</button>
+        <button type="button" id="toggle-password" class="password-toggle">
+          <i class="fas fa-eye"></i> <!-- Ícono de ojo -->
+        </button>
       </div>
       
       <div class="password-container">
         <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
-        <button type="button" id="toggle-confirm-password" class="password-toggle">Ver</button>
+        <button type="button" id="toggle-confirm-password" class="password-toggle">
+          <i class="fas fa-eye"></i> <!-- Ícono de ojo -->
+        </button>
       </div>
 
       <button type="submit">Registrarse</button>
@@ -84,12 +89,18 @@
       const passwordField = document.getElementById('password');
       const passwordFieldType = passwordField.type === 'password' ? 'text' : 'password';
       passwordField.type = passwordFieldType;
+      // Cambiar el ícono
+      const icon = document.getElementById('toggle-password').querySelector('i');
+      icon.classList.toggle('fa-eye-slash');
     });
 
     document.getElementById('toggle-confirm-password').addEventListener('click', () => {
       const confirmPasswordField = document.getElementById('confirm-password');
       const confirmPasswordFieldType = confirmPasswordField.type === 'password' ? 'text' : 'password';
       confirmPasswordField.type = confirmPasswordFieldType;
+      // Cambiar el ícono
+      const icon = document.getElementById('toggle-confirm-password').querySelector('i');
+      icon.classList.toggle('fa-eye-slash');
     });
   </script>
 </body>
