@@ -142,3 +142,20 @@ footer {
 #ojoconfirmar {
     right: 10px; /* Posición para el ícono de confirmar contraseña */
 }
+
+#registro-message,
+#login-message {
+  margin-top: 1em;
+  font-size: 1em;
+  text-align: center;
+}
+
+#registro-message.success,
+#login-message.success {
+  color: green;
+}
+
+#registro-message.error,
+#login-message.error {
+  color: red;
+}

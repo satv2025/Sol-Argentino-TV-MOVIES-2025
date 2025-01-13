@@ -49,105 +49,135 @@
   </footer>
 
   <script type="module">
-    // Importar Firebase y funcionalidades necesarias
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+// Importar Firebase y funcionalidades necesarias
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 
-    // Configuración de Firebase
-    const firebaseConfig = {
-      apiKey: "AIzaSyC051GQ3n7Lzj9M_FFXZbv8578BZZvTFRs",
-      authDomain: "sol-argentino-tv-movies.firebaseapp.com",
-      projectId: "sol-argentino-tv-movies",
-      storageBucket: "sol-argentino-tv-movies.firebasestorage.app",
-      messagingSenderId: "965356127011",
-      appId: "1:965356127011:web:eb197c18ea061393680296",
-      measurementId: "G-NB04NX5BZM"
-    };
+// Configuración de Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyC051GQ3n7Lzj9M_FFXZbv8578BZZvTFRs",
+  authDomain: "sol-argentino-tv-movies.firebaseapp.com",
+  projectId: "sol-argentino-tv-movies",
+  storageBucket: "sol-argentino-tv-movies.firebasestorage.app",
+  messagingSenderId: "965356127011",
+  appId: "1:965356127011:web:eb197c18ea061393680296",
+  measurementId: "G-NB04NX5BZM"
+};
 
-    // Inicializar Firebase
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
+// Inicializar Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
-    // Referencia al formulario
-    const registroForm = document.getElementById('registro-form');
-    registroForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
+// Referencia al formulario de registro
+const registroForm = document.getElementById('registro-form');
+registroForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-      const confirmPassword = document.getElementById('confirm-password').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const confirmPassword = document.getElementById('confirm-password').value;
 
-      // Validar que las contraseñas coincidan
-      if (password !== confirmPassword) {
-        alert('Las contraseñas no coinciden');
-        return;
-      }
+  const formWrapper = document.getElementById('form-wrapper');
+  let messageContainer = document.getElementById('registro-message');
 
-      try {
-        // Intentar crear el usuario
-        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-        console.log('Usuario registrado:', userCredential.user);
-        alert('¡Registro exitoso!');
+  // Crear un contenedor para mensajes si no existe
+  if (!messageContainer) {
+    messageContainer = document.createElement('div');
+    messageContainer.id = 'registro-message';
+    formWrapper.appendChild(messageContainer);
+  }
+
+  // Limpiar mensajes anteriores
+  messageContainer.textContent = '';
+  messageContainer.style.color = 'red';
+
+  // Validar que las contraseñas coincidan
+  if (password !== confirmPassword) {
+    messageContainer.textContent = 'Las contraseñas no coinciden';
+    return;
+  }
+
+  try {
+    // Intentar crear el usuario
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    console.log('Usuario registrado:', userCredential.user);
+
+    // Mostrar mensaje de éxito en verde
+    messageContainer.style.color = 'green';
+    messageContainer.textContent = '¡Registro exitoso!';
+    setTimeout(() => {
+      window.location.href = 'index'; // Redirigir al catálogo
+    }, 2000); // Esperar 2 segundos antes de redirigir
+  } catch (error) {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+    // Mostrar mensajes de error en rojo
+    if (errorCode === 'auth/email-already-in-use') {
+      messageContainer.textContent = 'El correo ya está registrado. Por favor, inicia sesión.';
+    } else {
+      console.error(`Error (${errorCode}): ${errorMessage}`);
+      messageContainer.textContent = `Error: ${errorMessage}`;
+    }
+  }
+});
+
+// Configurar el botón de inicio de sesión dinámico
+const loginButton = document.getElementById('login-button');
+loginButton.addEventListener('click', () => {
+  const formWrapper = document.getElementById('form-wrapper');
+  formWrapper.innerHTML = `
+    <h1>Inicio de Sesión</h1>
+    <form id="login-form" class="form-container">
+      <div class="form-container">
+        <input type="email" id="login-email" placeholder="Correo electrónico" required>
+        <div class="password-container">
+          <input type="password" id="login-password" placeholder="Contraseña" required>
+          <i class="fas fa-eye" id="toggle-login-password"></i>
+        </div>
+        <button type="submit">Iniciar Sesión</button>
+      </div>
+    </form>
+    <div id="login-message" style="color: red;"></div>
+  `;
+
+  // Funcionalidad del formulario de inicio de sesión
+  const loginForm = document.getElementById('login-form');
+  loginForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+
+    const messageContainer = document.getElementById('login-message');
+    messageContainer.textContent = ''; // Limpiar mensajes anteriores
+    messageContainer.style.color = 'red';
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      console.log('Usuario autenticado:', userCredential.user);
+
+      // Mostrar mensaje de éxito en verde
+      messageContainer.style.color = 'green';
+      messageContainer.textContent = 'Inicio de sesión exitoso';
+      setTimeout(() => {
         window.location.href = 'index'; // Redirigir al catálogo
-      } catch (error) {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+      }, 2000);
+    } catch (error) {
+      console.error('Error al iniciar sesión:', error.message);
+      messageContainer.textContent = `Error al iniciar sesión: ${error.message}`;
+    }
+  });
 
-        if (errorCode === 'auth/email-already-in-use') {
-          alert('El correo ya está registrado. Por favor, inicia sesión.');
-        } else {
-          console.error(`Error (${errorCode}): ${errorMessage}`);
-          alert(`Error: ${errorMessage}`);
-        }
-      }
-    });
-
-    // Cargar el formulario de inicio de sesión dinámicamente
-    const loginButton = document.getElementById('login-button');
-    loginButton.addEventListener('click', () => {
-      const formWrapper = document.getElementById('form-wrapper');
-      formWrapper.innerHTML = `
-        <h1>Inicio de Sesión</h1>
-        <form id="login-form" class="form-container">
-          <div class="form-container">
-            <input type="email" id="login-email" placeholder="Correo electrónico" required>
-            <div class="password-container">
-              <input type="password" id="login-password" placeholder="Contraseña" required>
-              <i class="fas fa-eye" id="toggle-login-password"></i>
-            </div>
-            <button type="submit">Iniciar Sesión</button>
-          </div>
-        </form>
-      `;
-
-      // Añadir funcionalidad al nuevo formulario
-      const loginForm = document.getElementById('login-form');
-      loginForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const email = document.getElementById('login-email').value;
-        const password = document.getElementById('login-password').value;
-
-        try {
-          const userCredential = await signInWithEmailAndPassword(auth, email, password);
-          console.log('Usuario autenticado:', userCredential.user);
-          alert('Inicio de sesión exitoso');
-          window.location.href = 'index'; // Redirigir al catálogo
-        } catch (error) {
-          console.error('Error al iniciar sesión:', error.message);
-          alert('Error al iniciar sesión: ' + error.message);
-        }
-      });
-
-      // Alternar visibilidad de contraseña
-      const togglePassword = document.getElementById('toggle-login-password');
-      togglePassword.addEventListener('click', () => {
-        const passwordField = document.getElementById('login-password');
-        const passwordFieldType = passwordField.type === 'password' ? 'text' : 'password';
-        passwordField.type = passwordFieldType;
-        togglePassword.classList.toggle('fa-eye-slash');
-        togglePassword.classList.toggle('fa-eye');
-      });
-    });
+  // Alternar visibilidad de contraseña
+  const togglePassword = document.getElementById('toggle-login-password');
+  togglePassword.addEventListener('click', () => {
+    const passwordField = document.getElementById('login-password');
+    const passwordFieldType = passwordField.type === 'password' ? 'text' : 'password';
+    passwordField.type = passwordFieldType;
+    togglePassword.classList.toggle('fa-eye-slash');
+    togglePassword.classList.toggle('fa-eye');
+  });
+});
   </script>
 </body>
 </html>
