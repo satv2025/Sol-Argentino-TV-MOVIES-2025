@@ -649,8 +649,8 @@ footer p {
   /* El contador de notificaciones en rojo */
   .notification-count {
     position: absolute;
-    top: -0.3em;  /* Ajuste basado en la fuente */
-    right: -0.3em;
+    top: -3.7em;  /* Ajuste basado en la fuente */
+    right: 23em;
     background-color: red;
     color: white;
     border-radius: 50%;
@@ -662,16 +662,17 @@ footer p {
   .notifications-popup {
     display: none; /* Oculto por defecto */
     position: fixed;
-    top: 50%;
-    right: 1em;  /* Ajuste de distancia */
+    top: 21em;
+    right: 16em;  /* Ajuste de distancia */
     transform: translateY(-50%);
-    background-color: white;
-    border: 0.1em solid #ccc;
-    width: 15em;  /* 15em en lugar de 250px */
+    background-color: #222;
+    width: 22em;  /* 15em en lugar de 250px */
+    height: 30em;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
     z-index: 1000;
     padding: 1em;
     font-size: 1em;
+    border-radius: 0.3em;
   }
   
   .notifications-header {
@@ -680,6 +681,11 @@ footer p {
     align-items: center;
   }
   
+  .notifications-header h4{ 
+  position: relative;
+  margin-top: -1em;
+  }
+
   .notifications-popup ul {
     list-style: none;
     padding: 0;
@@ -697,6 +703,8 @@ footer p {
     border: none;
     cursor: pointer;
     font-size: 1em;
+    position: relative;
+    left: 1em;
     color: #007bff;
   }
   
