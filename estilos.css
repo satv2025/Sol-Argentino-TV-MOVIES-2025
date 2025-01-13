@@ -104,8 +104,10 @@ nav a:hover {
     display: flex;
     justify-content: right; /* Alinea la barra de búsqueda a la derecha */
     margin-top: -1.7em; /* Espaciado superior */
-    position: relative;
+    position: absolute; /* Cambiar a absolute */
     top: 2.1em;
+    right: 2em; /* Añadir un margen para que no se pegue al borde derecho */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
 }
 
 .search-form input[type="text"] {
@@ -141,6 +143,7 @@ nav a:hover {
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-weight: 700;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
 }
 
 .search-form button:hover {
