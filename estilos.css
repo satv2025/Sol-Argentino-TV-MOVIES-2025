@@ -646,6 +646,7 @@ footer p {
     font-size: 1.5em; /* Tamaño ajustable dependiendo de la base de la fuente */
     left: 65em;
     top: -3em;
+    max-width: 10em;
   }
   
   /* El contador de notificaciones en rojo */
@@ -663,7 +664,7 @@ footer p {
   /* Estilo para el modal de notificaciones */
   .notifications-popup {
     display: none; /* Oculto por defecto */
-    position: fixed;
+    position: absolute;
     top: 21.5em;
     right: 21.4em;  /* Ajuste de distancia */
     transform: translateY(-50%);
