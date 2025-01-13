@@ -122,7 +122,7 @@
           if (user) {
             // Si el usuario está autenticado, mostrar su nombre o correo
             userNick.textContent = user.displayName || user.email;
-            logoutBtn.style.display = 'block'; // Mostrar el botón de cierre de sesión
+            logoutBtn.style.display = ''; // Mostrar el botón de cierre de sesión
           } else {
             // Si no hay un usuario autenticado, mostrar "Usuario No Identificado"
             userNick.textContent = 'Usuario No Identificado';
@@ -221,13 +221,13 @@
           if (user) {
             // Si el usuario está autenticado, mostrar su nombre o correo
             userNick.textContent = user.displayName || user.email;
-            logoutBtn.style.display = 'block';  // Mostrar el botón de cierre de sesión
+            logoutBtn.style.display = '';  // Mostrar el botón de cierre de sesión
             loginBtn.style.display = 'none';   // Ocultar el botón de inicio de sesión
           } else {
             // Si no hay un usuario autenticado, mostrar "Usuario No Identificado"
             userNick.textContent = 'Usuario No Identificado';
             logoutBtn.style.display = 'none';  // Ocultar el botón de cierre de sesión
-            loginBtn.style.display = 'block';  // Mostrar el botón de inicio de sesión
+            loginBtn.style.display = '';  // Mostrar el botón de inicio de sesión
           }
         });
       
