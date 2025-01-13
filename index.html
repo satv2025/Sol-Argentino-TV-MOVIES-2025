@@ -12,7 +12,7 @@
     <nav>
       <p class="logo">SATVMOVIES</p>
       <ul>
-        <li><a href="catalogo" class="inicio active">Inicio</a></li>
+        <li><a href="index" class="inicio active">Inicio</a></li>
         <li><a href="proximamente">Próximamente</a></li>
         <li><a href="acercade">Acerca De</a></li>
       </ul>
@@ -265,7 +265,7 @@
     try {
       await signOut(auth);  // Cerrar sesión
       console.log("Sesión cerrada.");
-      window.location.href = "index.html";  // Redirigir al login (index.html)
+      window.location.href = "index";  // Redirigir al login (index.html)
     } catch (error) {
       console.error("Error al cerrar sesión: ", error);
     }
@@ -313,13 +313,13 @@
     if (user) {
       // Si el usuario está autenticado, mostrar su nombre o correo
       userNick.textContent = user.displayName || user.email;
-      logoutBtn.style.display = 'block';  // Mostrar el botón de cierre de sesión
+      logoutBtn.style.display = '';  // Mostrar el botón de cierre de sesión
       loginBtn.style.display = 'none';   // Ocultar el botón de inicio de sesión
     } else {
       // Si no hay un usuario autenticado, mostrar "Usuario No Identificado"
       userNick.textContent = 'Usuario No Identificado';
       logoutBtn.style.display = 'none';  // Ocultar el botón de cierre de sesión
-      loginBtn.style.display = 'block';  // Mostrar el botón de inicio de sesión
+      loginBtn.style.display = '';  // Mostrar el botón de inicio de sesión
     }
   });
 
@@ -328,7 +328,7 @@
     try {
       await signOut(auth);  // Cerrar sesión
       console.log("Sesión cerrada.");
-      window.location.href = "index.html";  // Redirigir al login (index.html)
+      window.location.href = "index";  // Redirigir al login (index.html)
     } catch (error) {
       console.error("Error al cerrar sesión: ", error);
     }
