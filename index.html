@@ -21,10 +21,11 @@
         <button type="submit">Buscar</button>
       </form>
     </nav>
+  
     <div id="user-nick">Usuario No Identificado</div>
-    <button id="logout-btn">Cerrar sesión</button>
-  </header>   
-
+    <button id="logout-btn" style="display: none;">Cerrar sesión</button>
+    <button id="login-btn" style="display: none;">Iniciar sesión</button> <!-- Botón de inicio de sesión -->
+  </header>
 <main>
     <div class="desc">
         <h1>Bienvenidos a Sol Argentino TV MOVIES</h1>
@@ -278,6 +279,79 @@
       logoutBtn.addEventListener('click', logoutUser);  // Asignar el evento de clic para el logout
     } else {
       console.warn("No se encontró el botón de cerrar sesión.");
+    }
+  });
+</script>
+
+<script type="module">
+  // Importar las funciones necesarias de Firebase
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+  import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+
+  // Configuración de Firebase (tus credenciales)
+  const firebaseConfig = {
+    apiKey: "AIzaSyC051GQ3n7Lzj9M_FFXZbv8578BZZvTFRs",
+    authDomain: "sol-argentino-tv-movies.firebaseapp.com",
+    projectId: "sol-argentino-tv-movies",
+    storageBucket: "sol-argentino-tv-movies.firebasestorage.app",
+    messagingSenderId: "965356127011",
+    appId: "1:965356127011:web:eb197c18ea061393680296",
+    measurementId: "G-NB04NX5BZM"
+  };
+
+  // Inicializar Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  // Detectar el estado de autenticación
+  onAuthStateChanged(auth, (user) => {
+    const userNick = document.getElementById('user-nick');
+    const logoutBtn = document.getElementById('logout-btn');
+    const loginBtn = document.getElementById('login-btn');  // Botón de inicio de sesión
+
+    if (user) {
+      // Si el usuario está autenticado, mostrar su nombre o correo
+      userNick.textContent = user.displayName || user.email;
+      logoutBtn.style.display = 'block';  // Mostrar el botón de cierre de sesión
+      loginBtn.style.display = 'none';   // Ocultar el botón de inicio de sesión
+    } else {
+      // Si no hay un usuario autenticado, mostrar "Usuario No Identificado"
+      userNick.textContent = 'Usuario No Identificado';
+      logoutBtn.style.display = 'none';  // Ocultar el botón de cierre de sesión
+      loginBtn.style.display = 'block';  // Mostrar el botón de inicio de sesión
+    }
+  });
+
+  // Función para manejar el cierre de sesión
+  const logoutUser = async () => {
+    try {
+      await signOut(auth);  // Cerrar sesión
+      console.log("Sesión cerrada.");
+      window.location.href = "index.html";  // Redirigir al login (index.html)
+    } catch (error) {
+      console.error("Error al cerrar sesión: ", error);
+    }
+  };
+
+  // Función para manejar el inicio de sesión
+  const redirectToLogin = () => {
+    window.location.href = "registro";  // Redirige a la página de registro
+  };
+
+  // Asegurarse de que el botón de logout y login estén disponibles en el DOM antes de agregar el evento
+  window.addEventListener('DOMContentLoaded', () => {
+    const logoutBtn = document.getElementById('logout-btn');
+    const loginBtn = document.getElementById('login-btn');
+
+    if (logoutBtn) {
+      logoutBtn.addEventListener('click', logoutUser);  // Asignar el evento de clic para el logout
+    }
+
+    if (loginBtn) {
+      loginBtn.addEventListener('click', redirectToLogin);  // Asignar el evento de clic para el login
+    } else {
+      console.warn("No se encontró el botón de inicio de sesión.");
     }
   });
 </script>
