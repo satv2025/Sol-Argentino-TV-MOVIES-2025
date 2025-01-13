@@ -74,7 +74,7 @@ nav ul {
     display: flex;
     justify-content: center; /* Centra los elementos del menú */
     list-style: none; /* Elimina los puntos de lista */
-    top: 2em;
+    top: 1.6em;
     position: relative;
 }
 
@@ -97,13 +97,13 @@ nav a:hover {
     color: #005a9e; /* Azul más oscuro en hover */
 }
 
-.logo {position: absolute;left: -0.2em;color: #0078D4;font-weight: 700;font-size: 2em;top: 0.8em;left: 0.74em;}
+.logo {position: absolute;color: #0078D4;font-weight: 700;font-size: 2em;top: 0.2em;left: 0.78em;}
 
 /* Estilos para la barra de búsqueda */
 .search-form {
     display: flex;
     justify-content: right; /* Alinea la barra de búsqueda a la derecha */
-    margin-top: -1.7em; /* Espaciado superior */
+    margin-top: 0.9em; /* Espaciado superior */
     position: absolute; /* Cambiar a absolute */
     top: 2.1em;
     right: 2em; /* Añadir un margen para que no se pegue al borde derecho */
