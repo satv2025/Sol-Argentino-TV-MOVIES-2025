@@ -709,6 +709,9 @@ footer p {
     color: #007bff;
     top: -0.7em;
   }
+
+  .notification-icon i {
+  }
   
   /* Media Queries para pantallas pequeñas (ej. móviles) */
   @media (max-width: 600px) {
