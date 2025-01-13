@@ -25,6 +25,25 @@
     <div id="user-nick">Usuario No Identificado</div>
     <button id="logout-btn" style="display: none;">Cerrar sesión</button>
     <button id="login-btn" style="display: none;">Iniciar sesión</button> <!-- Botón de inicio de sesión -->
+
+    <!-- Icono de la campana de notificaciones -->
+<div class="notification-icon" id="notification-icon">
+  <i class="fas fa-bell"></i>
+  <span class="notification-count" id="notification-count">3</span>
+</div>
+
+<!-- Modal de notificaciones (inicialmente oculto) -->
+<div id="notifications-popup" class="notifications-popup">
+  <div class="notifications-header">
+    <h4>Notificaciones</h4>
+    <button class="notif" id="close-notifications">Cerrar</button>
+  </div>
+  <ul>
+    <li>Notificación 1</li>
+    <li>Notificación 2</li>
+    <li>Notificación 3</li>
+  </ul>
+</div>
   </header>
 <main>
     <div class="desc">
@@ -356,5 +375,22 @@
   });
 </script>
 
+<script>
+  // Obtener elementos del DOM
+const notificationIcon = document.getElementById("notification-icon");
+const notificationsPopup = document.getElementById("notifications-popup");
+const closeBtn = document.getElementById("close-notifications");
+
+// Mostrar/ocultar el modal de notificaciones al hacer clic en la campana
+notificationIcon.addEventListener("click", function() {
+  const isVisible = notificationsPopup.style.display === "block";
+  notificationsPopup.style.display = isVisible ? "none" : "block";
+});
+
+// Cerrar el modal de notificaciones al hacer clic en el botón "Cerrar"
+closeBtn.addEventListener("click", function() {
+  notificationsPopup.style.display = "none";
+});
+</script>
 </body>
 </html>

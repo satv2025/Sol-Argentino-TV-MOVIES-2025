@@ -53,13 +53,15 @@ h1 {
 
 .desc p {
     line-height: 1.5; /* Espaciado entre las líneas del párrafo */
-    max-width: 800px; /* Ancho máximo para mejorar legibilidad */
+    max-width: 50em; /* Ancho máximo para mejorar legibilidad */
     margin: 0 auto; /* Centrado del párrafo */
+    margin-top: -5.5em;
+    text-align: justify;
 }
 
 h4 {
     font-size: 1.2em;
-    margin-top: 2em;
+    margin-top: 3em;
     font-weight: normal;
 }
 nav a:active {
@@ -367,6 +369,7 @@ footer p {
     justify-content: center;
     text-align: center;
     display: grid;
+    margin-top: 0.3em;
 }
 
 #logout-btn:hover {
@@ -392,6 +395,7 @@ footer p {
     justify-content: center;
     text-align: center;
     display: grid;
+    margin-top: 0.3em;
 }
 
 #login-btn:hover {
@@ -634,3 +638,118 @@ footer p {
         max-height: 100em;
     }
 }
+
+/* Estilo para el ícono de la campana */
+.notification-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5em; /* Tamaño ajustable dependiendo de la base de la fuente */
+  }
+  
+  /* El contador de notificaciones en rojo */
+  .notification-count {
+    position: absolute;
+    top: -0.3em;  /* Ajuste basado en la fuente */
+    right: -0.3em;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.3em;
+    font-size: 0.75em; /* Reducción proporcional al ícono */
+  }
+  
+  /* Estilo para el modal de notificaciones */
+  .notifications-popup {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    right: 1em;  /* Ajuste de distancia */
+    transform: translateY(-50%);
+    background-color: white;
+    border: 0.1em solid #ccc;
+    width: 15em;  /* 15em en lugar de 250px */
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 1em;
+    font-size: 1em;
+  }
+  
+  .notifications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .notifications-popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .notifications-popup ul li {
+    padding: 0.5em;
+    border-bottom: 0.1em solid #eee;
+  }
+  
+  /* Estilo para el botón de cerrar */
+  .notif {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: #007bff;
+  }
+  
+  /* Media Queries para pantallas pequeñas (ej. móviles) */
+  @media (max-width: 600px) {
+    .notification-icon {
+      font-size: 1.2em; /* Reducir tamaño del ícono en pantallas pequeñas */
+    }
+  
+    .notification-count {
+      top: -0.2em;
+      right: -0.2em;
+      padding: 0.2em;
+      font-size: 0.6em;
+    }
+  
+    .notifications-popup {
+      width: 12em;  /* Reducir el tamaño del modal en pantallas pequeñas */
+      right: 0.5em; /* Ajustar la posición a la derecha */
+    }
+  
+    .notifications-header {
+      font-size: 0.9em;
+    }
+  
+    .notifications-popup ul li {
+      padding: 0.4em; /* Reducir padding para pantallas pequeñas */
+    }
+  
+    .notif {
+      font-size: 0.9em; /* Reducir tamaño del botón */
+    }
+  }
+  
+  /* Media Queries para pantallas medianas (tabletas) */
+  @media (max-width: 768px) {
+    .notification-icon {
+      font-size: 1.4em; /* Ajustar para tabletas */
+    }
+  
+    .notifications-popup {
+      width: 13em;  /* Ajustar el tamaño del modal en tabletas */
+    }
+  
+    .notifications-header {
+      font-size: 1em;
+    }
+  
+    .notifications-popup ul li {
+      padding: 0.45em; /* Ajustar padding */
+    }
+  
+    .notif {
+      font-size: 1em; /* Ajustar el tamaño del botón */
+    }
+  }
