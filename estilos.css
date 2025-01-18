@@ -673,7 +673,7 @@ footer p {
     display: none; /* Oculto por defecto */
     position: absolute;
     top: 21.5em;
-    right: 21.4em;  /* Ajuste de distancia */
+    right: 24.7em;  /* Ajuste de distancia */
     transform: translateY(-50%);
     background-color: #181818;
     width: 22em;  /* 15em en lugar de 250px */
