@@ -41,23 +41,9 @@
 }
 
 /* Firefox - Estilo alternativo para scrollbars en Firefox */
-scrollbar {
-  width: 1em;
-}
-
-scrollbar-track {
-  background: #181818;
-}
-
-scrollbar-thumb {
-  background-color: #0078D4;
-  border-radius: 0.5em;
-  border: 0.2em solid transparent;
-  background-clip: padding-box;
-}
-
-scrollbar-thumb:hover {
-  background-color: #007bff;
+html {
+  scrollbar-width: thin; /* Establece el grosor del scrollbar en Firefox */
+  scrollbar-color: #0078D4 #181818; /* Establece el color del pulgar y la pista en Firefox */
 }
 
 /* Internet Explorer y Edge Legacy */
