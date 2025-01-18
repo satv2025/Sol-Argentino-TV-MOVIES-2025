@@ -169,6 +169,9 @@ main {
 
 .bell-icon {
     font-family: 'FONTAWESOME';
+    position: relative;
+    left: 7em;
+    top: -0.3em;
 }
 
 .catalogo {
