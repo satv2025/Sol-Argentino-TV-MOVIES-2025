@@ -9,7 +9,7 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: #0078D4; /* Color del pulgar de la barra */
-  border-radius: 0.5em; /* Bordes redondeados */
+  border-radius: 0.3em; /* Bordes redondeados */
   border: 0.2em solid transparent; /* Bordes transparentes */
   background-clip: padding-box; /* Evita que el borde se mezcle con el color */
 }
@@ -25,7 +25,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    border-radius: 0.4em; /* Bordes más pequeños */
+    border-radius: 0.3em; /* Bordes más pequeños */
   }
 }
 
@@ -43,8 +43,9 @@
 /* Firefox - Estilo alternativo para scrollbars en Firefox */
 @-moz-document url-prefix() {
   html {
-    scrollbar-width: 1em; /* Establece el grosor del scrollbar en Firefox */
+    scrollbar-width: 3em; /* Establece el grosor del scrollbar en Firefox */
     scrollbar-color: #0078D4 #181818; /* Establece el color del pulgar y la pista en Firefox */
+    border-radius: 0.3em;
   }
 }
 
@@ -59,7 +60,7 @@
 
 ::-ms-scrollbar-thumb {
   background-color: #0078D4;
-  border-radius: 0.5em;
+  border-radius: 0.3em;
   border: 0.2em solid transparent;
   background-clip: padding-box;
 }
