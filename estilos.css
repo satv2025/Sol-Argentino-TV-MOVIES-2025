@@ -167,6 +167,10 @@ main {
     margin-top: 2em;
 }
 
+.bell-icon {
+    font-family: 'FONTAWESOME';
+}
+
 .catalogo {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 elementos por fila */
