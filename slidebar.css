@@ -15,7 +15,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #00bbff; /* Color al pasar el ratón */
+  background-color: #007bff; /* Color al pasar el ratón */
 }
 
 /* Media query para pantallas más pequeñas */
@@ -57,7 +57,7 @@ scrollbar-thumb {
 }
 
 scrollbar-thumb:hover {
-  background-color: #00bbff;
+  background-color: #007bff;
 }
 
 /* Internet Explorer y Edge Legacy */
@@ -77,5 +77,5 @@ scrollbar-thumb:hover {
 }
 
 ::-ms-scrollbar-thumb:hover {
-  background-color: #00bbff;
+  background-color: #007bff;
 }
