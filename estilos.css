@@ -251,8 +251,8 @@ main {
 }
 
 .pelicula:hover {
-    transform: translateY(-0.625em); /* 10px = 0.625em */
-    box-shadow: 0 0.3em 1.5em rgba(0, 0, 0, 0.4); /* Aumentar la sombra al pasar el cursor */
+    transform: scale(1.05);
+    box-shadow: 0 0.3em 1.5em rgba(0, 0, 0, 0.4);
 }
 
 button {
