@@ -41,9 +41,11 @@
 }
 
 /* Firefox - Estilo alternativo para scrollbars en Firefox */
-html {
-  scrollbar-width: thin; /* Establece el grosor del scrollbar en Firefox */
-  scrollbar-color: #0078D4 #181818; /* Establece el color del pulgar y la pista en Firefox */
+@-moz-document url-prefix() {
+  html {
+    scrollbar-width: 1em; /* Establece el grosor del scrollbar en Firefox */
+    scrollbar-color: #0078D4 #181818; /* Establece el color del pulgar y la pista en Firefox */
+  }
 }
 
 /* Internet Explorer y Edge Legacy */
