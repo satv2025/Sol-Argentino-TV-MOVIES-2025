@@ -7,50 +7,6 @@
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="SolArgentinoTVMOVIES.ico" type="image/x-icon">
-    <style>
-      /* Barra de desplazamiento por defecto para todos los tamaños */
-::-webkit-scrollbar {
-  width: 1em; /* Usamos 'em' en lugar de 'px' */
-}
-
-::-webkit-scrollbar-track {
-  background: #181818;
-  background-size: cover;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #0078D4;
-  border-radius: 0.5em; /* Radio en 'em' */
-  border: 0.2em solid transparent;
-  background-clip: padding-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #00bbff;
-}
-
-/* Media query para pantallas más pequeñas */
-@media (max-width: 768px) {
-  ::-webkit-scrollbar {
-    width: 0.8em; /* Reduce el ancho del scrollbar */
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: 0.4em; /* Bordes más pequeños */
-  }
-}
-
-/* Media query para pantallas extra pequeñas */
-@media (max-width: 480px) {
-  ::-webkit-scrollbar {
-    width: 0.6em; /* Scrollbar aún más fino */
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: 0.3em;
-  }
-}
-    </style>
   </head>
   <header>
     <nav>
@@ -72,7 +28,7 @@
 
     <!-- Icono de la campana de notificaciones -->
 <div class="notification-icon" id="notification-icon">
-  <i class="fas fa-bell"></i>
+  <span class="bell-icon">🔔</span>
 </div>
 
 <!-- Modal de notificaciones (inicialmente oculto) -->
