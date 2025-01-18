@@ -43,23 +43,29 @@
 /* Firefox - Estilo alternativo para scrollbars en Firefox */
 @-moz-document url-prefix() {
   html {
-    scrollbar-width: thick; /* Establece el grosor del scrollbar en Firefox sin hover */
-    scrollbar-color: #0078D4 #181818; /* Establece el color del pulgar y la pista en Firefox */
+    scrollbar-width: auto; /* Esto no afecta el grosor, pero puede mejorar la apariencia */
   }
 
-  /* Si quieres personalizar aún más el pulgar */
+  /* Modificar el pulgar para hacerlo más gordo sin hover */
   ::-moz-scrollbar-thumb {
     background-color: #0078D4;
     border-radius: 0.5em;
-    border: 0.2em solid transparent;
+    width: 1em; /* Aumentamos el grosor del pulgar directamente */
   }
 
+  /* El track sigue igual en color */
+  ::-moz-scrollbar-track {
+    background: #181818;
+  }
+
+  /* Cambiar el tamaño del scrollbar completo para Firefox */
+  ::-moz-scrollbar {
+    width: 1em;
+  }
+
+  /* Modificar el hover del pulgar */
   ::-moz-scrollbar-thumb:hover {
     background-color: #007bff;
-  }
-
-  ::-moz-scrollbar-track {
-    background: #181818; /* Fondo oscuro para la pista */
   }
 }
 
