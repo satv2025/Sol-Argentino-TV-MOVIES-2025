@@ -14,7 +14,8 @@
   "rewrites": [
     {
       "source": "/:folder",
-      "destination": "/:folder/:folder.html"
+      "destination": "/:folder/:folder.html",
+      "regex": true
     }
   ]
 }
