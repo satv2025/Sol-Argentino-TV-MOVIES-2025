@@ -13,24 +13,12 @@
   ],
   "rewrites": [
     {
-      "source": "/:page",
-      "destination": "/:page.html",
-      "has": [
-        {
-          "type": "file",
-          "value": "/:page.html"
-        }
-      ]
+      "source": "/:folder/:folder",
+      "destination": "/:folder/:folder.html"
     },
     {
-      "source": "/:folder",
-      "destination": "/:folder/:folder.html",
-      "has": [
-        {
-          "type": "file",
-          "value": "/:folder/:folder.html"
-        }
-      ]
+      "source": "/:page",
+      "destination": "/:page.html"
     }
   ]
 }
