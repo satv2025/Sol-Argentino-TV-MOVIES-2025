@@ -13,12 +13,8 @@
   ],
   "rewrites": [
     {
-      "source": "/:folder/:folder",
+      "source": "/:folder",
       "destination": "/:folder/:folder.html"
-    },
-    {
-      "source": "/:page",
-      "destination": "/:page.html"
     }
   ]
 }
