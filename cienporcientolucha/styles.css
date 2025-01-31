@@ -15,8 +15,10 @@ body {
 
 header {
     background-image: url('https://movies.solargentinotv.com.ar/—Pngtree—black background texture advertising_1911402.png');
-    padding: 1.25em; /* 20px = 1.25em */
-    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+    background-size: cover; /* Asegura que la imagen cubra todo el header */
+    background-position: center; /* Centra la imagen */
+    padding: 1.25em; /* Espaciado dentro del header */
+    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
 nav ul {
