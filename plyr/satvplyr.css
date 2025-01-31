@@ -909,16 +909,17 @@ a.plyr__control::after,a.plyr__control::before {
     padding: var(--plyr-control-spacing,10px)
 }
 
-.plyr--audio .plyr__control.plyr__tab-focus,.plyr--audio .plyr__control:hover,.plyr--audio .plyr__control[aria-expanded=true] {
-    background: #007BFF;
-    background: var(--plyr-audio-control-background-hover,var(--plyr-color-main,var(--plyr-color-main,#007BFF)));
-    color: #fff;
-    color: var(--plyr-audio-control-color-hover,#fff)
+.plyr__control.plyr__control--overlaid:hover {
+    background: #fff !important;
+    color: #007BFF !important;
 }
 
-.plyr__control.plyr__control--overlaid:hover {
-    background: #fff;
-    color: #007BFF;
+/* Estilos para los controles de audio (sin afectar el botón overlaid) */
+.plyr--audio .plyr__controls .plyr__control.plyr__tab-focus,
+.plyr--audio .plyr__controls .plyr__control:hover,
+.plyr--audio .plyr__controls .plyr__control[aria-expanded="true"] {
+    background: var(--plyr-audio-control-background-hover, var(--plyr-color-main, #007BFF));
+    color: var(--plyr-audio-control-color-hover, #fff);
 }
 
 .plyr--full-ui.plyr--audio input[type=range]::-webkit-slider-runnable-track {
