@@ -47,7 +47,7 @@
     display: none;
     position: absolute;
     background-color: #183347; /* Fondo igual que el del botón */
-    border: 0.125em solid #1788db; /* 2px a 0.125em */
+    border: 0.125em solid #007bff; /* 2px a 0.125em */
     padding: 0.625em 0.625em; /* 10px a 0.625em */
     color: white; /* Texto blanco */
     width: 15em; /* 240px a 15em */
@@ -76,7 +76,7 @@
     cursor: pointer;
     text-align: justify;
     position: relative;
-    left: -0.7em;
+    left: -0.72em;
     margin-bottom: -1.4em;
 }
 
