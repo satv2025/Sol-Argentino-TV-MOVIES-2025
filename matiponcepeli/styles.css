@@ -21,8 +21,10 @@ header {
 
 nav ul {
     display: flex;
-    justify-content: center;
-    list-style: none;
+    justify-content: center; /* Centra los elementos del menú */
+    list-style: none; /* Elimina los puntos de lista */
+    top: -0.6em;
+    position: relative;
 }
 
 nav li {
@@ -41,11 +43,23 @@ nav a:hover {
     color: #005a9e; /* Azul más oscuro en hover */
 }
 
-/* Estilos para la barra de búsqueda */
 .search-form {
     display: flex;
-    justify-content: center; /* Centra la barra de búsqueda */
-    margin-top: 20px;
+    justify-content: right; /* Alinea la barra de búsqueda a la derecha */
+    margin-top: 0.9em; /* Espaciado superior */
+    position: absolute; /* Cambiar a absolute */
+    top: -0.1em;
+    right: 2em; /* Añadir un margen para que no se pegue al borde derecho */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+.logo {
+    position: absolute;
+    color: #0078D4;
+    font-weight: 700;
+    font-size: 2em;
+    top: 0.4em;
+    left: 0.78em;
 }
 
 .search-form input[type="text"] {
