@@ -43,9 +43,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-document.querySelectorAll('header a').forEach(function(link) {
-    if (link.href === window.location.href) {
-        link.classList.add('active');
-    }
-});

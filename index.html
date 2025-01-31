@@ -5,54 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sol Argentino TV MOVIES</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="slidebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="SolArgentinoTVMOVIES.ico" type="image/x-icon">
-    <style>
-      /* Barra de desplazamiento por defecto para todos los tamaños */
-::-webkit-scrollbar {
-  width: 1em; /* Usamos 'em' en lugar de 'px' */
-}
-
-::-webkit-scrollbar-track {
-  background: #181818;
-  background-size: cover;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #0078D4;
-  border-radius: 0.5em; /* Radio en 'em' */
-  border: 0.2em solid transparent;
-  background-clip: padding-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #00bbff;
-}
-
-/* Media query para pantallas más pequeñas */
-@media (max-width: 768px) {
-  ::-webkit-scrollbar {
-    width: 0.8em; /* Reduce el ancho del scrollbar */
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: 0.4em; /* Bordes más pequeños */
-  }
-}
-
-/* Media query para pantallas extra pequeñas */
-@media (max-width: 480px) {
-  ::-webkit-scrollbar {
-    width: 0.6em; /* Scrollbar aún más fino */
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: 0.3em;
-  }
-}
-    </style>
   </head>
   <header>
+      <div class="content" id="scroll-container-header">
     <nav>
       <p class="logo">SATVMOVIES</p>
       <ul>
@@ -72,7 +30,7 @@
 
     <!-- Icono de la campana de notificaciones -->
 <div class="notification-icon" id="notification-icon">
-  <i class="fas fa-bell"></i>
+  <span class="bell-icon">🔔</span>
 </div>
 
 <!-- Modal de notificaciones (inicialmente oculto) -->
@@ -85,20 +43,24 @@
     <li>Notificación 1</li>
     <li>Notificación 2</li>
     <li>Notificación 3</li>
-  </ul>
-</div>
-  </header>
+    </ul>
+   </div>
+  </div>
+ </header>
+
+<body>
+    <div class="content" id="scroll-container-body">
 <main>
     <div class="desc">
         <h1>Bienvenidos a Sol Argentino TV MOVIES</h1>
         <p>¿Alguna vez buscaste películas o series gratis por internet? Bueno, llegó Sol Argentino TV MOVIES, un servicio de streaming completamente gratis, con series y películas nuevas, innovadoras y algunas conocidas.</p>
     </div>
 
-    <h4><strong>Estrenos Enero 2025:</strong> Gladiador [Saga Completa], Círculo, De noche con el diablo, Lo que hay dentro y Club De Buceo. Más contenido en marzo, junio y noviembre.</h4>
+    <h4><strong>Estrenos Marzo 2025:</strong> Gladiador [Saga Completa], Círculo, De noche con el diablo, Lo que hay dentro y Club De Buceo. Más contenido en marzo, junio y noviembre.</h4>
 
     <section class="catalogo">
       <!-- Película 1 -->
-      <a href="matiponcepeli/matiponcepeli" style="text-decoration: none; color: inherit;">
+      <a href="matiponcepeli" style="text-decoration: none; color: inherit;">
           <div class="pelicula">
               <img src="maxresdefault.jpg" alt="Pelicula 1">
               <h3 class="matiponcepelii">Matias Ponce - La Pelicula</h3>
@@ -108,7 +70,7 @@
       </a>
   
       <!-- Película 2 -->
-      <a href="cienporcientolucha/cienporcientolucha" style="text-decoration: none; color: inherit;">
+      <a href="cienporcientolucha" style="text-decoration: none; color: inherit;">
           <div class="pelicula">
               <img src="https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6" alt="Pelicula 10">
               <h3>100%Lucha - Las Peliculas</h3>
@@ -118,7 +80,7 @@
       </a>
   
       <!-- Película 3 -->
-      <a href="app/app" style="text-decoration: none; color: inherit;">
+      <a href="app" style="text-decoration: none; color: inherit;">
           <div class="pelicula">
               <img src="Asesinato para principiantes.jpg" alt="Pelicula 8">
               <h3>Asesinato para Principiantes</h3>
@@ -191,14 +153,15 @@
               <button type="button" onclick="activarRecordatorio('ClubDeBuceo')">Confirmar</button>
           </form>
       </div>      
-  
       </section>
       </main>
+    </div>
 
 <footer>
     <p>Sol Argentino TV MOVIES 2025 &copy; - Todos Los Derechos Reservados</p>
 </footer>
 
+<script src="slidebar.js"> </script>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
   import { getAuth, onAuthStateChanged, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
