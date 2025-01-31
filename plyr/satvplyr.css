@@ -916,6 +916,11 @@ a.plyr__control::after,a.plyr__control::before {
     color: var(--plyr-audio-control-color-hover,#fff)
 }
 
+.plyr__control.plyr__control--overlaid:hover {
+    background: #fff;
+    color: #007BFF;
+}
+
 .plyr--full-ui.plyr--audio input[type=range]::-webkit-slider-runnable-track {
     background-color: rgba(193,200,209,.6);
     background-color: var(--plyr-audio-range-track-background,var(--plyr-audio-progress-buffered-background,rgba(193,200,209,.6)))
@@ -1023,9 +1028,9 @@ a.plyr__control::after,a.plyr__control::before {
 
 .plyr--video .plyr__control.plyr__tab-focus,.plyr--video .plyr__control:hover,.plyr--video .plyr__control[aria-expanded=true] {
     background: #007BFF;
-    background: #ffffff;
+    background: var(--plyr-video-control-background-hover,var(--plyr-color-main,var(--plyr-color-main,#007BFF)));
     color: #fff;
-    color: #007bff;
+    color: var(--plyr-video-control-color-hover,#fff)
 }
 
 .plyr__control--overlaid {
