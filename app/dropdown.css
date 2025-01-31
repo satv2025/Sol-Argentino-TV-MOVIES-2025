@@ -8,7 +8,7 @@
     font-family: 'Netflix Sans';
     margin-top: 2.3em;
     background-color: #183347;
-    border: 0.125em solid #1788db; /* 2px a 0.125em */
+    border: 0.125em solid #007bff; /* 2px a 0.125em */
     color: white;
     padding: 0.625em 0.625em; /* 10px a 0.625em */
     font-size: 1em; /* 16px a 1em */
@@ -38,7 +38,7 @@
 }
 
 .dropdown-button:hover {
-    background-color: #16698e; /* Color más oscuro al pasar el mouse */
+    background-color: #007bff; /* Color más oscuro al pasar el mouse */
     cursor: pointer;
 }
 
@@ -81,7 +81,7 @@
 }
 
 .dropdown-content button:hover {
-    background-color: #16698e; /* Color de hover en los botones */
+    background-color: #007BFF; /* Color de hover en los botones */
 }
 
 /* Mostrar el contenido del dropdown al pasar el ratón o hacer clic */
