@@ -85,7 +85,7 @@ nav li {
 }
 
 nav a {
-    color: #0078D4; /* Color azul para los enlaces */
+    color: #007BFF; /* Color azul para los enlaces */
     text-decoration: none; /* Elimina el subrayado de los enlaces */
     font-weight: bold; /* Texto en negrita */
     font-size: 1.125em; /* Tamaño de fuente para los enlaces */
@@ -101,7 +101,7 @@ nav a:hover {
 
 .logo {
     position: absolute;
-    color: #0078D4;
+    color: #007BFF;
     font-weight: 700;
     font-size: 2em;
     top: 0.4em;
@@ -124,31 +124,31 @@ nav a:hover {
     font-family: 'Netflix Sans'; /* Tipografía */
     padding: 10px;
     font-size: 16px;
-    border: 2px solid #0078D4; /* Borde azul */
+    border: 2px solid #007BFF; /* Borde azul */
     border-radius: 5px 0 0 5px; /* Bordes redondeados */
     outline: none;
     font-weight: 700; /* Negrita */
-    color: #0078D4;
+    color: #007BFF;
 }
 
 .search-form input[type="text"]:focus {
-    border-color: #0078D4; /* Cambia el borde a azul cuando se enfoca */
+    border-color: #007BFF; /* Cambia el borde a azul cuando se enfoca */
 }
 
 .search-form input[type="text"]::placeholder {
-    color: #0078D4; /* Color del texto placeholder */
+    color: #007BFF; /* Color del texto placeholder */
 }
 
 .search-form button {
     font-family: 'Netflix Sans';
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #0078D4; /* Fondo azul */
+    background-color: #007BFF; /* Fondo azul */
     color: white;
     border-left: #fff;
-    border-top: 2px solid #0078D4;
-    border-right: 2px solid #0078D4;
-    border-bottom: 2px solid #0078D4;
+    border-top: 2px solid #007BFF;
+    border-right: 2px solid #007BFF;
+    border-bottom: 2px solid #007BFF;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-weight: 700;
@@ -270,7 +270,7 @@ main {
 }
 
 button {
-    background-color: #0078D400;
+    background-color: #007BFF00;
     color: #ffffff00;
     border: none;
     padding: 0.625em 1.25em; /* 10px 20px = 0.625em 1.25em */
@@ -302,7 +302,7 @@ footer p {
 .avisame-button {
     display: flex;
     align-items: center;
-    background-color: #0078D4;
+    background-color: #007BFF;
     color: white;
     border: none;
     padding: 0.5em 1em; /* Usando 'em' para que sea más responsive */
@@ -342,7 +342,7 @@ footer p {
 }
 
 .subscription-form button {
-    background-color: #0078D4;
+    background-color: #007BFF;
     color: white;
     border: none;
     padding: 0.5em 1em;
@@ -353,9 +353,9 @@ footer p {
 }
 
 #user-nick {
-    color: #0078D4;
+    color: #007BFF;
     font-family: 'Netflix Sans';
-    border: #0078D4 0.2em solid;
+    border: #007BFF 0.2em solid;
     width: 12%;
     height: 32%;
     text-align: center;
@@ -367,9 +367,9 @@ footer p {
 }
 
 #logout-btn {
-    color: #0078D4;
+    color: #007BFF;
     font-family: 'Netflix Sans';
-    border: #0078D4 0.2em solid;
+    border: #007BFF 0.2em solid;
     width: 12%;
     height: 32%;
     text-align: center;
@@ -387,15 +387,15 @@ footer p {
 }
 
 #logout-btn:hover {
-    background-color: #0078D4; /* Cambio de color al pasar el ratón por encima */
+    background-color: #007BFF; /* Cambio de color al pasar el ratón por encima */
     border-radius: 0.3em;
   
     color: white; /* Cambia el color del texto al pasar el ratón */
 }
 #login-btn {
-    color: #0078D4;
+    color: #007BFF;
     font-family: 'Netflix Sans';
-    border: #0078D4 0.2em solid;
+    border: #007BFF 0.2em solid;
     width: 12%;
     height: 32%;
     text-align: center;
@@ -413,7 +413,7 @@ footer p {
 }
 
 #login-btn:hover {
-    background-color: #0078D4; /* Cambio de color al pasar el ratón por encima */
+    background-color: #007BFF; /* Cambio de color al pasar el ratón por encima */
     border-radius: 0.3em;
     color: white; /* Cambia el color del texto al pasar el ratón */
 }
