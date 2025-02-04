@@ -267,6 +267,8 @@ main {
 .pelicula:hover {
     transform: scale(1.05);
     box-shadow: 0 0.3em 1.5em rgba(0, 0, 0, 0.4);
+    outline: 0.3em solid white; /* Borde blanco sin afectar el tamaño */
+     /* Ajuste para que siga el border-radius */
 }
 
 button {
