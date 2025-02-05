@@ -28,7 +28,7 @@
     height: 100vw;
 }
 
-svg {
+.close-button {
     position: absolute;
     top: 1em;
     left: 51em;

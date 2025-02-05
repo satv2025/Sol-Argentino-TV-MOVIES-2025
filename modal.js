@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Función para cerrar el modal al hacer clic en el botón de cierre
-document.querySelector(".previewModal-close").addEventListener("click", () => {
+document.querySelector(".close-button").addEventListener("click", () => {
     const modal = document.getElementById("infoModal");
     modal.style.display = "none";
     document.body.classList.remove("modal-open");
