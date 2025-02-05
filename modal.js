@@ -1,67 +1,54 @@
-// Datos de películas y series
+// Datos de las películas y series
 const peliculas = {
-    matiponcepeli: {
-        title: "Matias Ponce - La Pelicula",
-        description: "Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de YouTube.",
-        link: "matiponcepeli"
-    },
-    cienporcientolucha: {
-        title: "100% Lucha - Las Peliculas",
-        description: "Los productores detrás del famoso programa 100% Lucha decidieron hacerle películas.",
-        link: "cienporcientolucha"
-    },
     app: {
         title: "Asesinato para Principiantes",
+        tagline: "Un misterio atrapante por resolver.",
+        year: "2021",
+        rating: "13+ | violencia, lenguaje inapropiado",
+        genres: "Series dramáticas, Thriller",
         description: "En este thriller atrapante, una estudiante investiga un caso ocurrido hace cinco años.",
+        background: "Asesinato para principiantes.jpg",
         link: "app"
     }
 };
 
-// Función para abrir el modal
+// Función para abrir el modal con la info de la película/serie
 function openModal(movieKey) {
     const modal = document.getElementById("infoModal");
-    const title = document.getElementById("modal-title");
-    const description = document.getElementById("modal-description");
-    const watchButton = document.getElementById("watch-button");
-    const dropdownContainer = document.getElementById("season-dropdown-container");
-    const episodesContainer = document.getElementById("episodes-container");
-
     const movie = peliculas[movieKey];
-    title.innerText = movie.title;
-    description.innerText = movie.description;
-    watchButton.href = movie.link;
 
-    // Si es "Asesinato para Principiantes", agregar dropdown
+    document.getElementById("modal-title").innerText = movie.title;
+    document.getElementById("modal-tagline").innerText = movie.tagline;
+    document.getElementById("modal-year").innerText = movie.year;
+    document.getElementById("modal-rating").innerText = movie.rating;
+    document.getElementById("modal-genres").innerText = movie.genres;
+    document.getElementById("modal-description").innerText = movie.description;
+    document.getElementById("modal-background").src = movie.background;
+    document.getElementById("watch-button").href = movie.link;
+
+    // Si es "Asesinato para Principiantes", mostrar dropdown
     if (movieKey === "app") {
-        dropdownContainer.innerHTML = `
+        document.getElementById("season-dropdown-container").innerHTML = `
             <div class="season-dropdown">
-                <button class="dropdown-button" onclick="toggleDropdown()">Seleccionar Temporada</button>
+                <button class="dropdown-button" onclick="toggleDropdown()">Temporada 1</button>
                 <div class="dropdown-content">
                     <button onclick="loadEpisodes(1)">Temporada 1</button>
                     <button onclick="loadEpisodes(2)">Temporada 2 (Próximamente)</button>
                 </div>
             </div>
         `;
-        episodesContainer.innerHTML = ""; // Limpiar episodios anteriores
+        loadEpisodes(1);
     } else {
-        dropdownContainer.innerHTML = ""; // Ocultar dropdown en otras películas
-        episodesContainer.innerHTML = ""; // Limpiar episodios
+        document.getElementById("season-dropdown-container").innerHTML = "";
+        document.getElementById("episodes-container").innerHTML = "";
     }
 
     modal.style.display = "block";
 }
 
-// Cerrar modal al hacer clic en la "X"
+// Cerrar modal
 document.querySelector(".close").addEventListener("click", () => {
     document.getElementById("infoModal").style.display = "none";
-});
-
-// Detectar clic en los botones "Más Información"
-document.querySelectorAll(".moreinfobutton").forEach(button => {
-    button.addEventListener("click", function() {
-        const movieKey = this.getAttribute("data-movie");
-        openModal(movieKey);
-    });
 });
 
 // Mostrar dropdown de temporadas
@@ -78,10 +65,12 @@ function loadEpisodes(season) {
         episodes[1].forEach(ep => {
             episodesContainer.innerHTML += `
                 <div class="episode">
-                    <img src="${ep.image}" alt="${ep.title}" width="150">
-                    <h3>${ep.title}</h3>
-                    <p>${ep.description}</p>
-                    <p><strong>Duración:</strong> ${ep.duration}</p>
+                    <img src="${ep.image}" alt="${ep.title}">
+                    <div>
+                        <h3>${ep.title}</h3>
+                        <p>${ep.description}</p>
+                        <p><strong>Duración:</strong> ${ep.duration}</p>
+                    </div>
                 </div>
             `;
         });
@@ -89,3 +78,11 @@ function loadEpisodes(season) {
         episodesContainer.innerHTML = "<p>La temporada 2 está en desarrollo.</p>";
     }
 }
+
+// Detectar clic en los botones "Más Información"
+document.querySelectorAll(".moreinfobutton").forEach(button => {
+    button.addEventListener("click", function() {
+        const movieKey = this.getAttribute("data-movie");
+        openModal(movieKey);
+    });
+});
