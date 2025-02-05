@@ -1,4 +1,4 @@
-// Definir los datos de cada película
+// Datos de las películas y series
 const peliculas = {
     matiponcepeli: {
         year: "2022",
@@ -28,8 +28,6 @@ const peliculas = {
         background: "https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6",
         link: "#"
     },
-// Datos de las películas
-const peliculas = {
     app: {
         year: "2024",
         duration: "6 episodios",
@@ -113,14 +111,14 @@ const episodios = {
     ]
 };
 
-// Función para abrir el modal y cargar los datos
+// Función para abrir el modal y cargar los datos de la serie o película
 function openModal(movieKey) {
     const modal = document.getElementById("infoModal");
     const movie = peliculas[movieKey];
 
     if (!movie) return;
 
-    // Cargar los datos de la película en el modal
+    // Cargar los datos de la película o serie en el modal
     document.getElementById("modal-background").src = movie.background;
     document.getElementById("modal-title").innerText = movie.title;
     document.getElementById("modal-year").innerHTML = movie.year;
