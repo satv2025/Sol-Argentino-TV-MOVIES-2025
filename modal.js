@@ -25,7 +25,7 @@ const peliculas = {
         genres: "<strong>Géneros:</strong> Humor, lucha libre, luchas clandestinas, apuestas, secuestros, traiciones",
         titleType: "<strong>Este título es:</strong> Intenso, Íntimo, Delirante, Divertido",
         ageRating: "<span class='age'>12+</span> lenguaje inapropiado, daños físicos, humor absurdo",
-        curiosity: "<strong>En el 2011 iba a salir una tercera película, pero el programa fue cancelado</strong>",
+        curiosity: "<strong class='curiosidad'>En el 2011 iba a salir una tercera película, pero el programa fue cancelado</strong>",
         background: "https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6",
         link: "#"
     },
@@ -40,7 +40,7 @@ const peliculas = {
         genres: "<strong>Géneros:</strong> Series dramáticas, De Gran Bretaña, Series basadas en libros",
         titleType: "<strong>Este título es:</strong> Íntimo, Sombrío, De suspenso",
         ageRating: "<span class='age'>16+</span> lenguaje inapropiado, drogas, violencia sexual",
-        curiosity: "<strong>Es oficial: Se estrenará otra temporada</strong>",
+        curiosity: "<strong class='curiosidad'>Es oficial: Se estrenará otra temporada</strong>",
         background: "Asesinato para principiantes.jpg",
         link: "#"
     }
