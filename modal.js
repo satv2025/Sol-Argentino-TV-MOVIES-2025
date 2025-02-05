@@ -1,8 +1,8 @@
 // Definir los datos de cada película
 const peliculas = {
     matiponcepeli: {
-        title: "Matias Ponce - La Película",
-        year: "<strong>Año:</strong> 2022",
+        year: "2022",
+        duration: "1h",
         duration: "<strong>Duración:</strong> 1h",
         description: "Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de YouTube, o como él lo llama 'Yutun', desatando una hilarante y absurda aventura.",
         createdBy: "<strong>Creado por:</strong> Matias Ponce",
@@ -15,8 +15,8 @@ const peliculas = {
         link: "#"
     },
     cienporcientolucha: {
-        title: "100% Lucha - Las Películas",
-        year: "<strong>Año:</strong> 2008 y 2009",
+        year: "2008-09",
+        duration: "6 episodios",
         duration: "<strong>Duración:</strong> 80-85 mins por película",
         description: "Los productores detrás del famoso programa 100% Lucha decidieron hacerle películas.",
         createdBy: "<strong>Creado por:</strong> Eduardo Husni",
@@ -30,8 +30,8 @@ const peliculas = {
         link: "#"
     },
     app: {
-        title: "Asesinato para Principiantes",
-        year: "<strong>Año:</strong> 2024",
+        year: "2024",
+        duration: "6 episodios",
         seasons: "<strong>Temporadas:</strong> 1",
         episodes: "<strong>Episodios:</strong> 6",
         description: "En este thriller atrapante, una estudiante investiga, para un proyecto escolar, un caso ocurrido hace cinco años.",
