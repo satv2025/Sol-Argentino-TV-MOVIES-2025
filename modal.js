@@ -52,8 +52,6 @@ function openModal(movieKey) {
     if (!movie) return;
 
     // Cargar los datos de la película en el modal
-    document.getElementById("modal-title").innerText = movie.title;
-    document.getElementById("modal-tagline").innerText = movie.tagline;
     document.getElementById("modal-year").innerText = `Año: ${movie.year}`;
     document.getElementById("modal-duration").innerText = `Duración: ${movie.duration || "N/A"}`;
     document.getElementById("modal-description").innerText = movie.description;
