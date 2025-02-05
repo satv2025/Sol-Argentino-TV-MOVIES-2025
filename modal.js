@@ -201,38 +201,49 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Asegurarse de que el botón de cierre existe y capturarlo correctamente
-    const closeButton = document.querySelector(".previewModal-close span"); // Seleccionamos el <span> dentro de .previewModal-close
+window.onload = function() {
+    // Comprobamos si el modal y los elementos necesarios existen
+    const modal = document.getElementById("infoModal");
+    const closeButton = document.querySelector(".previewModal-close span"); // Apuntamos directamente al <span>
 
+    console.log("Modal:", modal);
+    console.log("Close Button:", closeButton);
+
+    // Verificamos si los elementos existen antes de añadir el evento
     if (closeButton) {
         closeButton.addEventListener("click", () => {
-            const modal = document.getElementById("infoModal");
             if (modal) {
                 modal.style.display = "none";
                 document.body.classList.remove("modal-open");
+                console.log("Modal cerrado");
+            } else {
+                console.log("Modal no encontrado");
             }
         });
+    } else {
+        console.log("Botón de cierre no encontrado");
     }
 
     // Función para cerrar el modal al hacer clic fuera de la caja de contenido
     document.addEventListener("click", (event) => {
-        const modal = document.getElementById("infoModal");
-        const modalContent = document.querySelector(".modal-content");
-        if (modal && modal.style.display === "block" && !modalContent.contains(event.target)) {
-            modal.style.display = "none";
-            document.body.classList.remove("modal-open");
+        if (modal && modal.style.display === "block") {
+            const modalContent = document.querySelector(".modal-content");
+            if (modalContent && !modalContent.contains(event.target)) {
+                modal.style.display = "none";
+                document.body.classList.remove("modal-open");
+                console.log("Modal cerrado al hacer clic fuera");
+            }
         }
     });
 
     // Función para cerrar el modal al presionar la tecla Esc
     document.addEventListener("keydown", (event) => {
         if (event.key === "Escape") {
-            const modal = document.getElementById("infoModal");
             if (modal) {
                 modal.style.display = "none";
                 document.body.classList.remove("modal-open");
+                console.log("Modal cerrado con la tecla Esc");
             }
         }
     });
-});
+};
