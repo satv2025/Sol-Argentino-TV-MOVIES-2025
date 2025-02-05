@@ -170,8 +170,8 @@ document.addEventListener("click", (event) => {
     const modal = document.getElementById("infoModal");
     const modalContent = document.querySelector(".modal-content");
 
-    // Solo cerrar el modal si el clic es fuera de la caja de contenido
-    if (modal.style.display === "block" && !modalContent.contains(event.target)) {
+    // Solo cerrar el modal si el clic es fuera de la caja de contenido y el modal está abierto
+    if (modal.style.display === "block" && !modalContent.contains(event.target) && !event.target.closest(".moreinfobutton")) {
         modal.style.display = "none";
         document.body.classList.remove("modal-open");
     }
