@@ -3,11 +3,12 @@ const peliculas = {
     matiponcepeli: {
         year: "2022",
         duration: "1h",
-        duration: "<strong>Duración:</strong> 1h",
         description: "Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de YouTube, o como él lo llama 'Yutun', desatando una hilarante y absurda aventura.",
-        createdBy: "<strong>Creado por:</strong> Matias Ponce",
-        cast: "<strong>Elenco:</strong> Matias Ponce, Santino Ponce, Indio Ponce, Antonella Ponce, Valeria Volpi, Julieta",
-        script: "<strong>Guión:</strong> Matias Ponce",
+        fullcreatedBy: "<strong>Creado por:</strong> Matias Ponce",
+        shortCast: "Matías Ponce, Santino Ponce, Indio Ponce, <a href='#' class='moreinfobuttona' data-movie='matiponcepeli'><em>Más</em></a>",  // Añadido "más"
+        fullcast: "<strong>Elenco:</strong> Matias Ponce, Santino Ponce, Indio Ponce, Antonella Ponce, Valeria Volpi, Julieta",
+        fullscript: "<strong>Guión:</strong> Matias Ponce",
+        fullgenres: "<strong>Géneros:</strong> Humor, humor absurdo, hackers, fama, grandes élites, paranoia, haters, YouTube",
         genres: "<strong>Géneros:</strong> Humor, humor absurdo, hackers, fama, grandes élites, paranoia, haters, YouTube",
         titleType: "<strong>Este título es:</strong> Original, delirante",
         ageRating: "<strong>Clasificación por edad:</strong> 12+, adolescentes, adultos, lenguaje inapropiado, delirante | Apta para mayores de 16 años",
@@ -16,12 +17,13 @@ const peliculas = {
     },
     cienporcientolucha: {
         year: "2008-09",
-        duration: "6 episodios",
-        duration: "<strong>Duración:</strong> 80-85 mins por película",
+        duration: "1h 20m (por película)",
         description: "Los productores detrás del famoso programa 100% Lucha decidieron hacerle películas.",
-        createdBy: "<strong>Creado por:</strong> Eduardo Husni",
-        cast: "<strong>Elenco:</strong> Norberto Adrián Fernandez, Marcelo Benítez, Miguel Ángel Wellington, Rubén Piuselli, Daniel Garcilazo, Paulo Giardina, Gabriel Emanuelli, Leonardo Montero, Eduardo Husni, Osvaldo Principi, Carlos Kaspar, Julio Mario Sibara (Turco Naím)",
-        script: "<strong>Guión:</strong> CineAR",
+        fullcreatedBy: "<strong>Creado por:</strong> Eduardo Husni",
+        shortCast: "Norberto Adrián Fernandez, Marcelo Benítez, Miguel Ángel Wellington <a href='#' class='moreinfobuttona' data-movie='cienporcientolucha'><em>Más</em></a>",  // Añadido "más"
+        fullcast: "<strong>Elenco:</strong> Norberto Adrián Fernandez, Marcelo Benítez, Miguel Ángel Wellington, Rubén Piuselli, Daniel Garcilazo, Paulo Giardina, Gabriel Emanuelli, Leonardo Montero, Eduardo Husni, Osvaldo Principi, Carlos Kaspar, Julio Mario Sibara (Turco Naím)",
+        fullscript: "<strong>Guión:</strong> CineAR",
+        fullgenres: "<strong>Géneros:</strong> Humor, lucha libre, luchas clandestinas, apuestas, secuestros, traiciones",
         genres: "<strong>Géneros:</strong> Humor, lucha libre, luchas clandestinas, apuestas, secuestros, traiciones",
         titleType: "<strong>Este título es:</strong> Intenso, Íntimo, Delirante, Divertido",
         ageRating: "<strong>Clasificación por edad:</strong> 12+ lenguaje inapropiado, daños físicos, humor absurdo",
@@ -32,15 +34,15 @@ const peliculas = {
     app: {
         year: "2024",
         duration: "6 episodios",
-        seasons: "<strong>Temporadas:</strong> 1",
-        episodes: "<strong>Episodios:</strong> 6",
         description: "En este thriller atrapante, una estudiante investiga, para un proyecto escolar, un caso ocurrido hace cinco años.",
         createdBy: "<strong>Creado por:</strong> Poppy Cogan",
-        cast: "<strong>Elenco:</strong> Emma Myers, Zain Iqbal, Asha Banks, Raiko Gohara, Jude Morgan-Collie, Yali Topol Margalith, Yasmin Al-Khudhairi, Henry Ashton, Carla Woodcock, Mathew Baynton, Gary Beadle, Anna Maxwell Martin",
-        script: "<strong>Guión:</strong> Poppy Cogan, Ruby Thomas, Zia Ahmed, Ajoke Ibironke",
+        shortCast: "Emma Myers, Zain Iqbal, Asha Banks <a href='#' class='moreinfobuttona' data-movie='app'><em>Más</em></a>",
+        fullcast: "<strong>Elenco:</strong> Emma Myers, Zain Iqbal, Asha Banks, Raiko Gohara, Jude Morgan-Collie, Yali Topol Margalith, Yasmin Al-Khudhairi, Henry Ashton, Carla Woodcock, Mathew Baynton, Gary Beadle, Anna Maxwell Martin",
+        fullscript: "<strong>Guión:</strong> Poppy Cogan, Ruby Thomas, Zia Ahmed, Ajoke Ibironke",
+        fullgenres: "<strong>Géneros:</strong> Series dramáticas, De Gran Bretaña, Series basadas en libros",
         genres: "<strong>Géneros:</strong> Series dramáticas, De Gran Bretaña, Series basadas en libros",
         titleType: "<strong>Este título es:</strong> Íntimo, Sombrío, De suspenso",
-        ageRating: "<strong>Clasificación por edad:</strong> 16+ lenguaje inapropiado, drogas, violencia sexual | Apta para mayores de 16 años",
+        fullageRating: "<strong>Clasificación por edad:</strong> 16+ lenguaje inapropiado, drogas, violencia sexual | Apta para mayores de 16 años",
         curiosity: "<strong>Curiosidad:</strong> ES OFICIAL: Una nueva temporada se acerca",
         background: "Asesinato para principiantes.jpg",
         link: "#"
@@ -60,7 +62,7 @@ function openModal(movieKey) {
     document.getElementById("modal-year").innerHTML = movie.year;
     document.getElementById("modal-description").innerText = movie.description;
     document.getElementById("modal-createdBy").innerHTML = movie.createdBy;
-    document.getElementById("modal-cast").innerHTML = movie.cast;
+    document.getElementById("modal-cast").innerHTML = movie.shortCast + " <a href='#' class='moreinfobutton' data-movie='" + movieKey + "'><em>Más</em></a>";
     document.getElementById("modal-script").innerHTML = movie.script;
     document.getElementById("modal-genres").innerHTML = movie.genres;
     document.getElementById("modal-titleType").innerHTML = movie.titleType;

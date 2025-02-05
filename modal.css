@@ -55,7 +55,7 @@
     color: #fff;
 }
 
-.modal-createdBy {
+.modal-fullcreatedBy {
     position: absolute;
     top: 47em;
     padding-left: 32em;
@@ -118,6 +118,42 @@
     padding-right: 24em;
     text-align: justify;
 }
+
+<----modalfull---->
+.modal-fulltitle {
+    position: absolute;
+    top: 4em;
+}
+
+.modal-fullcast {
+    position: absolute;
+    top: 6em;
+}
+
+.modal-fullscript {
+    position: absolute;
+    top: 8em;
+}
+
+.modal-fullgenres {
+    position: absolute;
+    top: 10em;
+}
+
+.modal-fulltitleType {
+    position: absolute;
+    top: 12em;
+}
+
+.modal-fullageRating {
+    position: absolute;
+    top: 14em;
+}
+
+.moreinfobuttona {
+    font-style: italic;
+}
+<----------------->
 
 .overlay {
     position: absolute;
