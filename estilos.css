@@ -300,7 +300,7 @@ footer p {
 }
 
 /* Estilos básicos del botón */
-.avisame-button, .comingbutton {
+.avisame-button, .moreinfobutton {
     display: flex;
     align-items: center;
     background-color: #007BFF;
