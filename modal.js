@@ -111,6 +111,14 @@ const episodios = {
     ]
 };
 
+// Detectar clic en los botones "Más Información"
+document.querySelectorAll(".moreinfobutton").forEach(button => {
+    button.addEventListener("click", function(event) {
+        const movieKey = this.getAttribute("data-movie");
+        openModal(movieKey);
+    });
+});
+
 // Función para abrir el modal y cargar los datos de la serie o película
 function openModal(movieKey) {
     const modal = document.getElementById("infoModal");
@@ -150,51 +158,6 @@ function openModal(movieKey) {
     }
 }
 
-// Detectar clic en los botones "Más Información"
-document.querySelectorAll(".moreinfobutton").forEach(button => {
-    button.addEventListener("click", function() {
-        const movieKey = this.getAttribute("data-movie");
-        openModal(movieKey);
-    });
-});
-
-// Función para cambiar la lista de episodios según la temporada seleccionada
-function changeSeason(season) {
-    const episodeList = document.getElementById("episode-list");
-    episodeList.innerHTML = ""; // Limpia la lista anterior
-
-    if (episodios[season]) {
-        episodios[season].forEach(ep => {
-            const li = document.createElement("li");
-            li.innerHTML = `
-                <img src="${ep.image}" alt="${ep.title}" class="episode-img">
-                <div class="episode-info">
-                    <h3>${ep.title}</h3>
-                    <p>${ep.description}</p>
-                    <span>${ep.duration}</span>
-                </div>
-            `;
-            episodeList.appendChild(li);
-        });
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdown = document.querySelector(".dropdown");
-    const button = document.querySelector(".dropdown-button");
-
-    button.addEventListener("click", function () {
-        dropdown.classList.toggle("active");
-    });
-
-    // Cerrar el dropdown si se hace clic fuera
-    document.addEventListener("click", function (event) {
-        if (!dropdown.contains(event.target)) {
-            dropdown.classList.remove("active");
-        }
-    });
-});
-
 // Función para cerrar el modal al hacer clic en el botón de cierre
 document.querySelector(".close-button").addEventListener("click", () => {
     const modal = document.getElementById("infoModal");
@@ -206,6 +169,8 @@ document.querySelector(".close-button").addEventListener("click", () => {
 document.addEventListener("click", (event) => {
     const modal = document.getElementById("infoModal");
     const modalContent = document.querySelector(".modal-content");
+
+    // Solo cerrar el modal si el clic es fuera de la caja de contenido
     if (modal.style.display === "block" && !modalContent.contains(event.target)) {
         modal.style.display = "none";
         document.body.classList.remove("modal-open");
