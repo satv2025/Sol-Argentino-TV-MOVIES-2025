@@ -139,8 +139,15 @@ function openModal(movieKey) {
     modal.style.display = "block";
     document.body.classList.add("modal-open");
 
-    // Cargar episodios de la temporada 1 por defecto
-    changeSeason(1);
+    // Solo cargar episodios si la serie es "app" (Asesinato Para Principiantes)
+    if (movieKey === "app") {
+        // Cargar episodios de la temporada 1 por defecto
+        changeSeason(1);
+    } else {
+        // Limpiar la lista de episodios para películas y otras series
+        const episodeList = document.getElementById("episode-list");
+        episodeList.innerHTML = ""; // Limpia la lista de episodios
+    }
 }
 
 // Función para cerrar el modal
@@ -156,17 +163,6 @@ document.querySelectorAll(".moreinfobutton").forEach(button => {
         openModal(movieKey);
     });
 });
-
-    // Solo cargar episodios si la serie es "app" (Asesinato Para Principiantes)
-    if (movieKey === "app") {
-        // Cargar episodios de la temporada 1 por defecto
-        changeSeason(1);
-    } else {
-        // Si no es "app", limpiar los episodios
-        const episodeList = document.getElementById("episode-list");
-        episodeList.innerHTML = ""; // Limpia la lista anterior
-    }
-}
 
 // Función para cambiar la lista de episodios según la temporada seleccionada
 function changeSeason(season) {
