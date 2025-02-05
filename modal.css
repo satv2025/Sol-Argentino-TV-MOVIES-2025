@@ -5,8 +5,8 @@
     z-index: 1000;
     left: 0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     overflow-y: auto;
 }
@@ -20,19 +20,18 @@
 .modal-content {
     background-color: #183347;
     color: white;
-    margin: 5vh auto;
-    padding: 1.5rem;
-    width: 45%;
-    border-radius: 0.5rem;
+    margin: 5% auto;
+    padding: 1.25em;
+    width: 43%;
+    border-radius: 0.625em;
     position: relative;
-    height: max(80vh, 40em);
+    height: 100vw;
 }
 
 /* Imagen de fondo */
 .modal-header {
     position: relative;
     width: 100%;
-    overflow: hidden;
 }
 
 .modal-header::before {
@@ -47,60 +46,79 @@
 }
 
 .modal-header img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5em 0.5em 0 0;
     position: relative;
-    z-index: 0;
+    margin-top: -2.5em;
+    margin-left: -1.3em;
+    height: 28em;
+    border-radius: 0.3em 0.3em 0 0;
 }
 
-/* Información del modal */
+/* Texto y detalles */
+.modal-cast a {
+    font-style: italic;
+    cursor: pointer;
+}
+
+.modal-cast a:hover {
+    cursor: pointer;
+}
+
+/* Posiciones con em */
 .modal-year {
     position: absolute;
-    top: 50%;
-    left: 25%;
-    font-size: 1.2em;
+    top: 26.4em;
+    left: 12.4em;
 }
 
 .modal-title {
     position: absolute;
     top: 2em;
-    font-size: 2rem;
 }
 
 .modal-duration {
     position: absolute;
     top: 2em;
     color: #fff;
-    font-size: 1.2em;
 }
 
-/* Información adicional */
-.modal-fullcreatedBy, .modal-cast, .modal-script,
-.modal-genres, .modal-titleType, .modal-ageRating,
-.modal-description, .modal-curiosity {
+.modal-fullcreatedBy,
+.modal-cast,
+.modal-script,
+.modal-genres,
+.modal-titleType {
     position: absolute;
+    padding-left: 32em;
     text-align: left;
-    padding: 2ch;
-    font-size: 1rem;
+    padding-right: 2em;
 }
 
-.modal-fullcreatedBy { top: 47vh; }
-.modal-cast { top: 30vh; }
-.modal-script { top: 44vh; }
-.modal-genres { top: 33vh; }
-.modal-titleType { top: 36vh; }
+.modal-fullcreatedBy { top: 47em; }
+.modal-cast { top: 30em; }
+.modal-script { top: 44em; }
+.modal-genres { top: 33em; }
+.modal-titleType { top: 36em; }
+
+.modal-ageRating,
+.modal-description,
+.modal-curiosity {
+    position: absolute;
+    padding-left: 2em;
+    padding-right: 24em;
+    text-align: justify;
+}
+
 .modal-ageRating { top: 4em; }
-.modal-description { top: 30vh; }
+.modal-description { top: 30em; }
 .modal-curiosity { top: 2em; }
 
-/* Botón de información */
-.moreinfobuttona {
-    font-style: italic;
-    font-size: 1rem;
+/* Información adicional */
+.modal-info > p {
+    margin: 0.3125em 0;
+    font-size: 1em;
+    color: #fff;
 }
 
-/* Estilos de overlay */
+/* Overlay */
 .overlay {
     position: absolute;
     bottom: 10%;
@@ -108,12 +126,12 @@
 }
 
 .overlay h1 {
-    font-size: clamp(1.8rem, 2vw, 2.5rem);
+    font-size: 2em;
     font-weight: bold;
 }
 
 .overlay p {
-    font-size: min(1.2rem, 1.5vw);
+    font-size: 1.2em;
 }
 
 /* Botones de acción */
@@ -127,20 +145,19 @@
 .watch-button {
     background-color: #007bff;
     color: white;
-    padding: 0.7em 1.5em;
+    padding: 0.625em 1.25em;
     font-size: 1.3em;
     border-radius: 0.3125em;
     text-decoration: none;
     font-weight: 700;
     position: absolute;
-    top: 17vh;
-    left: 2vw;
+    top: 17.4em;
+    left: 2em;
 }
 
 .watch-button:hover {
     background-color: #fff;
     color: #007bff;
-    font-weight: 700;
 }
 
 .icon-button {
@@ -151,24 +168,17 @@
     cursor: pointer;
 }
 
-/* Información adicional */
-.modal-info > p {
-    margin: 0.3em 0;
-    font-size: 1rem;
-    color: #fff;
-}
-
 /* Episodios */
 .episode {
     display: flex;
     align-items: center;
-    margin-top: 1em;
+    margin-top: 0.9375em;
 }
 
 .episode img {
-    width: 9em;
-    border-radius: 0.3em;
-    margin-right: 0.6em;
+    width: 9.375em;
+    border-radius: 0.3125em;
+    margin-right: 0.625em;
 }
 
 .episode h3 {
@@ -221,7 +231,7 @@
     }
 
     .modal-header img {
-        width: 100%;
+        width: 70%;
         height: auto;
     }
 
@@ -246,7 +256,7 @@
     }
 
     .modal-header img {
-        width: 100%;
+        width: 53em;
         border-radius: 0.3em 0.3em 0 0;
     }
 }
