@@ -43,7 +43,7 @@ const peliculas = {
         curiosity: "<strong class='curiosidad'>Es oficial: Se estrenará otra temporada</strong>",
         background: "https://occ-0-2443-1380.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABVp5EI24Pn-MhqBfRt6inhEm3YWfGw1YvxCWHJG7OhVZ9_F_9fV814k46BJ6cRj99iPL2YS_FxacJ6-qFRBAs-yS6ktTfnrTAYFh.webp?r=d16",
         link: "#",
-        seasons: `
+        seasons: `    
             <div class="season-dropdown">
                 <button class="dropdown-button">Seleccionar Temporada</button>
                 <div class="dropdown-content">
@@ -150,10 +150,30 @@ function openModal(movieKey) {
     }
 }
 
-// Función para cerrar el modal
-document.querySelector(".close").addEventListener("click", () => {
-    document.getElementById("infoModal").style.display = "none";
+// Función para cerrar el modal al hacer clic en el botón de cierre
+document.querySelector(".previewModal-close").addEventListener("click", () => {
+    const modal = document.getElementById("infoModal");
+    modal.style.display = "none";
     document.body.classList.remove("modal-open");
+});
+
+// Función para cerrar el modal al hacer clic fuera de la caja de contenido
+document.addEventListener("click", (event) => {
+    const modal = document.getElementById("infoModal");
+    const modalContent = document.querySelector(".modal-content");
+    if (modal.style.display === "block" && !modalContent.contains(event.target)) {
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+    }
+});
+
+// Función para cerrar el modal al presionar la tecla Esc
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        const modal = document.getElementById("infoModal");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+    }
 });
 
 // Detectar clic en los botones "Más Información"
@@ -184,19 +204,3 @@ function changeSeason(season) {
         });
     }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdown = document.querySelector(".dropdown");
-    const button = document.querySelector(".dropdown-button");
-
-    button.addEventListener("click", function () {
-        dropdown.classList.toggle("active");
-    });
-
-    // Cerrar el dropdown si se hace clic fuera
-    document.addEventListener("click", function (event) {
-        if (!dropdown.contains(event.target)) {
-            dropdown.classList.remove("active");
-        }
-    });
-});

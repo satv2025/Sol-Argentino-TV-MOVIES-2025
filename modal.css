@@ -110,6 +110,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    left: 14.5em;
+    top: 7.6em;
 }
 
 .dropdown-button::after {
