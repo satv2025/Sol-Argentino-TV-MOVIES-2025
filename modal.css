@@ -49,6 +49,11 @@
     left: 12.4em;
 }
 
+.modal-title {
+    position: absolute;
+    top: 2em;
+}
+
 .modal-duration {
     position: absolute;
     top: 2em;
