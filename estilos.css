@@ -299,15 +299,6 @@ footer p {
     color: #fff;
 }
 
-.moreinfobutton:hover {
-    background: #0022ff;
-}
-
-.moreinfobutton:hover ~ .pelicula {
-    box-shadow: none !important;
-    outline: none !important;
-}
-
 .pelicula:hover {
     box-shadow: 0 0.3em 1.5em rgba(0, 0, 0, 0.4);
     outline: 0.3em solid white;
@@ -328,6 +319,20 @@ footer p {
     transition: all 0.3s ease;
     font-family: 'Netflix Sans';
     justify-content: center;
+}
+
+.moreinfobutton:hover {
+    background: #0022ff;
+}
+
+.moreinfobutton:hover ~ .pelicula {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.pelicula:has(.moreinfobutton:hover):hover {
+    box-shadow: none !important;
+    outline: none !important;
 }
 
 .avisame-button .bell-icon {
