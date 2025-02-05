@@ -22,7 +22,7 @@ const peliculas = {
         cast: "<strong>Elenco:</strong> Daniel Garcilazo, Paulo Giardina, Gabriel Emanuelli, <a>más</a>",
         title: "Acerca de 100%Lucha - Las Películas",
         script: "<strong>Guión:</strong> CineAR",
-        genres: "<strong>Géneros:</strong> Humor, lucha libre, luchas clandestinas, apuestas, secuestros, traiciones",
+        genres: "<strong>Géneros:</strong> Humor, lucha libre, luchas clandestinas",
         titleType: "<strong>Este título es:</strong> Intenso, Íntimo, Delirante, Divertido",
         ageRating: "<span class='age'>12+</span> lenguaje inapropiado, daños físicos, humor absurdo",
         curiosity: "<strong class='curiosidad'>En el 2011 iba a salir una tercera película, pero el programa fue cancelado</strong>",
