@@ -41,7 +41,7 @@ const peliculas = {
         titleType: "<strong>Este título es:</strong> Íntimo, Sombrío, De suspenso",
         ageRating: "<span class='age'>16+</span> lenguaje inapropiado, drogas, violencia sexual",
         curiosity: "<strong class='curiosidad'>Es oficial: Se estrenará otra temporada</strong>",
-        background: "Asesinato para principiantes.jpg",
+        background: "https://occ-0-2443-1380.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABVp5EI24Pn-MhqBfRt6inhEm3YWfGw1YvxCWHJG7OhVZ9_F_9fV814k46BJ6cRj99iPL2YS_FxacJ6-qFRBAs-yS6ktTfnrTAYFh.webp?r=d16",
         link: "#",
         seasons: `
             <div class="season-dropdown">
