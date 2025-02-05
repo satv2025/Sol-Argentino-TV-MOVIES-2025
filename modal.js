@@ -39,7 +39,7 @@ const peliculas = {
         script: "<strong>Guión:</strong> Poppy Cogan, Ruby Thomas, Zia Ahmed, Ajoke Ibironke",
         genres: "<strong>Géneros:</strong> Series dramáticas, De Gran Bretaña, Series basadas en libros",
         titleType: "<strong>Este título es:</strong> Íntimo, Sombrío, De suspenso",
-        ageRating: "<span class='age'>16+</span> lenguaje inapropiado, drogas, violencia sexual | Apta para mayores de 16 años",
+        ageRating: "<span class='age'>16+</span> lenguaje inapropiado, drogas, violencia sexual",
         curiosity: "<strong>Es oficial: Se estrenará otra temporada</strong>",
         background: "Asesinato para principiantes.jpg",
         link: "#"
