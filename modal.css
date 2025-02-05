@@ -5,8 +5,8 @@
     z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
     overflow-y: auto;
 }
@@ -20,146 +20,87 @@
 .modal-content {
     background-color: #183347;
     color: white;
-    margin: 5% auto;
-    padding: 1.25em; /* 20px */
-    width: 43%;
-    border-radius: 0.625em; /* 10px */
+    margin: 5vh auto;
+    padding: 1.5rem;
+    width: 45%;
+    border-radius: 0.5rem;
     position: relative;
-    height: 100vw;
+    height: max(80vh, 40em);
 }
 
 /* Imagen de fondo */
 .modal-header {
     position: relative;
     width: 100%;
+    overflow: hidden;
+}
+
+.modal-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #183347, transparent 50%);
+    z-index: 1;
 }
 
 .modal-header img {
-    width: 50.7em; /* 50.7em */
-    margin-top: -2.5em; /* -2.5em */
-    margin-left: -1.3em; /* -1.2em */
-    height: 25em; /* 25em */
-    object-fit: cover;
-    border-radius: 0.3em 0.3em 0 0; /* 0.4px */
+    width: 100%;
+    height: auto;
+    border-radius: 0.5em 0.5em 0 0;
+    position: relative;
+    z-index: 0;
 }
 
+/* Información del modal */
 .modal-year {
     position: absolute;
-    top: 26.4em;
-    left: 12.4em;
+    top: 50%;
+    left: 25%;
+    font-size: 1.2em;
 }
 
 .modal-title {
     position: absolute;
     top: 2em;
+    font-size: 2rem;
 }
 
 .modal-duration {
     position: absolute;
     top: 2em;
     color: #fff;
+    font-size: 1.2em;
 }
 
-.modal-fullcreatedBy {
+/* Información adicional */
+.modal-fullcreatedBy, .modal-cast, .modal-script,
+.modal-genres, .modal-titleType, .modal-ageRating,
+.modal-description, .modal-curiosity {
     position: absolute;
-    top: 47em;
-    padding-left: 32em;
     text-align: left;
-    padding-right: 2em;
+    padding: 2ch;
+    font-size: 1rem;
 }
 
-.modal-cast {
-    position: absolute;
-    top: 30em;
-    padding-left: 32em;
-    text-align: left;
-    padding-right: 2em;
-}
+.modal-fullcreatedBy { top: 47vh; }
+.modal-cast { top: 30vh; }
+.modal-script { top: 44vh; }
+.modal-genres { top: 33vh; }
+.modal-titleType { top: 36vh; }
+.modal-ageRating { top: 4em; }
+.modal-description { top: 30vh; }
+.modal-curiosity { top: 2em; }
 
-.modal-script {
-    position: absolute;
-    top: 44em;
-    padding-left: 32em;
-    text-align: left;
-    padding-right: 2em;
-}
-
-.modal-genres {
-    position: absolute;
-    top: 38em;
-    padding-left: 32em;
-    text-align: left;
-    padding-right: 2em;
-}
-
-.modal-titleType {
-    position: absolute;
-    top: 41em;
-    padding-left: 32em;
-    text-align: left;
-    padding-right: 2em;
-}
-
-.modal-ageRating {
-    position: absolute;
-    top: 33em;
-    padding-left: 2em;
-    padding-right: 24em;
-    text-align: justify;
-}
-
-.modal-description {
-    position: absolute;
-    top: 30em;
-    padding-left: 2em;
-    padding-right: 24em;
-    text-align: justify;
-}
-
-.modal-curiosity {
-    position: absolute;
-    top: 36em;
-    padding-left: 2em;
-    padding-right: 24em;
-    text-align: justify;
-}
-
-<----modalfull---->
-.modal-fulltitle {
-    position: absolute;
-    top: 4em;
-}
-
-.modal-fullcast {
-    position: absolute;
-    top: 6em;
-}
-
-.modal-fullscript {
-    position: absolute;
-    top: 8em;
-}
-
-.modal-fullgenres {
-    position: absolute;
-    top: 10em;
-}
-
-.modal-fulltitleType {
-    position: absolute;
-    top: 12em;
-}
-
-.modal-fullageRating {
-    position: absolute;
-    top: 14em;
-}
-
+/* Botón de información */
 .moreinfobuttona {
     font-style: italic;
+    font-size: 1rem;
 }
-<----------------->
 
+/* Estilos de overlay */
 .overlay {
     position: absolute;
     bottom: 10%;
@@ -167,43 +108,53 @@
 }
 
 .overlay h1 {
-    font-size: 2em; /* 32px */
+    font-size: clamp(1.8rem, 2vw, 2.5rem);
     font-weight: bold;
 }
 
 .overlay p {
-    font-size: 1.2em; /* 19.2px */
+    font-size: min(1.2rem, 1.5vw);
 }
 
 /* Botones de acción */
 .modal-actions {
     display: flex;
     align-items: center;
-    gap: 0.625em; /* 10px */
-    margin-top: 0.625em; /* 10px */
+    gap: 0.625em;
+    margin-top: 0.625em;
 }
 
 .watch-button {
     background-color: #007bff;
     color: white;
-    padding: 0.625em 1.25em; /* 10px 20px */
-    font-size: 1.2em; /* 19.2px */
-    border-radius: 0.3125em; /* 5px */
+    padding: 0.7em 1.5em;
+    font-size: 1.3em;
+    border-radius: 0.3125em;
     text-decoration: none;
+    font-weight: 700;
+    position: absolute;
+    top: 17vh;
+    left: 2vw;
+}
+
+.watch-button:hover {
+    background-color: #fff;
+    color: #007bff;
+    font-weight: 700;
 }
 
 .icon-button {
     background: none;
     border: none;
     color: white;
-    font-size: 1.5em; /* 24px */
+    font-size: 1.5em;
     cursor: pointer;
 }
 
 /* Información adicional */
 .modal-info > p {
-    margin: 0.3125em 0;
-    font-size: 1em; /* 16px */
+    margin: 0.3em 0;
+    font-size: 1rem;
     color: #fff;
 }
 
@@ -211,21 +162,21 @@
 .episode {
     display: flex;
     align-items: center;
-    margin-top: 0.9375em; /* 15px */
+    margin-top: 1em;
 }
 
 .episode img {
-    width: 9.375em; /* 150px */
-    border-radius: 0.3125em; /* 5px */
-    margin-right: 0.625em; /* 10px */
+    width: 9em;
+    border-radius: 0.3em;
+    margin-right: 0.6em;
 }
 
 .episode h3 {
-    font-size: 1.2em; /* 19.2px */
+    font-size: 1.2em;
 }
 
 .episode p {
-    font-size: 1em; /* 16px */
+    font-size: 1em;
     color: #bbb;
 }
 
@@ -234,68 +185,68 @@
 /* Pantallas pequeñas (móviles) */
 @media (max-width: 600px) {
     .modal-content {
-        width: 90%; /* Hacer que el modal ocupe el 90% en pantallas pequeñas */
+        width: 90%;
         height: auto;
-        padding: 1em; /* Ajustar el padding para pantallas más pequeñas */
+        padding: 1em;
     }
 
     .modal-header img {
-        width: 100%; /* La imagen se ajusta al ancho del modal */
-        height: auto; /* Ajustar la altura de la imagen */
+        width: 100%;
+        height: auto;
     }
 
     .overlay h1 {
-        font-size: 1.5em; /* Reducir el tamaño de la fuente */
+        font-size: 1.5em;
     }
 
     .overlay p {
-        font-size: 1em; /* Reducir el tamaño de la fuente */
+        font-size: 1em;
     }
 
     .watch-button {
-        font-size: 1em; /* Reducir el tamaño del botón */
-        padding: 0.5em 1em; /* Ajustar el padding */
+        font-size: 1em;
+        padding: 0.5em 1em;
     }
 
     .episode img {
-        width: 6em; /* Reducir el tamaño de las imágenes de los episodios */
+        width: 6em;
     }
 }
 
 /* Pantallas medianas (tabletas) */
 @media (max-width: 1024px) {
     .modal-content {
-        width: 70%; /* El modal ocupará el 70% */
-        padding: 1.25em; /* Padding ligeramente mayor */
+        width: 70%;
+        padding: 1.25em;
     }
 
     .modal-header img {
-        width: 70%; /* La imagen se ajusta al 70% */
-        height: auto; /* Ajustar la altura */
+        width: 100%;
+        height: auto;
     }
 
     .overlay h1 {
-        font-size: 1.8em; /* Ajustar tamaño de texto */
+        font-size: 1.8em;
     }
 
     .overlay p {
-        font-size: 1.1em; /* Ajustar tamaño de texto */
+        font-size: 1.1em;
     }
 
     .watch-button {
-        font-size: 1.1em; /* Ajustar tamaño del botón */
-        padding: 0.75em 1.5em; /* Ajustar padding */
+        font-size: 1.1em;
+        padding: 0.75em 1.5em;
     }
 }
 
 /* Pantallas grandes (escritorios) */
 @media (min-width: 1025px) {
     .modal-content {
-        width: 44.5%; /* Tamaño base para pantallas grandes */
+        width: 44.5%;
     }
 
     .modal-header img {
-        width: 53em; /* Tamaño base para la imagen */
+        width: 100%;
         border-radius: 0.3em 0.3em 0 0;
     }
 }
