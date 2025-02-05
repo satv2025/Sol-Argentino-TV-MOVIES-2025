@@ -65,7 +65,7 @@ function openModal(movieKey) {
     document.getElementById("modal-titleType").innerHTML = movie.titleType;
     document.getElementById("modal-ageRating").innerHTML = movie.ageRating;
     document.getElementById("modal-curiosity").innerHTML = movie.curiosity || "";
-
+    document.getElementById("modal-duration").innerText = movie.duration; //
     // Enlace del botón "Reproducir"
     document.getElementById("watch-button").href = movie.link;
 
