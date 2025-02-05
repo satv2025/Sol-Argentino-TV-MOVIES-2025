@@ -43,44 +43,28 @@
     border-radius: 0.3em 0.3em 0 0; /* 0.4px */
 }
 
-#modal-year {
-    
+.modal-year {}
+
+.modal-duration {}
+
+.modal-createdBy {}
+
+.modal-cast {}
+
+.modal-script {}
+
+.modal-genres {}
+
+.modal-titleType {}
+
+.modal-ageRating {}
+
+.modal-description { 
+    margin-top: -12em; 
 }
 
-#modal-duration {
-
-}
-
-#modal-createdBy {
-
-}
-
-#modal-cast {
-
-}
-
-#modal-script {
-
-}
-
-#modal-genres {
-
-}
-
-#modal-titleType {
-
-}
-
-#modal-ageRating {
-
-}
-
-#modal-description {
-
-}
-
-#modal-curiosity {
-
+.modal-curiosity { 
+    margin-top: 10em; 
 }
 
 .overlay {
