@@ -30,7 +30,7 @@
 
 .close-button svg {
     position: absolute;
-    top: 1em;
+    top: -0.1em;
     left: 51em;
     z-index: 1000;
     background: #1833478c;

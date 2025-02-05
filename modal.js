@@ -158,6 +158,33 @@ function openModal(movieKey) {
     }
 }
 
+// Función para cambiar la lista de episodios según la temporada seleccionada
+function changeSeason(season) {
+    const episodeList = document.getElementById("episode-list");
+    episodeList.innerHTML = ""; // Limpiar lista de episodios antes de agregar nuevos
+
+    // Verifica si la temporada existe en el objeto 'episodios'
+    if (episodios[season]) {
+        episodios[season].forEach(ep => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <img src="${ep.image}" alt="${ep.title}" class="episode-img">
+                <div class="episode-info">
+                    <h3>${ep.title}</h3>
+                    <p>${ep.description}</p>
+                    <span>${ep.duration}</span>
+                </div>
+            `;
+            episodeList.appendChild(li);
+        });
+    } else {
+        // Si no se encuentra la temporada, muestra un mensaje
+        const li = document.createElement("li");
+        li.innerText = "No hay episodios disponibles para esta temporada.";
+        episodeList.appendChild(li);
+    }
+}
+
 // Función para cerrar el modal al hacer clic en el botón de cierre
 document.querySelector(".close-button").addEventListener("click", () => {
     const modal = document.getElementById("infoModal");
