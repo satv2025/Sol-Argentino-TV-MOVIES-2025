@@ -6,6 +6,7 @@
     <title>Sol Argentino TV MOVIES</title>
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="slidebar.css">
+    <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="SolArgentinoTVMOVIES.ico" type="image/x-icon">
   </head>
@@ -36,35 +37,42 @@
     <h4><strong>Estrenos Marzo 2025:</strong> Gladiador [Saga Completa], Círculo, De noche con el diablo, Lo que hay dentro y Club De Buceo. Más contenido en marzo, junio y noviembre.</h4>
 
     <section class="catalogo">
-      <!-- Película 1 -->
-      <a href="matiponcepeli" style="text-decoration: none; color: inherit;">
-          <div class="pelicula">
-              <img src="maxresdefault.jpg" alt="Pelicula 1">
-              <h3 class="matiponcepelii">Matias Ponce - La Pelicula</h3>
-              <p>Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de youtube, o como el lo llama "Yutun", desatando una hilarante y absurda aventura.</p>
-              <button id="comingbutton" class="moreinfobutton">Mas Información</button>
-          </div>
-      </a>
-  
-      <!-- Película 2 -->
-      <a href="cienporcientolucha" style="text-decoration: none; color: inherit;">
-          <div class="pelicula">
-              <img src="https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6" alt="Pelicula 10">
-              <h3>100%Lucha - Las Peliculas</h3>
-              <p>Los productores detrás del famoso programa emitido desde 2006 a 2011, 100%Lucha, decidieron hacerle peliculas.</p>
-              <button id="comingbutton" class="moreinfobutton">Mas Información</button>
-          </div>
-      </a>
-  
-      <!-- Película 3 -->
-      <a href="app" style="text-decoration: none; color: inherit;">
-          <div class="pelicula">
-              <img src="Asesinato para principiantes.jpg" alt="Pelicula 8">
-              <h3>Asesinato para Principiantes</h3>
-              <p>En este thriller atrapante, una estudiante investiga, para un proyecto escolar, un caso ocurrido hace cinco años.</p>
-              <button id="comingbutton" class="moreinfobutton">Mas Información</button>
-          </div>
-      </a>
+<!-- Película 1 -->
+<div class="pelicula">
+    <img src="maxresdefault.jpg" alt="Pelicula 1">
+    <h3 class="matiponcepelii">Matias Ponce - La Pelicula</h3>
+    <p>Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de YouTube.</p>
+    <button class="moreinfobutton" data-movie="matiponcepeli">Mas Información</button>
+</div>
+
+<!-- Película 2 -->
+<div class="pelicula">
+    <img src="https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6" alt="Pelicula 10">
+    <h3>100%Lucha - Las Peliculas</h3>
+    <p>Los productores detrás del famoso programa 100% Lucha decidieron hacerle películas.</p>
+    <button class="moreinfobutton" data-movie="cienporcientolucha">Mas Información</button>
+</div>
+
+<!-- Película 3 -->
+<div class="pelicula">
+    <img src="Asesinato para principiantes.jpg" alt="Pelicula 8">
+    <h3>Asesinato para Principiantes</h3>
+    <p>En este thriller atrapante, una estudiante investiga un caso ocurrido hace cinco años.</p>
+    <button class="moreinfobutton" data-movie="app">Mas Información</button>
+</div>
+
+<!-- Contenedor del Modal -->
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <div id="season-dropdown-container"></div>
+        <div id="episodes-container"></div>
+        <a id="watch-button" class="watch-button" href="#" target="_blank">Ver</a>
+    </div>
+</div>
+
   
       <div class="pelicula" data-pelicula="Gladiador">
           <img src="https://www.filmonpaper.com/wp-content/uploads/2011/05/Gladiator_onesheet_advance_USA-3.jpg" alt="Gladiador">
@@ -139,5 +147,6 @@
 </footer>
 
 <script src="slidebar.js"> </script>
+<script src="modal.js"> </script>
 </body>
 </html>
