@@ -40,7 +40,47 @@
     margin-left: -1.2em; /* -1.2em */
     height: 25em; /* 25em */
     object-fit: cover;
-    border-radius: 0.025em 0.025em 0 0; /* 0.4px */
+    border-radius: 0.3em 0.3em 0 0; /* 0.4px */
+}
+
+#modal-year {
+    
+}
+
+#modal-duration {
+
+}
+
+#modal-createdBy {
+
+}
+
+#modal-cast {
+
+}
+
+#modal-script {
+
+}
+
+#modal-genres {
+
+}
+
+#modal-titleType {
+
+}
+
+#modal-ageRating {
+
+}
+
+#modal-description {
+
+}
+
+#modal-curiosity {
+
 }
 
 .overlay {
@@ -178,6 +218,7 @@
     }
 
     .modal-header img {
-        width: 50.7em; /* Tamaño base para la imagen */
+        width: 51.1em; /* Tamaño base para la imagen */
+        border-radius: 0.3em 0.3em 0 0;
     }
 }
