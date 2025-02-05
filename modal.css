@@ -69,6 +69,7 @@
     top: 28.3em;
     padding-left: 2em;
     z-index: 1000;
+    color: #bcbcbc !important;!i;!;
 }
 
 .modal-title {
@@ -80,7 +81,7 @@
     position: absolute;
     top: 28.3em;
     left: 8em;
-    color: #fff;
+    color: #bcbcbc !important;!i;!;
 }
 
 .modal strong {
