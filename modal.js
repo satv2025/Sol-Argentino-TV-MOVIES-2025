@@ -150,12 +150,6 @@ function openModal(movieKey) {
     }
 }
 
-// Función para cerrar el modal
-document.querySelector(".close").addEventListener("click", () => {
-    document.getElementById("infoModal").style.display = "none";
-    document.body.classList.remove("modal-open");
-});
-
 // Detectar clic en los botones "Más Información"
 document.querySelectorAll(".moreinfobutton").forEach(button => {
     button.addEventListener("click", function() {
