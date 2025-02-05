@@ -25,7 +25,6 @@ const peliculas = {
         genres: "<strong>Géneros:</strong> Humor, lucha libre, luchas clandestinas",
         titleType: "<strong>Este título es:</strong> Intenso, Íntimo, Delirante, Divertido",
         ageRating: "<span class='age'>12+</span> lenguaje inapropiado, daños físicos, humor absurdo",
-        curiosity: "<strong class='curiosidad'>En el 2011 iba a salir una tercera película, pero el programa fue cancelado</strong>",
         background: "https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6",
         link: "#"
     },
