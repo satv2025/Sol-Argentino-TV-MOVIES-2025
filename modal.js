@@ -63,13 +63,3 @@ document.querySelectorAll(".moreinfobutton").forEach(button => {
         openModal(movieKey);
     });
 });
-
-function openModal() {
-    document.querySelector('body').classList.add('modal-open');
-    document.querySelector('.modal').style.display = 'block';
-}
-
-function closeModal() {
-    document.querySelector('body').classList.remove('modal-open');
-    document.querySelector('.modal').style.display = 'none';
-}
