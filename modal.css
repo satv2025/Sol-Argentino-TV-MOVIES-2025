@@ -1,4 +1,4 @@
-/* Estilos del modal */
+/* Estilos del Modal */
 .modal {
     display: none;
     position: fixed;
@@ -11,7 +11,7 @@
     overflow-y: auto;
 }
 
-/* Contenido del modal */
+/* Contenido del Modal */
 .modal-content {
     background-color: #181818;
     color: white;
@@ -22,7 +22,7 @@
     position: relative;
 }
 
-/* Imagen de fondo */
+/* Imagen de Fondo */
 .modal-header {
     position: relative;
     width: 100%;
@@ -50,7 +50,7 @@
     font-size: 1.2em;
 }
 
-/* Botones de acción */
+/* Botones de Acción */
 .modal-actions {
     display: flex;
     align-items: center;
@@ -75,31 +75,9 @@
     cursor: pointer;
 }
 
-/* Información adicional */
+/* Información Adicional */
 .modal-info p {
     margin: 5px 0;
-    font-size: 1em;
-    color: #bbb;
-}
-
-/* Episodios */
-.episode {
-    display: flex;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.episode img {
-    width: 150px;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-.episode h3 {
-    font-size: 1.2em;
-}
-
-.episode p {
     font-size: 1em;
     color: #bbb;
 }

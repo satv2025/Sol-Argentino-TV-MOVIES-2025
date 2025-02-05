@@ -1,21 +1,43 @@
-// Datos de las películas y series
+// Definir los datos de cada película
 const peliculas = {
+    matiponcepeli: {
+        title: "Matias Ponce - La Pelicula",
+        tagline: "Un enfrentamiento con alienígenas y hackers.",
+        year: "2023",
+        rating: "PG-13 | Ciencia ficción, Acción",
+        genres: "Aventura, Ciencia ficción",
+        description: "Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de YouTube.",
+        background: "maxresdefault.jpg",
+        link: "https://www.youtube.com/"
+    },
+    cienporcientolucha: {
+        title: "100% Lucha - Las Películas",
+        tagline: "La lucha no termina en el ring.",
+        year: "2008",
+        rating: "ATP | Acción, Deportes",
+        genres: "Acción, Deportes",
+        description: "Los productores detrás del famoso programa 100% Lucha decidieron hacerle películas.",
+        background: "https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6",
+        link: "https://www.netflix.com/"
+    },
     app: {
         title: "Asesinato para Principiantes",
-        tagline: "Un misterio atrapante por resolver.",
+        tagline: "Un thriller atrapante.",
         year: "2021",
-        rating: "13+ | violencia, lenguaje inapropiado",
-        genres: "Series dramáticas, Thriller",
+        rating: "16+ | Thriller, Drama",
+        genres: "Suspenso, Drama",
         description: "En este thriller atrapante, una estudiante investiga un caso ocurrido hace cinco años.",
         background: "Asesinato para principiantes.jpg",
-        link: "app"
+        link: "https://www.primevideo.com/"
     }
 };
 
-// Función para abrir el modal con la info de la película/serie
+// Función para abrir el modal y cargar los datos
 function openModal(movieKey) {
     const modal = document.getElementById("infoModal");
     const movie = peliculas[movieKey];
+
+    if (!movie) return;
 
     document.getElementById("modal-title").innerText = movie.title;
     document.getElementById("modal-tagline").innerText = movie.tagline;
@@ -26,58 +48,13 @@ function openModal(movieKey) {
     document.getElementById("modal-background").src = movie.background;
     document.getElementById("watch-button").href = movie.link;
 
-    // Si es "Asesinato para Principiantes", mostrar dropdown
-    if (movieKey === "app") {
-        document.getElementById("season-dropdown-container").innerHTML = `
-            <div class="season-dropdown">
-                <button class="dropdown-button" onclick="toggleDropdown()">Temporada 1</button>
-                <div class="dropdown-content">
-                    <button onclick="loadEpisodes(1)">Temporada 1</button>
-                    <button onclick="loadEpisodes(2)">Temporada 2 (Próximamente)</button>
-                </div>
-            </div>
-        `;
-        loadEpisodes(1);
-    } else {
-        document.getElementById("season-dropdown-container").innerHTML = "";
-        document.getElementById("episodes-container").innerHTML = "";
-    }
-
     modal.style.display = "block";
 }
 
-// Cerrar modal
+// Función para cerrar el modal
 document.querySelector(".close").addEventListener("click", () => {
     document.getElementById("infoModal").style.display = "none";
 });
-
-// Mostrar dropdown de temporadas
-function toggleDropdown() {
-    document.querySelector(".dropdown-content").classList.toggle("open");
-}
-
-// Cargar episodios de la temporada seleccionada
-function loadEpisodes(season) {
-    const episodesContainer = document.getElementById("episodes-container");
-    episodesContainer.innerHTML = "";
-
-    if (season === 1) {
-        episodes[1].forEach(ep => {
-            episodesContainer.innerHTML += `
-                <div class="episode">
-                    <img src="${ep.image}" alt="${ep.title}">
-                    <div>
-                        <h3>${ep.title}</h3>
-                        <p>${ep.description}</p>
-                        <p><strong>Duración:</strong> ${ep.duration}</p>
-                    </div>
-                </div>
-            `;
-        });
-    } else {
-        episodesContainer.innerHTML = "<p>La temporada 2 está en desarrollo.</p>";
-    }
-}
 
 // Detectar clic en los botones "Más Información"
 document.querySelectorAll(".moreinfobutton").forEach(button => {
