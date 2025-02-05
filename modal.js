@@ -177,3 +177,19 @@ function changeSeason(season) {
         });
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdown = document.querySelector(".dropdown");
+    const button = document.querySelector(".dropdown-button");
+
+    button.addEventListener("click", function () {
+        dropdown.classList.toggle("active");
+    });
+
+    // Cerrar el dropdown si se hace clic fuera
+    document.addEventListener("click", function (event) {
+        if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove("active");
+        }
+    });
+});
