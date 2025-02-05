@@ -200,3 +200,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// Función para cerrar el modal al hacer clic en el botón de cierre
+document.querySelector(".previewModal-close").addEventListener("click", () => {
+    const modal = document.getElementById("infoModal");
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+});
+
+// Función para cerrar el modal al hacer clic fuera de la caja de contenido
+document.addEventListener("click", (event) => {
+    const modal = document.getElementById("infoModal");
+    const modalContent = document.querySelector(".modal-content");
+    if (modal.style.display === "block" && !modalContent.contains(event.target)) {
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+    }
+});
+
+// Función para cerrar el modal al presionar la tecla Esc
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        const modal = document.getElementById("infoModal");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+    }
+});
