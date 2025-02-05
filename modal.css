@@ -23,7 +23,7 @@
     margin: 5% auto;
     padding: 1.25em;
     width: 43%;
-    border-radius: 0.625em;
+    border-radius: 0.7em;
     position: relative;
     height: 100vw;
 }
@@ -38,8 +38,8 @@
     content: "";
     position: absolute;
     top: 0em;
-    left: -1.3em;
-    width: 105%;
+    left: -1.2em;
+    width: 104.6%;
     height: 100%;
     background: linear-gradient(0deg, #183347, transparent 50%);
     z-index: 1;
@@ -48,7 +48,7 @@
 .modal-header img {
     position: relative;
     margin-top: -2.5em;
-    margin-left: -1.3em;
+    margin-left: -1.4em;
     height: 28em;
     border-radius: 0.7em 0.7em 0 0 !important;!i;!;
 }
@@ -107,7 +107,7 @@
 
 .modal-fullcreatedBy { top: 47em; }
 .modal-cast {top: 28.3em;}
-.modal-script { top: 44em; }
+.modal-script {top: 2em;left: -30.67em;}
 .modal-genres {top: 31em;}
 .modal-titleType {top: 34em;}
 
@@ -142,7 +142,7 @@
 
 .modal-createdBy {
     position: absolute;
-    top: 40em;
+    top: 0.5em;
 }
 
 /* Overlay */
@@ -284,7 +284,7 @@
     }
 
     .modal-header img {
-        width: 54.1em;
+        width: 54.2em;
         border-radius: 0.3em 0.3em 0 0;
     }
 }

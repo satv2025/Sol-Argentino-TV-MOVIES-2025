@@ -35,6 +35,7 @@ const peliculas = {
         createdBy: "<strong>Creado por:</strong> Poppy Cogan",
         cast: "<strong>Elenco:</strong> Emma Myers, Zain Iqbal, Asha Banks, <a>más</a>",
         title: "Acerca de Asesinato Para Principiantes",
+        episodelist: "<strong class='eplist'>Episodios</strong>",
         script: "<strong>Guión:</strong> Poppy Cogan, Ruby Thomas, Zia Ahmed, Ajoke Ibironke",
         genres: "<strong>Géneros:</strong> Series dramáticas, De Gran Bretaña, Series basadas en libros",
         titleType: "<strong>Este título es:</strong> Íntimo, Sombrío, De suspenso",
@@ -65,6 +66,7 @@ function openModal(movieKey) {
     document.getElementById("modal-ageRating").innerHTML = movie.ageRating;
     document.getElementById("modal-curiosity").innerHTML = movie.curiosity || "";
     document.getElementById("modal-duration").innerText = movie.duration; //
+    document.getElementById("modal-episodelist").innerHTML = movie.episodelist || "";
     // Enlace del botón "Reproducir"
     document.getElementById("watch-button").href = movie.link;
 
