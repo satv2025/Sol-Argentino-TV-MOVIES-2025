@@ -109,7 +109,13 @@
     text-align: justify;
 }
 
-.modal-ageRating {top: 32.4em;left: 1.5em;z-index: 1000;font-size: 0.91em;}
+.modal-ageRating {top: 32.66em;left: 1.5em;z-index: 1000;font-size: 0.91em;}
+
+.age {
+    border: 1px solid #fff;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
 .modal-description {top: 34em;}
 .modal-curiosity {top: 27.4em;z-index: 1000;font-size: 1.17em;left: 0.8em;}
 
