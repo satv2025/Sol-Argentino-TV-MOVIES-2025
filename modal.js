@@ -195,50 +195,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-window.onload = function() {
-    // Comprobamos si el modal y los elementos necesarios existen
+// Función para cerrar el modal al hacer clic en el botón de cierre
+document.querySelector(".previewModal-close").addEventListener("click", () => {
     const modal = document.getElementById("infoModal");
-    const closeButton = document.querySelector(".previewModal-close span"); // Apuntamos directamente al <span>
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+});
 
-    // Verificamos si el modal y el botón de cierre están correctamente seleccionados
-    console.log("Modal:", modal);  // Verifica que el modal esté encontrado
-    console.log("Close Button:", closeButton); // Verifica que el botón de cierre esté encontrado
-
-    // Verificamos si los elementos existen antes de añadir el evento
-    if (closeButton) {
-        closeButton.addEventListener("click", () => {
-            if (modal) {
-                modal.style.display = "none";
-                document.body.classList.remove("modal-open");
-                console.log("Modal cerrado");
-            } else {
-                console.log("Modal no encontrado");
-            }
-        });
-    } else {
-        console.log("Botón de cierre no encontrado");
+// Función para cerrar el modal al hacer clic fuera de la caja de contenido
+document.addEventListener("click", (event) => {
+    const modal = document.getElementById("infoModal");
+    const modalContent = document.querySelector(".modal-content");
+    if (modal.style.display === "block" && !modalContent.contains(event.target)) {
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
     }
+});
 
-    // Función para cerrar el modal al hacer clic fuera de la caja de contenido
-    document.addEventListener("click", (event) => {
-        if (modal && modal.style.display === "block") {
-            const modalContent = document.querySelector(".modal-content");
-            if (modalContent && !modalContent.contains(event.target)) {
-                modal.style.display = "none";
-                document.body.classList.remove("modal-open");
-                console.log("Modal cerrado al hacer clic fuera");
-            }
-        }
-    });
-
-    // Función para cerrar el modal al presionar la tecla Esc
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-            if (modal) {
-                modal.style.display = "none";
-                document.body.classList.remove("modal-open");
-                console.log("Modal cerrado con la tecla Esc");
-            }
-        }
-    });
-};
+// Función para cerrar el modal al presionar la tecla Esc
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        const modal = document.getElementById("infoModal");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+    }
+});
