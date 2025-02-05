@@ -8,7 +8,7 @@ const peliculas = {
         cast: "<strong>Elenco:</strong> Matias Ponce, Santino Ponce, Indio Ponce, <a>más</a>",
         title: "Acerca de Matias Ponce - La Película",
         script: "<strong>Guión:</strong> Matias Ponce",
-        genres: "<strong>Géneros:</strong> Humor, humor absurdo, hackers, fama, grandes élites, paranoia, haters, YouTube",
+        genres: "<strong>Géneros:</strong> Humor, humor absurdo, hackers, fama, grandes élites",
         titleType: "<strong>Este título es:</strong> Original, delirante",
         ageRating: "<span class='age'>16+</span> adolescentes, adultos, lenguaje inapropiado, delirante | Apta para mayores de 16 años",
         background: "maxresdefault.jpg",

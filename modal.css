@@ -81,18 +81,22 @@
     top: 2em;
 }
 
+/* Contenedor principal del dropdown */
 .season-dropdown {
     position: relative;
     display: inline-block;
     margin-top: 1em;
     width: 100%;
     max-width: 300px; /* Ajusta el ancho máximo */
+    z-index: 1000;
 }
 
-.season-dropdown {
-    z-index: 1000;position: absolute;top: 37em;left: 33em;
+/* Contenedor del dropdown con la clase activa */
+.season-dropdown.active .dropdown-content {
+    display: block;
 }
 
+/* Estilos del botón del dropdown */
 .dropdown-button {
     background-color: #282c34;
     color: white;
@@ -113,17 +117,21 @@
     font-size: 0.8em;
 }
 
+/* Estilos del contenido desplegable */
 .dropdown-content {
     display: none;
     position: absolute;
+    top: 100%; /* Asegura que se despliegue justo debajo del botón */
+    left: 0;
     background-color: #fff;
     border-radius: 0.4em;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-    z-index: 10;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
     overflow: hidden;
 }
 
+/* Estilos de los botones dentro del dropdown */
 .dropdown-content button {
     background: none;
     border: none;
@@ -135,22 +143,18 @@
     transition: background 0.3s ease;
 }
 
+/* Hover sobre los botones */
 .dropdown-content button:hover {
     background-color: #f0f0f0;
 }
 
+/* Información de los episodios */
 .episode-count {
     display: block;
     padding: 0.5em 1em;
     font-size: 0.9em;
     color: #666;
 }
-
-/* Mostrar el dropdown cuando esté activo */
-.season-dropdown.active .dropdown-content {
-    display: block;
-}
-
 
 #episode-list li {
     display: flex;
