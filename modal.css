@@ -97,8 +97,8 @@
 .modal-fullcreatedBy { top: 47em; }
 .modal-cast {top: 28.3em;}
 .modal-script { top: 44em; }
-.modal-genres { top: 33em; }
-.modal-titleType { top: 36em; }
+.modal-genres {top: 31em;}
+.modal-titleType {top: 34em;}
 
 .modal-ageRating,
 .modal-description,
@@ -109,15 +109,23 @@
     text-align: justify;
 }
 
-.modal-ageRating {top: 30em;z-index: 1000;}
+.modal-ageRating {top: 32.4em;left: 1.5em;z-index: 1000;font-size: 0.91em;}
 .modal-description {top: 34em;}
-.modal-curiosity { top: 2em; }
+.modal-curiosity {top: 27.4em;z-index: 1000;font-size: 1.17em;left: 0.8em;}
+
+.modal-curiosity p {
+    font-size: 12p;
+}
 
 /* Información adicional */
 .modal-info > p {
     margin: 0.3125em 0;
-    font-size: 1em;
     color: #fff;
+}
+
+.modal-createdBy {
+    position: absolute;
+    top: 40em;
 }
 
 /* Overlay */
