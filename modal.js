@@ -10,7 +10,7 @@ const peliculas = {
         script: "<strong>Guión:</strong> Matias Ponce",
         genres: "<strong>Géneros:</strong> Humor, humor absurdo, hackers, fama, grandes élites, paranoia, haters, YouTube",
         titleType: "<strong>Este título es:</strong> Original, delirante",
-        ageRating: "<p class='age'>16+</p>, adolescentes, adultos, lenguaje inapropiado, delirante | Apta para mayores de 16 años",
+        ageRating: "<span class='age'>16+</span>, adolescentes, adultos, lenguaje inapropiado, delirante | Apta para mayores de 16 años",
         background: "maxresdefault.jpg",
         link: "#"
     },
@@ -24,7 +24,7 @@ const peliculas = {
         script: "<strong>Guión:</strong> CineAR",
         genres: "<strong>Géneros:</strong> Humor, lucha libre, luchas clandestinas, apuestas, secuestros, traiciones",
         titleType: "<strong>Este título es:</strong> Intenso, Íntimo, Delirante, Divertido",
-        ageRating: "<p class='age'>12+</p>, lenguaje inapropiado, daños físicos, humor absurdo",
+        ageRating: "<span class='age'>12+</span>, lenguaje inapropiado, daños físicos, humor absurdo",
         curiosity: "<strong>En el 2011 iba a salir una tercera película, pero el programa fue cancelado</strong>",
         background: "https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6",
         link: "#"
@@ -39,7 +39,7 @@ const peliculas = {
         script: "<strong>Guión:</strong> Poppy Cogan, Ruby Thomas, Zia Ahmed, Ajoke Ibironke",
         genres: "<strong>Géneros:</strong> Series dramáticas, De Gran Bretaña, Series basadas en libros",
         titleType: "<strong>Este título es:</strong> Íntimo, Sombrío, De suspenso",
-        ageRating: "<p class='age'>16+</p>, lenguaje inapropiado, drogas, violencia sexual | Apta para mayores de 16 años",
+        ageRating: "<span class='age'>16+</span>, lenguaje inapropiado, drogas, violencia sexual | Apta para mayores de 16 años",
         curiosity: "<strong>Es oficial: Se estrenará otra temporada</strong>",
         background: "Asesinato para principiantes.jpg",
         link: "#"
