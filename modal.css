@@ -28,7 +28,7 @@
     height: 100vw;
 }
 
-.close-button {
+.close-button svg {
     position: absolute;
     top: 1em;
     left: 51em;
@@ -38,6 +38,7 @@
     padding: 0.3em;
     width: 2em;
     height: 2em;
+    cursor: pointer;
 }
 
 .episodios h2 {
