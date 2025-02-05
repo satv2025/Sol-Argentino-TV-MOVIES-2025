@@ -11,14 +11,19 @@
     overflow-y: auto;
 }
 
+/* Cuando el modal está visible, ocultar el scroll del body */
+.modal-open {
+    overflow: hidden;
+}
+
 /* Contenido del modal */
 .modal-content {
     background-color: #183347;
     color: white;
     margin: 5% auto;
-    padding: 20px;
+    padding: 1.25em; /* 20px */
     width: 43%;
-    border-radius: 10px;
+    border-radius: 0.625em; /* 10px */
     position: relative;
     height: 100vw;
 }
@@ -30,12 +35,12 @@
 }
 
 .modal-header img {
-    width: 50.7em;
-    margin-top: -2.5em;
-    margin-left: -1.2em;
-    height: 25em;
+    width: 50.7em; /* 50.7em */
+    margin-top: -2.5em; /* -2.5em */
+    margin-left: -1.2em; /* -1.2em */
+    height: 25em; /* 25em */
     object-fit: cover;
-    border-radius: 0.4em 0.4em 0 0;
+    border-radius: 0.025em 0.025em 0 0; /* 0.4px */
 }
 
 .overlay {
@@ -45,28 +50,28 @@
 }
 
 .overlay h1 {
-    font-size: 2em;
+    font-size: 2em; /* 32px */
     font-weight: bold;
 }
 
 .overlay p {
-    font-size: 1.2em;
+    font-size: 1.2em; /* 19.2px */
 }
 
 /* Botones de acción */
 .modal-actions {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 0.625em; /* 10px */
+    margin-top: 0.625em; /* 10px */
 }
 
 .watch-button {
     background-color: #007bff;
     color: white;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    border-radius: 5px;
+    padding: 0.625em 1.25em; /* 10px 20px */
+    font-size: 1.2em; /* 19.2px */
+    border-radius: 0.3125em; /* 5px */
     text-decoration: none;
 }
 
@@ -74,14 +79,14 @@
     background: none;
     border: none;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.5em; /* 24px */
     cursor: pointer;
 }
 
 /* Información adicional */
 .modal-info p {
-    margin: 5px 0;
-    font-size: 1em;
+    margin: 0.3125em 0; /* 5px */
+    font-size: 1em; /* 16px */
     color: #bbb;
 }
 
@@ -89,20 +94,90 @@
 .episode {
     display: flex;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 0.9375em; /* 15px */
 }
 
 .episode img {
-    width: 150px;
-    border-radius: 5px;
-    margin-right: 10px;
+    width: 9.375em; /* 150px */
+    border-radius: 0.3125em; /* 5px */
+    margin-right: 0.625em; /* 10px */
 }
 
 .episode h3 {
-    font-size: 1.2em;
+    font-size: 1.2em; /* 19.2px */
 }
 
 .episode p {
-    font-size: 1em;
+    font-size: 1em; /* 16px */
     color: #bbb;
+}
+
+/* Media Queries */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%; /* Hacer que el modal ocupe el 90% en pantallas pequeñas */
+        height: auto;
+        padding: 1em; /* Ajustar el padding para pantallas más pequeñas */
+    }
+
+    .modal-header img {
+        width: 100%; /* La imagen se ajusta al ancho del modal */
+        height: auto; /* Ajustar la altura de la imagen */
+    }
+
+    .overlay h1 {
+        font-size: 1.5em; /* Reducir el tamaño de la fuente */
+    }
+
+    .overlay p {
+        font-size: 1em; /* Reducir el tamaño de la fuente */
+    }
+
+    .watch-button {
+        font-size: 1em; /* Reducir el tamaño del botón */
+        padding: 0.5em 1em; /* Ajustar el padding */
+    }
+
+    .episode img {
+        width: 6em; /* Reducir el tamaño de las imágenes de los episodios */
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+    .modal-content {
+        width: 70%; /* El modal ocupará el 70% */
+        padding: 1.25em; /* Padding ligeramente mayor */
+    }
+
+    .modal-header img {
+        width: 70%; /* La imagen se ajusta al 70% */
+        height: auto; /* Ajustar la altura */
+    }
+
+    .overlay h1 {
+        font-size: 1.8em; /* Ajustar tamaño de texto */
+    }
+
+    .overlay p {
+        font-size: 1.1em; /* Ajustar tamaño de texto */
+    }
+
+    .watch-button {
+        font-size: 1.1em; /* Ajustar tamaño del botón */
+        padding: 0.75em 1.5em; /* Ajustar padding */
+    }
+}
+
+/* Pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+    .modal-content {
+        width: 43%; /* Tamaño base para pantallas grandes */
+    }
+
+    .modal-header img {
+        width: 50.7em; /* Tamaño base para la imagen */
+    }
 }

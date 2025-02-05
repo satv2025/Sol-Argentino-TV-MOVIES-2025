@@ -8,7 +8,7 @@ const peliculas = {
         genres: "Aventura, Ciencia ficción",
         description: "Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de YouTube.",
         background: "maxresdefault.jpg",
-        link: "https://www.youtube.com/"
+        link: "matiponcepeli"
     },
     cienporcientolucha: {
         title: "100% Lucha - Las Películas",
@@ -18,7 +18,7 @@ const peliculas = {
         genres: "Acción, Deportes",
         description: "Los productores detrás del famoso programa 100% Lucha decidieron hacerle películas.",
         background: "https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6",
-        link: "https://www.netflix.com/"
+        link: "cienporcientolucha"
     },
     app: {
         title: "Asesinato para Principiantes",
@@ -28,7 +28,7 @@ const peliculas = {
         genres: "Suspenso, Drama",
         description: "En este thriller atrapante, una estudiante investiga un caso ocurrido hace cinco años.",
         background: "Asesinato para principiantes.jpg",
-        link: "https://www.primevideo.com/"
+        link: "app"
     }
 };
 
@@ -63,3 +63,13 @@ document.querySelectorAll(".moreinfobutton").forEach(button => {
         openModal(movieKey);
     });
 });
+
+function openModal() {
+    document.querySelector('body').classList.add('modal-open');
+    document.querySelector('.modal').style.display = 'block';
+}
+
+function closeModal() {
+    document.querySelector('body').classList.remove('modal-open');
+    document.querySelector('.modal').style.display = 'none';
+}
