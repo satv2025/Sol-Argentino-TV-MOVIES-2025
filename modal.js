@@ -28,6 +28,8 @@ const peliculas = {
         background: "https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6",
         link: "#"
     },
+// Definir los datos de cada película
+const peliculas = {
     app: {
         year: "2024",
         duration: "6 episodios",
@@ -42,8 +44,73 @@ const peliculas = {
         ageRating: "<span class='age'>16+</span> lenguaje inapropiado, drogas, violencia sexual",
         curiosity: "<strong class='curiosidad'>Es oficial: Se estrenará otra temporada</strong>",
         background: "Asesinato para principiantes.jpg",
-        link: "#"
+        link: "#",
+        seasons: `
+            <div class="season-dropdown">
+                <button class="dropdown-button">Seleccionar Temporada</button>
+                <div class="dropdown-content">
+                    <button class="texto" onclick="changeSeason(1)"><span>Temporada 1</span></button>
+                    <span class="episode-count">6 episodios</span>
+                    <button class="texto" onclick="changeSeason(2)"><span>Temporada 2</span></button>
+                    <span class="episode-count">Coming Soon</span>
+                </div>
+            </div>
+            <div class="episodios">
+                <h2>Lista de Episodios</h2>
+                <ul id="episode-list"></ul>
+            </div>
+        `
     }
+};
+
+// Datos de episodios por temporada
+const episodios = {
+    1: [
+        {
+            title: "Episodio 1",
+            description: "Pip elige un caso de homicidio para su proyecto escolar. Pero cuando empieza a investigar, descubre que para algunas personas era mejor dejarlo enterrado para siempre.",
+            image: "https://www.mediafire.com/convkey/8ebd/67e8toxnggmojw09g.jpg",
+            duration: "43 min"
+        },
+        {
+            title: "Episodio 2",
+            description: "Luego de entrevistar a las mejores amigas de Andie, Pip tiene una idea más clara de quién era la víctima, pero tras reorganizar fotos viejas empieza a comprender mejor todo.",
+            image: "https://www.mediafire.com/convkey/88d0/o7ja6efkgc857oo9g.jpg",
+            duration: "44 min"
+        },
+        {
+            title: "Episodio 3",
+            description: "Pip descubre por primera vez en su vida el lado oscuro cuando va a una fiesta clandestina. Y su siguiente pista la lleva a territorio aún más peligroso.",
+            image: "https://www.mediafire.com/convkey/6ed1/6870czca0karqn29g.jpg",
+            duration: "43 min"
+        },
+        {
+            title: "Episodio 4",
+            description: "Pip y Ravi siguen una nueva pista que los lleva lejos de Little Kilton. Allí, descubren una valiosa prueba... y una desagradable sorpresa.",
+            image: "https://www.mediafire.com/convkey/0de9/czivzlrwjyr2rlj9g.jpg",
+            duration: "44 min"
+        },
+        {
+            title: "Episodio 5",
+            description: "Una impactante confesión arroja luz en la investigación. Antes de que Pip pueda decidir qué hacer, recibe otro mensaje amenazador.",
+            image: "https://occ-0-2442-1380.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABeED_UJixLwFl5Ln39ljb3EY3B-_bE2aisB_eLtQVDlnZTf_vQ3hbjJseEWVQtQR3_xSoTLDsQaJqB20WoXVRq4ALdwp2VwxqDgvq9ssa8GfB9Ed925tZ5zk.jpg?r=2f5",
+            duration: "50 min"
+        },
+        {
+            title: "Episodio 6",
+            description: "La policía hace un arresto, pero Pip no está segura de que el caso esté solucionado, así que va a visitar a la única persona que podría tener respuestas.",
+            image: "https://www.mediafire.com/convkey/0869/05fmkuq6l9kj4159g.jpg",
+            duration: "51 min"
+        }
+    ],
+    2: [
+        {
+            title: "Coming Soon...",
+            description: "La temporada 2 aún no tiene episodios confirmados.",
+            image: "https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6",
+            duration: "?? min"
+        }
+    ]
 };
 
 // Función para abrir el modal y cargar los datos
@@ -65,16 +132,17 @@ function openModal(movieKey) {
     document.getElementById("modal-titleType").innerHTML = movie.titleType;
     document.getElementById("modal-ageRating").innerHTML = movie.ageRating;
     document.getElementById("modal-curiosity").innerHTML = movie.curiosity || "";
-    document.getElementById("modal-duration").innerText = movie.duration; //
+    document.getElementById("modal-duration").innerText = movie.duration;
     document.getElementById("modal-episodelist").innerHTML = movie.episodelist || "";
-    // Enlace del botón "Reproducir"
+    document.getElementById("modal-seasons").innerHTML = movie.seasons || "";
     document.getElementById("watch-button").href = movie.link;
 
     // Mostrar el modal
     modal.style.display = "block";
-
-    // Añadir clase para ocultar el scroll del body
     document.body.classList.add("modal-open");
+
+    // Cargar episodios de la temporada 1 por defecto
+    changeSeason(1);
 }
 
 // Función para cerrar el modal
@@ -90,3 +158,24 @@ document.querySelectorAll(".moreinfobutton").forEach(button => {
         openModal(movieKey);
     });
 });
+
+// Función para cambiar la lista de episodios según la temporada seleccionada
+function changeSeason(season) {
+    const episodeList = document.getElementById("episode-list");
+    episodeList.innerHTML = ""; // Limpia la lista anterior
+
+    if (episodios[season]) {
+        episodios[season].forEach(ep => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <img src="${ep.image}" alt="${ep.title}" class="episode-img">
+                <div class="episode-info">
+                    <h3>${ep.title}</h3>
+                    <p>${ep.description}</p>
+                    <span>${ep.duration}</span>
+                </div>
+            `;
+            episodeList.appendChild(li);
+        });
+    }
+}

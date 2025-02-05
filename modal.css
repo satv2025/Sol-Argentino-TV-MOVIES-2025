@@ -123,9 +123,8 @@
 .modal-ageRating {top: 33.3em;left: 1.5em;z-index: 1000;font-size: 0.91em;}
 
 .age {
-    border: 1px solid #fff;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
+    border: 1px solid hsla(0, 0%, 100%, .4);
+    padding: 0 .4em;
 }
 .modal-description {top: 34em;}
 .modal-curiosity {top: 27.4em;z-index: 1000;font-size: 1.17em;left: 0.8em;}
@@ -138,6 +137,15 @@
 .modal-info > p {
     margin: 0.3125em 0;
     color: #fff;
+}
+
+.modal strong.eplist {
+    color: #fff;
+    font-weight: 700;
+    position: absolute;
+    top: 25.6em;
+    left: 2.2em;
+    font-size: 1.5em;
 }
 
 .modal-createdBy {
