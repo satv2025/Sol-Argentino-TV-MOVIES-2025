@@ -299,6 +299,21 @@ footer p {
     color: #fff;
 }
 
+.moreinfobutton:hover {
+    background: #0022ff;
+}
+
+.moreinfobutton:hover ~ .pelicula {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.pelicula:hover {
+    box-shadow: 0 0.3em 1.5em rgba(0, 0, 0, 0.4);
+    outline: 0.3em solid white;
+}
+
+
 /* Estilos básicos del botón */
 .avisame-button, .moreinfobutton {
     display: flex;
