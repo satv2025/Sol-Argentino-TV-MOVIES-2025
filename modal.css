@@ -133,11 +133,6 @@
     font-size: 0.8em;
 }
 
-.dropdown.active .dropdown-content {
-    visibility: visible;
-    opacity: 1;
-}
-
 .dropdown.active .dropdown-button::after {
     transform: rotate(180deg); /* Rota la flecha hacia arriba */
 }
