@@ -1,803 +1,444 @@
-/* Importamos la tipografía 'Netflix Sans' desde Sol Argentino TV Fuentes */
-@import url('https://fuentes.solargentinotv.com.ar/netflixsans.css');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
-    font-family: 'Netflix Sans', sans-serif;
-    background-image: url('https://movies.solargentinotv.com.ar/—Pngtree—black background texture advertising_1911402.png');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    font-size: 1rem; /* Base font size = 16px */
-    height: 100%; /* Asegura que ocupe todo el alto de la pantalla */
-    margin: 0; /* Elimina el margen por defecto */
-    padding: 0; /* Elimina el padding por defecto */
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex-grow: 1; /* Hace que el contenedor principal ocupe el espacio restante */
-    display: flex;
-    flex-direction: column;
-    gap: 1em; /* Espacio entre las filas */
-}
-
-header {
-    background-image: url('https://movies.solargentinotv.com.ar/—Pngtree—black background texture advertising_1911402.png');
-    background-size: cover; /* Asegura que la imagen cubra todo el header */
-    background-position: center; /* Centra la imagen */
-    padding: 1.25em; /* Espaciado dentro del header */
-    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1); /* Sombra ligera */
-}
-
-h1 {
-    font-size: 2.25em; /* 36px = 2.25em */
-    margin-bottom: 2.5em; /* 40px = 2.5em */
-    color: #fff; /* Color blanco para el título */
-    text-align: center; /* Centrado del título */
-}
-
-.desc {
-    margin-top: 1.5em; /* Espaciado por encima de la descripción */
-    font-size: 1.125em; /* Tamaño de fuente ligeramente mayor */
-    color: #ddd; /* Color claro para la descripción */
-    text-align: center; /* Centrado del texto de la descripción */
-    padding: 0 20px; /* Espaciado interno para que no toque los bordes */
-}
-
-.desc p {
-    line-height: 1.5; /* Espaciado entre las líneas del párrafo */
-    max-width: 50em; /* Ancho máximo para mejorar legibilidad */
-    margin: 0 auto; /* Centrado del párrafo */
-    margin-top: -5.5em;
-    text-align: justify;
-}
-
-h4 {
-    font-size: 1.2em;
-    margin-top: 3em;
-    font-weight: normal;
-}
-nav a:active {
-    color: #fff;
-}
-
-header a.active {
-    color: #fff;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center; /* Centra los elementos del menú */
-    list-style: none; /* Elimina los puntos de lista */
-    top: -0.6em;
-    position: relative;
-}
-
-nav li {
-    margin: 0 1.25em; /* Espaciado entre los elementos del menú */
-}
-
-nav a {
-    color: #007BFF; /* Color azul para los enlaces */
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    font-weight: bold; /* Texto en negrita */
-    font-size: 1.125em; /* Tamaño de fuente para los enlaces */
-    transition: color 0.3s ease; /* Efecto suave para el cambio de color */
-    position: relative;
-    top: 0.3em;
-    font-size: 1.4em;
-}
-
-nav a:hover {
-    color: #005a9e; /* Azul más oscuro en hover */
-}
-
-.logo {
+/* Estilos del modal */
+.modal {
+    display: none;
     position: absolute;
-    color: #007BFF;
-    font-weight: 700;
-    font-size: 2em;
-    top: 0.4em;
-    left: 0.78em;
+    z-index: 1000;
+    left: -1em;
+    top: -3.7em;
+    width: 102.1%;
+    height: 110%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
 }
 
-/* Estilos para la barra de búsqueda */
-.search-form {
-    display: flex;
-    justify-content: right; /* Alinea la barra de búsqueda a la derecha */
-    margin-top: 0.9em; /* Espaciado superior */
-    position: absolute; /* Cambiar a absolute */
+/* Cuando el modal está visible, ocultar el scroll del body */
+.modal-open {
+    overflow: hidden;
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #183347;
+    color: white;
+    margin: 5% auto;
+    padding: 1.25em;
+    width: 43%;
+    border-radius: 0.7em;
+    position: relative;
+    height: 100vw;
+}
+
+.close-button svg {
+    position: absolute;
     top: -0.1em;
-    right: 2em; /* Añadir un margen para que no se pegue al borde derecho */
-    z-index: 10; /* Asegura que esté por encima de otros elementos */
-}
-
-.search-form input[type="text"] {
-    width: 250px; /* Ancho fijo para el input */
-    font-family: 'Netflix Sans'; /* Tipografía */
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #007BFF; /* Borde azul */
-    border-radius: 5px 0 0 5px; /* Bordes redondeados */
-    outline: none;
-    font-weight: 700; /* Negrita */
-    color: #007BFF;
-}
-
-.search-form input[type="text"]:focus {
-    border-color: #007BFF; /* Cambia el borde a azul cuando se enfoca */
-}
-
-.search-form input[type="text"]::placeholder {
-    color: #007BFF; /* Color del texto placeholder */
-}
-
-.search-form button {
-    font-family: 'Netflix Sans';
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #007BFF; /* Fondo azul */
-    color: white;
-    border-left: #fff;
-    border-top: 2px solid #007BFF;
-    border-right: 2px solid #007BFF;
-    border-bottom: 2px solid #007BFF;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-weight: 700;
-    z-index: 10; /* Asegura que esté por encima de otros elementos */
-}
-
-.search-form button:hover {
-    background-color: #007bff; /* Fondo más oscuro en hover */
-}
-
-.search-form button:focus {
-    outline: none; /* Elimina el borde del botón al hacer clic */
-}
-
-
-main {
-    text-align: center;
-    padding: 3.125em; /* 50px = 3.125em */
-    flex-grow: 1; /* Asegura que el main ocupe el espacio restante entre el header y el footer */
-}
-
-.pelicula h3.matiponcepeli {
-    margin-top: 2em;
-}
-
-.bell-icon {
-    font-family: 'FONTAWESOME';
-    position: relative;
-    left: 7em;
-    top: -0.3em;
-}
-
-.catalogo {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 elementos por fila */
-    gap: 1.25em; /* Espacio entre las tarjetas */
-    margin-top: 1.25em;
-}
-
-.acercadecont {
-    background-color: #183347; /* Fondo blanco para los items */
-    border-radius: 0.3em; /* Bordes redondeados */
-    width: 100%;
-    max-width: 60em; /* 240px = 15em */
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 1.25em; /* 20px = 1.25em */
-    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.3); /* Sombra negra notable en los items */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 25%;
-    padding-left: 3em;
-    padding-right: 3em;
-}
-
-.acercadecont p {
-    font-size: 0.875em; /* 14px = 0.875em */
-    color: #fff; /* Gris oscuro para el texto */
-    margin-bottom: 1.25em; /* 20px = 1.25em */
-    text-align: justify;
-    padding: 0.9em;
-    flex-grow: 1; /* Permite que la sinopsis ocupe el espacio restante */
-    overflow: hidden; /* Evita que el texto se desborde si es muy largo */
-}
-
-.acercadecont h1 {
-    margin-top: 0.65em;
-    margin-bottom: 0.3em;
-}
-
-.pelicula img {
-    width: 100%;
-    height: 200px; /* Establece una altura fija para todas las imágenes */
-    object-fit: cover;
-    border-radius: 0.3em 0.3em 0 0; /* Bordes redondeados solo en la parte superior */
-    margin-bottom: 0.625em; /* 10px = 0.625em */
-}
-
-/* Aseguramos que el contenedor de las películas tenga una altura fija */
-.pelicula {
-    background-color: #183347; /* Fondo blanco para los items */
-    border-radius: 0.3em; /* Bordes redondeados */
-    width: 100%;
-    max-width: 15em; /* 240px = 15em */
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 1.25em; /* 20px = 1.25em */
-    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.3); /* Sombra negra notable en los items */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 380px; /* Asegura que todas las películas tengan la misma altura */
-}
-
-.pelicula h3 {
-    font-size: 1.25em; /* 20px = 1.25em */
-    margin-bottom: 0.625em; /* 10px = 0.625em */
-    text-align: center;
-    padding: 0.19em;
-    font-weight: 600; /* Para hacerlo un poco más destacado */
-    flex-grow: 0; /* No debe expandirse, su altura debe ser fija */
-}
-
-.pelicula p {
-    font-size: 0.875em; /* 14px = 0.875em */
-    color: #fff; /* Gris oscuro para el texto */
-    margin-bottom: 1.25em; /* 20px = 1.25em */
-    text-align: justify;
-    padding: 0.9em;
-    flex-grow: 1; /* Permite que la sinopsis ocupe el espacio restante */
-    overflow: hidden; /* Evita que el texto se desborde si es muy largo */
-}
-
-.pelicula:hover {
-    box-shadow: 0 0.3em 1.5em rgba(0, 0, 0, 0.4);
-    outline: 0.3em solid white; /* Borde blanco sin afectar el tamaño */
-     /* Ajuste para que siga el border-radius */
-}
-
-button {
-    background-color: #007BFF00;
-    color: #ffffff00;
-    border: none;
-    padding: 0.625em 1.25em; /* 10px 20px = 0.625em 1.25em */
-    font-weight: bold;
-    font-size: 1em; /* 16px = 1em */
-    border-radius: 0 0 0.3em 0.3em; /* 5px = 0.3125em */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-footer {
-    background-image: url('https://movies.solargentinotv.com.ar/—Pngtree—black background texture advertising_1911402.png');
-    background-size: cover; /* Asegura que la imagen cubra todo el footer */
-    background-position: center; /* Centra la imagen */
-    text-align: center;
-    padding: 1.25em; /* 20px = 1.25em */
-    margin-top: 2.5em; /* 40px = 2.5em */
-    position: relative;
-    width: 100%;
-    bottom: 0;
-}
-
-footer p {
-    font-size: 0.875em; /* 14px = 0.875em */
-    color: #fff;
-}
-
-.pelicula:hover {
-    box-shadow: 0 0.3em 1.5em rgba(0, 0, 0, 0.4);
-    outline: 0.3em solid white;
-}
-
-
-/* Estilos básicos del botón */
-.avisame-button, .moreinfobutton {
-    display: flex;
-    align-items: center;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 0.5em 1em; /* Usando 'em' para que sea más responsive */
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 0 0 0.3em 0.3em; /* Border-radius especificado */
-    transition: all 0.3s ease;
-    font-family: 'Netflix Sans';
-    justify-content: center;
-}
-
-.moreinfobutton:hover {
-    background: #0022ff;
-}
-
-.moreinfobutton:hover ~ .pelicula {
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-.pelicula:has(.moreinfobutton:hover):hover {
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-.avisame-button .bell-icon {
-    margin-right: 0.5em; /* Espacio entre el ícono de la campana y el texto */
-}
-
-/* Estilo cuando el botón está en estado "Activado" */
-.avisame-button.recordatorio-activado {
-    background-color: #fff;
-    color: #000;
-}
-
-/* Formulario de suscripción */
-.subscription-form {
-    margin-top: 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em; /* Espacio entre los campos del formulario */
-    font-family: 'Netflix Sans';
-}
-
-.subscription-form input {
-    padding: 0.5em;
-    border-radius: 0.3em;
-    border: 1px solid #ccc;
-    font-size: 1em;
-    font-family: 'Netflix Sans';
-}
-
-.subscription-form button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 0.5em 1em;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 0.3em;
-    font-family: 'Netflix Sans';
-}
-
-#user-nick {
-    color: #007BFF;
-    font-family: 'Netflix Sans';
-    border: #007BFF 0.2em solid;
-    width: 12%;
-    height: 32%;
-    text-align: center;
-    background: #fff;
-    font-weight: 700;
-    align-content: center;
-    border-radius: 0.3em;
-    cursor: pointer; /* Añadido para mejorar la interacción con el botón */
-}
-
-#logout-btn {
-    color: #007BFF;
-    font-family: 'Netflix Sans';
-    border: #007BFF 0.2em solid;
-    width: 12%;
-    height: 32%;
-    text-align: center;
-    background: #fff;
-    font-weight: 700;
-    align-content: center;
-    border-radius: 0.3em;
-    cursor: pointer;
-    top: -2.5em;
-    left: 14.4em;
-    justify-content: center;
-    text-align: center;
-    display: grid;
-    margin-top: 0.3em;
-}
-
-#logout-btn:hover {
-    background-color: #007BFF; /* Cambio de color al pasar el ratón por encima */
-    border-radius: 0.3em;
-  
-    color: white; /* Cambia el color del texto al pasar el ratón */
-}
-#login-btn {
-    color: #007BFF;
-    font-family: 'Netflix Sans';
-    border: #007BFF 0.2em solid;
-    width: 12%;
-    height: 32%;
-    text-align: center;
-    background: #fff;
-    font-weight: 700;
-    align-content: center;
-    border-radius: 0.3em;
-    cursor: pointer;
-    top: -2.5em;
-    left: 14.4em;
-    justify-content: center;
-    text-align: center;
-    display: grid;
-    margin-top: 0.3em;
-}
-
-#login-btn:hover {
-    background-color: #007BFF; /* Cambio de color al pasar el ratón por encima */
-    border-radius: 0.3em;
-    color: white; /* Cambia el color del texto al pasar el ratón */
-}
-
-/* Media Queries para diseño responsive */
-@media (max-width: 48em) { /* Máximo 48em = 768px */
-    .avisame-button {
-        font-size: 0.9em;
-        padding: 0.4em 0.8em;
-    }
-
-    .avisame-button .bell-icon {
-        margin-right: 0.3em;
-    }
-
-    .subscription-form {
-        gap: 0.4em;
-    }
-
-    .subscription-form input {
-        font-size: 0.9em;
-        padding: 0.4em;
-    }
-
-    .subscription-form button {
-        font-size: 0.9em;
-        padding: 0.4em 0.8em;
-    }
-}
-
-@media (max-width: 30em) { /* Máximo 30em = 480px */
-    .avisame-button {
-        font-size: 0.8em;
-        padding: 0.3em 0.6em;
-    }
-
-    .avisame-button .bell-icon {
-        margin-right: 0.3em;
-    }
-
-    .subscription-form {
-        gap: 0.3em;
-    }
-
-    .subscription-form input {
-        font-size: 0.8em;
-        padding: 0.3em;
-    }
-
-    .subscription-form button {
-        font-size: 0.8em;
-        padding: 0.3em 0.6em;
-    }
-}
-
-/* Media Queries para diseño responsive */
-@media (max-width: 48em) { /* Máximo 48em = 768px */
-    .avisame-button {
-        font-size: 0.9em;
-        padding: 0.4em 0.8em;
-    }
-
-    .avisame-button .bell-icon {
-        margin-right: 0.3em;
-    }
-
-    .subscription-form {
-        gap: 0.4em;
-    }
-
-    .subscription-form input {
-        font-size: 0.9em;
-        padding: 0.4em;
-    }
-
-    .subscription-form button {
-        font-size: 0.9em;
-        padding: 0.4em 0.8em;
-    }
-}
-
-@media (max-width: 30em) { /* Máximo 30em = 480px */
-    .avisame-button {
-        font-size: 0.8em;
-        padding: 0.3em 0.6em;
-    }
-
-    .avisame-button .bell-icon {
-        margin-right: 0.3em;
-    }
-
-    .subscription-form {
-        gap: 0.3em;
-    }
-
-    .subscription-form input {
-        font-size: 0.8em;
-        padding: 0.3em;
-    }
-
-    .subscription-form button {
-        font-size: 0.8em;
-        padding: 0.3em 0.6em;
-    }
-}
-
-/* Media Queries para diseño responsive */
-@media (max-width: 48em) { /* Máximo 48em = 768px */
-    .avisame-button {
-        font-size: 0.9em;
-        padding: 0.4em 0.8em;
-    }
-
-    .avisame-button .bell-icon {
-        margin-right: 0.3em;
-    }
-
-    .subscription-form {
-        gap: 0.4em;
-    }
-
-    .subscription-form input {
-        font-size: 0.9em;
-        padding: 0.4em;
-    }
-
-    .subscription-form button {
-        font-size: 0.9em;
-        padding: 0.4em 0.8em;
-    }
-}
-
-@media (max-width: 30em) { /* Máximo 30em = 480px */
-    .avisame-button {
-        font-size: 0.8em;
-        padding: 0.3em 0.6em;
-    }
-
-    .avisame-button .bell-icon {
-        margin-right: 0.3em;
-    }
-
-    .subscription-form {
-        gap: 0.3em;
-    }
-
-    .subscription-form input {
-        font-size: 0.8em;
-        padding: 0.3em;
-    }
-
-    .subscription-form button {
-        font-size: 0.8em;
-        padding: 0.3em 0.6em;
-    }
-}
-
-/* Responsivo para pantallas pequeñas */
-@media (max-width: 768px) {
-    footer {
-        position: relative;
-        bottom: 0;
-    }
-}
-
-@media (max-width: 480px) {
-    footer {
-        position: relative;
-        bottom: 0;
-    }
-}
-
-/* Estilos para dispositivos pequeños (móviles) */
-@media (max-width: 48em) { /* 768px = 48em */
-    .pelicula {
-        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-    }
-
-    .catalogo {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    h1 {
-        font-size: 1.75em; /* 28px = 1.75em */
-    }
-}
-
-/* Estilos para pantallas grandes (por ejemplo, tabletas y escritorios grandes) */
-@media (min-width: 48.063em) { /* 769px = 48.063em */
-    .pelicula {
-        width: 100%;
-        max-width: 22em; /* 300px = 18.75em */
-        height: 100%;
-        max-height: 100em;
-    }
-}
-
-/* Responsivo para pantallas pequeñas */
-@media (max-width: 768px) {
-    footer {
-        position: relative;
-        bottom: 0;
-    }
-}
-
-@media (max-width: 480px) {
-    footer {
-        position: relative;
-        bottom: 0;
-    }
-}
-
-/* Estilos para dispositivos pequeños (móviles) */
-@media (max-width: 48em) { /* 768px = 48em */
-    .pelicula {
-        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-    }
-
-    .catalogo {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    h1 {
-        font-size: 1.75em; /* 28px = 1.75em */
-    }
-}
-
-/* Estilos para pantallas grandes (por ejemplo, tabletas y escritorios grandes) */
-@media (min-width: 48.063em) { /* 769px = 48.063em */
-    .pelicula {
-        width: 100%;
-        max-width: 22em; /* 300px = 18.75em */
-        height: 100%;
-        max-height: 100em;
-    }
-}
-
-/* Estilo para el ícono de la campana */
-.notification-icon {
-    position: relative;
-    cursor: pointer;
-    font-size: 1.5em; /* Tamaño ajustable dependiendo de la base de la fuente */
-    left: 46.9em;
-    top: -2.6em;
-    max-width: 10em;
-  }
-  
-  /* El contador de notificaciones en rojo */
-  .notification-count {
-    position: absolute;
-    top: -3.7em;  /* Ajuste basado en la fuente */
-    right: 23em;
-    background-color: red;
-    color: white;
+    left: 51em;
+    z-index: 1000;
+    background: #1833478c;
     border-radius: 50%;
     padding: 0.3em;
-    font-size: 0.75em; /* Reducción proporcional al ícono */
-  }
-  
-  /* Estilo para el modal de notificaciones */
-  .notifications-popup {
-    display: none; /* Oculto por defecto */
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+
+.episodios h2 {
+    color: #fff0;
+}
+
+/* Imagen de fondo */
+.modal-header {
+    position: relative;
+    width: 100%;
+}
+
+.modal-header::before {
+    content: "";
     position: absolute;
-    top: 21.5em;
-    right: 24.7em;  /* Ajuste de distancia */
-    transform: translateY(-50%);
-    background-color: #181818;
-    width: 22em;  /* 15em en lugar de 250px */
-    height: 30em;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    top: 0em;
+    left: -1.2em;
+    width: 104.6%;
+    height: 100%;
+    background: linear-gradient(0deg, #183347, transparent 50%);
+    z-index: 1;
+}
+
+.modal-header img {
+    position: relative;
+    margin-top: -2.5em;
+    margin-left: -1.2em;
+    height: 28em;
+    border-radius: 0.7em 0.7em 0 0 !important;!i;!;
+}
+
+/* Texto y detalles */
+.modal-cast a {
+    font-style: italic;
+    cursor: pointer;
+}
+
+.modal-cast a:hover {
+    cursor: pointer;
+}
+
+/* Posiciones con em */
+.modal-year {
+    position: absolute;
+    top: 28.3em;
+    padding-left: 2em;
     z-index: 1000;
-    padding: 1em;
+    color: #bcbcbc !important;!i;!;
+}
+
+.modal-title {
+    position: absolute;
+    top: 2em;
+}
+
+/* Contenedor principal del dropdown */
+.season-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 1em;
+    width: 100%;
+    max-width: 300px; /* Ajusta el ancho máximo */
+    z-index: 1000;
+}
+
+/* Contenedor del dropdown con la clase activa */
+.season-dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Estilos del botón del dropdown */
+.dropdown-button {
+    background-color: #282c34;
+    color: white;
+    padding: 0.8em 1.2em;
     font-size: 1em;
-    border-radius: 0.3em;
-  }
-  
-  .notifications-header {
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .notifications-header h4{
-  position: relative;
-  margin-top: -1em;
-  left: 0.3em;
-  }
+    position: absolute;
+    left: 14.5em;
+    top: 7.6em;
+}
 
-  .notifications-popup ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .notifications-popup ul li {
-    padding: 0.5em;
-    border-bottom: 0.1em solid #eee;
-  }
-  
-  /* Estilo para el botón de cerrar */
-  .notif {
-    background-color: transparent;
+.dropdown-button::after {
+    content: "▼"; /* Flecha indicando que se despliega */
+    font-size: 0.8em;
+}
+
+/* Estilos del contenido desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Asegura que se despliegue justo debajo del botón */
+    left: 0;
+    background-color: #fff;
+    border-radius: 0.4em;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+    overflow: hidden;
+}
+
+/* Estilos de los botones dentro del dropdown */
+.dropdown-content button {
+    background: none;
     border: none;
-    cursor: pointer;
+    width: 100%;
+    padding: 0.8em 1em;
+    text-align: left;
     font-size: 1em;
-    position: relative;
-    left: 0em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Hover sobre los botones */
+.dropdown-content button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Información de los episodios */
+.episode-count {
+    display: block;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+    color: #666;
+}
+
+#episode-list li {
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    padding: 0.5em 2em; /* 0.5em arriba/abajo, 2em izquierda/derecha */
+    border-bottom: 1px solid #ccc;
+}
+
+#episode-list li p {
+    margin-right: -1.3em;
+}
+
+#episode-list li span {
+    position: absolute;
+    left: 46.5em;
+}
+
+#episode-list li img {
+    width: 170px; /* Ancho */
+    height: 75px; /* 16:9 (100px de ancho → 56px de alto) */
+    border-radius: 0.4em; /* Bordes redondeados */
+    object-fit: cover;
+    margin-right: 1em;
+}
+
+.episode-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.episode-title {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.episode-description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.modal-duration {
+    position: absolute;
+    top: 28.3em;
+    left: 8em;
+    color: #bcbcbc !important;!i;!;
+}
+
+.modal strong {
+    color: #777;
+    font-weight: normal;
+}
+
+.modal .curiosidad {
+    color: #fff;
+    font-weight: 700;
+}
+
+.modal-fullcreatedBy,
+.modal-cast,
+.modal-script,
+.modal-genres,
+.modal-titleType {
+    position: absolute;
+    padding-left: 32em;
+    text-align: left;
+    padding-right: 2em;
+}
+
+.modal-fullcreatedBy { top: 47em; }
+.modal-cast {top: 28.3em;}
+.modal-script {top: 2em;left: -30.67em;}
+.modal-genres {top: 31em;}
+.modal-titleType {top: 34em;}
+
+.modal-ageRating,
+.modal-description,
+.modal-curiosity {
+    position: absolute;
+    padding-left: 2em;
+    padding-right: 24em;
+    text-align: justify;
+}
+
+.modal-ageRating {top: 33.3em;left: 1.5em;z-index: 1000;font-size: 0.91em;}
+
+.age {
+    border: 1px solid hsla(0, 0%, 100%, .4);
+    padding: 0 .4em;
+}
+.modal-description {top: 34em;}
+.modal-curiosity {top: 27.4em;z-index: 1000;font-size: 1.17em;left: 0.8em;}
+
+.modal-curiosity p {
+    font-size: 12p;
+}
+
+/* Información adicional */
+.modal-info > p {
+    margin: 0.3125em 0;
+    color: #fff;
+}
+
+button.texto {
+}
+
+ul#episode-list {
+    padding-left: 2em;
+    padding-right: 3em;
+    position: absolute;
+    top: 41em;
+}
+
+.modal strong.eplist {
+    color: #fff;
+    font-weight: 700;
+    position: absolute;
+    top: 25.6em;
+    left: 2.2em;
+    font-size: 1.5em;
+    
+}
+
+.modal-createdBy {
+    position: absolute;
+    top: 0.5em;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+
+.overlay h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.overlay p {
+    font-size: 1.2em;
+}
+
+/* Botones de acción */
+.modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+    margin-top: 0.625em;
+}
+
+.watch-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.625em 1.25em;
+    font-size: 1.3em;
+    border-radius: 0.3125em;
+    text-decoration: none;
+    font-weight: 700;
+    position: absolute;
+    top: 17.4em;
+    left: 2em;
+    z-index: 1000;
+}
+
+.watch-button:hover {
+    background-color: #fff;
     color: #007bff;
-    top: -0.7em;
-  }
-  
-  /* Media Queries para pantallas pequeñas (ej. móviles) */
-  @media (max-width: 600px) {
-    .notification-icon {
-      font-size: 1.2em; /* Reducir tamaño del ícono en pantallas pequeñas */
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Episodios */
+.episode {
+    display: flex;
+    align-items: center;
+    margin-top: 0.9375em;
+}
+
+.episode img {
+    width: 9.375em;
+    border-radius: 0.3125em;
+    margin-right: 0.625em;
+}
+
+.episode h3 {
+    font-size: 1.2em;
+}
+
+.episode p {
+    font-size: 1em;
+    color: #bbb;
+}
+
+/* Media Queries */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+        height: auto;
+        padding: 1em;
     }
-  
-    .notification-count {
-      top: -0.2em;
-      right: -0.2em;
-      padding: 0.2em;
-      font-size: 0.6em;
+
+    .modal-header img {
+        width: 100%;
+        height: auto;
     }
-  
-    .notifications-popup {
-      width: 12em;  /* Reducir el tamaño del modal en pantallas pequeñas */
-      right: 0.5em; /* Ajustar la posición a la derecha */
+
+    .overlay h1 {
+        font-size: 1.5em;
     }
-  
-    .notifications-header {
-      font-size: 0.9em;
+
+    .overlay p {
+        font-size: 1em;
     }
-  
-    .notifications-popup ul li {
-      padding: 0.4em; /* Reducir padding para pantallas pequeñas */
+
+    .watch-button {
+        font-size: 1em;
+        padding: 0.5em 1em;
     }
-  
-    .notif {
-      font-size: 0.9em; /* Reducir tamaño del botón */
+
+    .episode img {
+        width: 6em;
     }
-  }
-  
-  /* Media Queries para pantallas medianas (tabletas) */
-  @media (max-width: 768px) {
-    .notification-icon {
-      font-size: 1.4em; /* Ajustar para tabletas */
+}
+
+/* Pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+    .modal-content {
+        width: 70%;
+        padding: 1.25em;
     }
-  
-    .notifications-popup {
-      width: 13em;  /* Ajustar el tamaño del modal en tabletas */
+
+    .modal-header img {
+        width: 70%;
+        height: auto;
     }
-  
-    .notifications-header {
-      font-size: 1em;
+
+    .overlay h1 {
+        font-size: 1.8em;
     }
-  
-    .notifications-popup ul li {
-      padding: 0.45em; /* Ajustar padding */
+
+    .overlay p {
+        font-size: 1.1em;
     }
-  
-    .notif {
-      font-size: 1em; /* Ajustar el tamaño del botón */
+
+    .watch-button {
+        font-size: 1.1em;
+        padding: 0.75em 1.5em;
     }
-  }
+}
+
+/* Pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+    .modal-content {
+        width: 44.5%;
+    }
+
+    .modal-header img {
+        width: 54.00em;
+        border-radius: 0.3em 0.3em 0 0;
+    }
+}
