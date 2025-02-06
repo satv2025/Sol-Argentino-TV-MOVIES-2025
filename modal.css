@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 /* Estilos del modal */
 .modal {
     display: none;
@@ -132,13 +136,13 @@
     font-size: 1em;
     border-radius: 0.2em;
     cursor: pointer;
-    width: 80%;
+    width: 63%;
     text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    left: 18.2em;
+    left: 21.4em;
     top: 9em;
 }
 
@@ -158,10 +162,10 @@
       /* Asegura que esté por encima de otros elementos */
      position: absolute;
      top: 12em;
-     left: 14.4em;
+     left: 18.91em;
      background-color: #282c34;
      border: 0.1em solid rgb(77, 77, 77);
-     width: 100%;
+     width: 76%;
      z-index: 100;
      overflow: hidden;
      visibility: initial;
@@ -179,7 +183,7 @@
 .dropdown-content button {
     background: none;
     border: none;
-    width: 120%;
+    width: 100%;
     padding: 0.8em 1em;
     position: absolute;
     left: 0em;
@@ -191,6 +195,15 @@
     align-content: center;
     align-items: center;
     display: grid;
+}
+
+button.texto {
+    padding-left: 1em !important;!i;!;
+}
+
+.episode-count {
+    !i;!;
+    padding-left: 2em;
 }
 
 #texto1 {
@@ -207,7 +220,8 @@
     padding-left: 2em;
 }
 
-.texto {}
+.texto {
+}
 
 /* Hover sobre los botones */
 button.text:hover {
@@ -217,7 +231,7 @@ button.text:hover {
 /* Información de los episodios */
 .episode-count {
     display: block;
-    padding: 0.5em 1em;
+    padding: 0.5em 0em;
     font-size: 0.9em;
     color: #ffffff;
     z-index: 1000;
@@ -228,11 +242,13 @@ button.text:hover {
 }
 
 #episode-count1 {
-    top: 0.2em;
+    top: 0.1em;
+    left: 8.8em;!i;!;
 }
 
 #episode-count2 {
     top: 0.07em;
+    left: 8.8em;
 }
 
 #episode-list li {
