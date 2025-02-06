@@ -39,10 +39,14 @@ body.modal-open {
     margin: 5% auto;
     padding: 1.25em;
     width: 43%;
-    top: 1em;
+    top: -2.6em;
     border-radius: 0.7em;
     position: relative;
     height: 100vw;
+    z-index: 1000;
+}
+
+.modal-info {
 }
 
 .close-button svg {
@@ -83,7 +87,6 @@ body.modal-open {
     position: relative;
     margin-top: -2.5em;
     margin-left: -1.2em;
-    height: 28em;
     border-radius: 0.7em 0.7em 0 0 !important;!i;!;
 }
 
@@ -352,6 +355,7 @@ button.text:hover {
 .modal-info > p {
     margin: 0.3125em 0;
     color: #fff;
+    z-index: 1000;
 }
 
 button.texto:hover {background: #424242;border-radius: 0em;}
