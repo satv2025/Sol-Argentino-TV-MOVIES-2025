@@ -212,15 +212,3 @@ document.addEventListener("keydown", (event) => {
         document.body.classList.remove("modal-open");
     }
 });
-
-document.querySelector(".dropdown-button").addEventListener("click", function () {
-    document.querySelector(".dropdown").classList.toggle("active");
-});
-
-// Cierra el dropdown si se hace clic fuera
-document.addEventListener("click", function (event) {
-    const dropdown = document.querySelector(".dropdown");
-    if (!dropdown.contains(event.target)) {
-        dropdown.classList.remove("active");
-    }
-});
