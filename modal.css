@@ -113,19 +113,19 @@
 .dropdown-button {
     background-color: #282c34;
     color: white;
+    border: 0.1em solid rgb(77, 77, 77);
     padding: 0.8em 1.2em;
     font-size: 1em;
-    border: none;
-    border-radius: 0.4em;
+    border-radius: 0.2em;
     cursor: pointer;
-    width: 100%;
+    width: 80%;
     text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    left: 14.5em;
-    top: 7.6em;
+    left: 18.2em;
+    top: 9em;
 }
 
 .dropdown-button::after {
@@ -135,32 +135,64 @@
 
 /* Estilos del contenido desplegable */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%; /* Asegura que se despliegue justo debajo del botón */
-    left: 0;
-    background-color: #fff;
-    border-radius: 0.4em;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    z-index: 10; /* Asegura que esté por encima de otros elementos */
-    overflow: hidden;
+     /* Asegura que se despliegue justo debajo del botón */
+     
+      /* Asegura que esté por encima de otros elementos */
+     position: absolute;
+     top: 12em;
+     left: 14.4em;
+     background-color: #282c34;
+     border: 0.1em solid rgb(77, 77, 77);
+     width: 100%;
+     z-index: 100;
+     overflow: hidden;
+     visibility: initial;
+     transition: opacity 0.3s ease, visibility 0.3s ease;
+     height: 7em;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Estilos de los botones dentro del dropdown */
 .dropdown-content button {
     background: none;
     border: none;
-    width: 100%;
+    width: 120%;
     padding: 0.8em 1em;
+    position: absolute;
+    left: 0em;
     text-align: left;
     font-size: 1em;
     cursor: pointer;
     transition: background 0.3s ease;
+    color: #fff;
+    align-content: center;
+    align-items: center;
+    display: grid;
 }
 
+#texto1 {
+    position: absolute;
+    top: 1.15em;
+    height: 2.2em;
+    padding-left: 2em;
+}
+
+#texto2 {
+    position: absolute;
+    top: 3.4em;
+    height: 2.2em;
+    padding-left: 2em;
+}
+
+.texto {}
+
 /* Hover sobre los botones */
-.dropdown-content button:hover {
+button.text:hover {
     background-color: #f0f0f0;
 }
 
@@ -169,7 +201,20 @@
     display: block;
     padding: 0.5em 1em;
     font-size: 0.9em;
-    color: #666;
+    color: #ffffff;
+    z-index: 1000;
+    position: absolute;
+    top: 1.4em;
+    left: 10em;
+    font-weight: 300;
+}
+
+#episode-count1 {
+    top: 1.3em;
+}
+
+#episode-count2 {
+    top: 3.8em;
 }
 
 #episode-list li {
@@ -274,8 +319,7 @@
     color: #fff;
 }
 
-button.texto {
-}
+button.texto:hover {background: #424242;border-radius: 0em;}
 
 ul#episode-list {
     padding-left: 2em;

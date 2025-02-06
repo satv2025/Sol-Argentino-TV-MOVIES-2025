@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sol Argentino TV MOVIES</title>
@@ -10,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="SolArgentinoTVMOVIES.ico" type="image/x-icon">
   </head>
-  <header>
+  <body class="modal-open"><header>
       <div class="content" id="scroll-container-header">
     <nav>
       <p class="logo">SATVMOVIES</p>
@@ -20,13 +19,13 @@
         <li><a href="acercade">Acerca De</a></li>
       </ul>
       <form action="#" method="get" class="search-form">
-        <input type="text" id="search" name="search" placeholder="Buscar película o serie..." />
+        <input type="text" id="search" name="search" placeholder="Buscar película o serie...">
         <button type="submit">Buscar</button>
       </form>
     </nav>
- </header>
+ </div></header>
 
-<body>
+
     <div class="content" id="scroll-container-body">
 <main>
     <div class="desc">
@@ -62,7 +61,7 @@
     </div>
 
 <!-- Contenedor del Modal -->
-<div id="infoModal" class="modal">
+<div id="infoModal" class="modal" style="display: block;">
     <div class="modal-content">
         <div class="close-button">
             <span class="close-icon" data-uia="previewModal-closebtn" role="button" aria-label="close" tabindex="0" title="close">
@@ -74,9 +73,9 @@
         
         <!-- Imagen de fondo -->
         <div class="modal-header">
-            <img id="modal-background" src="" alt="Fondo">
+            <img id="modal-background" src="https://occ-0-2443-1380.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABVp5EI24Pn-MhqBfRt6inhEm3YWfGw1YvxCWHJG7OhVZ9_F_9fV814k46BJ6cRj99iPL2YS_FxacJ6-qFRBAs-yS6ktTfnrTAYFh.webp?r=d16" alt="Fondo">
             <div class="overlay">
-                <h1 id="modal-title"></h1>
+                <h1 id="modal-title">Acerca de Asesinato Para Principiantes</h1>
                 <p id="modal-tagline"></p>
             </div>
         </div>
@@ -88,19 +87,76 @@
 
         <!-- Información adicional -->
         <div class="modal-info">
-            <p id="modal-year" class="modal-year"></p>
-            <p id="modal-duration" class="modal-duration"></p>
-            <p id="modal-createdBy" class="modal-createdBy"></p>
-            <p id="modal-cast" class="modal-cast"></p>
-            <p id="modal-script" class="modal-script"></p>
-            <p id="modal-genres" class="modal-genres"></p>
-            <p id="modal-titleType" class="modal-titleType"></p>
-            <p id="modal-ageRating" class="modal-ageRating"></p>
-            <p id="modal-description" class="modal-description"></p>
-            <p id="modal-curiosity" class="modal-curiosity"></p>
+            <p id="modal-year" class="modal-year">2024</p>
+            <p id="modal-duration" class="modal-duration">6 episodios</p>
+            <p id="modal-createdBy" class="modal-createdBy"><strong>Creado por:</strong> Poppy Cogan</p>
+            <p id="modal-cast" class="modal-cast"><strong>Elenco:</strong> Emma Myers, Zain Iqbal, Asha Banks, <a>más</a></p>
+            <p id="modal-script" class="modal-script"><strong>Guión:</strong> Poppy Cogan, Ruby Thomas, Zia Ahmed, Ajoke Ibironke</p>
+            <p id="modal-genres" class="modal-genres"><strong>Géneros:</strong> Series dramáticas, De Gran Bretaña, Series basadas en libros</p>
+            <p id="modal-titleType" class="modal-titleType"><strong>Este título es:</strong> Íntimo, Sombrío, De suspenso</p>
+            <p id="modal-ageRating" class="modal-ageRating"><span class="age">16+</span> lenguaje inapropiado, drogas, violencia sexual</p>
+            <p id="modal-description" class="modal-description">En este thriller atrapante, una estudiante investiga, para un proyecto escolar, un caso ocurrido hace cinco años.</p>
+            <p id="modal-curiosity" class="modal-curiosity"><strong class="curiosidad">Es oficial: Se estrenará otra temporada</strong></p>
             <p id="modal-title" class="modal-title"></p>      
-            <p id="modal-episodelist" class="modal-episodelist"></p>
-            <p id="modal-seasons" class="modal-seasons"></p>
+            <p id="modal-episodelist" class="modal-episodelist"><strong class="eplist">Episodios</strong></p>
+            <p id="modal-seasons" class="modal-seasons">
+            <div class="season-dropdown">
+                <button class="dropdown-button">Seleccionar Temporada</button>
+                <div class="dropdown-content">
+                    <button class="texto" onclick="changeSeason(1)" style="
+" id="texto1"><span>Temporada 1</span></button>
+                    <span id="episode-count1" class="episode-count">(6 episodios)</span>
+                    <button class="texto" onclick="changeSeason(2)" id="texto2"><span>Temporada 2</span></button>
+                    <span id="episode-count2" class="episode-count">(Coming Soon)</span>
+                </div>
+            </div>
+            <div class="episodios">
+                <h2>Lista de Episodios</h2>
+                <ul id="episode-list"><li>
+                <img src="https://www.mediafire.com/convkey/8ebd/67e8toxnggmojw09g.jpg" alt="Episodio 1" class="episode-img">
+                <div class="episode-info">
+                    <h3>Episodio 1</h3>
+                    <p>Pip elige un caso de homicidio para su proyecto escolar. Pero cuando empieza a investigar, descubre que para algunas personas era mejor dejarlo enterrado para siempre.</p>
+                    <span>43 min</span>
+                </div>
+            </li><li>
+                <img src="https://www.mediafire.com/convkey/88d0/o7ja6efkgc857oo9g.jpg" alt="Episodio 2" class="episode-img">
+                <div class="episode-info">
+                    <h3>Episodio 2</h3>
+                    <p>Luego de entrevistar a las mejores amigas de Andie, Pip tiene una idea más clara de quién era la víctima, pero tras reorganizar fotos viejas empieza a comprender mejor todo.</p>
+                    <span>44 min</span>
+                </div>
+            </li><li>
+                <img src="https://www.mediafire.com/convkey/6ed1/6870czca0karqn29g.jpg" alt="Episodio 3" class="episode-img">
+                <div class="episode-info">
+                    <h3>Episodio 3</h3>
+                    <p>Pip descubre por primera vez en su vida el lado oscuro cuando va a una fiesta clandestina. Y su siguiente pista la lleva a territorio aún más peligroso.</p>
+                    <span>43 min</span>
+                </div>
+            </li><li>
+                <img src="https://www.mediafire.com/convkey/0de9/czivzlrwjyr2rlj9g.jpg" alt="Episodio 4" class="episode-img">
+                <div class="episode-info">
+                    <h3>Episodio 4</h3>
+                    <p>Pip y Ravi siguen una nueva pista que los lleva lejos de Little Kilton. Allí, descubren una valiosa prueba... y una desagradable sorpresa.</p>
+                    <span>44 min</span>
+                </div>
+            </li><li>
+                <img src="https://occ-0-2442-1380.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABeED_UJixLwFl5Ln39ljb3EY3B-_bE2aisB_eLtQVDlnZTf_vQ3hbjJseEWVQtQR3_xSoTLDsQaJqB20WoXVRq4ALdwp2VwxqDgvq9ssa8GfB9Ed925tZ5zk.jpg?r=2f5" alt="Episodio 5" class="episode-img">
+                <div class="episode-info">
+                    <h3>Episodio 5</h3>
+                    <p>Una impactante confesión arroja luz en la investigación. Antes de que Pip pueda decidir qué hacer, recibe otro mensaje amenazador.</p>
+                    <span>50 min</span>
+                </div>
+            </li><li>
+                <img src="https://www.mediafire.com/convkey/0869/05fmkuq6l9kj4159g.jpg" alt="Episodio 6" class="episode-img">
+                <div class="episode-info">
+                    <h3>Episodio 6</h3>
+                    <p>La policía hace un arresto, pero Pip no está segura de que el caso esté solucionado, así que va a visitar a la única persona que podría tener respuestas.</p>
+                    <span>51 min</span>
+                </div>
+            </li></ul>
+            </div>
+        </p>
             <div class="episodios">
             <ul id="episode-list"></ul>
             </div>
@@ -116,7 +172,7 @@
               <span class="bell-icon"></span> Próximamente
           </button>
           <form id="Gladiador-form" class="subscription-form" style="display: none;">
-              <input type="email" id="Gladiador-email" placeholder="Introduce tu correo" required>
+              <input type="email" id="Gladiador-email" placeholder="Introduce tu correo" required="">
               <button type="button" onclick="activarRecordatorio('Gladiador')">Confirmar</button>
           </form>
       </div>
@@ -129,7 +185,7 @@
               <span class="bell-icon"></span> Próximamente
           </button>
           <form id="Circulo-form" class="subscription-form" style="display: none;">
-              <input type="email" id="Circulo-email" placeholder="Introduce tu correo" required>
+              <input type="email" id="Circulo-email" placeholder="Introduce tu correo" required="">
               <button type="button" onclick="activarRecordatorio('Circulo')">Confirmar</button>
           </form>
       </div>
@@ -142,7 +198,7 @@
               <span class="bell-icon"></span> Próximamente
           </button>
           <form id="DeNocheConElDiablo-form" class="subscription-form" style="display: none;">
-              <input type="email" id="DeNocheConElDiablo-email" placeholder="Introduce tu correo" required>
+              <input type="email" id="DeNocheConElDiablo-email" placeholder="Introduce tu correo" required="">
               <button type="button" onclick="activarRecordatorio('DeNocheConElDiablo')">Confirmar</button>
           </form>
       </div>
@@ -155,7 +211,7 @@
               <span class="bell-icon"></span> Próximamente
           </button>
           <form id="LoQueHayDentro-form" class="subscription-form" style="display: none;">
-              <input type="email" id="LoQueHayDentro-email" placeholder="Introduce tu correo" required>
+              <input type="email" id="LoQueHayDentro-email" placeholder="Introduce tu correo" required="">
               <button type="button" onclick="activarRecordatorio('LoQueHayDentro')">Confirmar</button>
           </form>
       </div>
@@ -168,7 +224,7 @@
               <span class="bell-icon"></span> Próximamente
           </button>
           <form id="ClubDeBuceo-form" class="subscription-form" style="display: none;">
-              <input type="email" id="ClubDeBuceo-email" placeholder="Introduce tu correo" required>
+              <input type="email" id="ClubDeBuceo-email" placeholder="Introduce tu correo" required="">
               <button type="button" onclick="activarRecordatorio('ClubDeBuceo')">Confirmar</button>
           </form>
       </div>      
@@ -177,10 +233,11 @@
     </div>
 
 <footer>
-    <p>Sol Argentino TV MOVIES 2025 &copy; - Todos Los Derechos Reservados</p>
+    <p>Sol Argentino TV MOVIES 2025 © - Todos Los Derechos Reservados</p>
 </footer>
 
 <script src="slidebar.js"> </script>
 <script src="modal.js"> </script>
+
 </body>
 </html>
