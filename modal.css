@@ -1,7 +1,6 @@
-body {
+body.modal-open {
     overflow: hidden;
 }
-
 /* Estilos del modal */
 .modal {
     display: none;
@@ -144,6 +143,7 @@ body {
     position: absolute;
     left: 21.4em;
     top: 9em;
+    opacity: 0;
 }
 
 .dropdown-button::after {
@@ -171,6 +171,7 @@ body {
      visibility: initial;
      transition: opacity 0.3s ease, visibility 0.3s ease;
      height: 7em;
+     opacity: 0;
 }
 
 .dropdown:hover .dropdown-content,
