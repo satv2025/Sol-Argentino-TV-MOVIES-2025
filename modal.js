@@ -179,8 +179,8 @@ function changeSeason(season) {
                     <h3>${ep.title}</h3>
                     <p>${ep.description}</p>
                     <span>${ep.duration}</span>
-                    <p>${ep.number}</p> <!-- Esta línea muestra el número del episodio con formato -->
-                </div>
+                    <div>${ep.number}</div> <!-- Aquí se insertará el 'number' -->
+        </div>
             `;
             episodeList.appendChild(li);
         });
