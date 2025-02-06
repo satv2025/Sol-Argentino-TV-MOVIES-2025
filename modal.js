@@ -13,6 +13,13 @@ const peliculas = {
         ageRating: "<span class='age'>16+</span> adolescentes, adultos, lenguaje inapropiado, delirante | Apta para mayores de 16 años",
         background: "maxresdefault.jpg",
         link: "#"
+
+        <----FULL ITEMS---->
+        fullCast
+        fullGenres
+        fulltitleType
+        fullClasif
+        <------------------>
     },
     cienporcientolucha: {
         year: "2008-09",
