@@ -13,8 +13,21 @@
 
 /* Cuando el modal está visible, ocultar el scroll del body */
 .modal-open {
-    overflow: hidden;
+    overflow: auto;
 }
+
+#infoModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* Contenido del modal */
 .modal-content {
@@ -23,6 +36,7 @@
     margin: 5% auto;
     padding: 1.25em;
     width: 43%;
+    top: 1em;
     border-radius: 0.7em;
     position: relative;
     height: 100vw;
