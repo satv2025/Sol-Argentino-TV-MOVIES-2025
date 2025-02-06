@@ -73,7 +73,7 @@ body.modal-open {
     position: absolute;
     top: 0em;
     left: -1.2em;
-    width: 104.6%;
+    width: 104.7%;
     height: 100%;
     background: linear-gradient(0deg, #183347, transparent 50%);
     z-index: 1;
@@ -513,11 +513,11 @@ ul#episode-list {
 /* Pantallas grandes (escritorios) */
 @media (min-width: 1025px) {
     .modal-content {
-        width: 44.5%;
+        width: 46%;
     }
 
     .modal-header img {
-        width: 54.00em;
+        width: 54.7em;
         border-radius: 0.3em 0.3em 0 0;
     }
 }
