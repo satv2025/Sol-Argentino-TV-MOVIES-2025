@@ -12,7 +12,7 @@ const peliculas = {
         background: "maxresdefault.jpg",
         link: "#",
         createdBy: "<span class='fcbprefix'>Creado por:</span>  <span class='fcbcontent'>Matias Ponce</span>",
-        fullcast: "<span class='fcprefix'>Elenco:</span> <span class='fccontent'>Matias Ponce, Santino Ponce, Indio Ponce, Antonella Ponce, Valeria Volpi, Julieta/span>", 
+        fullcast: "<span class='fcprefix'>Elenco:</span> <span class='fccontent'>Matias Ponce, Santino Ponce, Indio Ponce, Antonella Ponce, Valeria Volpi, Julieta</span>", 
         fullscript: "<span class='fsprefix'>Guión:</span> <span class='fscontent'>Matias Ponce</span>", 
         fullgenres: "<span class='fgprefix'>Géneros:</span><span class='fgcontent'> Humor, humor absurdo, hackers, fama, grandes élites, paranoia, haters, YouTube</span>", 
         fulltitletype: "<span class='fttprefix'>Este titulo es:</span> <span class='fttcontent'> Original, delirante</span>", 

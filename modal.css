@@ -491,6 +491,26 @@ span.fcprefix {color: #bcbcbc;}
     z-index: 1000;
 }
 
+span.fcbprefix {
+    color: #bcbcbc;
+}
+
+span.fsprefix {
+    color: #bcbcbc;
+}
+
+span.fgprefix {
+    color: #bcbcbc;
+}
+
+span.fttprefix {
+    color: #bcbcbc;
+}
+
+span.faprefix {
+    color: #bcbcbc;
+}
+
 .fullcreatedBy.fc {}
 
 .fullage {
