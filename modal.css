@@ -374,13 +374,13 @@ button.text:hover {
     margin-right: -1.3em;
 }
 
-a:hover {color: #fff;}
+a.eplink:hover {color: #fff;}
 
-a:visited {
+a.eplink:visited {
     color: #fff;
 }
 
-a {
+a.eplink {
     text-decoration: none;
 }
 
