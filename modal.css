@@ -3,8 +3,8 @@ html {
 }
 
 #about {
-    margin-top: 100vh; /* Se asegura que la sección sea visible después de desplazarse */
-    height: 100vh;
+    margin-top: 30vh;
+    height: 0vh;
 }
 
 body.modal-open {

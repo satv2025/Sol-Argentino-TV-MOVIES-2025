@@ -268,16 +268,42 @@ modal.addEventListener('hidden.bs.modal', () => {
   document.getElementById("modal-fullage").innerHTML = '';  // Clasificación por edad completa
 });
 
-        // Obtener el enlace con el ID 'scroll-to-about'
-        document.getElementById('scroll-to-about').addEventListener('click', function(e) {
-            e.preventDefault(); // Evita el comportamiento por defecto de los enlaces
+document.querySelector('a[href="#about"]').addEventListener('click', function(e) {
+    e.preventDefault(); // Evita que el #about se ponga en la URL
 
-            // Obtener la sección de destino
-            const target = document.getElementById('about');
+    // Obtener la posición de la sección de destino
+    const target = document.getElementById('about');
+    const targetPosition = target.offsetTop;  // La posición vertical de la sección
 
-            // Desplazamiento suave hacia la sección 'about'
-            window.scrollTo({
-                top: target.offsetTop,  // Desplazarse hasta la parte superior de la sección
-                behavior: 'smooth'      // Comportamiento suave
-            });
-        });
+    // Hacer un desplazamiento suave con scroll-like
+    let startPosition = window.scrollY;  // Posición actual del scroll
+    let distance = targetPosition - startPosition;  // Distancia que debe recorrer
+
+    let startTime = null;
+
+    // Función para el desplazamiento suave
+    function animateScroll(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        let timeElapsed = currentTime - startTime;  // Tiempo transcurrido
+        let scrollAmount = easeInOut(timeElapsed, startPosition, distance, 500);  // Movimiento con easing
+
+        window.scrollTo(0, scrollAmount);  // Aplicamos el desplazamiento
+
+        if (timeElapsed < 500) {  // Duración del desplazamiento (en milisegundos)
+            requestAnimationFrame(animateScroll);  // Llamar a la siguiente animación
+        } else {
+            window.scrollTo(0, targetPosition);  // Aseguramos que llegue al final
+        }
+    }
+
+    // Función de easing (transición suave)
+    function easeInOut(t, b, c, d) {
+        let p = t / (d / 2);
+        if (p < 1) return c / 2 * p * p + b;
+        p--;
+        return -c / 2 * (p * (p - 2) - 1) + b;
+    }
+
+    // Iniciar la animación
+    requestAnimationFrame(animateScroll);
+});
