@@ -83,42 +83,48 @@ const episodios = {
             number: "<strong class='epnumber1'>1</strong>",
             description: "Pip elige un caso de homicidio para su proyecto escolar. Pero cuando empieza a investigar, descubre que para algunas personas era mejor dejarlo enterrado para siempre.",
             image: "https://www.mediafire.com/convkey/8ebd/67e8toxnggmojw09g.jpg",
-            duration: "43 min"
+            duration: "43 min",
+            link: "app"
         },
         {
             title: "Episodio 2",
             number: "<strong class='epnumber2'>2</strong>",
             description: "Luego de entrevistar a las mejores amigas de Andie, Pip tiene una idea más clara de quién era la víctima, pero tras reorganizar fotos viejas empieza a comprender mejor todo.",
             image: "https://www.mediafire.com/convkey/88d0/o7ja6efkgc857oo9g.jpg",
-            duration: "44 min"
+            duration: "44 min",
+            link: "app"
         },
         {
             title: "Episodio 3",
             number: "<strong class='epnumber3'>3</strong>",
             description: "Pip descubre por primera vez en su vida el lado oscuro cuando va a una fiesta clandestina. Y su siguiente pista la lleva a territorio aún más peligroso.",
             image: "https://www.mediafire.com/convkey/6ed1/6870czca0karqn29g.jpg",
-            duration: "43 min"
+            duration: "43 min",
+            link: "app"
         },
         {
             title: "Episodio 4",
             number: "<strong class='epnumber4'>4</strong>",
             description: "Pip y Ravi siguen una nueva pista que los lleva lejos de Little Kilton. Allí, descubren una valiosa prueba... y una desagradable sorpresa.",
             image: "https://www.mediafire.com/convkey/0de9/czivzlrwjyr2rlj9g.jpg",
-            duration: "44 min"
+            duration: "44 min",
+            link: "app"
         },
         {
             title: "Episodio 5",
             number: "<strong class='epnumber5'>5</strong>",
             description: "Una impactante confesión arroja luz en la investigación. Antes de que Pip pueda decidir qué hacer, recibe otro mensaje amenazador.",
             image: "https://occ-0-2442-1380.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABeED_UJixLwFl5Ln39ljb3EY3B-_bE2aisB_eLtQVDlnZTf_vQ3hbjJseEWVQtQR3_xSoTLDsQaJqB20WoXVRq4ALdwp2VwxqDgvq9ssa8GfB9Ed925tZ5zk.jpg?r=2f5",
-            duration: "50 min"
+            duration: "50 min",
+            link: "app"
         },
         {
             title: "Episodio 6",
             number: "<strong class='epnumber6'>6</strong>",
             description: "La policía hace un arresto, pero Pip no está segura de que el caso esté solucionado, así que va a visitar a la única persona que podría tener respuestas.",
             image: "https://www.mediafire.com/convkey/0869/05fmkuq6l9kj4159g.jpg",
-            duration: "51 min"
+            duration: "51 min",
+            link: "app"
         }
     ],
     2: [
