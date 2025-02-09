@@ -507,51 +507,6 @@ span.faprefix {
 
 .fullcreatedBy.fc {}
 
-.modal-createdBy {
-    position: absolute;
-    top: 85em;
-    padding-left: 2em;
-}
-
-.fullcast {
-    position: absolute;
-    top: 86.6em;
-    text-align: justify;
-    padding-left: 2em;
-    padding-right: 3em;
-}
-
-.fullage {
-    position: absolute;
-    top: 95.4em;
-    text-align: justify;
-    padding-right: 3em;
-    padding-left: 2em;
-}
-
-.fullgenres {
-    position: absolute;
-    top: 91em;
-    padding-left: 2em;
-    text-align: justify;
-    padding-right: 3em;
-}
-
-.fullscript {
-    position: absolute;
-    top: 89.5em;
-    padding-left: 2em;
-    padding-right: 2em;
-}
-
-.fulltitletype {
-    position: absolute;
-    top: 93.9em;
-    text-align: justify;
-    padding-left: 2em;
-    padding-right: 3em;
-}
-
 button.texto:hover {background: #424242;border-radius: 0em;}
 
 ul#episode-list {
