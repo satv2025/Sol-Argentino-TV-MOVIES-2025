@@ -94,11 +94,18 @@ body.modal-open {
 .modal-cast a {
     font-style: italic;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .modal-cast a:hover {
     cursor: pointer;
     text-decoration: underline;
+    color: #fff;
+}
+
+.modal-cast a:visited {
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Posiciones con em */
