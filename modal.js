@@ -267,3 +267,40 @@ modal.addEventListener('hidden.bs.modal', () => {
   document.getElementById("modal-fulltitletype").innerHTML = '';  // Tipo de título completo
   document.getElementById("modal-fullage").innerHTML = '';  // Clasificación por edad completa
 });
+
+    function openModal(movieId) {
+      const modal = document.getElementById(`${movieId}-modal`);
+      modal.style.display = 'flex';
+
+      let videoUrl = '';
+      // Define las URLs de los videos según la película
+      if (movieId === 'matiponcepeli') {
+        videoUrl = 'https://gitlab.com/solargentinotv/satvmoviesvideos/-/raw/main/MATIAS_PONCE_-_LA_PEL%C3%8DCULA__TR%C3%81ILER_OFICIAL_2022.webm';
+      } else if (movieId === 'cienporcientolucha') {
+        videoUrl = 'https://gitlab.com/solargentinotv/satvmoviesvideos/-/raw/main/100_LUCHA_LA_PEL%C3%8DCULA__Tr%C3%A1iler__HD_.mp4';
+      } else if (movieId === 'app') {
+        videoUrl = 'https://gitlab.com/solargentinotv/satvmoviesvideos/-/raw/main/Asesinato_para_principiantes__Tr%C3%A1iler_oficial__Netflix.mp4';
+      }
+
+      // Asegúrate de que el DPlayer se cargue solo si no se ha cargado previamente
+      const playerContainer = document.getElementById(`dplayer-${movieId}`);
+      
+      if (!playerContainer.querySelector('video')) {
+        // Inicializa DPlayer con la URL del video
+        new DPlayer({
+          container: playerContainer,
+          video: {
+            url: videoUrl,
+            type: 'auto',
+          },
+          autoplay: true,
+          loop: true,
+          screenshot: false,
+          hotkey: true,
+          preload: 'auto',
+          volume: 1,
+          mutex: true,
+          controls: false, // Cambia a 'true' si quieres los controles visibles
+        });
+      }
+    }
