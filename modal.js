@@ -238,39 +238,38 @@ document.addEventListener("keydown", (event) => {
 
 document.addEventListener("DOMContentLoaded", function () {
     const elements = [
-        { selector: ".modal-createdBy", baseTop: 85 },
-        { selector: ".fullcast", baseTop: 86.6 },
-        { selector: ".fullscript", baseTop: 89.5 },
-        { selector: ".fullgenres", baseTop: 91 },
-        { selector: ".fulltitletype", baseTop: 93.9 },
-        { selector: ".fullage", baseTop: 95.4 }
+        { selector: ".modal-createdBy", baseTop: 85, lineCount: 1 }, // matiponcepeli
+        { selector: ".fullcast", baseTop: 86.6, lineCount: 1 }, // matiponcepeli
+        { selector: ".fullscript", baseTop: 89.5, lineCount: 1 }, // matiponcepeli
+        { selector: ".fullgenres", baseTop: 91, lineCount: 1 }, // matiponcepeli
+        { selector: ".fulltitletype", baseTop: 93.9, lineCount: 1 }, // matiponcepeli
+        { selector: ".fullage", baseTop: 95.4, lineCount: 2 }, // matiponcepeli
+        // Caso app
+        { selector: ".fullcast", baseTop: 86.6, lineCount: 2 }, // app
+        { selector: ".fullgenres", baseTop: 91, lineCount: 2 }, // app
+        // Caso cienporcientolucha
+        { selector: ".fullcast", baseTop: 86.6, lineCount: 3 }, // cienporcientolucha
+        { selector: ".fullgenres", baseTop: 91, lineCount: 1 } // cienporcientolucha
     ];
 
     let topOffset = 85; // Punto de inicio en EM basado en CSS
     const spacing = 1.6; // Espaciado base en EM
 
-    function getLineCount(element) {
-        const lineHeight = parseFloat(window.getComputedStyle(element).lineHeight);
-        return Math.round(element.scrollHeight / lineHeight);
-    }
-
-    elements.forEach((item, index) => {
+    elements.forEach((item) => {
         const element = document.querySelector(item.selector);
         if (element) {
-            const lineCount = getLineCount(element);
             let extraSpace = 0;
 
-            if (lineCount > 3) {
-                extraSpace = 2.5; // Mucho contenido → más espacio
-            } else if (lineCount === 3) {
-                extraSpace = 1.5; // Tres líneas → algo más de espacio
-            } else if (lineCount === 2) {
-                extraSpace = 1; // Dos líneas → leve ajuste
+            // Ajustamos la separación según el número de renglones especificado para cada caso
+            if (item.lineCount === 3) {
+                extraSpace = 2.4; // Si tiene 3 renglones (cienporcientolucha) agrega más espacio
+            } else if (item.lineCount === 2) {
+                extraSpace = 1.6; // Si tiene 2 renglones (app) agrega un poco más de espacio
             }
 
+            // Aplicar el valor de `top` y calcular el siguiente
             element.style.top = `${topOffset}em`;
-
-            topOffset = item.baseTop + spacing + extraSpace;
+            topOffset += extraSpace + spacing; // Agregar el espaciado calculado
         }
     });
 });
