@@ -4,7 +4,7 @@ const peliculas = {
         year: "2022",
         duration: "1h",
         description: "Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de YouTube, o como él lo llama 'Yutun', desatando una hilarante y absurda aventura.",
-        cast: "<strong>Elenco:</strong> Matias Ponce, Santino Ponce, Indio Ponce, <a href='#about'>más</a>",
+        cast: "<strong>Elenco:</strong> Matias Ponce, Santino Ponce, Indio Ponce, <a href="javascript:void(0);" id="scroll-to-about">más</a>",
         title: "<span class='about'>Acerca de</span> <strong class='titulo'></span> <strong class='titulo'>Matias Ponce - La Película</strong>",
         genres: "<strong>Géneros:</strong> Humor, humor absurdo, hackers, fama, grandes élites",
         titleType: "<strong>Este título es:</strong> Original, delirante",
@@ -23,7 +23,7 @@ const peliculas = {
         year: "2008-09",
         duration: "1h 20m (por película)",
         description: "Los productores detrás del famoso programa 100% Lucha decidieron hacerle películas.",
-        cast: "<strong>Elenco:</strong> Maria Fernanda Neil, Carlos Kaspar, Daniel Garcilazo, <a href='#about'>más</a>",
+        cast: "<strong>Elenco:</strong> Maria Fernanda Neil, Carlos Kaspar, Daniel Garcilazo, <a href="javascript:void(0);" id="scroll-to-about">más</a>",
         title: "<span class='about'>Acerca de</span> <strong class='titulo'> 100%Lucha - Las Películas</strong>",
         genres: "<strong>Géneros:</strong> Humor, lucha libre, luchas clandestinas",
         titleType: "<strong>Este título es:</strong> Intenso, Íntimo, Delirante, Divertido",
@@ -41,7 +41,7 @@ const peliculas = {
         year: "2024",
         duration: "6 episodios",
         description: "En este thriller atrapante, una estudiante investiga, para un proyecto escolar, un caso ocurrido hace cinco años.",
-        cast: "<strong>Elenco:</strong> Emma Myers, Zain Iqbal, Asha Banks, <a href='#about'>más</a>",
+        cast: "<strong>Elenco:</strong> Emma Myers, Zain Iqbal, Asha Banks, <a href="javascript:void(0);" id="scroll-to-about">más</a>",
         title: "<span class='about'>Acerca de</span> <strong class='titulo'> Asesinato Para Principiantes</strong>",
         episodelist: "<strong class='eplist'>Episodios</strong>",
         genres: "<strong>Géneros:</strong> Series dramáticas, De Gran Bretaña, Series basadas en libros",
@@ -268,43 +268,14 @@ modal.addEventListener('hidden.bs.modal', () => {
   document.getElementById("modal-fullage").innerHTML = '';  // Clasificación por edad completa
 });
 
-        // Obtener el enlace con el ID 'scroll-to-about'
-        document.getElementById('scroll-to-about').addEventListener('click', function(e) {
-            e.preventDefault(); // Evita el comportamiento por defecto del enlace (que cambia la URL)
-
-    // Obtener la posición de la sección de destino
+document.getElementById('scroll-to-about').addEventListener('click', function() {
+    // Obtener la sección de destino
     const target = document.getElementById('about');
-    const targetPosition = target.offsetTop;  // La posición vertical de la sección
+    const targetPosition = target.offsetTop;
 
-    // Hacer un desplazamiento suave con scroll-like
-    let startPosition = window.scrollY;  // Posición actual del scroll
-    let distance = targetPosition - startPosition;  // Distancia que debe recorrer
-
-    let startTime = null;
-
-    // Función para el desplazamiento suave
-    function animateScroll(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        let timeElapsed = currentTime - startTime;  // Tiempo transcurrido
-        let scrollAmount = easeInOut(timeElapsed, startPosition, distance, 500);  // Movimiento con easing
-
-        window.scrollTo(0, scrollAmount);  // Aplicamos el desplazamiento
-
-        if (timeElapsed < 500) {  // Duración del desplazamiento (en milisegundos)
-            requestAnimationFrame(animateScroll);  // Llamar a la siguiente animación
-        } else {
-            window.scrollTo(0, targetPosition);  // Aseguramos que llegue al final
-        }
-    }
-
-    // Función de easing (transición suave)
-    function easeInOut(t, b, c, d) {
-        let p = t / (d / 2);
-        if (p < 1) return c / 2 * p * p + b;
-        p--;
-        return -c / 2 * (p * (p - 2) - 1) + b;
-    }
-
-    // Iniciar la animación
-    requestAnimationFrame(animateScroll);
+    // Desplazamiento suave hacia la sección 'about'
+    window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'   // Desplazamiento suave
+    });
 });
