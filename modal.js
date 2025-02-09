@@ -34,7 +34,7 @@ const peliculas = {
         description: "En este thriller atrapante, una estudiante investiga, para un proyecto escolar, un caso ocurrido hace cinco años.",
         createdBy: "<strong>Creado por:</strong> Poppy Cogan",
         cast: "<strong>Elenco:</strong> Emma Myers, Zain Iqbal, Asha Banks, <a>más</a>",
-        title: "Acerca de Asesinato Para Principiantes",
+        title: "<span class='about'>Acerca de</span> <strong class='titulo'>Asesinato Para Principiantes</strong>",
         episodelist: "<strong class='eplist'>Episodios</strong>",
         script: "<strong>Guión:</strong> Poppy Cogan, Ruby Thomas, Zia Ahmed, Ajoke Ibironke",
         genres: "<strong>Géneros:</strong> Series dramáticas, De Gran Bretaña, Series basadas en libros",
