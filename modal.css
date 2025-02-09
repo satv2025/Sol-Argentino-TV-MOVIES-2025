@@ -228,57 +228,57 @@ button.texto {
 }
 
 strong.epnumber1 {
-    color: color: #bcbcbc;
+    color: #bcbcbc !important;
     position: absolute;
     left: 1.1em;
     top: 1em;
     font-size: 2em;
-    font-weight: 450;
+    font-weight: 100;
 }
 
 strong.epnumber2 {
-    color: #bcbcbc;
+    color: #bcbcbc !important;
     position: absolute;
     left: 1.1em;
     top: 4.1em;
     font-size: 2em;
-    font-weight: 450;
+    font-weight: 100;
 }
 
 strong.epnumber3 {
-    color: #bcbcbc;
+    color: #bcbcbc !important;
     position: absolute;
     left: 1.1em;
     top: 7.1em;
     font-size: 2em;
-    font-weight: 450;
+    font-weight: 100;
 }
 
 strong.epnumber4 {
-    color: #bcbcbc;
+    color: #bcbcbc !important;
     position: absolute;
     left: 1.1em;
     top: 10em;
     font-size: 2em;
-    font-weight: 450;
+    font-weight: 100;
 }
 
 strong.epnumber5 {
-    color: #bcbcbc;
+    color: #bcbcbc !important;
     position: absolute;
     left: 1.1em;
     top: 12.9em;
     font-size: 2em;
-    font-weight: 450;
+    font-weight: 100;
 }
 
 strong.epnumber6 {
-    color: #bcbcbc;
+    color: #bcbcbc !important;
     position: absolute;
     left: 1.1em;
     top: 15.8em;
     font-size: 2em;
-    font-weight: 450;
+    font-weight: 100;
 }
 
 /* Hover sobre los botones */
