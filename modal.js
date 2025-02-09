@@ -235,32 +235,3 @@ document.addEventListener("keydown", (event) => {
         document.body.classList.remove("modal-open");
     }
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-    const elements = [
-        ".modal-createdBy",
-        ".fullcast",
-        ".fullscript",
-        ".fullgenres",
-        ".fulltitletype",
-        ".fullage"
-    ];
-
-    let topOffset = 1360; // Equivalente a 85em en píxeles
-    const spacing = 30; // Espaciado uniforme
-
-    elements.forEach((selector) => {
-        const element = document.querySelector(selector);
-        if (element) {
-            // Ajuste dinámico de la posición 'top' solo si es necesario
-            let newTop = topOffset;
-            if (selector === ".fullcast" || selector === ".fullage") {
-                // Si hay mucho texto (ejemplo: .fullcast o .fullage), ajusta un poco más
-                newTop += 10; // Ajusta esta cantidad a lo que se ve bien
-            }
-
-            element.style.top = `${newTop}px`;
-            topOffset += element.offsetHeight + spacing; // Mantiene el espaciado dinámico
-        }
-    });
-});
