@@ -4,45 +4,57 @@ const peliculas = {
         year: "2022",
         duration: "1h",
         description: "Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de YouTube, o como él lo llama 'Yutun', desatando una hilarante y absurda aventura.",
-        createdBy: "<strong>Creado por:</strong> Matias Ponce",
         cast: "<strong>Elenco:</strong> Matias Ponce, Santino Ponce, Indio Ponce, <a>más</a>",
         title: "<span class='about'>Acerca de</span> <strong class='titulo'></span> <strong class='titulo'>Matias Ponce - La Película</strong>",
-        script: "<strong>Guión:</strong> Matias Ponce",
         genres: "<strong>Géneros:</strong> Humor, humor absurdo, hackers, fama, grandes élites",
         titleType: "<strong>Este título es:</strong> Original, delirante",
         ageRating: "<span class='age'>16+</span> adolescentes, adultos, lenguaje inapropiado, delirante",
         background: "maxresdefault.jpg",
-        link: "#"
+        link: "#",
+        createdBy: "<strong>Creado por:</strong> Matias Ponce",
+        fullcast: "<span class='fcprefix'>Elenco:</span> <span class='fccontent'>Matias Ponce, Santino Ponce, Indio Ponce, Antonella Ponce, Valeria Volpi, Julieta/span>", 
+        fullscript: "<span class='fsprefix'>Guión:</span> <span class='fscontent'>Matias Ponce/span>", 
+        fullgenres: "<span class='fgprefix'>Géneros:</span><span class='fgcontent'> Humor, humor absurdo, hackers, fama, grandes élites, paranoia, haters, YouTube</span>", 
+        fultitletype: "<span class='fttprefix'>Este titulo es:</span> <span class='fttcontent'> Original, delirante</span>", 
+        fullage: "<span class='faprefix'>Clasificación por edad: </span> <span class='facontent'><span class='age'>12+</span> adolescentes, adultos, lenguaje inapropiado, delirante</span> <span class='facontent2'>Apta para mayores de 12 años</span>"
     },
     cienporcientolucha: {
         year: "2008-09",
         duration: "1h 20m (por película)",
         description: "Los productores detrás del famoso programa 100% Lucha decidieron hacerle películas.",
-        createdBy: "<strong>Creado por:</strong> Eduardo Husni",
-        cast: "<strong>Elenco:</strong> Daniel Garcilazo, Paulo Giardina, Gabriel Emanuelli, <a>más</a>",
+        cast: "<strong>Elenco:</strong> Maria Fernanda Neil, Carlos Kaspar, Daniel Garcilazo, <a>más</a>",
         title: "<span class='about'>Acerca de</span> <strong class='titulo'> 100%Lucha - Las Películas</strong>",
-        script: "<strong>Guión:</strong> CineAR",
         genres: "<strong>Géneros:</strong> Humor, lucha libre, luchas clandestinas",
         titleType: "<strong>Este título es:</strong> Intenso, Íntimo, Delirante, Divertido",
         ageRating: "<span class='age'>12+</span> lenguaje inapropiado, daños físicos, humor absurdo",
         background: "https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6",
-        link: "#"
+        link: "#",
+        createdBy: "<strong>Creado por:</strong> Poppy Cogan",
+        fullcast: "<span class='fcprefix'>Elenco:</span> <span class='fccontent'>Maria Fernanda Neil, Carlos Kaspar, Daniel Garcilazo, Paulo Giardina, Gabriel Emanuelli, Norberto Adrián Fernandez, Marcelo Benítez, Miguel Ángel Wellington, Rubén Piuselli, Leonardo Montero, Eduardo Husni, Osvaldo Principi, Julio Mario Sibara (Turco Naím), Cecilia Bonelli, Delfina Gérez Bosco</span>", 
+        fullscript: "<span class='fsprefix'>Guión:</span> <span class='fscontent'>CineAR</span>", 
+        fullgenres: "<span class='fgprefix'>Géneros:</span><span class='fgcontent'> Humor, Lucha Libre, Luchas Clandestinas, Apuestas, Secuestros, Traiciones</span>", 
+        fultitletype: "<span class='fttprefix'>Este titulo es:</span> <span class='fttcontent'> Intenso, Íntimo, Delirante, Divertido</span>", 
+        fullage: "<span class='faprefix'>Clasificación por edad: </span> <span class='facontent'><span class='age'>12+</span> lenguaje inapropiado, daños físicos, humor absurdo</span> <span class='facontent2'>Apta para mayores de 16 años</span>"
     },
     app: {
         year: "2024",
         duration: "6 episodios",
         description: "En este thriller atrapante, una estudiante investiga, para un proyecto escolar, un caso ocurrido hace cinco años.",
-        createdBy: "<strong>Creado por:</strong> Poppy Cogan",
         cast: "<strong>Elenco:</strong> Emma Myers, Zain Iqbal, Asha Banks, <a>más</a>",
         title: "<span class='about'>Acerca de</span> <strong class='titulo'> Asesinato Para Principiantes</strong>",
         episodelist: "<strong class='eplist'>Episodios</strong>",
-        script: "<strong>Guión:</strong> Poppy Cogan, Ruby Thomas, Zia Ahmed, Ajoke Ibironke",
         genres: "<strong>Géneros:</strong> Series dramáticas, De Gran Bretaña, Series basadas en libros",
         titleType: "<strong>Este título es:</strong> Íntimo, Sombrío, De suspenso",
         ageRating: "<span class='age'>16+</span> lenguaje inapropiado, drogas, violencia sexual",
         curiosity: "<strong class='curiosidad'>Es oficial: Se estrenará otra temporada</strong>",
         background: "https://occ-0-2443-1380.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABVp5EI24Pn-MhqBfRt6inhEm3YWfGw1YvxCWHJG7OhVZ9_F_9fV814k46BJ6cRj99iPL2YS_FxacJ6-qFRBAs-yS6ktTfnrTAYFh.webp?r=d16",
         link: "#",
+        createdBy: "<strong>Creado por:</strong> Poppy Cogan",
+        fullcast: "<span class='fcprefix'>Elenco:</span> <span class='fccontent'>Emma Myers Zain Iqbal, Asha Banks, Raiko Gohara, Jude Morgan-Collie, Yali Topol Margalith, Yasmin Al-Khudhairi, Henry Ashton, Carla Woodcock, Mathew Baynton, Gary Beadle, Anna Maxwell Martin</span>", 
+        fullscript: "<span class='fsprefix'>Guión:</span> <span class='fscontent'>Poppy Cogan, Ruby Thomas, Zia Ahmed, Ajoke Ibironke</span>", 
+        fullgenres: "<span class='fgprefix'>Géneros:</span><span class='fgcontent'> Series dramáticas, De Gran Bretaña, Series basadas en libros, Series de adolescentes, Series de misterio</span>", 
+        fultitletype: "<span class='fttprefix'>Este titulo es:</span> <span class='fttcontent'> Íntimo, Sombrío, De suspenso</span>", 
+        fullage: "<span class='faprefix'>Clasificación por edad: </span> <span class='facontent'><span class='age'>16+</span> lenguaje inapropiado, drogas, violencia sexual</span> <span class='facontent2'>Apta para mayores de 16 años</span>",
         seasons: `
             <div class="season-dropdown">
                 <button class="dropdown-button">Seleccionar Temporada</button>
@@ -137,9 +149,7 @@ function openModal(movieKey) {
     document.getElementById("modal-title").innerHTML = movie.title;
     document.getElementById("modal-year").innerHTML = movie.year;
     document.getElementById("modal-description").innerText = movie.description;
-    document.getElementById("modal-createdBy").innerHTML = movie.createdBy;
     document.getElementById("modal-cast").innerHTML = movie.cast;
-    document.getElementById("modal-script").innerHTML = movie.script;
     document.getElementById("modal-genres").innerHTML = movie.genres;
     document.getElementById("modal-titleType").innerHTML = movie.titleType;
     document.getElementById("modal-ageRating").innerHTML = movie.ageRating;
@@ -148,6 +158,11 @@ function openModal(movieKey) {
     document.getElementById("modal-episodelist").innerHTML = movie.episodelist || "";
     document.getElementById("modal-seasons").innerHTML = movie.seasons || "";
     document.getElementById("watch-button").href = movie.link;
+    document.getElementById("modal-createdBy").innerHTML = movie.createdBy;
+    document.getElementById("modal-fullscript").innerHTML = movie.script;
+    document.getElementById("modal-fullgenres").innerHTML = movie.createdBy;
+    document.getElementById("modal-fulltitletype").innerHTML = movie.script;
+    document.getElementById("modal-fullage").innerHTML = movie.script;
 
     // Mostrar el modal
     modal.style.display = "block";
