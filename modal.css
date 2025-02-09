@@ -2,6 +2,11 @@ html {
     scroll-behavior: smooth;
 }
 
+#about {
+    margin-top: 100vh; /* Se asegura que la sección sea visible después de desplazarse */
+    height: 100vh;
+}
+
 body.modal-open {
     overflow: hidden;
 }
