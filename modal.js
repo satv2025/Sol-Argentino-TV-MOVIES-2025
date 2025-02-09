@@ -268,8 +268,9 @@ modal.addEventListener('hidden.bs.modal', () => {
   document.getElementById("modal-fullage").innerHTML = '';  // Clasificación por edad completa
 });
 
-document.querySelector('a[href="#about"]').addEventListener('click', function(e) {
-    e.preventDefault(); // Evita que el #about se ponga en la URL
+        // Obtener el enlace con el ID 'scroll-to-about'
+        document.getElementById('scroll-to-about').addEventListener('click', function(e) {
+            e.preventDefault(); // Evita el comportamiento por defecto del enlace (que cambia la URL)
 
     // Obtener la posición de la sección de destino
     const target = document.getElementById('about');
