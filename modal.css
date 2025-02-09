@@ -288,7 +288,7 @@ strong.epnumber6 {
 
 /* Estilo para la lista de episodios */
 ul#episode-list li:hover {
-    background: #bcbcbc80;
+    background: #cccccc80;
     cursor: pointer;
     position: relative; /* Necesario para posicionar el icono correctamente */
 }
@@ -366,7 +366,7 @@ button.text:hover {
     text-align: justify;
     align-items: center;
     padding: 0.5em 2em; /* 0.5em arriba/abajo, 2em izquierda/derecha */
-    border-bottom: 1px solid #ccc;
+    border-bottom: 0.1em solid #cccccc80;
 }
 
 #episode-list li p {
