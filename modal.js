@@ -9,7 +9,7 @@ const peliculas = {
         genres: "<strong>Géneros:</strong> Humor, humor absurdo, hackers, fama, grandes élites",
         titleType: "<strong>Este título es:</strong> Original, delirante",
         ageRating: "<span class='age'>16+</span> adolescentes, adultos, lenguaje inapropiado, delirante",
-        background: "maxresdefault.jpg",
+        background: "<div class='video-background'><video autoplay muted loop id='background-video'><source src='https://gitlab.com/solargentinotv/satvmoviesvideos/-/raw/main/MATIAS_PONCE_-_LA_PEL%C3%8DCULA__TR%C3%81ILER_OFICIAL_2022.webm' type='video/webm'>Tu navegador no soporta videos.</video></div>",
         link: "matiponcepeli",
         createdBy: "<div class='modal-createdBy' style='position: absolute; top: 85em; padding-left: 2em;'><span class='fcbprefix' style='color: #bcbcbc;'>Creado por:</span> <span class='fcbcontent'>Matías Ponce</span></div>",
         fullcast: "<div class='fullcast' style='position: absolute; top: 86.8em; text-align: justify; padding-left: 2em; padding-right: 3em;'><span class='fcprefix' style='color: #bcbcbc;'>Elenco:</span> <span class='fccontent'>Matías Ponce, Santino Ponce, Indio Ponce, Antonella Ponce, Valeria Volpi, Julieta</span></div>", 
@@ -28,7 +28,7 @@ const peliculas = {
         genres: "<strong>Géneros:</strong> Humor, lucha libre, luchas clandestinas",
         titleType: "<strong>Este título es:</strong> Intenso, Íntimo, Delirante, Divertido",
         ageRating: "<span class='age'>12+</span> lenguaje inapropiado, daños físicos, humor absurdo",
-        background: "https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6",
+        background: "<div class='video-background'><video autoplay muted loop id='background-video'><source src='https://gitlab.com/solargentinotv/satvmoviesvideos/-/raw/main/100_LUCHA_LA_PEL%C3%8DCULA__Tr%C3%A1iler__HD_.mp4' type='video/mp4'>Tu navegador no soporta videos.</video></div>",
         link: "cienporcientolucha",
         createdBy: "<div class='modal-createdBy' style='position: absolute; top: 85em; padding-left: 2em;'><span class='fcbprefix' style='color: #bcbcbc;'>Creado por:</span> <span class='fcbcontent'>Eduardo Husni</span></div>",
         fullcast: "<div class='fullcast' style='position: absolute; top: 86.8em; text-align: justify; padding-left: 2em; padding-right: 3em;'><span class='fcprefix' style='color: #bcbcbc;'>Elenco:</span> <span class='fccontent'>Maria Fernanda Neil, Carlos Kaspar, Daniel Garcilazo, Paulo Giardina, Gabriel Emanuelli, Norberto Adrián Fernandez, Marcelo Benítez, Miguel Ángel Wellington, Rubén Piuselli, Leonardo Montero, Eduardo Husni, Osvaldo Principi, Julio Mario Sibara (Turco Naím), Cecilia Bonelli, Delfina Gérez Bosco</span></div>", 
@@ -48,7 +48,7 @@ const peliculas = {
         titleType: "<strong>Este título es:</strong> Íntimo, Sombrío, De suspenso",
         ageRating: "<span class='age'>16+</span> lenguaje inapropiado, drogas, violencia sexual",
         curiosity: "<strong class='curiosidad'>Es oficial: Se estrenará otra temporada</strong>",
-        background: "https://occ-0-2443-1380.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABVp5EI24Pn-MhqBfRt6inhEm3YWfGw1YvxCWHJG7OhVZ9_F_9fV814k46BJ6cRj99iPL2YS_FxacJ6-qFRBAs-yS6ktTfnrTAYFh.webp?r=d16",
+        background: "<div class='video-background'><video autoplay muted loop id='background-video'><source src='https://gitlab.com/solargentinotv/satvmoviesvideos/-/raw/main/Asesinato_para_principiantes__Tr%C3%A1iler_oficial__Netflix.mp4' type='video/mp4'>Tu navegador no soporta videos.</video></div>",
         link: "app",
         createdBy: "<div class='modal-createdBy' style='position: absolute; top: 85em; padding-left: 2em;'><span class='fcbprefix' style='color: #bcbcbc;'>Creado por:</span> <span class='fcbcontent'>Poppy Cogan</span></div>",
         fullcast: "<div class='fullcast' style='position: absolute; top: 86.8em; text-align: justify; padding-left: 2em; padding-right: 3em;'><span class='fcprefix' style='color: #bcbcbc;'>Elenco:</span> <span class='fccontent'>Emma Myers Zain Iqbal, Asha Banks, Raiko Gohara, Jude Morgan-Collie, Yali Topol Margalith, Yasmin Al-Khudhairi, Henry Ashton, Carla Woodcock, Mathew Baynton, Gary Beadle, Anna Maxwell Martin</span></div>", 
@@ -267,40 +267,3 @@ modal.addEventListener('hidden.bs.modal', () => {
   document.getElementById("modal-fulltitletype").innerHTML = '';  // Tipo de título completo
   document.getElementById("modal-fullage").innerHTML = '';  // Clasificación por edad completa
 });
-
-    function openModal(movieId) {
-      const modal = document.getElementById(`${movieId}-modal`);
-      modal.style.display = 'flex';
-
-      let videoUrl = '';
-      // Define las URLs de los videos según la película
-      if (movieId === 'matiponcepeli') {
-        videoUrl = 'https://gitlab.com/solargentinotv/satvmoviesvideos/-/raw/main/MATIAS_PONCE_-_LA_PEL%C3%8DCULA__TR%C3%81ILER_OFICIAL_2022.webm';
-      } else if (movieId === 'cienporcientolucha') {
-        videoUrl = 'https://gitlab.com/solargentinotv/satvmoviesvideos/-/raw/main/100_LUCHA_LA_PEL%C3%8DCULA__Tr%C3%A1iler__HD_.mp4';
-      } else if (movieId === 'app') {
-        videoUrl = 'https://gitlab.com/solargentinotv/satvmoviesvideos/-/raw/main/Asesinato_para_principiantes__Tr%C3%A1iler_oficial__Netflix.mp4';
-      }
-
-      // Asegúrate de que el DPlayer se cargue solo si no se ha cargado previamente
-      const playerContainer = document.getElementById(`dplayer-${movieId}`);
-      
-      if (!playerContainer.querySelector('video')) {
-        // Inicializa DPlayer con la URL del video
-        new DPlayer({
-          container: playerContainer,
-          video: {
-            url: videoUrl,
-            type: 'auto',
-          },
-          autoplay: true,
-          loop: true,
-          screenshot: false,
-          hotkey: true,
-          preload: 'auto',
-          volume: 1,
-          mutex: true,
-          controls: false, // Cambia a 'true' si quieres los controles visibles
-        });
-      }
-    }
