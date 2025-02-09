@@ -159,10 +159,10 @@ function openModal(movieKey) {
     document.getElementById("modal-seasons").innerHTML = movie.seasons || "";
     document.getElementById("watch-button").href = movie.link;
     document.getElementById("modal-createdBy").innerHTML = movie.createdBy;
-    document.getElementById("modal-fullscript").innerHTML = movie.script;
-    document.getElementById("modal-fullgenres").innerHTML = movie.createdBy;
-    document.getElementById("modal-fulltitletype").innerHTML = movie.script;
-    document.getElementById("modal-fullage").innerHTML = movie.script;
+    document.getElementById("modal-fullscript").innerHTML = movie.fullscript;
+    document.getElementById("modal-fullgenres").innerHTML = movie.fullgenres;
+    document.getElementById("modal-fulltitletype").innerHTML = movie.fulltitletype;
+    document.getElementById("modal-fullage").innerHTML = movie.fullage;
 
     // Mostrar el modal
     modal.style.display = "block";
