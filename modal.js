@@ -267,17 +267,3 @@ modal.addEventListener('hidden.bs.modal', () => {
   document.getElementById("modal-fulltitletype").innerHTML = '';  // Tipo de título completo
   document.getElementById("modal-fullage").innerHTML = '';  // Clasificación por edad completa
 });
-
-        // Obtener el enlace con el ID 'scroll-to-about'
-        document.getElementById('scroll-to-about').addEventListener('click', function(e) {
-            e.preventDefault(); // Evita el comportamiento por defecto de los enlaces
-
-            // Obtener la sección de destino
-            const target = document.getElementById('about');
-
-            // Desplazamiento suave hacia la sección 'about'
-            window.scrollTo({
-                top: target.offsetTop,  // Desplazarse hasta la parte superior de la sección
-                behavior: 'smooth'      // Comportamiento suave
-            });
-        });
