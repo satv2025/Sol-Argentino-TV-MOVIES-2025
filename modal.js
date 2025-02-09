@@ -246,14 +246,21 @@ document.addEventListener("DOMContentLoaded", function () {
         ".fullage"
     ];
 
-    let topOffset = 1360; // Equivalente a 85em en píxeles (ajusta si es necesario)
-    const spacing = 20; // Espacio entre elementos
+    let topOffset = 1360; // Equivalente a 85em en píxeles
+    const spacing = 30; // Espaciado uniforme
 
     elements.forEach((selector) => {
         const element = document.querySelector(selector);
         if (element) {
-            element.style.top = `${topOffset}px`;
-            topOffset += element.offsetHeight + spacing; // Ajusta en base a la altura del contenido
+            // Ajuste dinámico de la posición 'top' solo si es necesario
+            let newTop = topOffset;
+            if (selector === ".fullcast" || selector === ".fullage") {
+                // Si hay mucho texto (ejemplo: .fullcast o .fullage), ajusta un poco más
+                newTop += 10; // Ajusta esta cantidad a lo que se ve bien
+            }
+
+            element.style.top = `${newTop}px`;
+            topOffset += element.offsetHeight + spacing; // Mantiene el espaciado dinámico
         }
     });
 });

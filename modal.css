@@ -507,11 +507,6 @@ span.faprefix {
 
 .fullcreatedBy.fc {}
 
-.container {
-    position: relative;
-    width: 100%;
-}
-
 .modal-createdBy,
 .fullcast,
 .fullscript,
@@ -524,29 +519,12 @@ span.faprefix {
     text-align: justify;
 }
 
-.modal-createdBy {
-    top: 85em;
-}
-
-.fullcast {
-    top: 86.6em;
-}
-
-.fullscript {
-    top: 89.5em;
-}
-
-.fullgenres {
-    top: 91em;
-}
-
-.fulltitletype {
-    top: 93.9em;
-}
-
-.fullage {
-    top: 95.4em;
-}
+.modal-createdBy { top: 85em; }
+.fullcast { top: 86.6em; }
+.fullscript { top: 89.5em; }
+.fullgenres { top: 91em; }
+.fulltitletype { top: 93.9em; }
+.fullage { top: 95.4em; }
 
 button.texto:hover {background: #424242;border-radius: 0em;}
 
