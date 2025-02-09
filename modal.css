@@ -445,13 +445,7 @@ button.text:hover {
     padding-left: 2em;
 }
 
-.fullcast {
-    position: absolute;
-    top: 86.6em;
-    text-align: justify;
-    padding-left: 2em;
-    padding-right: 3em;
-}
+
 
 .fcprefix {
     color: #fff;
@@ -513,35 +507,49 @@ span.faprefix {
 
 .fullcreatedBy.fc {}
 
-.fullage {
+.modal-createdBy {
     position: absolute;
-    top: 95.4em;
-    text-align: justify;
-    padding-right: 3em;
+    top: 85em;
     padding-left: 2em;
 }
 
-.fullgenres {
+.fullcast {
     position: absolute;
-    top: 91em;
-    padding-left: 2em;
+    top: calc(85em + 1.6em); /* Mantiene la separación proporcional */
     text-align: justify;
+    padding-left: 2em;
     padding-right: 3em;
 }
 
 .fullscript {
     position: absolute;
-    top: 89.5em;
+    top: calc(85em + 4.5em);
     padding-left: 2em;
     padding-right: 2em;
 }
 
+.fullgenres {
+    position: absolute;
+    top: calc(85em + 6em);
+    padding-left: 2em;
+    text-align: justify;
+    padding-right: 3em;
+}
+
 .fulltitletype {
     position: absolute;
-    top: 93.9em;
+    top: calc(85em + 8.9em);
     text-align: justify;
     padding-left: 2em;
     padding-right: 3em;
+}
+
+.fullage {
+    position: absolute;
+    top: calc(85em + 10.4em);
+    text-align: justify;
+    padding-right: 3em;
+    padding-left: 2em;
 }
 
 button.texto:hover {background: #424242;border-radius: 0em;}
@@ -567,12 +575,6 @@ ul#episode-list {
     left: 2.2em;
     font-size: 1.5em;
     
-}
-
-.modal-createdBy {
-    position: absolute;
-    top: 85em;
-    padding-left: 2em;
 }
 
 /* Overlay */
