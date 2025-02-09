@@ -237,3 +237,28 @@ document.addEventListener("keydown", (event) => {
         document.body.classList.remove("modal-open");
     }
 });
+
+const modal = document.getElementById('modal');
+
+modal.addEventListener('hidden.bs.modal', () => {
+  // Resetear todos los campos que mencionaste
+  document.getElementById("modal-background").src = '';  // Imagen de fondo
+  document.getElementById("modal-title").innerHTML = '';  // Título
+  document.getElementById("modal-year").innerHTML = '';  // Año
+  document.getElementById("modal-description").innerText = '';  // Descripción
+  document.getElementById("modal-cast").innerHTML = '';  // Elenco
+  document.getElementById("modal-genres").innerHTML = '';  // Géneros
+  document.getElementById("modal-titleType").innerHTML = '';  // Tipo de título
+  document.getElementById("modal-ageRating").innerHTML = '';  // Clasificación por edad
+  document.getElementById("modal-curiosity").innerHTML = '';  // Curiosidad
+  document.getElementById("modal-duration").innerText = '';  // Duración
+  document.getElementById("modal-episodelist").innerHTML = '';  // Lista de episodios
+  document.getElementById("modal-seasons").innerHTML = '';  // Temporadas
+  document.getElementById("watch-button").href = '#';  // Enlace para ver
+  document.getElementById("modal-createdBy").innerHTML = '';  // Creador
+  document.getElementById("modal-fullcast").innerHTML = '';  // Elenco completo
+  document.getElementById("modal-fullscript").innerHTML = '';  // Guion completo
+  document.getElementById("modal-fullgenres").innerHTML = '';  // Géneros completos
+  document.getElementById("modal-fulltitletype").innerHTML = '';  // Tipo de título completo
+  document.getElementById("modal-fullage").innerHTML = '';  // Clasificación por edad completa
+});
