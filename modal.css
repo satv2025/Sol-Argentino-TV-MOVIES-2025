@@ -522,6 +522,14 @@ h1#modal-title {
     z-index: 1000;
 }
 
+strong.titulo {
+    font-weight: 500;
+}
+
+span.about {
+    font-weight: 400;
+}
+
 .overlay p {
     font-size: 1.2em;
 }

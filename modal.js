@@ -10,7 +10,7 @@ const peliculas = {
         script: "<strong>Guión:</strong> Matias Ponce",
         genres: "<strong>Géneros:</strong> Humor, humor absurdo, hackers, fama, grandes élites",
         titleType: "<strong>Este título es:</strong> Original, delirante",
-        ageRating: "<span class='age'>16+</span> adolescentes, adultos, lenguaje inapropiado, delirante | Apta para mayores de 16 años",
+        ageRating: "<span class='age'>16+</span> adolescentes, adultos, lenguaje inapropiado, delirante",
         background: "maxresdefault.jpg",
         link: "#"
     },
