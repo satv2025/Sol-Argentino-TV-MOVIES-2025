@@ -437,6 +437,27 @@ button.text:hover {
 
 .modal-fullcreatedBy { top: 47em; }
 .modal-cast {top: 28.3em;}
+
+.createdBy {
+    position: absolute;
+    top: 90em;
+    text-align: justify;
+    padding-left: 2em;
+}
+
+.fullcast {
+    position: absolute;
+    top: 86.6em;
+    text-align: justify;
+    padding-left: 2em;
+    padding-right: 3em;
+}
+
+.fcprefix {
+    color: #fff;
+}
+
+span.fcprefix {color: #bcbcbc;}
 .modal-script {top: 2em;left: -30.67em;}
 .modal-genres {top: 31em;}
 .modal-titleType {top: 34em;}
@@ -470,6 +491,39 @@ button.text:hover {
     z-index: 1000;
 }
 
+.fullcreatedBy.fc {}
+
+.fullage {
+    position: absolute;
+    top: 95.4em;
+    text-align: justify;
+    padding-right: 3em;
+    padding-left: 2em;
+}
+
+.fullgenres {
+    position: absolute;
+    top: 91em;
+    padding-left: 2em;
+    text-align: justify;
+    padding-right: 3em;
+}
+
+.fullscript {
+    position: absolute;
+    top: 89.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.fulltitletype {
+    position: absolute;
+    top: 93.9em;
+    text-align: justify;
+    padding-left: 2em;
+    padding-right: 3em;
+}
+
 button.texto:hover {background: #424242;border-radius: 0em;}
 
 ul#episode-list {
@@ -497,7 +551,8 @@ ul#episode-list {
 
 .modal-createdBy {
     position: absolute;
-    top: 0.5em;
+    top: 85em;
+    padding-left: 2em;
 }
 
 /* Overlay */
@@ -520,6 +575,7 @@ h1#modal-title {
     text-decoration: underline 0.05em;
     text-underline-offset: 0.4em; /* Ajusta la distancia aquí */
     z-index: 1000;
+    left: -0.3em;
 }
 
 strong.titulo {
