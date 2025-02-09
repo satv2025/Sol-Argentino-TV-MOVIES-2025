@@ -526,14 +526,6 @@ span.faprefix {
 .fulltitletype { top: 93.9em; }
 .fullage { top: 95.4em; }
 
-/* Evita que el contenido se desborde */
-.fccontent, .fscontent, .fgcontent, .fttcontent, .facontent {
-    display: block;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    white-space: normal;
-}
-
 button.texto:hover {background: #424242;border-radius: 0em;}
 
 ul#episode-list {
