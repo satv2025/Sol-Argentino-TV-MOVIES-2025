@@ -238,25 +238,37 @@ document.addEventListener("keydown", (event) => {
 
 document.addEventListener("DOMContentLoaded", function () {
     const elements = [
-        ".modal-createdBy",
-        ".fullcast",
-        ".fullscript",
-        ".fullgenres",
-        ".fulltitletype",
-        ".fullage"
+        { selector: ".modal-createdBy", baseTop: 85 },
+        { selector: ".fullcast", baseTop: 86.6 },
+        { selector: ".fullscript", baseTop: 89.5 },
+        { selector: ".fullgenres", baseTop: 91 },
+        { selector: ".fulltitletype", baseTop: 93.9 },
+        { selector: ".fullage", baseTop: 95.4 }
     ];
 
-    let topOffset = 1360; // Equivalente a 85em en píxeles
-    const spacing = 30; // Espaciado entre elementos
+    let topOffset = 85; // Punto de inicio en EM basado en CSS
+    const spacing = 1.6; // Espaciado base en EM
 
-    elements.forEach((selector, index) => {
-        const element = document.querySelector(selector);
+    elements.forEach((item, index) => {
+        const element = document.querySelector(item.selector);
         if (element) {
-            // Ajusta la posición inicial
-            element.style.top = `${topOffset}px`;
+            // Detectar si el contenido es largo (más de 100 caracteres)
+            const contentLength = element.textContent.trim().length;
+            let extraSpace = 0;
 
-            // Aumenta el topOffset con la altura real del elemento
-            topOffset += element.offsetHeight + spacing;
+            if (contentLength > 250) {
+                extraSpace = 2.5; // Mucho contenido → más espacio
+            } else if (contentLength > 150) {
+                extraSpace = 1.5; // Contenido medio → algo más de espacio
+            } else if (contentLength > 100) {
+                extraSpace = 1; // Poco contenido → leve ajuste
+            }
+
+            // Asignar la posición calculada
+            element.style.top = `${topOffset}em`;
+
+            // Calcular el siguiente top sumando el espacio extra
+            topOffset = item.baseTop + spacing + extraSpace;
         }
     });
 });
