@@ -249,25 +249,27 @@ document.addEventListener("DOMContentLoaded", function () {
     let topOffset = 85; // Punto de inicio en EM basado en CSS
     const spacing = 1.6; // Espaciado base en EM
 
+    function getLineCount(element) {
+        const lineHeight = parseFloat(window.getComputedStyle(element).lineHeight);
+        return Math.round(element.scrollHeight / lineHeight);
+    }
+
     elements.forEach((item, index) => {
         const element = document.querySelector(item.selector);
         if (element) {
-            // Detectar si el contenido es largo (más de 100 caracteres)
-            const contentLength = element.textContent.trim().length;
+            const lineCount = getLineCount(element);
             let extraSpace = 0;
 
-            if (contentLength > 250) {
+            if (lineCount > 3) {
                 extraSpace = 2.5; // Mucho contenido → más espacio
-            } else if (contentLength > 150) {
-                extraSpace = 1.5; // Contenido medio → algo más de espacio
-            } else if (contentLength > 100) {
-                extraSpace = 1; // Poco contenido → leve ajuste
+            } else if (lineCount === 3) {
+                extraSpace = 1.5; // Tres líneas → algo más de espacio
+            } else if (lineCount === 2) {
+                extraSpace = 1; // Dos líneas → leve ajuste
             }
 
-            // Asignar la posición calculada
             element.style.top = `${topOffset}em`;
 
-            // Calcular el siguiente top sumando el espacio extra
             topOffset = item.baseTop + spacing + extraSpace;
         }
     });
