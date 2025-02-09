@@ -2,12 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-#about {
-    margin-top: 100vh; /* Da un espacio para ver el efecto de desplazamiento */
-    height: 100vh;
-    background-color: lightblue;
-}
-
 body.modal-open {
     overflow: hidden;
 }

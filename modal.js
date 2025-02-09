@@ -4,7 +4,7 @@ const peliculas = {
         year: "2022",
         duration: "1h",
         description: "Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de YouTube, o como él lo llama 'Yutun', desatando una hilarante y absurda aventura.",
-        cast: "<strong>Elenco:</strong> Matias Ponce, Santino Ponce, Indio Ponce, <a href="#about" class="scroll-link" id="scroll-to-about" style="color: #007bff; font-weight: bold; text-decoration: none;">más</a>",
+        cast: "<strong>Elenco:</strong> Matias Ponce, Santino Ponce, Indio Ponce, <a href='#about'>más</a>",
         title: "<span class='about'>Acerca de</span> <strong class='titulo'></span> <strong class='titulo'>Matias Ponce - La Película</strong>",
         genres: "<strong>Géneros:</strong> Humor, humor absurdo, hackers, fama, grandes élites",
         titleType: "<strong>Este título es:</strong> Original, delirante",
@@ -23,7 +23,7 @@ const peliculas = {
         year: "2008-09",
         duration: "1h 20m (por película)",
         description: "Los productores detrás del famoso programa 100% Lucha decidieron hacerle películas.",
-        cast: "<strong>Elenco:</strong> Maria Fernanda Neil, Carlos Kaspar, Daniel Garcilazo, <a href="#about" class="scroll-link" id="scroll-to-about" style="color: #007bff; font-weight: bold; text-decoration: none;">más</a>",
+        cast: "<strong>Elenco:</strong> Maria Fernanda Neil, Carlos Kaspar, Daniel Garcilazo, <a href='#about'>más</a>",
         title: "<span class='about'>Acerca de</span> <strong class='titulo'> 100%Lucha - Las Películas</strong>",
         genres: "<strong>Géneros:</strong> Humor, lucha libre, luchas clandestinas",
         titleType: "<strong>Este título es:</strong> Intenso, Íntimo, Delirante, Divertido",
@@ -41,7 +41,7 @@ const peliculas = {
         year: "2024",
         duration: "6 episodios",
         description: "En este thriller atrapante, una estudiante investiga, para un proyecto escolar, un caso ocurrido hace cinco años.",
-        cast: "<strong>Elenco:</strong> Emma Myers, Zain Iqbal, Asha Banks, <a href="#about" class="scroll-link" id="scroll-to-about" style="color: #007bff; font-weight: bold; text-decoration: none;">más</a>",
+        cast: "<strong>Elenco:</strong> Emma Myers, Zain Iqbal, Asha Banks, <a href='#about'>más</a>",
         title: "<span class='about'>Acerca de</span> <strong class='titulo'> Asesinato Para Principiantes</strong>",
         episodelist: "<strong class='eplist'>Episodios</strong>",
         genres: "<strong>Géneros:</strong> Series dramáticas, De Gran Bretaña, Series basadas en libros",
@@ -267,3 +267,17 @@ modal.addEventListener('hidden.bs.modal', () => {
   document.getElementById("modal-fulltitletype").innerHTML = '';  // Tipo de título completo
   document.getElementById("modal-fullage").innerHTML = '';  // Clasificación por edad completa
 });
+
+        // Obtener el enlace con el ID 'scroll-to-about'
+        document.getElementById('scroll-to-about').addEventListener('click', function(e) {
+            e.preventDefault(); // Evita el comportamiento por defecto de los enlaces
+
+            // Obtener la sección de destino
+            const target = document.getElementById('about');
+
+            // Desplazamiento suave hacia la sección 'about'
+            window.scrollTo({
+                top: target.offsetTop,  // Desplazarse hasta la parte superior de la sección
+                behavior: 'smooth'      // Comportamiento suave
+            });
+        });
