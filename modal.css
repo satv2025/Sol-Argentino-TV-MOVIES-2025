@@ -229,55 +229,55 @@ button.texto {
 
 <----numerosep---->
 strong.epnumber1 {
-    color: #fff;
+    color: color: #bcbcbc;
     position: absolute;
-    left: 1em;
+    left: 1.1em;
     top: 1em;
     font-size: 2em;
     font-weight: 450;
 }
 
 strong.epnumber2 {
-    color: #fff;
+    color: #bcbcbc;
     position: absolute;
-    left: 1em;
-    top: 2em;
+    left: 1.1em;
+    top: 4.1em;
     font-size: 2em;
     font-weight: 450;
 }
 
 strong.epnumber3 {
-    color: #fff;
+    color: #bcbcbc;
     position: absolute;
-    left: 1em;
-    top: 3em;
+    left: 1.1em;
+    top: 7.1em;
     font-size: 2em;
     font-weight: 450;
 }
 
 strong.epnumber4 {
-    color: #fff;
+    color: #bcbcbc;
     position: absolute;
-    left: 1em;
-    top: 4em;
+    left: 1.1em;
+    top: 10em;
     font-size: 2em;
     font-weight: 450;
 }
 
 strong.epnumber5 {
-    color: #fff;
+    color: #bcbcbc;
     position: absolute;
-    left: 1em;
-    top: 5em;
+    left: 1.1em;
+    top: 12.9em;
     font-size: 2em;
     font-weight: 450;
 }
 
 strong.epnumber6 {
-    color: #fff;
+    color: #bcbcbc;
     position: absolute;
-    left: 1em;
-    top: 6em;
+    left: 1.1em;
+    top: 15.8em;
     font-size: 2em;
     font-weight: 450;
 }
