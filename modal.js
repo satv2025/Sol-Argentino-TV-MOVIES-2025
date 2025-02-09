@@ -15,7 +15,7 @@ const peliculas = {
         fullcast: "<span class='fcprefix'>Elenco:</span> <span class='fccontent'>Matias Ponce, Santino Ponce, Indio Ponce, Antonella Ponce, Valeria Volpi, Julieta/span>", 
         fullscript: "<span class='fsprefix'>Guión:</span> <span class='fscontent'>Matias Ponce/span>", 
         fullgenres: "<span class='fgprefix'>Géneros:</span><span class='fgcontent'> Humor, humor absurdo, hackers, fama, grandes élites, paranoia, haters, YouTube</span>", 
-        fultitletype: "<span class='fttprefix'>Este titulo es:</span> <span class='fttcontent'> Original, delirante</span>", 
+        fulltitletype: "<span class='fttprefix'>Este titulo es:</span> <span class='fttcontent'> Original, delirante</span>", 
         fullage: "<span class='faprefix'>Clasificación por edad: </span> <span class='facontent'><span class='age'>12+</span> adolescentes, adultos, lenguaje inapropiado, delirante</span> <span class='facontent2'>Apta para mayores de 12 años</span>"
     },
     cienporcientolucha: {
@@ -33,7 +33,7 @@ const peliculas = {
         fullcast: "<span class='fcprefix'>Elenco:</span> <span class='fccontent'>Maria Fernanda Neil, Carlos Kaspar, Daniel Garcilazo, Paulo Giardina, Gabriel Emanuelli, Norberto Adrián Fernandez, Marcelo Benítez, Miguel Ángel Wellington, Rubén Piuselli, Leonardo Montero, Eduardo Husni, Osvaldo Principi, Julio Mario Sibara (Turco Naím), Cecilia Bonelli, Delfina Gérez Bosco</span>", 
         fullscript: "<span class='fsprefix'>Guión:</span> <span class='fscontent'>CineAR</span>", 
         fullgenres: "<span class='fgprefix'>Géneros:</span><span class='fgcontent'> Humor, Lucha Libre, Luchas Clandestinas, Apuestas, Secuestros, Traiciones</span>", 
-        fultitletype: "<span class='fttprefix'>Este titulo es:</span> <span class='fttcontent'> Intenso, Íntimo, Delirante, Divertido</span>", 
+        fulltitletype: "<span class='fttprefix'>Este titulo es:</span> <span class='fttcontent'> Intenso, Íntimo, Delirante, Divertido</span>", 
         fullage: "<span class='faprefix'>Clasificación por edad: </span> <span class='facontent'><span class='age'>12+</span> lenguaje inapropiado, daños físicos, humor absurdo</span> <span class='facontent2'>Apta para mayores de 16 años</span>"
     },
     app: {
@@ -53,7 +53,7 @@ const peliculas = {
         fullcast: "<span class='fcprefix'>Elenco:</span> <span class='fccontent'>Emma Myers Zain Iqbal, Asha Banks, Raiko Gohara, Jude Morgan-Collie, Yali Topol Margalith, Yasmin Al-Khudhairi, Henry Ashton, Carla Woodcock, Mathew Baynton, Gary Beadle, Anna Maxwell Martin</span>", 
         fullscript: "<span class='fsprefix'>Guión:</span> <span class='fscontent'>Poppy Cogan, Ruby Thomas, Zia Ahmed, Ajoke Ibironke</span>", 
         fullgenres: "<span class='fgprefix'>Géneros:</span><span class='fgcontent'> Series dramáticas, De Gran Bretaña, Series basadas en libros, Series de adolescentes, Series de misterio</span>", 
-        fultitletype: "<span class='fttprefix'>Este titulo es:</span> <span class='fttcontent'> Íntimo, Sombrío, De suspenso</span>", 
+        fulltitletype: "<span class='fttprefix'>Este titulo es:</span> <span class='fttcontent'> Íntimo, Sombrío, De suspenso</span>", 
         fullage: "<span class='faprefix'>Clasificación por edad: </span> <span class='facontent'><span class='age'>16+</span> lenguaje inapropiado, drogas, violencia sexual</span> <span class='facontent2'>Apta para mayores de 16 años</span>",
         seasons: `
             <div class="season-dropdown">
