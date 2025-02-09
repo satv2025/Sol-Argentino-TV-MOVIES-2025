@@ -227,6 +227,62 @@ button.texto {
 .texto {
 }
 
+<----numerosep---->
+strong.epnumber1 {
+    color: #fff;
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    font-size: 2em;
+    font-weight: 450;
+}
+
+strong.epnumber2 {
+    color: #fff;
+    position: absolute;
+    left: 1em;
+    top: 2em;
+    font-size: 2em;
+    font-weight: 450;
+}
+
+strong.epnumber3 {
+    color: #fff;
+    position: absolute;
+    left: 1em;
+    top: 3em;
+    font-size: 2em;
+    font-weight: 450;
+}
+
+strong.epnumber4 {
+    color: #fff;
+    position: absolute;
+    left: 1em;
+    top: 4em;
+    font-size: 2em;
+    font-weight: 450;
+}
+
+strong.epnumber5 {
+    color: #fff;
+    position: absolute;
+    left: 1em;
+    top: 5em;
+    font-size: 2em;
+    font-weight: 450;
+}
+
+strong.epnumber6 {
+    color: #fff;
+    position: absolute;
+    left: 1em;
+    top: 6em;
+    font-size: 2em;
+    font-weight: 450;
+}
+<----numerosep---->
+
 /* Hover sobre los botones */
 button.text:hover {
     background-color: #f0f0f0;
