@@ -374,6 +374,16 @@ button.text:hover {
     margin-right: -1.3em;
 }
 
+a:hover {color: #fff;}
+
+a:visited {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
 #episode-list li span {
     position: absolute;
     left: 46.5em;
