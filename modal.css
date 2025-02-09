@@ -106,11 +106,21 @@ body.modal-open {
     text-decoration: none;
 }
 
+.modal-cast a:visited {
+    color: #fff;
+}
+
+.modal-cast a:focus {
+    color: #fff;
+}
+
 .modal-cast a:hover {
     cursor: pointer;
     text-decoration: underline;
     color: #fff;
 }
+
+.modal-cast a:visited {}
 
 .modal-cast a:visited {
     color: #fff;
