@@ -234,51 +234,103 @@ strong.epnumber1 {
     top: 1em;
     font-size: 2em;
     font-weight: 400;
+    z-index: 1000;
 }
 
 strong.epnumber2 {
     color: #bcbcbc !important;
     position: absolute;
     left: 1.1em;
-    top: 4.1em;
+    top: 4.3em;
     font-size: 2em;
     font-weight: 400;
+    z-index: 1000;
 }
 
 strong.epnumber3 {
     color: #bcbcbc !important;
     position: absolute;
     left: 1.1em;
-    top: 7.1em;
+    top: 7.6em;
     font-size: 2em;
     font-weight: 400;
+    z-index: 1000;
 }
 
 strong.epnumber4 {
     color: #bcbcbc !important;
     position: absolute;
     left: 1.1em;
-    top: 10em;
+    top: 10.9em;
     font-size: 2em;
     font-weight: 400;
+    z-index: 1000;
 }
 
 strong.epnumber5 {
     color: #bcbcbc !important;
     position: absolute;
     left: 1.1em;
-    top: 12.9em;
+    top: 14.2em;
     font-size: 2em;
     font-weight: 400;
+    z-index: 1000;
 }
 
 strong.epnumber6 {
     color: #bcbcbc !important;
     position: absolute;
     left: 1.1em;
-    top: 15.8em;
+    top: 17.5em;
     font-size: 2em;
     font-weight: 400;
+}
+
+/* Estilo para la lista de episodios */
+ul#episode-list li:hover {
+    background: #bcbcbc80;
+    cursor: pointer;
+    position: relative; /* Necesario para posicionar el icono correctamente */
+}
+
+span:hover {}
+
+#episode-list li::before {
+    content: ''; /* Contenido vacío para el círculo */
+    width: 0.7em; /* Ancho del círculo */
+    height: 0.7em; /* Altura del círculo */
+    font-size: 3.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Círculo */
+    border: 0.02em solid white; /* Borde blanco para el círculo */
+    position: absolute;
+    left: 13%; /* Alineación a la izquierda */
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centrado exacto del círculo */
+    background: rgba(30, 30, 20, 0.5);
+    opacity: 0; /* El círculo está oculto por defecto */
+}
+
+#episode-list li:hover::before {
+    opacity: 1; /* El círculo aparece al hacer hover */
+}
+
+#episode-list li::after {
+    content: '▶'; /* El ícono de la flecha */
+    font-size: 3.3em; /* Tamaño del ícono */
+    color: white; /* Color del ícono */
+    position: absolute;
+    left: 13.34%; /* Alineación de la flecha */
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centrado exacto de la flecha */
+    opacity: 0; /* La flecha está oculta por defecto */
+    pointer-events: none; /* Para que no interfiera con otros elementos interactivos */
+}
+
+#episode-list li:hover::after {
+    opacity: 1; /* La flecha aparece al hacer hover */
 }
 
 /* Hover sobre los botones */
@@ -326,12 +378,18 @@ button.text:hover {
     left: 46.5em;
 }
 
+#episode-list li:hover span {
+    opacity: 0;
+}
+
 #episode-list li img {
     width: 170px; /* Ancho */
     height: 75px; /* 16:9 (100px de ancho → 56px de alto) */
     border-radius: 0.4em; /* Bordes redondeados */
     object-fit: cover;
     margin-right: 1em;
+    margin-top: 0.43em;
+    margin-bottom: 0.43em;
 }
 
 .episode-info {
@@ -419,6 +477,12 @@ ul#episode-list {
     padding-right: 3em;
     position: absolute;
     top: 41em;
+}
+
+ul#episode-list {
+    
+    
+    !em;!e;!;
 }
 
 .modal strong.eplist {
