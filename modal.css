@@ -507,49 +507,45 @@ span.faprefix {
 
 .fullcreatedBy.fc {}
 
-.modal-createdBy {
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.modal-createdBy,
+.fullcast,
+.fullscript,
+.fullgenres,
+.fulltitletype,
+.fullage {
     position: absolute;
+    left: 2em;
+    right: 3em;
+    text-align: justify;
+}
+
+.modal-createdBy {
     top: 85em;
-    padding-left: 2em;
 }
 
 .fullcast {
-    position: absolute;
-    top: calc(85em + 1.6em); /* Mantiene la separación proporcional */
-    text-align: justify;
-    padding-left: 2em;
-    padding-right: 3em;
+    top: 86.6em;
 }
 
 .fullscript {
-    position: absolute;
-    top: calc(85em + 4.5em);
-    padding-left: 2em;
-    padding-right: 2em;
+    top: 89.5em;
 }
 
 .fullgenres {
-    position: absolute;
-    top: calc(85em + 6em);
-    padding-left: 2em;
-    text-align: justify;
-    padding-right: 3em;
+    top: 91em;
 }
 
 .fulltitletype {
-    position: absolute;
-    top: calc(85em + 8.9em);
-    text-align: justify;
-    padding-left: 2em;
-    padding-right: 3em;
+    top: 93.9em;
 }
 
 .fullage {
-    position: absolute;
-    top: calc(85em + 10.4em);
-    text-align: justify;
-    padding-right: 3em;
-    padding-left: 2em;
+    top: 95.4em;
 }
 
 button.texto:hover {background: #424242;border-radius: 0em;}

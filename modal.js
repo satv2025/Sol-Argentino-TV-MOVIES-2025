@@ -235,3 +235,25 @@ document.addEventListener("keydown", (event) => {
         document.body.classList.remove("modal-open");
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const elements = [
+        ".modal-createdBy",
+        ".fullcast",
+        ".fullscript",
+        ".fullgenres",
+        ".fulltitletype",
+        ".fullage"
+    ];
+
+    let topOffset = 1360; // Equivalente a 85em en píxeles, ajusta según sea necesario
+    const spacing = 30; // Espaciado uniforme en píxeles entre elementos
+
+    elements.forEach((selector, index) => {
+        const element = document.querySelector(selector);
+        if (element) {
+            element.style.top = `${topOffset}px`;
+            topOffset += element.offsetHeight + spacing; // Ajusta la posición basado en el contenido
+        }
+    });
+});
