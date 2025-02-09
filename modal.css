@@ -98,6 +98,7 @@ body.modal-open {
 
 .modal-cast a:hover {
     cursor: pointer;
+    text-decoration: underline;
 }
 
 /* Posiciones con em */
@@ -483,6 +484,11 @@ span.fcprefix {color: #bcbcbc;}
     margin: 0.3125em 0;
     color: #fff;
     z-index: 1000;
+}
+
+.modal-cast strong, .modal-genres strong, .modal-titleType strong {
+    color: #bcbcbc;
+    font-weight: 400;
 }
 
 span.fcbprefix {
