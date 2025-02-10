@@ -146,31 +146,32 @@ document.querySelectorAll(".moreinfobutton").forEach(button => {
 
 // Función para abrir el modal y cargar los datos de la serie o película
 function openModal(movieKey) {
-    const modal = document.getElementById("infoModal");
+    const infoModal = document.getElementById('infoModal');
     const movie = peliculas[movieKey];
 
     if (!movie) return;
 
-    // Cargar los datos de la película o serie en el modal
-    document.getElementById("modal-background").src = movie.background;
-    document.getElementById("modal-title").innerHTML = movie.title;
-    document.getElementById("modal-year").innerHTML = movie.year;
-    document.getElementById("modal-description").innerText = movie.description;
-    document.getElementById("modal-cast").innerHTML = movie.cast;
-    document.getElementById("modal-genres").innerHTML = movie.genres;
-    document.getElementById("modal-titleType").innerHTML = movie.titleType;
-    document.getElementById("modal-ageRating").innerHTML = movie.ageRating;
-    document.getElementById("modal-curiosity").innerHTML = movie.curiosity || "";
-    document.getElementById("modal-duration").innerText = movie.duration;
-    document.getElementById("modal-episodelist").innerHTML = movie.episodelist || "";
-    document.getElementById("modal-seasons").innerHTML = movie.seasons || "";
-    document.getElementById("watch-button").href = movie.link;
-    document.getElementById("modal-createdBy").innerHTML = movie.createdBy;
-    document.getElementById("modal-fullcast").innerHTML = movie.fullcast
-    document.getElementById("modal-fullscript").innerHTML = movie.fullscript;
-    document.getElementById("modal-fullgenres").innerHTML = movie.fullgenres;
-    document.getElementById("modal-fulltitletype").innerHTML = movie.fulltitletype;
-    document.getElementById("modal-fullage").innerHTML = movie.fullage;
+    infoModal.addEventListener('hidden.bs.modal', () => {
+      // Resetear todos los campos del modal
+      document.getElementById("modal-background").src = '';  
+      document.getElementById("modal-title").innerHTML = '';  
+      document.getElementById("modal-year").innerHTML = '';  
+      document.getElementById("modal-description").innerText = '';  
+      document.getElementById("modal-cast").innerHTML = '';  
+      document.getElementById("modal-genres").innerHTML = '';  
+      document.getElementById("modal-titleType").innerHTML = '';  
+      document.getElementById("modal-ageRating").innerHTML = '';  
+      document.getElementById("modal-curiosity").innerHTML = '';  
+      document.getElementById("modal-duration").innerText = '';  
+      document.getElementById("modal-episodelist").innerHTML = '';  
+      document.getElementById("modal-seasons").innerHTML = '';  
+      document.getElementById("watch-button").href = '#';  
+      document.getElementById("modal-createdBy").innerHTML = '';  
+      document.getElementById("modal-fullcast").innerHTML = '';  
+      document.getElementById("modal-fullscript").innerHTML = '';  
+      document.getElementById("modal-fullgenres").innerHTML = '';  
+      document.getElementById("modal-fulltitletype").innerHTML = '';  
+      document.getElementById("modal-fullage").innerHTML = '';  
 
     // Mostrar el modal
     modal.style.display = "block";
