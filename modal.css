@@ -103,6 +103,7 @@ body.modal-open {
     font-style: italic;
     cursor: pointer;
     text-decoration: none;
+    color: #fff;
 }
 
 .modal-cast a:visited {
@@ -395,8 +396,25 @@ button.text:hover {
     border-bottom: 1px solid #ccc;
 }
 
+#episode-list li:focus {
+    color: #fff;
+}
+
+.episode-info p:focus {
+    color: #fff;
+}
+
+#episode-list li:visited {
+    color: #fff;
+}
+
 #episode-list li p {
     margin-right: -1.3em;
+    color: #fff;
+}
+
+.episode-info {
+    color: #fff;
 }
 
 a.eplink:hover {color: #fff;}
