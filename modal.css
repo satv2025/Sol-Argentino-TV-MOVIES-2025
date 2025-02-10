@@ -313,12 +313,32 @@ strong.epnumber6 {
     font-weight: 400;
 }
 
-strong.epnumber1,
-strong.epnumber2,
-strong.epnumber3,
-strong.epnumber4,
-strong.epnumber5,
-strong.epnumber6 {
+strong.epnumber1:hover {
+position: absolute;
+left: 0.1em;
+}
+
+strong.epnumber2:hover {
+position: absolute;
+left: 0.1em;
+}
+
+strong.epnumber3:hover {
+position: absolute;
+left: 0.1em;
+}
+
+strong.epnumber4:hover {
+position: absolute;
+left: 0.1em;
+}
+
+strong.epnumber5:hover {
+position: absolute;
+left: 0.1em;
+}
+
+strong.epnumber6:hover {
 position: absolute;
 left: 0.1em;
 }
