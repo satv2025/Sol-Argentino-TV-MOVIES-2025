@@ -150,9 +150,7 @@ function openModal(movieKey) {
     const movie = peliculas[movieKey];
 
     if (!movie) return;
-
-    infoModal.addEventListener('hidden.bs.modal', () => {
-        // Resetear todos los campos del modal
+    
     // Cargar los datos de la película o serie en el modal
     document.getElementById("modal-background").src = movie.background;
     document.getElementById("modal-title").innerHTML = movie.title;
