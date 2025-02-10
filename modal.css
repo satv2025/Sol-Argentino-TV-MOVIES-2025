@@ -313,6 +313,16 @@ strong.epnumber6 {
     font-weight: 400;
 }
 
+strong.epnumber1,
+strong.epnumber2,
+strong.epnumber3,
+strong.epnumber4,
+strong.epnumber5,
+strong.epnumber6 {
+position: absolute;
+left: 0.1em;
+}
+
 /* Estilo para la lista de episodios */
 ul#episode-list li:hover {
     background: #bcbcbc80;
