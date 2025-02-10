@@ -150,9 +150,7 @@ function openModal(movieKey) {
     const movie = peliculas[movieKey];
 
     if (!movie) return;
-
-    infoModal.addEventListener('hidden.bs.modal', () => {
-      // Resetear todos los campos del modal
+    
       document.getElementById("modal-background").src = '';  
       document.getElementById("modal-title").innerHTML = '';  
       document.getElementById("modal-year").innerHTML = '';  
