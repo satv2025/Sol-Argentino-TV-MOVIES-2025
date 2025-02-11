@@ -16,7 +16,7 @@ const peliculas = {
         fullscript: "<div class='fullscript' style='position: absolute; top: 88.5em; padding-left: 2em; padding-right: 2em;'><span class='fsprefix' style='color: #bcbcbc;'>Guión:</span> <span class='fscontent'>Matías Ponce</span></div>", 
         fullgenres: "<div class='fullgenres' style='position: absolute; top: 90.3em; padding-left: 2em; text-align: justify; padding-right: 3em;'><span class='fgprefix' style='color: #bcbcbc;'>Géneros:</span><span class='fgcontent'> Humor, humor absurdo, hackers, fama, grandes élites, paranoia, haters, YouTube</span></div>", 
         fulltitletype: "<div class='fulltitletype' style='position: absolute; top: 92em; text-align: justify; padding-left: 2em; padding-right: 3em;'><span class='fttprefix' style='color: #bcbcbc;'>Este titulo es:</span> <span class='fttcontent'> Original, delirante</span></div>", 
-        fullage: "<div class='fullage' style='position: absolute; top: 93.85em; text-align: justify; padding-right: 3em; padding-left: 2em;'><span class='faprefix' style='color: #bcbcbc;'>Clasificación por edad: </span> <span class='facontent'><span class='age'>12+</span> adolescentes, adultos, lenguaje inapropiado, delirante</span> <span class='facontent2'>Apta para mayores de 12 años</span></div>"
+        fullage: "<div class='fullage' style='position: absolute; top: 93.85em; text-align: justify; padding-right: 3em; padding-left: 2em;'><span class='faprefix' style='color: #bcbcbc;'>Clasificación por edad: </span> <span class='facontent'><span class='age'>12+</span> adolescentes, adultos, lenguaje inapropiado, delirante</span> <span class='facontent2'>| Apta para mayores de 12 años</span></div>"
        
     },
     cienporcientolucha: {
@@ -35,7 +35,7 @@ const peliculas = {
         fullscript: "<div class='fullscript' style='position: absolute; top: 91em; padding-left: 2em; padding-right: 2em;'><span class='fsprefix' style='color: #bcbcbc;'>Guión:</span> <span class='fscontent'>CineAR</span></div>", 
         fullgenres: "<div class='fullgenres' style='position: absolute; top: 92.8em; padding-left: 2em; text-align: justify; padding-right: 3em;'><span class='fgprefix' style='color: #bcbcbc;'>Géneros:</span><span class='fgcontent'> Humor, Lucha Libre, Luchas Clandestinas, Apuestas, Secuestros, Traiciones</span></div>", 
         fulltitletype: "<div class='fulltitletype' style='position: absolute; top: 94.5em; text-align: justify; padding-left: 2em; padding-right: 3em;'><span class='fttprefix' style='color: #bcbcbc;'>Este titulo es:</span> <span class='fttcontent'> Intenso, Íntimo, Delirante, Divertido</span></div>", 
-        fullage: "<div class='fullage' style='position: absolute; top: 96.3em; text-align: justify; padding-right: 3em; padding-left: 2em;'><span class='faprefix' style='color: #bcbcbc;'>Clasificación por edad: </span> <span class='facontent'><span class='age'>12+</span> lenguaje inapropiado, daños físicos, humor absurdo</span> <span class='facontent2'>Apta para mayores de 16 años</span></div>" 
+        fullage: "<div class='fullage' style='position: absolute; top: 96.3em; text-align: justify; padding-right: 3em; padding-left: 2em;'><span class='faprefix' style='color: #bcbcbc;'>Clasificación por edad: </span> <span class='facontent'><span class='age'>12+</span> lenguaje inapropiado, daños físicos, humor absurdo</span> <span class='facontent2'>| Apta para mayores de 16 años</span></div>" 
     },
     app: {
         year: "2024",
@@ -55,7 +55,7 @@ const peliculas = {
         fullscript: "<div class='fullscript' style='position: absolute; top: 89.7em; padding-left: 2em; padding-right: 2em;'><span class='fsprefix' style='color: #bcbcbc;'>Guión:</span> <span class='fscontent'>Poppy Cogan, Ruby Thomas, Zia Ahmed, Ajoke Ibironke</span></div>", 
         fullgenres: "<div class='fullgenres' style='position: absolute; top: 91.5em; padding-left: 2em; text-align: justify; padding-right: 3em;'><span class='fgprefix' style='color: #bcbcbc;'>Géneros:</span><span class='fgcontent'> Series dramáticas, De Gran Bretaña, Series basadas en libros, Series de adolescentes, Series de misterio</span></div>", 
         fulltitletype: "<div class='fulltitletype' style='position: absolute; top: 94.5em; text-align: justify; padding-left: 2em; padding-right: 3em;'><span class='fttprefix' style='color: #bcbcbc;'>Este titulo es:</span> <span class='fttcontent'> Íntimo, Sombrío, De suspenso</span></div>", 
-        fullage: "<div class='fullage' style='position: absolute; top: 96.3em; text-align: justify; padding-right: 3em; padding-left: 2em;'><span class='faprefix' style='color: #bcbcbc;'>Clasificación por edad: </span> <span class='facontent'><span class='age'>16+</span> lenguaje inapropiado, drogas, violencia sexual</span> <span class='facontent2'>Apta para mayores de 16 años</span></div>",  
+        fullage: "<div class='fullage' style='position: absolute; top: 96.3em; text-align: justify; padding-right: 3em; padding-left: 2em;'><span class='faprefix' style='color: #bcbcbc;'>Clasificación por edad: </span> <span class='facontent'><span class='age'>16+</span> lenguaje inapropiado, drogas, violencia sexual</span> <span class='facontent2'>| Apta para mayores de 16 años</span></div>",  
         seasons: `
             <div class="season-dropdown">
                 <button class="dropdown-button">Seleccionar Temporada</button>
@@ -150,7 +150,7 @@ function openModal(movieKey) {
     const movie = peliculas[movieKey];
 
     if (!movie) return;
-    
+
     // Cargar los datos de la película o serie en el modal
     document.getElementById("modal-background").src = movie.background;
     document.getElementById("modal-title").innerHTML = movie.title;
