@@ -683,7 +683,8 @@ span.about {
     color: #007bff;
 }
 
-a#watch-button::visited {
+#watch-button:visited {
+    all: unset;
 }
 
 .icon-button {
