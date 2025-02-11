@@ -685,6 +685,7 @@ span.about {
 
 #watch-button:visited {
     all: unset;
+    text-decoration: none;
 }
 
 .icon-button {
