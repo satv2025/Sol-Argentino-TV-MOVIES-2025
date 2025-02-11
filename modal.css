@@ -10,6 +10,8 @@ html {
 body.modal-open {
     overflow: hidden;
 }
+
+body.modal-open {}
 /* Estilos del modal */
 .modal {
     display: none;
@@ -26,6 +28,10 @@ body.modal-open {
 /* Cuando el modal está visible, ocultar el scroll del body */
 .modal-open {
     overflow: auto;
+}
+
+a, a:visited, a:hover, a:focus {
+    text-decoration: none !important;
 }
 
 #infoModal {
