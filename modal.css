@@ -30,7 +30,7 @@ body.modal-open {}
     overflow: auto;
 }
 
-a, a:visited, a:hover, a:focus {
+a#watch-button, a#watch-button:visited, a#watch-button:hover, a#watch-button:focus {
     text-decoration: none !important;
 }
 
