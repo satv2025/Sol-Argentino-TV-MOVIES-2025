@@ -664,7 +664,7 @@ span.about {
     margin-top: 0.625em;
 }
 
-#watch-button {
+.watch-button {
     background-color: #007bff;
     color: white;
     padding: 0.625em 1.25em;
@@ -678,9 +678,12 @@ span.about {
     z-index: 1000;
 }
 
-#watch-button:hover {
+.watch-button:hover {
     background-color: #fff;
     color: #007bff;
+}
+
+a#watch-button::visited {
 }
 
 .icon-button {
