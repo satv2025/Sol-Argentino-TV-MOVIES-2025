@@ -101,7 +101,8 @@ a#watch-button, a#watch-button:visited, a#watch-button:hover, a#watch-button:foc
     position: relative;
     margin-top: -2.5em;
     margin-left: -1.2em;
-    border-radius: 0.7em 0.7em 0 0 !important;!i;!;
+    border-top-left-radius: 11.2px;!i;!;
+    border-top-right-radius: 11.2px;
 }
 
 /* Texto y detalles */
@@ -791,6 +792,7 @@ span.about {
 
     .modal-header img {
         width: 54.7em;
-        border-radius: 0.3em 0.3em 0 0;
+        border-top-left-radius: 11.2px;
+        border-top-right-radius: 11.2px;
     }
 }
