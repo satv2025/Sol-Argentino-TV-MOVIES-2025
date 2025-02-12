@@ -137,8 +137,9 @@ a#watch-button, a#watch-button:visited, a#watch-button:hover, a#watch-button:foc
 /* Posiciones con em */
 .modal-year {
     position: absolute;
-    top: 28.3em;
-    padding-left: 2em;
+    top: 32.6em;
+    font-size: 0.875em;
+    padding-left: 2.2em;
     z-index: 1000;
     color: #bcbcbc !important;!i;!;
 }
@@ -448,6 +449,3348 @@ button.text:hover {
 #episode-list li p {
     margin-right: -1.3em;
     color: #fff;
+    font-size: 0.875em;
+    
+    
+    html {
+    scroll-behavior: smooth;
+}
+
+#about {
+    margin-top: 20vh;
+    height: 0vh;
+}
+    body.modal-open {
+    overflow: hidden;
+}
+    body.modal-open {}
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    left: -1em;
+    top: -3.7em;
+    width: 102.1%;
+    height: 145%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+}
+
+/* Cuando el modal está visible, ocultar el scroll del body */
+.modal-open {
+    overflow: auto;
+}
+    a#watch-button, a#watch-button:visited, a#watch-button:hover, a#watch-button:focus {
+    text-decoration: none !important;
+}
+
+#infoModal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #183347;
+    color: white;
+    margin: 5% auto;
+    padding: 1.25em;
+    width: 43%;
+    top: -2.6em;
+    border-radius: 0.7em;
+    position: relative;
+    height: 268vh;
+}
+
+.modal-info {
+}
+
+.close-button
+    svg {
+    position: absolute;
+    top: -0.1em;
+    left: 51em;
+    z-index: 1000;
+    background: #1833478c;
+    border-radius: 50%;
+    padding: 0.3em;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+
+.episodios
+    h2 {
+    color: #fff0;
+}
+
+/* Imagen de fondo */
+.modal-header {
+    position: relative;
+    width: 100%;
+}
+
+.modal-header::
+    before {
+    content: "";
+    position: absolute;
+    top: 0em;
+    left: -1.2em;
+    width: 104.7%;
+    height: 100%;
+    background: linear-gradient(0deg, #183347, transparent 50%);
+    z-index: 1;
+}
+
+.modal-header
+    img {
+    position: relative;
+    margin-top: -2.5em;
+    margin-left: -1.2em;
+    border-top-left-radius: 11.2px;!i;!;
+    border-top-right-radius: 11.2px;
+}
+
+/* Texto y detalles */
+.modal-cast
+    a {
+    font-style: italic;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.modal-cast
+    a:visited {
+    color: #fff;
+}
+
+.modal-cast
+    a:focus {
+    color: #fff;
+}
+
+.modal-cast
+    a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #fff;
+}
+
+.modal-cast
+    a:visited {}
+
+.modal-cast
+    a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Posiciones con em */
+.modal-year {
+    position: absolute;
+    top: 32.6em;
+    font-size: 0.875em;
+    padding-left: 2.2em;
+    z-index: 1000;
+    color: #bcbcbc !important;!i;!;
+}
+
+.modal-title {
+    position: absolute;
+    top: 2em;
+}
+
+/* Contenedor principal del dropdown */
+.season-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 1em;
+    width: 100%;
+    max-width: 300px; /* Ajusta el ancho máximo */
+    z-index: 1000;
+}
+
+/* Contenedor del dropdown con la clase activa */
+.season-dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Estilos del botón del dropdown */
+.dropdown-button {
+    background-color: #282c34;
+    color: white;
+    border: 0.1em solid rgb(77, 77, 77);
+    padding: 0.8em 1.2em;
+    font-size: 1em;
+    border-radius: 0.2em;
+    cursor: pointer;
+    width: 63%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 21.4em;
+    top: 9em;
+    opacity: 0;
+}
+
+.dropdown-button::
+    after {
+    content: "▼"; /* Flecha indicando que se despliega */
+    font-size: 0.8em;
+}
+
+.dropdown.active .dropdown-button::
+    after {
+    transform: rotate(180deg); /* Rota la flecha hacia arriba */
+}
+
+/* Estilos del contenido desplegable */
+.dropdown-content {
+     /* Asegura que se despliegue justo debajo del botón */
+     
+      /* Asegura que esté por encima de otros elementos */
+    position: absolute;
+    top: 12em;
+    left: 18.91em;
+    background-color: #282c34;
+    border: 0.1em solid rgb(77, 77, 77);
+    width: 76%;
+    z-index: 100;
+    overflow: hidden;
+    visibility: initial;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    height: 7em;
+    opacity: 0;
+}
+
+.dropdown:
+    hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estilos de los botones dentro del dropdown */
+.dropdown-content
+    button {
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 0.8em 1em;
+    position: absolute;
+    left: 0em;
+    text-align: left;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    color: #fff;
+    align-content: center;
+    align-items: center;
+    display: grid;
+}
+    button.texto {
+    padding-left: 1em !important;!i;!;
+}
+
+.episode-count {
+    !i;!;
+    padding-left: 2em;
+}
+
+#texto1 {
+    position: absolute;
+    top: 1.15em;
+    height: 2.2em;
+    padding-left: 2em;
+}
+
+#texto2 {
+    position: absolute;
+    top: 3.4em;
+    height: 2.2em;
+    padding-left: 2em;
+}
+
+.texto {
+}
+    strong.epnumber1 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 1em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber2 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 4.3em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber3 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 7.6em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber4 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 10.9em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber5 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 14.2em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber6 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 17.5em;
+    font-size: 2em;
+    font-weight: 400;
+}
+    strong.epnumber1:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber2:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber3:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber4:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber5:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber6:hover {
+position: absolute;
+    left: 0.1em;
+}
+
+/* Estilo para la lista de episodios */
+    ul#episode-list li:hover {
+    background: #bcbcbc80;
+    cursor: pointer;
+    position: relative; /* Necesario para posicionar el icono correctamente */
+}
+    span:hover {}
+
+#episode-list
+    li::before {
+    content: ''; /* Contenido vacío para el círculo */
+    width: 0.7em; /* Ancho del círculo */
+    height: 0.7em; /* Altura del círculo */
+    font-size: 3.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Círculo */
+    border: 0.02em solid white; /* Borde blanco para el círculo */
+    position: absolute;
+    left: 13%; /* Alineación a la izquierda */
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centrado exacto del círculo */
+    background: rgba(30, 30, 20, 0.5);
+    opacity: 0; /* El círculo está oculto por defecto */
+}
+
+#episode-list
+    li:hover::before {
+    opacity: 1; /* El círculo aparece al hacer hover */
+}
+
+#episode-list
+    li::after {
+    content: '▶'; /* El ícono de la flecha */
+    font-size: 3.3em; /* Tamaño del ícono */
+    color: white; /* Color del ícono */
+    position: absolute;
+    left: 13.34%; /* Alineación de la flecha */
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centrado exacto de la flecha */
+    opacity: 0; /* La flecha está oculta por defecto */
+    pointer-events: none; /* Para que no interfiera con otros elementos interactivos */
+}
+
+#episode-list
+    li:hover::after {
+    opacity: 1; /* La flecha aparece al hacer hover */
+}
+
+/* Hover sobre los botones */
+    button.text:hover {
+    background-color: #f0f0f0;
+}
+
+/* Información de los episodios */
+.episode-count {
+    display: block;
+    padding: 0.5em 0em;
+    font-size: 0.9em;
+    color: #ffffff;
+    z-index: 1000;
+    position: absolute;
+    top: 1.4em;
+    left: 10em;
+    font-weight: 300;
+}
+
+#episode-count1 {
+    top: 0.1em;
+    left: 8.8em;!i;!;
+}
+
+#episode-count2 {
+    top: 0.07em;
+    left: 8.8em;
+}
+
+#episode-list
+    li {
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    padding: 0.5em 2em; /* 0.5em arriba/abajo, 2em izquierda/derecha */
+    border-bottom: 1px solid #ccc;
+}
+
+#episode-list
+    li:focus {
+    color: #fff;
+}
+
+.episode-info
+    p:focus {
+    color: #fff;
+}
+
+#episode-list
+    li:visited {
+    color: #fff;
+}
+
+#episode-list
+    li p {
+    margin-right: -1.3em;
+    color: #fff;
+}
+
+.episode-info {
+    color: #fff;
+}
+    a.eplink:hover {color: #fff;}
+    a.eplink:visited {
+    color: #fff;
+}
+    a.eplink {
+    text-decoration: none;
+}
+
+#episode-list
+    li span {
+    position: absolute;
+    left: 46.5em;
+}
+
+#episode-list
+    li:hover span {
+    opacity: 0;
+}
+
+#episode-list
+    li img {
+    width: 170px; /* Ancho */
+    height: 75px; /* 16:9 (100px de ancho → 56px de alto) */
+    border-radius: 0.4em; /* Bordes redondeados */
+    object-fit: cover;
+    margin-right: 1em;
+    margin-top: 0.43em;
+    margin-bottom: 0.43em;
+}
+
+.episode-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.episode-title {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.episode-description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.modal-duration {
+    position: absolute;
+    top: 32.6em;
+    font-size: 0.875em;
+    left: 9.1em;
+    color: #bcbcbc !important;!i;!;
+}
+
+.modal
+    strong p{
+    color: #777;
+    font-weight: normal;
+}
+
+.modal .curiosidad {
+    color: #fff;
+    font-weight: 700;
+}
+
+.modal-fullcreatedBy,
+.modal-cast,
+.modal-script,
+.modal-genres,
+.modal-titleType {
+    position: absolute;
+    padding-left: 32em;
+    text-align: left;
+    padding-right: 2em;
+}
+
+.modal-fullcreatedBy {
+    top: 47em; }
+.modal-cast {
+    top: 32.6em;
+    font-size: 0.875em;
+    padding-left: 36.6em;
+    padding-right: 4em;}
+
+.createdBy {
+    position: absolute;
+    top: 90em;
+    text-align: justify;
+    padding-left: 2em;
+}
+
+
+
+.fcprefix {
+    color: #fff;
+}
+    span.fcprefix {color: #bcbcbc;}
+.modal-script {
+    top: 2em;
+    left: -30.67em;}
+.modal-genres {
+    top: 35.5em;
+    font-size: 0.875em;
+    padding-left: 36.6em;
+    padding-right: 4em;}
+.modal-titleType {
+    top: 38.4em;
+    font-size: 0.875em;
+    padding-left: 36.6em;
+    padding-right: 4em;}
+
+.modal-ageRating,
+.modal-description,
+.modal-curiosity {
+    position: absolute;
+    padding-left: 2em;
+    padding-right: 24em;
+    text-align: justify;
+}
+
+.modal-ageRating {
+    top: 33.3em;
+    left: 1.5em;
+    z-index: 1000;
+    font-size: 0.91em;}
+
+.age {
+    border: 1px solid hsla(0, 0%, 100%, .4);
+    padding: 0 .4em;
+}
+.modal-description {
+    top: 38.5em;
+    font-size: 0.875em;
+    left: 1.8em;
+    padding-right: 29em;}
+.modal-curiosity {
+    top: 27.4em;
+    z-index: 1000;
+    font-size: 1.17em;
+    left: 0.8em;}
+
+.modal-curiosity
+    p {
+    font-size: 12p;
+}
+
+/* Información adicional */
+.modal-info >
+    p {
+    margin: 0.3125em 0;
+    color: #fff;
+    z-index: 1000;
+}
+
+.modal-cast
+    strong, .modal-genres strong, .modal-titleType strong {
+    color: #bcbcbc;
+    font-weight: 400;
+}
+    span.fcbprefix {
+    color: #bcbcbc;
+}
+    span.fsprefix {
+    color: #bcbcbc;
+}
+    span.fgprefix {
+    color: #bcbcbc;
+}
+    span.fttprefix {
+    color: #bcbcbc;
+}
+    span.faprefix {
+    color: #bcbcbc;
+}
+
+.fullcreatedBy.fc {}
+    button.texto:hover {background: #424242;
+    border-radius: 0em;}
+    ul#episode-list {
+    padding-left: 2em;
+    padding-right: 3em;
+    position: absolute;
+    top: 41em;
+}
+    ul#episode-list {
+    
+    
+    !em;!e;!;
+}
+
+.modal
+    strong.eplist {
+    color: #fff;
+    font-weight: 700;
+    position: absolute;
+    top: 25.6em;
+    left: 2.2em;
+    font-size: 1.5em;
+    
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+
+.overlay
+    h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+    h1#modal-title {
+    font-size: 2em;
+    font-weight: bold;
+    position: relative;
+    top: 31em;
+    text-decoration: underline 0.05em;
+    text-underline-offset: 0.4em; /* Ajusta la distancia aquí */
+    z-index: 1000;
+    left: -0.3em;
+}
+    strong.titulo {
+    font-weight: 500;
+}
+    span.about {
+    font-weight: 400;
+}
+
+.overlay
+    p {
+    font-size: 1.2em;
+}
+
+/* Botones de acción */
+.modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+    margin-top: 0.625em;
+}
+
+.watch-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.625em 1.25em;
+    font-size: 1.3em;
+    border-radius: 0.3125em;
+    text-decoration: none;
+    font-weight: 700;
+    position: absolute;
+    top: 17.4em;
+    left: 2em;
+    z-index: 1000;
+}
+
+.watch-button:
+    hover {
+    background-color: #fff;
+    color: #007bff;
+}
+
+#watch-button:
+    visited {
+    all: unset;
+    text-decoration: none;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Episodios */
+.episode {
+    display: flex;
+    align-items: center;
+    margin-top: 0.9375em;
+}
+
+.episode
+    img {
+    width: 9.375em;
+    border-radius: 0.3125em;
+    margin-right: 0.625em;
+}
+
+.episode
+    h3 {
+    font-size: 1.2em;
+}
+
+.episode
+    p {
+    font-size: 1em;
+    color: #bbb;
+}
+
+/* Media Queries */
+
+/* Pantallas pequeñas (móviles) */
+    @media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+    height: auto;
+    padding: 1em;
+    }
+
+    .modal-header img {
+    width: 100%;
+    height: auto;
+    }
+
+    .overlay h1 {
+    font-size: 1.5em;
+    }
+
+    .overlay p {
+    font-size: 1em;
+    }
+
+    .watch-button {
+    font-size: 1em;
+    padding: 0.5em 1em;
+    }
+
+    .episode img {
+    width: 6em;
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+    @media (max-width: 1024px) {
+    .modal-content {
+        width: 70%;
+    padding: 1.25em;
+    }
+
+    .modal-header img {
+    width: 70%;
+    height: auto;
+    }
+
+    .overlay h1 {
+    font-size: 1.8em;
+    }
+
+    .overlay p {
+    font-size: 1.1em;
+    }
+
+    .watch-button {
+    font-size: 1.1em;
+    padding: 0.75em 1.5em;
+    }
+}
+
+/* Pantallas grandes (escritorios) */
+    @media (min-width: 1025px) {
+    .modal-content {
+        width: 46%;
+    }
+
+    .modal-header img {
+    width: 54.7em;
+    border-top-left-radius: 11.2px;
+    border-top-right-radius: 11.2px;
+    }
+};
+    
+    html {
+    scroll-behavior: smooth;
+}
+
+#about {
+    margin-top: 20vh;
+    height: 0vh;
+}
+    body.modal-open {
+    overflow: hidden;
+}
+    body.modal-open {}
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    left: -1em;
+    top: -3.7em;
+    width: 102.1%;
+    height: 145%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+}
+
+/* Cuando el modal está visible, ocultar el scroll del body */
+.modal-open {
+    overflow: auto;
+}
+    a#watch-button, a#watch-button:visited, a#watch-button:hover, a#watch-button:focus {
+    text-decoration: none !important;
+}
+
+#infoModal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #183347;
+    color: white;
+    margin: 5% auto;
+    padding: 1.25em;
+    width: 43%;
+    top: -2.6em;
+    border-radius: 0.7em;
+    position: relative;
+    height: 268vh;
+}
+
+.modal-info {
+}
+
+.close-button
+    svg {
+    position: absolute;
+    top: -0.1em;
+    left: 51em;
+    z-index: 1000;
+    background: #1833478c;
+    border-radius: 50%;
+    padding: 0.3em;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+
+.episodios
+    h2 {
+    color: #fff0;
+}
+
+/* Imagen de fondo */
+.modal-header {
+    position: relative;
+    width: 100%;
+}
+
+.modal-header::
+    before {
+    content: "";
+    position: absolute;
+    top: 0em;
+    left: -1.2em;
+    width: 104.7%;
+    height: 100%;
+    background: linear-gradient(0deg, #183347, transparent 50%);
+    z-index: 1;
+}
+
+.modal-header
+    img {
+    position: relative;
+    margin-top: -2.5em;
+    margin-left: -1.2em;
+    border-top-left-radius: 11.2px;!i;!;
+    border-top-right-radius: 11.2px;
+}
+
+/* Texto y detalles */
+.modal-cast
+    a {
+    font-style: italic;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.modal-cast
+    a:visited {
+    color: #fff;
+}
+
+.modal-cast
+    a:focus {
+    color: #fff;
+}
+
+.modal-cast
+    a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #fff;
+}
+
+.modal-cast
+    a:visited {}
+
+.modal-cast
+    a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Posiciones con em */
+.modal-year {
+    position: absolute;
+    top: 32.6em;
+    font-size: 0.875em;
+    padding-left: 2.2em;
+    z-index: 1000;
+    color: #bcbcbc !important;!i;!;
+}
+
+.modal-title {
+    position: absolute;
+    top: 2em;
+}
+
+/* Contenedor principal del dropdown */
+.season-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 1em;
+    width: 100%;
+    max-width: 300px; /* Ajusta el ancho máximo */
+    z-index: 1000;
+}
+
+/* Contenedor del dropdown con la clase activa */
+.season-dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Estilos del botón del dropdown */
+.dropdown-button {
+    background-color: #282c34;
+    color: white;
+    border: 0.1em solid rgb(77, 77, 77);
+    padding: 0.8em 1.2em;
+    font-size: 1em;
+    border-radius: 0.2em;
+    cursor: pointer;
+    width: 63%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 21.4em;
+    top: 9em;
+    opacity: 0;
+}
+
+.dropdown-button::
+    after {
+    content: "▼"; /* Flecha indicando que se despliega */
+    font-size: 0.8em;
+}
+
+.dropdown.active .dropdown-button::
+    after {
+    transform: rotate(180deg); /* Rota la flecha hacia arriba */
+}
+
+/* Estilos del contenido desplegable */
+.dropdown-content {
+     /* Asegura que se despliegue justo debajo del botón */
+     
+      /* Asegura que esté por encima de otros elementos */
+    position: absolute;
+    top: 12em;
+    left: 18.91em;
+    background-color: #282c34;
+    border: 0.1em solid rgb(77, 77, 77);
+    width: 76%;
+    z-index: 100;
+    overflow: hidden;
+    visibility: initial;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    height: 7em;
+    opacity: 0;
+}
+
+.dropdown:
+    hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estilos de los botones dentro del dropdown */
+.dropdown-content
+    button {
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 0.8em 1em;
+    position: absolute;
+    left: 0em;
+    text-align: left;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    color: #fff;
+    align-content: center;
+    align-items: center;
+    display: grid;
+}
+    button.texto {
+    padding-left: 1em !important;!i;!;
+}
+
+.episode-count {
+    !i;!;
+    padding-left: 2em;
+}
+
+#texto1 {
+    position: absolute;
+    top: 1.15em;
+    height: 2.2em;
+    padding-left: 2em;
+}
+
+#texto2 {
+    position: absolute;
+    top: 3.4em;
+    height: 2.2em;
+    padding-left: 2em;
+}
+
+.texto {
+}
+    strong.epnumber1 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 1em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber2 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 4.3em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber3 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 7.6em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber4 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 10.9em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber5 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 14.2em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber6 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 17.5em;
+    font-size: 2em;
+    font-weight: 400;
+}
+    strong.epnumber1:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber2:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber3:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber4:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber5:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber6:hover {
+position: absolute;
+    left: 0.1em;
+}
+
+/* Estilo para la lista de episodios */
+    ul#episode-list li:hover {
+    background: #bcbcbc80;
+    cursor: pointer;
+    position: relative; /* Necesario para posicionar el icono correctamente */
+}
+    span:hover {}
+
+#episode-list
+    li::before {
+    content: ''; /* Contenido vacío para el círculo */
+    width: 0.7em; /* Ancho del círculo */
+    height: 0.7em; /* Altura del círculo */
+    font-size: 3.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Círculo */
+    border: 0.02em solid white; /* Borde blanco para el círculo */
+    position: absolute;
+    left: 13%; /* Alineación a la izquierda */
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centrado exacto del círculo */
+    background: rgba(30, 30, 20, 0.5);
+    opacity: 0; /* El círculo está oculto por defecto */
+}
+
+#episode-list
+    li:hover::before {
+    opacity: 1; /* El círculo aparece al hacer hover */
+}
+
+#episode-list
+    li::after {
+    content: '▶'; /* El ícono de la flecha */
+    font-size: 3.3em; /* Tamaño del ícono */
+    color: white; /* Color del ícono */
+    position: absolute;
+    left: 13.34%; /* Alineación de la flecha */
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centrado exacto de la flecha */
+    opacity: 0; /* La flecha está oculta por defecto */
+    pointer-events: none; /* Para que no interfiera con otros elementos interactivos */
+}
+
+#episode-list
+    li:hover::after {
+    opacity: 1; /* La flecha aparece al hacer hover */
+}
+
+/* Hover sobre los botones */
+    button.text:hover {
+    background-color: #f0f0f0;
+}
+
+/* Información de los episodios */
+.episode-count {
+    display: block;
+    padding: 0.5em 0em;
+    font-size: 0.9em;
+    color: #ffffff;
+    z-index: 1000;
+    position: absolute;
+    top: 1.4em;
+    left: 10em;
+    font-weight: 300;
+}
+
+#episode-count1 {
+    top: 0.1em;
+    left: 8.8em;!i;!;
+}
+
+#episode-count2 {
+    top: 0.07em;
+    left: 8.8em;
+}
+
+#episode-list
+    li {
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    padding: 0.5em 2em; /* 0.5em arriba/abajo, 2em izquierda/derecha */
+    border-bottom: 1px solid #ccc;
+}
+
+#episode-list
+    li:focus {
+    color: #fff;
+}
+
+.episode-info
+    p:focus {
+    color: #fff;
+}
+
+#episode-list
+    li:visited {
+    color: #fff;
+}
+
+#episode-list
+    li p {
+    margin-right: -1.3em;
+    color: #fff;
+}
+
+.episode-info {
+    color: #fff;
+}
+    a.eplink:hover {color: #fff;}
+    a.eplink:visited {
+    color: #fff;
+}
+    a.eplink {
+    text-decoration: none;
+}
+
+#episode-list
+    li span {
+    position: absolute;
+    left: 46.5em;
+}
+
+#episode-list
+    li:hover span {
+    opacity: 0;
+}
+
+#episode-list
+    li img {
+    width: 170px; /* Ancho */
+    height: 75px; /* 16:9 (100px de ancho → 56px de alto) */
+    border-radius: 0.4em; /* Bordes redondeados */
+    object-fit: cover;
+    margin-right: 1em;
+    margin-top: 0.43em;
+    margin-bottom: 0.43em;
+}
+
+.episode-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.episode-title {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.episode-description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.modal-duration {
+    position: absolute;
+    top: 32.6em;
+    font-size: 0.875em;
+    left: 9.1em;
+    color: #bcbcbc !important;!i;!;
+}
+
+.modal
+    strong p{
+    color: #777;
+    font-weight: normal;
+}
+
+.modal .curiosidad {
+    color: #fff;
+    font-weight: 700;
+}
+
+.modal-fullcreatedBy,
+.modal-cast,
+.modal-script,
+.modal-genres,
+.modal-titleType {
+    position: absolute;
+    padding-left: 32em;
+    text-align: left;
+    padding-right: 2em;
+}
+
+.modal-fullcreatedBy {
+    top: 47em; }
+.modal-cast {
+    top: 32.6em;
+    font-size: 0.875em;
+    padding-left: 36.6em;
+    padding-right: 4em;}
+
+.createdBy {
+    position: absolute;
+    top: 90em;
+    text-align: justify;
+    padding-left: 2em;
+}
+
+
+
+.fcprefix {
+    color: #fff;
+}
+    span.fcprefix {color: #bcbcbc;}
+.modal-script {
+    top: 2em;
+    left: -30.67em;}
+.modal-genres {
+    top: 35.5em;
+    font-size: 0.875em;
+    padding-left: 36.6em;
+    padding-right: 4em;}
+.modal-titleType {
+    top: 38.4em;
+    font-size: 0.875em;
+    padding-left: 36.6em;
+    padding-right: 4em;}
+
+.modal-ageRating,
+.modal-description,
+.modal-curiosity {
+    position: absolute;
+    padding-left: 2em;
+    padding-right: 24em;
+    text-align: justify;
+}
+
+.modal-ageRating {
+    top: 33.3em;
+    left: 1.5em;
+    z-index: 1000;
+    font-size: 0.91em;}
+
+.age {
+    border: 1px solid hsla(0, 0%, 100%, .4);
+    padding: 0 .4em;
+}
+.modal-description {
+    top: 38.5em;
+    font-size: 0.875em;
+    left: 1.8em;
+    padding-right: 29em;}
+.modal-curiosity {
+    top: 27.4em;
+    z-index: 1000;
+    font-size: 1.17em;
+    left: 0.8em;}
+
+.modal-curiosity
+    p {
+    font-size: 12p;
+}
+
+/* Información adicional */
+.modal-info >
+    p {
+    margin: 0.3125em 0;
+    color: #fff;
+    z-index: 1000;
+}
+
+.modal-cast
+    strong, .modal-genres strong, .modal-titleType strong {
+    color: #bcbcbc;
+    font-weight: 400;
+}
+    span.fcbprefix {
+    color: #bcbcbc;
+}
+    span.fsprefix {
+    color: #bcbcbc;
+}
+    span.fgprefix {
+    color: #bcbcbc;
+}
+    span.fttprefix {
+    color: #bcbcbc;
+}
+    span.faprefix {
+    color: #bcbcbc;
+}
+
+.fullcreatedBy.fc {}
+    button.texto:hover {background: #424242;
+    border-radius: 0em;}
+    ul#episode-list {
+    padding-left: 2em;
+    padding-right: 3em;
+    position: absolute;
+    top: 41em;
+}
+    ul#episode-list {
+    
+    
+    !em;!e;!;
+}
+
+.modal
+    strong.eplist {
+    color: #fff;
+    font-weight: 700;
+    position: absolute;
+    top: 25.6em;
+    left: 2.2em;
+    font-size: 1.5em;
+    
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+
+.overlay
+    h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+    h1#modal-title {
+    font-size: 2em;
+    font-weight: bold;
+    position: relative;
+    top: 31em;
+    text-decoration: underline 0.05em;
+    text-underline-offset: 0.4em; /* Ajusta la distancia aquí */
+    z-index: 1000;
+    left: -0.3em;
+}
+    strong.titulo {
+    font-weight: 500;
+}
+    span.about {
+    font-weight: 400;
+}
+
+.overlay
+    p {
+    font-size: 1.2em;
+}
+
+/* Botones de acción */
+.modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+    margin-top: 0.625em;
+}
+
+.watch-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.625em 1.25em;
+    font-size: 1.3em;
+    border-radius: 0.3125em;
+    text-decoration: none;
+    font-weight: 700;
+    position: absolute;
+    top: 17.4em;
+    left: 2em;
+    z-index: 1000;
+}
+
+.watch-button:
+    hover {
+    background-color: #fff;
+    color: #007bff;
+}
+
+#watch-button:
+    visited {
+    all: unset;
+    text-decoration: none;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Episodios */
+.episode {
+    display: flex;
+    align-items: center;
+    margin-top: 0.9375em;
+}
+
+.episode
+    img {
+    width: 9.375em;
+    border-radius: 0.3125em;
+    margin-right: 0.625em;
+}
+
+.episode
+    h3 {
+    font-size: 1.2em;
+}
+
+.episode
+    p {
+    font-size: 1em;
+    color: #bbb;
+}
+
+/* Media Queries */
+
+/* Pantallas pequeñas (móviles) */
+    @media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+    height: auto;
+    padding: 1em;
+    }
+
+    .modal-header img {
+    width: 100%;
+    height: auto;
+    }
+
+    .overlay h1 {
+    font-size: 1.5em;
+    }
+
+    .overlay p {
+    font-size: 1em;
+    }
+
+    .watch-button {
+    font-size: 1em;
+    padding: 0.5em 1em;
+    }
+
+    .episode img {
+    width: 6em;
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+    @media (max-width: 1024px) {
+    .modal-content {
+        width: 70%;
+    padding: 1.25em;
+    }
+
+    .modal-header img {
+    width: 70%;
+    height: auto;
+    }
+
+    .overlay h1 {
+    font-size: 1.8em;
+    }
+
+    .overlay p {
+    font-size: 1.1em;
+    }
+
+    .watch-button {
+    font-size: 1.1em;
+    padding: 0.75em 1.5em;
+    }
+}
+
+/* Pantallas grandes (escritorios) */
+    @media (min-width: 1025px) {
+    .modal-content {
+        width: 46%;
+    }
+
+    .modal-header img {
+    width: 54.7em;
+    border-top-left-radius: 11.2px;
+    border-top-right-radius: 11.2px;
+    }
+};
+    
+    html {
+    scroll-behavior: smooth;
+}
+
+#about {
+    margin-top: 20vh;
+    height: 0vh;
+}
+    body.modal-open {
+    overflow: hidden;
+}
+    body.modal-open {}
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    left: -1em;
+    top: -3.7em;
+    width: 102.1%;
+    height: 145%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+}
+
+/* Cuando el modal está visible, ocultar el scroll del body */
+.modal-open {
+    overflow: auto;
+}
+    a#watch-button, a#watch-button:visited, a#watch-button:hover, a#watch-button:focus {
+    text-decoration: none !important;
+}
+
+#infoModal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #183347;
+    color: white;
+    margin: 5% auto;
+    padding: 1.25em;
+    width: 43%;
+    top: -2.6em;
+    border-radius: 0.7em;
+    position: relative;
+    height: 268vh;
+}
+
+.modal-info {
+}
+
+.close-button
+    svg {
+    position: absolute;
+    top: -0.1em;
+    left: 51em;
+    z-index: 1000;
+    background: #1833478c;
+    border-radius: 50%;
+    padding: 0.3em;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+
+.episodios
+    h2 {
+    color: #fff0;
+}
+
+/* Imagen de fondo */
+.modal-header {
+    position: relative;
+    width: 100%;
+}
+
+.modal-header::
+    before {
+    content: "";
+    position: absolute;
+    top: 0em;
+    left: -1.2em;
+    width: 104.7%;
+    height: 100%;
+    background: linear-gradient(0deg, #183347, transparent 50%);
+    z-index: 1;
+}
+
+.modal-header
+    img {
+    position: relative;
+    margin-top: -2.5em;
+    margin-left: -1.2em;
+    border-top-left-radius: 11.2px;!i;!;
+    border-top-right-radius: 11.2px;
+}
+
+/* Texto y detalles */
+.modal-cast
+    a {
+    font-style: italic;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.modal-cast
+    a:visited {
+    color: #fff;
+}
+
+.modal-cast
+    a:focus {
+    color: #fff;
+}
+
+.modal-cast
+    a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #fff;
+}
+
+.modal-cast
+    a:visited {}
+
+.modal-cast
+    a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Posiciones con em */
+.modal-year {
+    position: absolute;
+    top: 32.6em;
+    font-size: 0.875em;
+    padding-left: 2.2em;
+    z-index: 1000;
+    color: #bcbcbc !important;!i;!;
+}
+
+.modal-title {
+    position: absolute;
+    top: 2em;
+}
+
+/* Contenedor principal del dropdown */
+.season-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 1em;
+    width: 100%;
+    max-width: 300px; /* Ajusta el ancho máximo */
+    z-index: 1000;
+}
+
+/* Contenedor del dropdown con la clase activa */
+.season-dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Estilos del botón del dropdown */
+.dropdown-button {
+    background-color: #282c34;
+    color: white;
+    border: 0.1em solid rgb(77, 77, 77);
+    padding: 0.8em 1.2em;
+    font-size: 1em;
+    border-radius: 0.2em;
+    cursor: pointer;
+    width: 63%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 21.4em;
+    top: 9em;
+    opacity: 0;
+}
+
+.dropdown-button::
+    after {
+    content: "▼"; /* Flecha indicando que se despliega */
+    font-size: 0.8em;
+}
+
+.dropdown.active .dropdown-button::
+    after {
+    transform: rotate(180deg); /* Rota la flecha hacia arriba */
+}
+
+/* Estilos del contenido desplegable */
+.dropdown-content {
+     /* Asegura que se despliegue justo debajo del botón */
+     
+      /* Asegura que esté por encima de otros elementos */
+    position: absolute;
+    top: 12em;
+    left: 18.91em;
+    background-color: #282c34;
+    border: 0.1em solid rgb(77, 77, 77);
+    width: 76%;
+    z-index: 100;
+    overflow: hidden;
+    visibility: initial;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    height: 7em;
+    opacity: 0;
+}
+
+.dropdown:
+    hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estilos de los botones dentro del dropdown */
+.dropdown-content
+    button {
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 0.8em 1em;
+    position: absolute;
+    left: 0em;
+    text-align: left;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    color: #fff;
+    align-content: center;
+    align-items: center;
+    display: grid;
+}
+    button.texto {
+    padding-left: 1em !important;!i;!;
+}
+
+.episode-count {
+    !i;!;
+    padding-left: 2em;
+}
+
+#texto1 {
+    position: absolute;
+    top: 1.15em;
+    height: 2.2em;
+    padding-left: 2em;
+}
+
+#texto2 {
+    position: absolute;
+    top: 3.4em;
+    height: 2.2em;
+    padding-left: 2em;
+}
+
+.texto {
+}
+    strong.epnumber1 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 1em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber2 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 4.3em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber3 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 7.6em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber4 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 10.9em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber5 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 14.2em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber6 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 17.5em;
+    font-size: 2em;
+    font-weight: 400;
+}
+    strong.epnumber1:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber2:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber3:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber4:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber5:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber6:hover {
+position: absolute;
+    left: 0.1em;
+}
+
+/* Estilo para la lista de episodios */
+    ul#episode-list li:hover {
+    background: #bcbcbc80;
+    cursor: pointer;
+    position: relative; /* Necesario para posicionar el icono correctamente */
+}
+    span:hover {}
+
+#episode-list
+    li::before {
+    content: ''; /* Contenido vacío para el círculo */
+    width: 0.7em; /* Ancho del círculo */
+    height: 0.7em; /* Altura del círculo */
+    font-size: 3.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Círculo */
+    border: 0.02em solid white; /* Borde blanco para el círculo */
+    position: absolute;
+    left: 13%; /* Alineación a la izquierda */
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centrado exacto del círculo */
+    background: rgba(30, 30, 20, 0.5);
+    opacity: 0; /* El círculo está oculto por defecto */
+}
+
+#episode-list
+    li:hover::before {
+    opacity: 1; /* El círculo aparece al hacer hover */
+}
+
+#episode-list
+    li::after {
+    content: '▶'; /* El ícono de la flecha */
+    font-size: 3.3em; /* Tamaño del ícono */
+    color: white; /* Color del ícono */
+    position: absolute;
+    left: 13.34%; /* Alineación de la flecha */
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centrado exacto de la flecha */
+    opacity: 0; /* La flecha está oculta por defecto */
+    pointer-events: none; /* Para que no interfiera con otros elementos interactivos */
+}
+
+#episode-list
+    li:hover::after {
+    opacity: 1; /* La flecha aparece al hacer hover */
+}
+
+/* Hover sobre los botones */
+    button.text:hover {
+    background-color: #f0f0f0;
+}
+
+/* Información de los episodios */
+.episode-count {
+    display: block;
+    padding: 0.5em 0em;
+    font-size: 0.9em;
+    color: #ffffff;
+    z-index: 1000;
+    position: absolute;
+    top: 1.4em;
+    left: 10em;
+    font-weight: 300;
+}
+
+#episode-count1 {
+    top: 0.1em;
+    left: 8.8em;!i;!;
+}
+
+#episode-count2 {
+    top: 0.07em;
+    left: 8.8em;
+}
+
+#episode-list
+    li {
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    padding: 0.5em 2em; /* 0.5em arriba/abajo, 2em izquierda/derecha */
+    border-bottom: 1px solid #ccc;
+}
+
+#episode-list
+    li:focus {
+    color: #fff;
+}
+
+.episode-info
+    p:focus {
+    color: #fff;
+}
+
+#episode-list
+    li:visited {
+    color: #fff;
+}
+
+#episode-list
+    li p {
+    margin-right: -1.3em;
+    color: #fff;
+}
+
+.episode-info {
+    color: #fff;
+}
+    a.eplink:hover {color: #fff;}
+    a.eplink:visited {
+    color: #fff;
+}
+    a.eplink {
+    text-decoration: none;
+}
+
+#episode-list
+    li span {
+    position: absolute;
+    left: 46.5em;
+}
+
+#episode-list
+    li:hover span {
+    opacity: 0;
+}
+
+#episode-list
+    li img {
+    width: 170px; /* Ancho */
+    height: 75px; /* 16:9 (100px de ancho → 56px de alto) */
+    border-radius: 0.4em; /* Bordes redondeados */
+    object-fit: cover;
+    margin-right: 1em;
+    margin-top: 0.43em;
+    margin-bottom: 0.43em;
+}
+
+.episode-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.episode-title {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.episode-description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.modal-duration {
+    position: absolute;
+    top: 32.6em;
+    font-size: 0.875em;
+    left: 9.1em;
+    color: #bcbcbc !important;!i;!;
+}
+
+.modal
+    strong p{
+    color: #777;
+    font-weight: normal;
+}
+
+.modal .curiosidad {
+    color: #fff;
+    font-weight: 700;
+}
+
+.modal-fullcreatedBy,
+.modal-cast,
+.modal-script,
+.modal-genres,
+.modal-titleType {
+    position: absolute;
+    padding-left: 32em;
+    text-align: left;
+    padding-right: 2em;
+}
+
+.modal-fullcreatedBy {
+    top: 47em; }
+.modal-cast {
+    top: 32.6em;
+    font-size: 0.875em;
+    padding-left: 36.6em;
+    padding-right: 4em;}
+
+.createdBy {
+    position: absolute;
+    top: 90em;
+    text-align: justify;
+    padding-left: 2em;
+}
+
+
+
+.fcprefix {
+    color: #fff;
+}
+    span.fcprefix {color: #bcbcbc;}
+.modal-script {
+    top: 2em;
+    left: -30.67em;}
+.modal-genres {
+    top: 35.5em;
+    font-size: 0.875em;
+    padding-left: 36.6em;
+    padding-right: 4em;}
+.modal-titleType {
+    top: 38.4em;
+    font-size: 0.875em;
+    padding-left: 36.6em;
+    padding-right: 4em;}
+
+.modal-ageRating,
+.modal-description,
+.modal-curiosity {
+    position: absolute;
+    padding-left: 2em;
+    padding-right: 24em;
+    text-align: justify;
+}
+
+.modal-ageRating {
+    top: 33.3em;
+    left: 1.5em;
+    z-index: 1000;
+    font-size: 0.91em;}
+
+.age {
+    border: 1px solid hsla(0, 0%, 100%, .4);
+    padding: 0 .4em;
+}
+.modal-description {
+    top: 38.5em;
+    font-size: 0.875em;
+    left: 1.8em;
+    padding-right: 29em;}
+.modal-curiosity {
+    top: 27.4em;
+    z-index: 1000;
+    font-size: 1.17em;
+    left: 0.8em;}
+
+.modal-curiosity
+    p {
+    font-size: 12p;
+}
+
+/* Información adicional */
+.modal-info >
+    p {
+    margin: 0.3125em 0;
+    color: #fff;
+    z-index: 1000;
+}
+
+.modal-cast
+    strong, .modal-genres strong, .modal-titleType strong {
+    color: #bcbcbc;
+    font-weight: 400;
+}
+    span.fcbprefix {
+    color: #bcbcbc;
+}
+    span.fsprefix {
+    color: #bcbcbc;
+}
+    span.fgprefix {
+    color: #bcbcbc;
+}
+    span.fttprefix {
+    color: #bcbcbc;
+}
+    span.faprefix {
+    color: #bcbcbc;
+}
+
+.fullcreatedBy.fc {}
+    button.texto:hover {background: #424242;
+    border-radius: 0em;}
+    ul#episode-list {
+    padding-left: 2em;
+    padding-right: 3em;
+    position: absolute;
+    top: 41em;
+}
+    ul#episode-list {
+    
+    
+    !em;!e;!;
+}
+
+.modal
+    strong.eplist {
+    color: #fff;
+    font-weight: 700;
+    position: absolute;
+    top: 25.6em;
+    left: 2.2em;
+    font-size: 1.5em;
+    
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+
+.overlay
+    h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+    h1#modal-title {
+    font-size: 2em;
+    font-weight: bold;
+    position: relative;
+    top: 31em;
+    text-decoration: underline 0.05em;
+    text-underline-offset: 0.4em; /* Ajusta la distancia aquí */
+    z-index: 1000;
+    left: -0.3em;
+}
+    strong.titulo {
+    font-weight: 500;
+}
+    span.about {
+    font-weight: 400;
+}
+
+.overlay
+    p {
+    font-size: 1.2em;
+}
+
+/* Botones de acción */
+.modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+    margin-top: 0.625em;
+}
+
+.watch-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.625em 1.25em;
+    font-size: 1.3em;
+    border-radius: 0.3125em;
+    text-decoration: none;
+    font-weight: 700;
+    position: absolute;
+    top: 17.4em;
+    left: 2em;
+    z-index: 1000;
+}
+
+.watch-button:
+    hover {
+    background-color: #fff;
+    color: #007bff;
+}
+
+#watch-button:
+    visited {
+    all: unset;
+    text-decoration: none;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Episodios */
+.episode {
+    display: flex;
+    align-items: center;
+    margin-top: 0.9375em;
+}
+
+.episode
+    img {
+    width: 9.375em;
+    border-radius: 0.3125em;
+    margin-right: 0.625em;
+}
+
+.episode
+    h3 {
+    font-size: 1.2em;
+}
+
+.episode
+    p {
+    font-size: 1em;
+    color: #bbb;
+}
+
+/* Media Queries */
+
+/* Pantallas pequeñas (móviles) */
+    @media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+    height: auto;
+    padding: 1em;
+    }
+
+    .modal-header img {
+    width: 100%;
+    height: auto;
+    }
+
+    .overlay h1 {
+    font-size: 1.5em;
+    }
+
+    .overlay p {
+    font-size: 1em;
+    }
+
+    .watch-button {
+    font-size: 1em;
+    padding: 0.5em 1em;
+    }
+
+    .episode img {
+    width: 6em;
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+    @media (max-width: 1024px) {
+    .modal-content {
+        width: 70%;
+    padding: 1.25em;
+    }
+
+    .modal-header img {
+    width: 70%;
+    height: auto;
+    }
+
+    .overlay h1 {
+    font-size: 1.8em;
+    }
+
+    .overlay p {
+    font-size: 1.1em;
+    }
+
+    .watch-button {
+    font-size: 1.1em;
+    padding: 0.75em 1.5em;
+    }
+}
+
+/* Pantallas grandes (escritorios) */
+    @media (min-width: 1025px) {
+    .modal-content {
+        width: 46%;
+    }
+
+    .modal-header img {
+    width: 54.7em;
+    border-top-left-radius: 11.2px;
+    border-top-right-radius: 11.2px;
+    }
+};
+    
+    html {
+    scroll-behavior: smooth;
+}
+
+#about {
+    margin-top: 20vh;
+    height: 0vh;
+}
+    body.modal-open {
+    overflow: hidden;
+}
+    body.modal-open {}
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    left: -1em;
+    top: -3.7em;
+    width: 102.1%;
+    height: 145%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+}
+
+/* Cuando el modal está visible, ocultar el scroll del body */
+.modal-open {
+    overflow: auto;
+}
+    a#watch-button, a#watch-button:visited, a#watch-button:hover, a#watch-button:focus {
+    text-decoration: none !important;
+}
+
+#infoModal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #183347;
+    color: white;
+    margin: 5% auto;
+    padding: 1.25em;
+    width: 43%;
+    top: -2.6em;
+    border-radius: 0.7em;
+    position: relative;
+    height: 268vh;
+}
+
+.modal-info {
+}
+
+.close-button
+    svg {
+    position: absolute;
+    top: -0.1em;
+    left: 51em;
+    z-index: 1000;
+    background: #1833478c;
+    border-radius: 50%;
+    padding: 0.3em;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+
+.episodios
+    h2 {
+    color: #fff0;
+}
+
+/* Imagen de fondo */
+.modal-header {
+    position: relative;
+    width: 100%;
+}
+
+.modal-header::
+    before {
+    content: "";
+    position: absolute;
+    top: 0em;
+    left: -1.2em;
+    width: 104.7%;
+    height: 100%;
+    background: linear-gradient(0deg, #183347, transparent 50%);
+    z-index: 1;
+}
+
+.modal-header
+    img {
+    position: relative;
+    margin-top: -2.5em;
+    margin-left: -1.2em;
+    border-top-left-radius: 11.2px;!i;!;
+    border-top-right-radius: 11.2px;
+}
+
+/* Texto y detalles */
+.modal-cast
+    a {
+    font-style: italic;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.modal-cast
+    a:visited {
+    color: #fff;
+}
+
+.modal-cast
+    a:focus {
+    color: #fff;
+}
+
+.modal-cast
+    a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #fff;
+}
+
+.modal-cast
+    a:visited {}
+
+.modal-cast
+    a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Posiciones con em */
+.modal-year {
+    position: absolute;
+    top: 32.6em;
+    font-size: 0.875em;
+    padding-left: 2.2em;
+    z-index: 1000;
+    color: #bcbcbc !important;!i;!;
+}
+
+.modal-title {
+    position: absolute;
+    top: 2em;
+}
+
+/* Contenedor principal del dropdown */
+.season-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 1em;
+    width: 100%;
+    max-width: 300px; /* Ajusta el ancho máximo */
+    z-index: 1000;
+}
+
+/* Contenedor del dropdown con la clase activa */
+.season-dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Estilos del botón del dropdown */
+.dropdown-button {
+    background-color: #282c34;
+    color: white;
+    border: 0.1em solid rgb(77, 77, 77);
+    padding: 0.8em 1.2em;
+    font-size: 1em;
+    border-radius: 0.2em;
+    cursor: pointer;
+    width: 63%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 21.4em;
+    top: 9em;
+    opacity: 0;
+}
+
+.dropdown-button::
+    after {
+    content: "▼"; /* Flecha indicando que se despliega */
+    font-size: 0.8em;
+}
+
+.dropdown.active .dropdown-button::
+    after {
+    transform: rotate(180deg); /* Rota la flecha hacia arriba */
+}
+
+/* Estilos del contenido desplegable */
+.dropdown-content {
+     /* Asegura que se despliegue justo debajo del botón */
+     
+      /* Asegura que esté por encima de otros elementos */
+    position: absolute;
+    top: 12em;
+    left: 18.91em;
+    background-color: #282c34;
+    border: 0.1em solid rgb(77, 77, 77);
+    width: 76%;
+    z-index: 100;
+    overflow: hidden;
+    visibility: initial;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    height: 7em;
+    opacity: 0;
+}
+
+.dropdown:
+    hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estilos de los botones dentro del dropdown */
+.dropdown-content
+    button {
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 0.8em 1em;
+    position: absolute;
+    left: 0em;
+    text-align: left;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    color: #fff;
+    align-content: center;
+    align-items: center;
+    display: grid;
+}
+    button.texto {
+    padding-left: 1em !important;!i;!;
+}
+
+.episode-count {
+    !i;!;
+    padding-left: 2em;
+}
+
+#texto1 {
+    position: absolute;
+    top: 1.15em;
+    height: 2.2em;
+    padding-left: 2em;
+}
+
+#texto2 {
+    position: absolute;
+    top: 3.4em;
+    height: 2.2em;
+    padding-left: 2em;
+}
+
+.texto {
+}
+    strong.epnumber1 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 1em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber2 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 4.3em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber3 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 7.6em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber4 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 10.9em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber5 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 14.2em;
+    font-size: 2em;
+    font-weight: 400;
+    z-index: 1000;
+}
+    strong.epnumber6 {
+    color: #bcbcbc !important;
+    position: absolute;
+    left: 1.1em;
+    top: 17.5em;
+    font-size: 2em;
+    font-weight: 400;
+}
+    strong.epnumber1:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber2:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber3:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber4:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber5:hover {
+position: absolute;
+    left: 0.1em;
+}
+    strong.epnumber6:hover {
+position: absolute;
+    left: 0.1em;
+}
+
+/* Estilo para la lista de episodios */
+    ul#episode-list li:hover {
+    background: #bcbcbc80;
+    cursor: pointer;
+    position: relative; /* Necesario para posicionar el icono correctamente */
+}
+    span:hover {}
+
+#episode-list
+    li::before {
+    content: ''; /* Contenido vacío para el círculo */
+    width: 0.7em; /* Ancho del círculo */
+    height: 0.7em; /* Altura del círculo */
+    font-size: 3.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Círculo */
+    border: 0.02em solid white; /* Borde blanco para el círculo */
+    position: absolute;
+    left: 13%; /* Alineación a la izquierda */
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centrado exacto del círculo */
+    background: rgba(30, 30, 20, 0.5);
+    opacity: 0; /* El círculo está oculto por defecto */
+}
+
+#episode-list
+    li:hover::before {
+    opacity: 1; /* El círculo aparece al hacer hover */
+}
+
+#episode-list
+    li::after {
+    content: '▶'; /* El ícono de la flecha */
+    font-size: 3.3em; /* Tamaño del ícono */
+    color: white; /* Color del ícono */
+    position: absolute;
+    left: 13.34%; /* Alineación de la flecha */
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centrado exacto de la flecha */
+    opacity: 0; /* La flecha está oculta por defecto */
+    pointer-events: none; /* Para que no interfiera con otros elementos interactivos */
+}
+
+#episode-list
+    li:hover::after {
+    opacity: 1; /* La flecha aparece al hacer hover */
+}
+
+/* Hover sobre los botones */
+    button.text:hover {
+    background-color: #f0f0f0;
+}
+
+/* Información de los episodios */
+.episode-count {
+    display: block;
+    padding: 0.5em 0em;
+    font-size: 0.9em;
+    color: #ffffff;
+    z-index: 1000;
+    position: absolute;
+    top: 1.4em;
+    left: 10em;
+    font-weight: 300;
+}
+
+#episode-count1 {
+    top: 0.1em;
+    left: 8.8em;!i;!;
+}
+
+#episode-count2 {
+    top: 0.07em;
+    left: 8.8em;
+}
+
+#episode-list
+    li {
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    padding: 0.5em 2em; /* 0.5em arriba/abajo, 2em izquierda/derecha */
+    border-bottom: 1px solid #ccc;
+}
+
+#episode-list
+    li:focus {
+    color: #fff;
+}
+
+.episode-info
+    p:focus {
+    color: #fff;
+}
+
+#episode-list
+    li:visited {
+    color: #fff;
+}
+
+#episode-list
+    li p {
+    margin-right: -1.3em;
+    color: #fff;
+}
+
+.episode-info {
+    color: #fff;
+}
+    a.eplink:hover {color: #fff;}
+    a.eplink:visited {
+    color: #fff;
+}
+    a.eplink {
+    text-decoration: none;
+}
+
+#episode-list
+    li span {
+    position: absolute;
+    left: 46.5em;
+}
+
+#episode-list
+    li:hover span {
+    opacity: 0;
+}
+
+#episode-list
+    li img {
+    width: 170px; /* Ancho */
+    height: 75px; /* 16:9 (100px de ancho → 56px de alto) */
+    border-radius: 0.4em; /* Bordes redondeados */
+    object-fit: cover;
+    margin-right: 1em;
+    margin-top: 0.43em;
+    margin-bottom: 0.43em;
+}
+
+.episode-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.episode-title {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.episode-description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.modal-duration {
+    position: absolute;
+    top: 32.6em;
+    font-size: 0.875em;
+    left: 9.1em;
+    color: #bcbcbc !important;!i;!;
+}
+
+.modal
+    strong p{
+    color: #777;
+    font-weight: normal;
+}
+
+.modal .curiosidad {
+    color: #fff;
+    font-weight: 700;
+}
+
+.modal-fullcreatedBy,
+.modal-cast,
+.modal-script,
+.modal-genres,
+.modal-titleType {
+    position: absolute;
+    padding-left: 32em;
+    text-align: left;
+    padding-right: 2em;
+}
+
+.modal-fullcreatedBy {
+    top: 47em; }
+.modal-cast {
+    top: 32.6em;
+    font-size: 0.875em;
+    padding-left: 36.6em;
+    padding-right: 4em;}
+
+.createdBy {
+    position: absolute;
+    top: 90em;
+    text-align: justify;
+    padding-left: 2em;
+}
+
+
+
+.fcprefix {
+    color: #fff;
+}
+    span.fcprefix {color: #bcbcbc;}
+.modal-script {
+    top: 2em;
+    left: -30.67em;}
+.modal-genres {
+    top: 35.5em;
+    font-size: 0.875em;
+    padding-left: 36.6em;
+    padding-right: 4em;}
+.modal-titleType {
+    top: 38.4em;
+    font-size: 0.875em;
+    padding-left: 36.6em;
+    padding-right: 4em;}
+
+.modal-ageRating,
+.modal-description,
+.modal-curiosity {
+    position: absolute;
+    padding-left: 2em;
+    padding-right: 24em;
+    text-align: justify;
+}
+
+.modal-ageRating {
+    top: 33.3em;
+    left: 1.5em;
+    z-index: 1000;
+    font-size: 0.91em;}
+
+.age {
+    border: 1px solid hsla(0, 0%, 100%, .4);
+    padding: 0 .4em;
+}
+.modal-description {
+    top: 38.5em;
+    font-size: 0.875em;
+    left: 1.8em;
+    padding-right: 29em;}
+.modal-curiosity {
+    top: 27.4em;
+    z-index: 1000;
+    font-size: 1.17em;
+    left: 0.8em;}
+
+.modal-curiosity
+    p {
+    font-size: 12p;
+}
+
+/* Información adicional */
+.modal-info >
+    p {
+    margin: 0.3125em 0;
+    color: #fff;
+    z-index: 1000;
+}
+
+.modal-cast
+    strong, .modal-genres strong, .modal-titleType strong {
+    color: #bcbcbc;
+    font-weight: 400;
+}
+    span.fcbprefix {
+    color: #bcbcbc;
+}
+    span.fsprefix {
+    color: #bcbcbc;
+}
+    span.fgprefix {
+    color: #bcbcbc;
+}
+    span.fttprefix {
+    color: #bcbcbc;
+}
+    span.faprefix {
+    color: #bcbcbc;
+}
+
+.fullcreatedBy.fc {}
+    button.texto:hover {background: #424242;
+    border-radius: 0em;}
+    ul#episode-list {
+    padding-left: 2em;
+    padding-right: 3em;
+    position: absolute;
+    top: 41em;
+}
+    ul#episode-list {
+    
+    
+    !em;!e;!;
+}
+
+.modal
+    strong.eplist {
+    color: #fff;
+    font-weight: 700;
+    position: absolute;
+    top: 25.6em;
+    left: 2.2em;
+    font-size: 1.5em;
+    
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+
+.overlay
+    h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+    h1#modal-title {
+    font-size: 2em;
+    font-weight: bold;
+    position: relative;
+    top: 31em;
+    text-decoration: underline 0.05em;
+    text-underline-offset: 0.4em; /* Ajusta la distancia aquí */
+    z-index: 1000;
+    left: -0.3em;
+}
+    strong.titulo {
+    font-weight: 500;
+}
+    span.about {
+    font-weight: 400;
+}
+
+.overlay
+    p {
+    font-size: 1.2em;
+}
+
+/* Botones de acción */
+.modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+    margin-top: 0.625em;
+}
+
+.watch-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.625em 1.25em;
+    font-size: 1.3em;
+    border-radius: 0.3125em;
+    text-decoration: none;
+    font-weight: 700;
+    position: absolute;
+    top: 17.4em;
+    left: 2em;
+    z-index: 1000;
+}
+
+.watch-button:
+    hover {
+    background-color: #fff;
+    color: #007bff;
+}
+
+#watch-button:
+    visited {
+    all: unset;
+    text-decoration: none;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Episodios */
+.episode {
+    display: flex;
+    align-items: center;
+    margin-top: 0.9375em;
+}
+
+.episode
+    img {
+    width: 9.375em;
+    border-radius: 0.3125em;
+    margin-right: 0.625em;
+}
+
+.episode
+    h3 {
+    font-size: 1.2em;
+}
+
+.episode
+    p {
+    font-size: 1em;
+    color: #bbb;
+}
+
+/* Media Queries */
+
+/* Pantallas pequeñas (móviles) */
+    @media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+    height: auto;
+    padding: 1em;
+    }
+
+    .modal-header img {
+    width: 100%;
+    height: auto;
+    }
+
+    .overlay h1 {
+    font-size: 1.5em;
+    }
+
+    .overlay p {
+    font-size: 1em;
+    }
+
+    .watch-button {
+    font-size: 1em;
+    padding: 0.5em 1em;
+    }
+
+    .episode img {
+    width: 6em;
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+    @media (max-width: 1024px) {
+    .modal-content {
+        width: 70%;
+    padding: 1.25em;
+    }
+
+    .modal-header img {
+    width: 70%;
+    height: auto;
+    }
+
+    .overlay h1 {
+    font-size: 1.8em;
+    }
+
+    .overlay p {
+    font-size: 1.1em;
+    }
+
+    .watch-button {
+    font-size: 1.1em;
+    padding: 0.75em 1.5em;
+    }
+}
+
+/* Pantallas grandes (escritorios) */
+    @media (min-width: 1025px) {
+    .modal-content {
+        width: 46%;
+    }
+
+    .modal-header img {
+    width: 54.7em;
+    border-top-left-radius: 11.2px;
+    border-top-right-radius: 11.2px;
+    }
+};
 }
 
 .episode-info {
@@ -500,8 +3843,9 @@ a.eplink {
 
 .modal-duration {
     position: absolute;
-    top: 28.3em;
-    left: 8em;
+    top: 32.6em;
+    font-size: 0.875em;
+    left: 9.1em;
     color: #bcbcbc !important;!i;!;
 }
 
@@ -527,7 +3871,7 @@ a.eplink {
 }
 
 .modal-fullcreatedBy { top: 47em; }
-.modal-cast {top: 28.3em;}
+.modal-cast {top: 32.6em;font-size: 0.875em;padding-left: 36.6em;padding-right: 4em;}
 
 .createdBy {
     position: absolute;
@@ -544,8 +3888,8 @@ a.eplink {
 
 span.fcprefix {color: #bcbcbc;}
 .modal-script {top: 2em;left: -30.67em;}
-.modal-genres {top: 31em;}
-.modal-titleType {top: 34em;}
+.modal-genres {top: 35.5em;font-size: 0.875em;padding-left: 36.6em;padding-right: 4em;}
+.modal-titleType {top: 38.4em;font-size: 0.875em;padding-left: 36.6em;padding-right: 4em;}
 
 .modal-ageRating,
 .modal-description,
@@ -562,7 +3906,7 @@ span.fcprefix {color: #bcbcbc;}
     border: 1px solid hsla(0, 0%, 100%, .4);
     padding: 0 .4em;
 }
-.modal-description {top: 34em;}
+.modal-description {top: 38.5em;font-size: 0.875em;left: 1.8em;padding-right: 29em;}
 .modal-curiosity {top: 27.4em;z-index: 1000;font-size: 1.17em;left: 0.8em;}
 
 .modal-curiosity p {
