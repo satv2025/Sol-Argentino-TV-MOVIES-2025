@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de - Sol Argentino TV MOVIES</title>
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="slidebar.css">
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../slidebar.css">
     <link rel="icon" href="SolArgentinoTVMOVIES.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <nav>
-          <a class="logo" href="index" style="color: #007BFF; text-decoration: none;" onmouseover="this.style.color='#007BFF';" onmouseout="this.style.color='#007BFF';">SATVMOVIES</a>
-          <ul>
-            <li><a href="index">Inicio</a></li>
-            <li><a href="proximamente">Próximamente</a></li>
-            <li><a href="acercade"class="acerca-de active">Acerca De</a></li>
-          </ul>
-          <form action="#" method="get" class="search-form">
-            <input type="text" id="search" name="search" placeholder="Buscar película o serie..." />
-            <button type="submit">Buscar</button>
-          </form>
-        </nav>
-      
-        <div id="user-nick">Usuario No Identificado</div>
-        <button id="logout-btn" style="display: none;">Cerrar sesión</button>
-        <button id="login-btn" style="display: none;">Iniciar sesión</button> <!-- Botón de inicio de sesión -->
-      </header>
+  <header>
+    <div class="content" id="scroll-container-header">
+  <nav>
+      <a class="logo" href="index" style="color: #007BFF; text-decoration: none;" onmouseover="this.style.color='#007BFF';" onmouseout="this.style.color='#007BFF';">SATVMOVIES</a>
+    <ul>
+      <li><a href="index" class="inicio active">Inicio</a></li>
+      <li><a href="proximamente">Próximamente</a></li>
+      <li><a href="acercade">Acerca De</a></li>
+    </ul>
+    <form action="#" method="get" class="search-form">
+      <input type="text" id="search" name="search" placeholder="Buscar película o serie...">
+      <button type="submit">Buscar</button>
+    </form>
+  </nav>
+</div>
+</header>
+
     <main>
         <div class="acercadecont">
         <h1>Acerca de Sol Argentino TV MOVIES</h1>
