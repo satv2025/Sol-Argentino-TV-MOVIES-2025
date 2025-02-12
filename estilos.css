@@ -747,21 +747,6 @@ footer p {
     color: #007bff;
     top: -0.7em;
   }
-  
-  #peliculas-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em; /* Espacio entre las películas */
-    justify-content: center; /* Centra las películas filtradas */
-    align-items: flex-start;
-}
-
-.pelicula {
-    display: flex; /* Se mantiene visible hasta que se oculte en JS */
-    flex-direction: column;
-    justify-content: space-between;
-    transition: all 0.3s ease-in-out;
-}
 
   /* Media Queries para pantallas pequeñas (ej. móviles) */
   @media (max-width: 600px) {

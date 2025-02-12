@@ -24,28 +24,22 @@ function verPelicula(url) {
     window.location.href = url;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search'); // Campo de búsqueda
-    const peliculasContainer = document.getElementById('peliculas-container'); // Contenedor de películas
-    const peliculas = Array.from(document.querySelectorAll('.pelicula')); // Todas las películas en la página
-
-    searchInput.addEventListener('input', function () {
-        const query = searchInput.value.toLowerCase().trim();
-        let hayResultados = false; // Para verificar si hay coincidencias
-
+    const peliculas = document.querySelectorAll('.pelicula'); // Todas las películas en la página
+    
+    // Función para filtrar las películas
+    searchInput.addEventListener('input', function() {
+        const query = searchInput.value.toLowerCase(); // Convierte la búsqueda a minúsculas
         peliculas.forEach(pelicula => {
             const title = pelicula.querySelector('h3').textContent.toLowerCase();
             const description = pelicula.querySelector('p').textContent.toLowerCase();
-            
+            // Si el título o la descripción coinciden con la búsqueda, muestra la película
             if (title.includes(query) || description.includes(query)) {
-                pelicula.style.display = 'flex'; // Muestra la película
-                hayResultados = true;
+                pelicula.style.display = 'block'; // Muestra la película
             } else {
                 pelicula.style.display = 'none'; // Oculta la película
             }
         });
-
-        // Muestra u oculta el contenedor según haya resultados
-        peliculasContainer.style.display = hayResultados ? 'flex' : 'none';
     });
 });
