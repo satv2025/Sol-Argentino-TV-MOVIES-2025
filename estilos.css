@@ -7,6 +7,24 @@
     box-sizing: border-box;
 }
 
+.sevapronto {
+    position: absolute;
+    margin-top: 0em;
+    margin-left: 0.3em;
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 3px 2px 1px #000000;
+}
+
+svg {
+    width: 100%;
+    max-width: 420px; /* Ajusta según sea necesario */
+    height: auto;
+    color: #ff0000;
+}
+
+
 body, html {
     font-family: 'Netflix Sans', sans-serif;
     background-image: url('https://movies.solargentinotv.com.ar/—Pngtree—black background texture advertising_1911402.png');

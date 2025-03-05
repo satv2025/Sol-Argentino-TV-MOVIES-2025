@@ -23,6 +23,7 @@ const peliculas = {
         year: "2008-09",
         duration: "1h 20m (por película)",
         description: "Los productores detrás del famoso programa 100% Lucha decidieron hacerle películas.",
+        curiosity: "<strong class='curiosidad'>Último día para ver esto: 10 de marzo</strong>",
         cast: "<strong>Elenco:</strong> Maria Fernanda Neil, Carlos Kaspar, Daniel Garcilazo, <a href='#about'>más</a>",
         title: "<span class='about'>Acerca de</span> <strong class='titulo'> 100%Lucha - Las Películas</strong>",
         genres: "<strong>Géneros:</strong> Humor, lucha libre, luchas clandestinas",
@@ -54,7 +55,7 @@ const peliculas = {
         fullcast: "<div class='fullcast' style='position: absolute; top: 86.8em; text-align: justify; padding-left: 2em; padding-right: 3em;'><span class='fcprefix' style='color: #bcbcbc;'>Elenco:</span> <span class='fccontent'>Emma Myers Zain Iqbal, Asha Banks, Raiko Gohara, Jude Morgan-Collie, Yali Topol Margalith, Yasmin Al-Khudhairi, Henry Ashton, Carla Woodcock, Mathew Baynton, Gary Beadle, Anna Maxwell Martin</span></div>", 
         fullscript: "<div class='fullscript' style='position: absolute; top: 89.7em; padding-left: 2em; padding-right: 2em;'><span class='fsprefix' style='color: #bcbcbc;'>Guión:</span> <span class='fscontent'>Poppy Cogan, Ruby Thomas, Zia Ahmed, Ajoke Ibironke</span></div>", 
         fullgenres: "<div class='fullgenres' style='position: absolute; top: 91.5em; padding-left: 2em; text-align: justify; padding-right: 3em;'><span class='fgprefix' style='color: #bcbcbc;'>Géneros:</span><span class='fgcontent'> Series dramáticas, De Gran Bretaña, Series basadas en libros, Series de adolescentes, Series de misterio</span></div>", 
-        fulltitletype: "<div class='fulltitletype' style='position: absolute; top: 94.5em; text-align: justify; padding-left: 2em; padding-right: 3em;'><span class='fttprefix' style='color: #bcbcbc;'>Este titulo es:</span> <span class='fttcontent'> Íntimo, Sombrío, De suspenso</span></div>", 
+        fulltitletype: "<div class='fulltitletype' style='position: absolute; top: 94.5em; text-align: justify; padding-left: 2em; padding-right: 3em;'><span class='fttprefix' style='color: #bcbcbc;'>Este titulo es:</span> <span class='fttcontent'>  Íntimo, Sombrío, De suspenso</span></div>", 
         fullage: "<div class='fullage' style='position: absolute; top: 96.3em; text-align: justify; padding-right: 3em; padding-left: 2em;'><span class='faprefix' style='color: #bcbcbc;'>Clasificación por edad: </span> <span class='facontent'><span class='age'>16+</span> lenguaje inapropiado, drogas, violencia sexual</span> <span class='facontent2'>| Apta para mayores de 16 años</span></div>",  
         seasons: `
             <div class="season-dropdown">
