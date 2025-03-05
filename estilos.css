@@ -39,6 +39,8 @@ body, html {
     flex-direction: column;
 }
 
+.prontodis {margin-left: 3em;margin-top: 1.4em;position: absolute;color: #007bff;}
+
 main {
     flex-grow: 1; /* Hace que el contenedor principal ocupe el espacio restante */
     display: flex;
