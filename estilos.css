@@ -262,8 +262,6 @@ main {
     transition: transform 0.3s ease-in-out;
 }
 
-.gladiadorimg {width: 20em;}
-
 /* Aseguramos que el contenedor de las películas tenga una altura fija */
 .pelicula {
     width: 100%;
@@ -271,11 +269,11 @@ main {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 1.25em; /* 20px = 1.25em */
-    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.3); /* Sombra negra notable en los items */
+     /* Sombra negra notable en los items */
     display: grid;
     flex-direction: column;
     justify-content: space-between;
-    height: 380px; /* Asegura que todas las películas tengan la misma altura */
+     /* Asegura que todas las películas tengan la misma altura */
 }
 
 .cir {
@@ -330,11 +328,6 @@ footer p {
     font-size: 0.875em; /* 14px = 0.875em */
     color: #fff;
 }
-
-.pelicula:hover {
-    box-shadow: 0 0.3em 1.5em rgba(0, 0, 0, 0.4);
-}
-
 
 /* Estilos básicos del botón */
 .avisame-button, .moreinfobutton {
