@@ -31,7 +31,7 @@ svg {
     width: 100%;
     max-width: 420px; /* Ajusta según sea necesario */
     height: auto;
-    color: #ff0000;
+    color: #fff;
 }
 
 
@@ -164,11 +164,13 @@ nav :hover {
     width: 250px; /* Ancho fijo para el input */
     font-family: 'Netflix Sans'; /* Tipografía */
     padding: 10px;
+    padding-left: 0.9em;
+    padding-top: 9px;
     font-size: 16px;
     border: 1px solid #fff; /* Borde azul */
     border-radius: 5px 0 0 5px; /* Bordes redondeados */
     outline: none;
-    color: #ccc;
+    color: #fff;
     background: #181818;
 }
 
@@ -182,7 +184,7 @@ nav :hover {
 
 .search-form button {
     font-family: 'FONTAWESOME';
-    padding: 10px 13px;
+    padding: 10px 10px;
     font-size: 16px;
     background-color: #181818;/* Fondo azul */
     color: #fff;
