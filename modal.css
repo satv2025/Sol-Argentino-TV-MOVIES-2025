@@ -3960,7 +3960,10 @@ span.faprefix {
 
 .fullcreatedBy.fc {}
 
-button.texto:hover {background: #424242;border-radius: 0em;}
+button.texto:hover {
+    background: #424242;
+    border-radius: 0em;
+}
 
 ul#episode-list {
     padding-left: 2em;
