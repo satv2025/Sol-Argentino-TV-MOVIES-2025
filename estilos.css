@@ -152,70 +152,66 @@ nav :hover {
 /* Estilos para la barra de búsqueda */
 .search-form {
     display: flex;
-    justify-content: right; /* Alinea la barra de búsqueda a la derecha */
-    margin-top: 0.9em; /* Espaciado superior */
-    position: absolute; /* Cambiar a absolute */
+    justify-content: right;
+    position: absolute;
     top: -0.1em;
-    right: 2em; /* Añadir un margen para que no se pegue al borde derecho */
-    z-index: 10; /* Asegura que esté por encima de otros elementos */
+    right: 2em;
+    margin-top: 0.9em;
+    z-index: 10;
 }
 
+/* Ocultar inicialmente el campo de búsqueda */
 .search-form input[type="text"] {
-    width: 250px; /* Ancho fijo para el input */
-    font-family: 'Netflix Sans'; /* Tipografía */
-    padding: 10px;
-    padding-left: 0.9em;
-    padding-top: 9px;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    font-family: 'Netflix Sans';
+    padding: 10px 0.9em 9px;
     font-size: 16px;
-    border: 1px solid #fff; /* Borde azul */
-    border-radius: 5px 0 0 5px; /* Bordes redondeados */
+    border: 1px solid #fff;
+    border-radius: 5px 0 0 5px;
     outline: none;
     color: #fff;
     background: #181818;
-}
-
-.search-form input[type="text"]:focus {
-    border-color: #fff; /* Cambia el borde a azul cuando se enfoca */
-}
-
-.search-form input[type="text"]::placeholder {
-    color: #fff; /* Color del texto placeholder */
-}
-
-.search-form button {
-    font-family: 'FONTAWESOME';
-    padding: 10px 10px;
-    font-size: 16px;
-    background-color: #181818;/* Fondo azul */
-    color: #fff;
-    border: 1px solid #ffff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    z-index: 10; /* Asegura que esté por encima de otros elementos */
-}
-
-.search-form button:hover {
-    background-color: #444; /* Fondo más oscuro en hover */
-}
-
-.search-form button:focus {
-    outline: none; /* Elimina el borde del botón al hacer clic */
-}
-
-.search-form input[type="text"] {
-    width: 0; /* Inicialmente está oculto */
-    opacity: 0;
-    visibility: hidden;
-    transition: width 0.5s ease, opacity 0.5s ease, visibility 0s ease 0.5s; /* Deslizar y aparecer */
+    transition: width 0.5s ease, opacity 0.5s ease, visibility 0s ease 0.5s;
 }
 
 /* Cuando se activa, el campo de búsqueda se despliega */
 .search-form.active input[type="text"] {
-    width: 250px; /* El tamaño al que se debe expandir */
+    width: 250px;
     opacity: 1;
     visibility: visible;
     transition: width 0.5s ease, opacity 0.5s ease;
     margin-right: -0.04em;
+}
+
+/* Estilo para el placeholder */
+.search-form input[type="text"]::placeholder {
+    color: #fff;
+}
+
+/* Botón de búsqueda */
+.search-form button {
+    font-family: 'FONTAWESOME';
+    padding: 10px;
+    font-size: 16px;
+    background-color: #181818;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+    transition: border-radius 0.3s ease;
+}
+
+/* Hover del botón */
+.search-form button:hover {
+    background-color: #444;
+}
+
+/* Cuando se activa, el botón cambia su forma */
+.search-form.active button {
+    border-radius: 0 5px 5px 0;
 }
 
 main {
