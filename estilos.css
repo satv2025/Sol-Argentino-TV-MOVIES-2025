@@ -135,7 +135,7 @@ nav :hover {
     font-weight: 700;
     font-size: 2em;
     left: 0.78em;
-    top: -1.6em;
+    top: -1.7em;
      /* Esto ajusta el hover al tamaño del texto */
     background: #00000000;
     width: 7em;
@@ -165,39 +165,38 @@ nav :hover {
     font-family: 'Netflix Sans'; /* Tipografía */
     padding: 10px;
     font-size: 16px;
-    border: 2px solid #007BFF; /* Borde azul */
+    border: 1px solid #fff; /* Borde azul */
     border-radius: 5px 0 0 5px; /* Bordes redondeados */
     outline: none;
-    font-weight: 700; /* Negrita */
-    color: #007BFF;
+    color: #ccc;
+    background: #181818;
 }
 
 .search-form input[type="text"]:focus {
-    border-color: #007BFF; /* Cambia el borde a azul cuando se enfoca */
+    border-color: #fff; /* Cambia el borde a azul cuando se enfoca */
 }
 
 .search-form input[type="text"]::placeholder {
-    color: #007BFF; /* Color del texto placeholder */
+    color: #fff; /* Color del texto placeholder */
 }
 
 .search-form button {
-    font-family: 'Netflix Sans';
-    padding: 10px 15px;
+    font-family: 'FONTAWESOME';
+    padding: 10px 13px;
     font-size: 16px;
-    background-color: #007BFF; /* Fondo azul */
-    color: white;
+    background-color: #181818;/* Fondo azul */
+    color: #fff;
     border-left: #fff;
-    border-top: 2px solid #007BFF;
-    border-right: 2px solid #007BFF;
-    border-bottom: 2px solid #007BFF;
+    border-top: 1px solid #ffff;
+    border-right: 1px solid #ffff;
+    border-bottom: 1px solid #ffff;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
-    font-weight: 700;
     z-index: 10; /* Asegura que esté por encima de otros elementos */
 }
 
 .search-form button:hover {
-    background-color: #007bff; /* Fondo más oscuro en hover */
+    background-color: #444; /* Fondo más oscuro en hover */
 }
 
 .search-form button:focus {
