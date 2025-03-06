@@ -49,7 +49,7 @@ a#watch-button, a#watch-button:visited, a#watch-button:hover, a#watch-button:foc
 
 /* Contenido del modal */
 .modal-content {
-    background-color: #183347;
+    background-color: #181818;
     color: white;
     margin: 5% auto;
     padding: 1.25em;
@@ -68,7 +68,7 @@ a#watch-button, a#watch-button:visited, a#watch-button:hover, a#watch-button:foc
     top: -0.1em;
     left: 51em;
     z-index: 1000;
-    background: #1833478c;
+    background: #1818188c;
     border-radius: 50%;
     padding: 0.3em;
     width: 2em;
@@ -93,7 +93,7 @@ a#watch-button, a#watch-button:visited, a#watch-button:hover, a#watch-button:foc
     left: -1.2em;
     width: 104.7%;
     height: 100%;
-    background: linear-gradient(0deg, #183347, transparent 50%);
+    background: linear-gradient(0deg, #181818, transparent 50%);
     z-index: 1;
 }
 
@@ -500,7 +500,7 @@ button.text:hover {
 
 /* Contenido del modal */
 .modal-content {
-    background-color: #183347;
+    background-color: #181818;
     color: white;
     margin: 5% auto;
     padding: 1.25em;
@@ -520,7 +520,7 @@ button.text:hover {
     top: -0.1em;
     left: 51em;
     z-index: 1000;
-    background: #1833478c;
+    background: #1818188c;
     border-radius: 50%;
     padding: 0.3em;
     width: 2em;
@@ -547,7 +547,7 @@ button.text:hover {
     left: -1.2em;
     width: 104.7%;
     height: 100%;
-    background: linear-gradient(0deg, #183347, transparent 50%);
+    background: linear-gradient(0deg, #181818, transparent 50%);
     z-index: 1;
 }
 
@@ -1335,7 +1335,7 @@ position: absolute;
 
 /* Contenido del modal */
 .modal-content {
-    background-color: #183347;
+    background-color: #181818;
     color: white;
     margin: 5% auto;
     padding: 1.25em;
@@ -1355,7 +1355,7 @@ position: absolute;
     top: -0.1em;
     left: 51em;
     z-index: 1000;
-    background: #1833478c;
+    background: #1818188c;
     border-radius: 50%;
     padding: 0.3em;
     width: 2em;
@@ -1382,7 +1382,7 @@ position: absolute;
     left: -1.2em;
     width: 104.7%;
     height: 100%;
-    background: linear-gradient(0deg, #183347, transparent 50%);
+    background: linear-gradient(0deg, #181818, transparent 50%);
     z-index: 1;
 }
 
@@ -2170,7 +2170,7 @@ position: absolute;
 
 /* Contenido del modal */
 .modal-content {
-    background-color: #183347;
+    background-color: #181818;
     color: white;
     margin: 5% auto;
     padding: 1.25em;
@@ -2190,7 +2190,7 @@ position: absolute;
     top: -0.1em;
     left: 51em;
     z-index: 1000;
-    background: #1833478c;
+    background: #1818188c;
     border-radius: 50%;
     padding: 0.3em;
     width: 2em;
@@ -2217,7 +2217,7 @@ position: absolute;
     left: -1.2em;
     width: 104.7%;
     height: 100%;
-    background: linear-gradient(0deg, #183347, transparent 50%);
+    background: linear-gradient(0deg, #181818, transparent 50%);
     z-index: 1;
 }
 
@@ -3005,7 +3005,7 @@ position: absolute;
 
 /* Contenido del modal */
 .modal-content {
-    background-color: #183347;
+    background-color: #181818;
     color: white;
     margin: 5% auto;
     padding: 1.25em;
@@ -3025,7 +3025,7 @@ position: absolute;
     top: -0.1em;
     left: 51em;
     z-index: 1000;
-    background: #1833478c;
+    background: #1818188c;
     border-radius: 50%;
     padding: 0.3em;
     width: 2em;
@@ -3052,7 +3052,7 @@ position: absolute;
     left: -1.2em;
     width: 104.7%;
     height: 100%;
-    background: linear-gradient(0deg, #183347, transparent 50%);
+    background: linear-gradient(0deg, #181818, transparent 50%);
     z-index: 1;
 }
 
@@ -4016,8 +4016,8 @@ span.about {
 }
 
 .watch-button {
-    background-color: #181818;
-    color: white;
+    background-color: #fff;
+    color: #000;
     padding: 0.625em 1.25em;
     font-size: 1.3em;
     border-radius: 0.3125em;
