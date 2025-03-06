@@ -232,7 +232,7 @@ main {
 }
 
 .acercadecont {
-    background-color: #183347; /* Fondo blanco para los items */
+    background-color: #181818; /* Fondo blanco para los items */
     border-radius: 0.3em; /* Bordes redondeados */
     width: 100%;
     max-width: 60em; /* 240px = 15em */
@@ -265,28 +265,52 @@ main {
 }
 
 .pelicula img {
+    width: 100%;
     height: 200px; /* Establece una altura fija para todas las imágenes */
-    border-top-right-radius: 0.3em;
-    border-top-left-radius: 0.3em;
-    border-bottom-right-radius: 0.3em;
-    border-bottom-left-radius: 0.3em;
-    margin-bottom: 0.625em; /* 10px = 0.625em */
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+    border-radius: 0.3em 0.3em 0 0; /* Bordes redondeados solo en la parte superior */
+    margin-bottom: 0.625em; /* 10px = 0.625em */
 }
 
 /* Aseguramos que el contenedor de las películas tenga una altura fija */
 .pelicula {
+    background-color: #181818; /* Fondo blanco para los items */
+    border-radius: 0.3em; /* Bordes redondeados */
     width: 100%;
     max-width: 15em; /* 240px = 15em */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 1.25em; /* 20px = 1.25em */
-     /* Sombra negra notable en los items */
-    display: grid;
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.3); /* Sombra negra notable en los items */
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-     /* Asegura que todas las películas tengan la misma altura */
+    height: 380px; /* Asegura que todas las películas tengan la misma altura */
+}
+
+.pelicula h3 {
+    font-size: 1.25em; /* 20px = 1.25em */
+    margin-bottom: 0.625em; /* 10px = 0.625em */
+    text-align: center;
+    padding: 0.19em;
+    font-weight: 600; /* Para hacerlo un poco más destacado */
+    flex-grow: 0; /* No debe expandirse, su altura debe ser fija */
+}
+
+.pelicula p {
+    font-size: 0.875em; /* 14px = 0.875em */
+    color: #fff; /* Gris oscuro para el texto */
+    margin-bottom: 1.25em; /* 20px = 1.25em */
+    text-align: justify;
+    padding: 0.9em;
+    flex-grow: 1; /* Permite que la sinopsis ocupe el espacio restante */
+    overflow: hidden; /* Evita que el texto se desborde si es muy largo */
+}
+
+.pelicula:hover {
+    box-shadow: 0 0.3em 1.5em rgba(0, 0, 0, 0.4);
+    outline: 0.3em solid white; /* Borde blanco sin afectar el tamaño */
+     /* Ajuste para que siga el border-radius */
 }
 
 .cir {
@@ -321,10 +345,6 @@ main {
     padding: 0.9em;
     flex-grow: 1; /* Permite que la sinopsis ocupe el espacio restante */
     overflow: hidden; /* Evita que el texto se desborde si es muy largo */
-}
-
-.pelicula:hover {
-    transform: scale(1.1); /* Se agranda un 20% */
 }
 
 footer {
