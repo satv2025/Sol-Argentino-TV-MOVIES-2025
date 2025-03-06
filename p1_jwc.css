@@ -188,10 +188,7 @@ nav :hover {
     font-size: 16px;
     background-color: #181818;/* Fondo azul */
     color: #fff;
-    border-left: #fff;
-    border-top: 1px solid #ffff;
-    border-right: 1px solid #ffff;
-    border-bottom: 1px solid #ffff;
+    border: 1px solid #ffff;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     z-index: 10; /* Asegura que esté por encima de otros elementos */
@@ -204,7 +201,6 @@ nav :hover {
 .search-form button:focus {
     outline: none; /* Elimina el borde del botón al hacer clic */
 }
-
 
 .search-form input[type="text"] {
     width: 0; /* Inicialmente está oculto */
@@ -219,6 +215,7 @@ nav :hover {
     opacity: 1;
     visibility: visible;
     transition: width 0.5s ease, opacity 0.5s ease;
+    margin-right: -0.04em;
 }
 
 main {
