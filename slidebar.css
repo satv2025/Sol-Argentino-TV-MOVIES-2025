@@ -4,18 +4,18 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #181818; /* Fondo oscuro para la pista */
+  background: #444; /* Fondo oscuro para la pista */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #007bff; /* Color del pulgar de la barra */
+  background-color: #181818; /* Color del pulgar de la barra */
   border-radius: 0.5em; /* Bordes redondeados */
   border: 0.2em solid transparent; /* Bordes transparentes */
   background-clip: padding-box; /* Evita que el borde se mezcle con el color */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #007bff; /* Color al pasar el ratón */
+  background-color: #141414; /* Color al pasar el ratón */
 }
 
 /* Media query para pantallas más pequeñas */
@@ -46,18 +46,18 @@ scrollbar {
 }
 
 scrollbar-track {
-  background: #181818;
+  background: #444;
 }
 
 scrollbar-thumb {
-  background-color: #0078D4;
+  background-color: #181818;
   border-radius: 0.5em;
   border: 0.2em solid transparent;
   background-clip: padding-box;
 }
 
 scrollbar-thumb:hover {
-  background-color: #007bff;
+  background-color: #141414;
 }
 
 /* Internet Explorer y Edge Legacy */
@@ -66,16 +66,16 @@ scrollbar-thumb:hover {
 }
 
 ::-ms-scrollbar-track {
-  background: #181818;
+  background: #444;
 }
 
 ::-ms-scrollbar-thumb {
-  background-color: #0078D4;
+  background-color: #181818;
   border-radius: 0.5em;
   border: 0.2em solid transparent;
   background-clip: padding-box;
 }
 
 ::-ms-scrollbar-thumb:hover {
-  background-color: #007bff;
+  background-color: #141414;
 }
