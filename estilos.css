@@ -60,7 +60,7 @@ main {
 
 header {
     background-image: url('https://movies.solargentinotv.com.ar/—Pngtree—black background texture advertising_1911402.png');
-    background-size: cover; /* Asegura que la imagen cubra todo el header */
+    background-size: contain; /* Asegura que la imagen cubra todo el header */
     background-position: center; /* Centra la imagen */
     padding: 1.25em; /* Espaciado dentro del header */
     box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1); /* Sombra ligera */
@@ -315,7 +315,7 @@ main {
 
 footer {
     background-image: url('https://movies.solargentinotv.com.ar/—Pngtree—black background texture advertising_1911402.png');
-    background-size: cover; /* Asegura que la imagen cubra todo el footer */
+    background-size: contain; /* Asegura que la imagen cubra todo el footer */
     background-position: center; /* Centra la imagen */
     text-align: center;
     padding: 1.25em; /* 20px = 1.25em */
@@ -323,6 +323,7 @@ footer {
     position: relative;
     width: 100%;
     bottom: 0;
+    font-size: 1.1em;
 }
 
 footer p {
