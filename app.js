@@ -42,4 +42,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Aquí agregamos el evento para mostrar el campo de búsqueda con el deslizamiento
+    const searchForm = document.querySelector('.search-form');
+    const searchButton = searchForm.querySelector('button');
+
+    searchButton.addEventListener('click', function(e) {
+        e.preventDefault(); // Evita que el formulario se envíe
+        searchForm.classList.add('active'); // Agrega la clase para hacer el efecto de deslizamiento
+    });
 });

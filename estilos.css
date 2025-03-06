@@ -205,6 +205,20 @@ nav :hover {
     outline: none; /* Elimina el borde del botón al hacer clic */
 }
 
+.search-form input[type="text"] {
+    width: 0; /* Inicialmente está oculto */
+    opacity: 0;
+    visibility: hidden;
+    transition: width 0.5s ease, opacity 0.5s ease, visibility 0s ease 0.5s; /* Deslizar y aparecer */
+}
+
+/* Cuando se activa, el campo de búsqueda se despliega */
+.search-form.active input[type="text"] {
+    width: 250px; /* El tamaño al que se debe expandir */
+    opacity: 1;
+    visibility: visible;
+    transition: width 0.5s ease, opacity 0.5s ease;
+}
 
 main {
     text-align: center;
