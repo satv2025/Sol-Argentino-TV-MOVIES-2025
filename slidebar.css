@@ -1,6 +1,6 @@
-/* Estilo para el scrollbar en navegadores WebKit (Chrome, Brave, Safari, Opera, Opera GX, Edge) */
+84884ccO/* Estilo para el scrollbar en navegadores WebKit (Chrome, Brave, Safari, Opera, Opera GX, Edge) */
 ::-webkit-scrollbar {
-  width: 0.86em; /* Usamos 'em' en lugar de 'px' */
+  width: 1em; /* Usamos 'em' en lugar de 'px' */
 }
 
 ::-webkit-scrollbar-track {
