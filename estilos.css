@@ -254,14 +254,13 @@ main {
 
 /* Aseguramos que el contenedor de las películas tenga una altura fija */
 .pelicula {
-    border-radius: 0.3em; /* Bordes redondeados */
     width: 100%;
     max-width: 15em; /* 240px = 15em */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 1.25em; /* 20px = 1.25em */
     box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.3); /* Sombra negra notable en los items */
-    display: flex;
+    display: grid;
     flex-direction: column;
     justify-content: space-between;
     height: 380px; /* Asegura que todas las películas tengan la misma altura */
@@ -288,18 +287,6 @@ main {
 
 .pelicula:hover {
     transition: scale(0.5);
-}
-
-button {
-    background-color: #007BFF00;
-    color: #ffffff00;
-    border: none;
-    padding: 0.625em 1.25em; /* 10px 20px = 0.625em 1.25em */
-    font-weight: bold;
-    font-size: 1em; /* 16px = 1em */
-    border-radius: 0 0 0.3em 0.3em; /* 5px = 0.3125em */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 footer {
