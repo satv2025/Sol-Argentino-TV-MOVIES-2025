@@ -26,28 +26,3 @@ document.addEventListener('DOMContentLoaded', function() {
             pelicula.style.display = (title.includes(query) || description.includes(query)) ? 'block' : 'none';
         });
     });
-
-    // Función para abrir el modal
-    window.openModal = function(modalId) {
-        document.getElementById(modalId).style.display = "block";
-    }
-
-    // Función para cerrar el modal
-    window.closeModal = function(modalId) {
-        document.getElementById(modalId).style.display = "none";
-    }
-
-    // Cerrar el modal si se hace clic fuera de él
-    window.onclick = function(event) {
-        document.querySelectorAll('.modal').forEach(modal => {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        });
-    };
-
-    // Redireccionar a una película
-    window.verPelicula = function(url) {
-        window.location.href = url;
-    }
-});
