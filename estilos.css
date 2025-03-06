@@ -49,7 +49,7 @@ body, html {
     flex-direction: column;
 }
 
-.prontodis {margin-left: 3em;margin-top: 1.4em;position: absolute;color: #007bff;}
+.prontodis {margin-left: 3em;margin-top: 1.4em;position: absolute;color: #fff;}
 
 main {
     flex-grow: 1; /* Hace que el contenedor principal ocupe el espacio restante */
@@ -95,11 +95,11 @@ h4 {
     font-weight: normal;
 }
 nav a:active {
-    color: #fff;
+    color: #aaa;
 }
 
 header a.active {
-    color: #fff;
+    color: #aaa;
 }
 
 nav ul {
@@ -115,7 +115,7 @@ nav li {
 }
 
 nav a {
-    color: #007BFF; /* Color azul para los enlaces */
+    color: #fff; /* Color azul para los enlaces */
     text-decoration: none; /* Elimina el subrayado de los enlaces */
     font-weight: bold; /* Texto en negrita */
     font-size: 1.125em; /* Tamaño de fuente para los enlaces */
@@ -125,18 +125,29 @@ nav a {
     font-size: 1.4em;
 }
 
-nav a:hover {
-    color: #005a9e; /* Azul más oscuro en hover */
+nav :hover {
+    color: #aaa; /* Azul más oscuro en hover */
 }
 
 .logo {
-    position: absolute;
-    color: #007BFF;
+    position: relative;
+    color: #fff !important;
     font-weight: 700;
     font-size: 2em;
-    top: 0.4em;
     left: 0.78em;
+    top: -1.6em;
+     /* Esto ajusta el hover al tamaño del texto */
+    background: #00000000;
+    width: 7em;
+    border: 0;
 }
+
+.logo:hover {
+    color: #aaa !important;
+    cursor: pointer;
+}
+
+
 
 /* Estilos para la barra de búsqueda */
 .search-form {
