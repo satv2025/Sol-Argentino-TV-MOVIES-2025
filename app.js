@@ -43,12 +43,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Aquí agregamos el evento para mostrar el campo de búsqueda con el deslizamiento
-    const searchForm = document.querySelector('.search-form');
-    const searchButton = searchForm.querySelector('button');
-
-    searchButton.addEventListener('click', function(e) {
-        e.preventDefault(); // Evita que el formulario se envíe
-        searchForm.classList.add('active'); // Agrega la clase para hacer el efecto de deslizamiento
-    });
-});
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchForm = document.querySelector('.search-form');
+        const searchButton = searchForm.querySelector('button');
+        const searchInput = document.getElementById('search'); // Campo de búsqueda
+    
+        searchButton.addEventListener('click', function(e) {
+            e.preventDefault(); // Evita que el formulario se envíe
+            
+            // Alternar la clase 'active' en el formulario
+            searchForm.classList.toggle('active');
+    
+            // Si el campo de búsqueda está oculto, limpiamos su valor
+            if (!searchForm.classList.contains('active')) {
+                searchInput.value = "";
+            }
+        });
+    });    
