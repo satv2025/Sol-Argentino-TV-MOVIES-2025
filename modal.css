@@ -265,7 +265,7 @@ button.texto {
 strong.epnumber1 {
     color: #bcbcbc !important;
     position: absolute;
-    left: 1.1em;
+    left: 0.2em;
     top: 1em;
     font-size: 2em;
     font-weight: 400;
@@ -275,8 +275,8 @@ strong.epnumber1 {
 strong.epnumber2 {
     color: #bcbcbc !important;
     position: absolute;
-    left: 1.1em;
-    top: 4.3em;
+    left: 0.2em;
+    top: 1em;
     font-size: 2em;
     font-weight: 400;
     z-index: 1000;
@@ -285,8 +285,8 @@ strong.epnumber2 {
 strong.epnumber3 {
     color: #bcbcbc !important;
     position: absolute;
-    left: 1.1em;
-    top: 7.6em;
+    left: 0.2em;
+    top: 1em;
     font-size: 2em;
     font-weight: 400;
     z-index: 1000;
@@ -295,8 +295,8 @@ strong.epnumber3 {
 strong.epnumber4 {
     color: #bcbcbc !important;
     position: absolute;
-    left: 1.1em;
-    top: 10.9em;
+    left: 0.2em;
+    top: 1em;
     font-size: 2em;
     font-weight: 400;
     z-index: 1000;
@@ -305,18 +305,21 @@ strong.epnumber4 {
 strong.epnumber5 {
     color: #bcbcbc !important;
     position: absolute;
-    left: 1.1em;
-    top: 14.2em;
+    left: 0.2em;
+    top: 1.034em;
     font-size: 2em;
     font-weight: 400;
     z-index: 1000;
 }
 
+strong.epnumber5 {
+}
+
 strong.epnumber6 {
     color: #bcbcbc !important;
     position: absolute;
-    left: 1.1em;
-    top: 17.5em;
+    left: 0.2em;
+    top: 1.1em;
     font-size: 2em;
     font-weight: 400;
 }
@@ -351,14 +354,21 @@ position: absolute;
 left: 0.1em;
 }
 
-/* Estilo para la lista de episodios */
+/* Estilo para el contenedor principal */
+ul#episode-list {
+    position: relative; /* Necesario para que los pseudo-elementos se posicionen con respecto a este contenedor */
+}
+
+/* Estilo para los elementos de la lista */
+ul#episode-list li {
+    padding-left: 2em; /* Ajusta el espacio para el círculo */
+    position: relative; /* Eliminar si no es necesario */
+}
+
 ul#episode-list li:hover {
     background: #bcbcbc80;
     cursor: pointer;
-    position: relative; /* Necesario para posicionar el icono correctamente */
 }
-
-span:hover {}
 
 #episode-list li::before {
     content: ''; /* Contenido vacío para el círculo */
@@ -376,6 +386,7 @@ span:hover {}
     transform: translate(-50%, -50%); /* Centrado exacto del círculo */
     background: rgba(30, 30, 20, 0.5);
     opacity: 0; /* El círculo está oculto por defecto */
+    pointer-events: none; /* Para evitar que interfiera con la interacción */
 }
 
 #episode-list li:hover::before {
@@ -384,11 +395,12 @@ span:hover {}
 
 #episode-list li::after {
     content: '▶'; /* El ícono de la flecha */
-    font-size: 3.3em; /* Tamaño del ícono */
+    font-size: 1.7em; /* Tamaño del ícono */
+    font-family: FONTAWESOME;
     color: white; /* Color del ícono */
     position: absolute;
-    left: 13.34%; /* Alineación de la flecha */
-    top: 50%;
+    left: 12.89%; /* Alineación de la flecha */
+    top: 49.8%;
     transform: translate(-50%, -50%); /* Centrado exacto de la flecha */
     opacity: 0; /* La flecha está oculta por defecto */
     pointer-events: none; /* Para que no interfiera con otros elementos interactivos */
@@ -397,6 +409,7 @@ span:hover {}
 #episode-list li:hover::after {
     opacity: 1; /* La flecha aparece al hacer hover */
 }
+
 
 /* Hover sobre los botones */
 button.text:hover {
