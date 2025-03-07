@@ -376,8 +376,6 @@ ul#episode-list li:hover {
     height: 0.7em; /* Altura del círculo */
     font-size: 3.3em;
     display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 50%; /* Círculo */
     border: 0.02em solid white; /* Borde blanco para el círculo */
     position: absolute;
@@ -444,7 +442,7 @@ button.text:hover {
     text-align: justify;
     align-items: center;
     padding: 0.5em 2em; /* 0.5em arriba/abajo, 2em izquierda/derecha */
-    border-bottom: 1px solid #ccc;
+    border-bottom: 0.1em solid #bcbcbc80;
 }
 
 #episode-list li:focus {
@@ -822,7 +820,6 @@ position: absolute;
     cursor: pointer;
     position: relative; /* Necesario para posicionar el icono correctamente */
 }
-    span:hover {}
 
 #episode-list
     li::before {
@@ -943,7 +940,7 @@ position: absolute;
 
 #episode-list
     li:hover span {
-    opacity: 0;
+    opacity: 1;
 }
 
 #episode-list
@@ -1655,7 +1652,6 @@ position: absolute;
     cursor: pointer;
     position: relative; /* Necesario para posicionar el icono correctamente */
 }
-    span:hover {}
 
 #episode-list
     li::before {
@@ -2488,7 +2484,6 @@ position: absolute;
     cursor: pointer;
     position: relative; /* Necesario para posicionar el icono correctamente */
 }
-    span:hover {}
 
 #episode-list
     li::before {
@@ -3321,7 +3316,6 @@ position: absolute;
     cursor: pointer;
     position: relative; /* Necesario para posicionar el icono correctamente */
 }
-    span:hover {}
 
 #episode-list
     li::before {
@@ -3818,7 +3812,7 @@ a.eplink {
 }
 
 #episode-list li:hover span {
-    opacity: 0;
+    opacity: 1;
 }
 
 #episode-list li img {
@@ -3994,12 +3988,13 @@ ul#episode-list {
 }
 
 h1#modal-title {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     position: relative;
-    top: 31.5em;
+    top: 987px;
     z-index: 1000;
-    left: -0.3em;
+    margin-left: -2.6em;
+    padding-left: 2.2em;
 }
 
 strong.titulo {
