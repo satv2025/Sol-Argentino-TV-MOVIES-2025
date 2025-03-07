@@ -3933,6 +3933,10 @@ span.fcprefix {color: #bcbcbc;}
     z-index: 1000;
 }
 
+.facontent2 {
+    margin-left: 1.1em;
+}
+
 .modal-cast strong, .modal-genres strong, .modal-titleType strong {
     color: #bcbcbc;
     font-weight: 400;
