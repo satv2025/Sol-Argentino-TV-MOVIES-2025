@@ -12,7 +12,6 @@ body.modal-open {
 }
 
 body.modal-open {}
-
 /* Estilos del modal */
 .modal {
     display: none;
@@ -23,7 +22,7 @@ body.modal-open {}
     width: 102.1%;
     height: 145%;
     background-color: rgba(0, 0, 0, 0.8);
-    overflow: hidden;  /* El contenedor modal no debe hacer scroll en la página */
+    overflow-y: auto;
 }
 
 /* Cuando el modal está visible, ocultar el scroll del body */
@@ -58,8 +57,7 @@ a#watch-button, a#watch-button:visited, a#watch-button:hover, a#watch-button:foc
     top: -2.6em;
     border-radius: 0.7em;
     position: relative;
-    max-height: 90vh; /* Limitar la altura para que no sea tan alta */
-    overflow-y: auto; /* Habilitar scroll solo dentro del modal */
+    height: 268vh;
 }
 
 .modal-info {
