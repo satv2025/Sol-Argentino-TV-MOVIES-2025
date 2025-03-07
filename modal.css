@@ -1144,8 +1144,6 @@ position: absolute;
     font-weight: bold;
     position: relative;
     top: 31em;
-    text-decoration: underline 0.05em;
-    text-underline-offset: 0.4em; /* Ajusta la distancia aquí */
     z-index: 1000;
     left: -0.3em;
 }
