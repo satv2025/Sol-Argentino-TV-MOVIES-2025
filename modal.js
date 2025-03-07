@@ -274,3 +274,16 @@ function scrollToBottom() {
       behavior: 'smooth' // Hace el scroll de forma suave
     });
   }
+
+  document.querySelector('a[href="#about"]').addEventListener('click', function (e) {
+    e.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+    
+    // Obtener el contenedor del modal
+    const modalContent = document.querySelector('.modal-content');
+
+    // Obtener el elemento al que deseas hacer scroll (el #about)
+    const aboutSection = document.querySelector('#about');
+
+    // Desplazar el contenido del modal hasta la sección #about
+    modalContent.scrollTop = aboutSection.offsetTop - modalContent.offsetTop;
+});
