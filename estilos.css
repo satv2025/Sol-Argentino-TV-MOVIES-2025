@@ -12,22 +12,31 @@
 
 .sevapronto {
     position: absolute;
-    margin-top: 0.5em;
-    margin-left: 1em;
-    font-size: 1.3em;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    padding-bottom: 0.2em;
+    padding-top: 0.154em;
+    margin-top: 10.15em;
+    margin-left: 7em;
+    font-size: 0.86em;
     color: #fff;
     font-weight: 700;
-    text-shadow: 3px 2px 1px #000000;
+    background: #f00;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
 }
 
 #cirsvp {
     z-index: 999;
-    margin-top: 0.9em;
+    margin-top: 10.1em;
+    margin-left: 5em;
 }
 
 #act {
-    margin-top: -6.3em;
-    margin-left: -4.8em;
+    margin-top: 9.42em;
+    margin-left: 0.64em;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
 }
 
 svg {
@@ -298,7 +307,6 @@ main {
 }
 
 .cir {
-    position: relative;
     top: 0.61em;
 }
 
