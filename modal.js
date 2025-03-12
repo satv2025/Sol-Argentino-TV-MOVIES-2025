@@ -288,10 +288,6 @@ function scrollToBottom() {
     modalContent.scrollTop = aboutSection.offsetTop - modalContent.offsetTop;
 });
 
-    function openModal(movieId) {
-      const modal = document.getElementById(`${movieId}-modal`);
-      modal.style.display = 'flex';
-
       let videoUrl = '';
       if (movieId === 'matiponcepeli') {
         videoUrl = 'https://gitlab.com/solargentinotv/satvmoviesvideos/-/raw/main/MATIAS_PONCE_-_LA_PEL%C3%8DCULA__TR%C3%81ILER_OFICIAL_2022.webm';
