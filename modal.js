@@ -288,7 +288,6 @@ function scrollToBottom() {
     modalContent.scrollTop = aboutSection.offsetTop - modalContent.offsetTop;
 });
 
-<script>
     function openModal(movieId) {
       const modal = document.getElementById(`${movieId}-modal`);
       modal.style.display = 'flex';
