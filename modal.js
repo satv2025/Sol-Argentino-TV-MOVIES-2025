@@ -9,7 +9,7 @@ const peliculas = {
         genres: "<strong>Géneros:</strong> Humor, humor absurdo, hackers, fama, grandes élites",
         titleType: "<strong>Este título es:</strong> Original, delirante",
         ageRating: "<span class='age'>16+</span> adolescentes, adultos, lenguaje inapropiado, delirante",
-        background: "<div id='dplayer-matiponcepeli'></div>",
+        background: "maxresdefault.jpg",
         link: "<a id='watch-button' href='https://movies.solargentinotv.com.ar/matiponcepeli' target='_self'>▶ Reproducir</a>",
         createdBy: "<div class='modal-createdBy' style='position: absolute; top: 1360px; padding-left: 2.2em; font-size: 0.875em;'><span class='fcbprefix' style='color: #bcbcbc;'>Creado por:</span> <span class='fcbcontent'>Matías Ponce</span></div>",
         fullcast: "<div class='fullcast' style='position: absolute; top: 1382px; text-align: left; padding-left: 2.2em; padding-right: 3em; font-size: 0.875em;'><span class='fcprefix' style='color: #bcbcbc;'>Elenco:</span> <span class='fccontent'>Matías Ponce, Santino Ponce, Indio Ponce, Antonella Ponce, Valeria Volpi, Julieta</span></div>", 
@@ -28,7 +28,7 @@ const peliculas = {
         genres: "<strong>Géneros:</strong> Humor, lucha libre, luchas clandestinas",
         titleType: "<strong>Este título es:</strong> Intenso, Íntimo, Delirante, Divertido",
         ageRating: "<span class='age'>12+</span> lenguaje inapropiado, daños físicos, humor absurdo",
-        background: "<div id='dplayer-100lucha'></div>",
+        background: "https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6",
         link: "<a id='watch-button' href='https://movies.solargentinotv.com.ar/cienporcientolucha' target='_self'>▶ Reproducir</a>",
         createdBy: "<div class='modal-createdBy' style='position: absolute; top: 1360px; padding-left: 32px; font-size: 0.875em;'><span class='fcbprefix' style='color: #bcbcbc;'>Creado por:</span> <span class='fcbcontent'>Eduardo Husni</span></div>",
         fullcast: "<div class='fullcast' style='position: absolute; top: 1382px; text-align: left; padding-left: 32px; padding-right: 48px; font-size: 0.875em;'><span class='fcprefix' style='color: #bcbcbc;'>Elenco:</span> <span class='fccontent'>Maria Fernanda Neil, Carlos Kaspar, Daniel Garcilazo, Paulo Giardina, Gabriel Emanuelli, Norberto Adrián Fernandez, Marcelo Benítez, Miguel Ángel Wellington, Rubén Piuselli, Leonardo Montero, Eduardo Husni, Osvaldo Principi, Julio Mario Sibara (Turco Naím), Cecilia Bonelli, Delfina Gérez Bosco</span></div>",
@@ -48,7 +48,7 @@ const peliculas = {
         titleType: "<strong>Este título es:</strong> Íntimo, Sombrío, De suspenso",
         ageRating: "<span class='age'>16+</span> lenguaje inapropiado, drogas, violencia sexual",
         curiosity: "<strong class='curiosidad'>Es oficial: Se estrenará otra temporada</strong>",
-        background: "<div id='dplayer-app'></div>",
+        background: "https://occ-0-2443-1380.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABVp5EI24Pn-MhqBfRt6inhEm3YWfGw1YvxCWHJG7OhVZ9_F_9fV814k46BJ6cRj99iPL2YS_FxacJ6-qFRBAs-yS6ktTfnrTAYFh.webp?r=d16",
         link: "<a id='watch-button' href='https://movies.solargentinotv.com.ar/app' target='_self'>▶ Reproducir</a>",
         createdBy: "<div class='modal-createdBy' style='position: absolute; top: 1360px; padding-left: 32px; font-size: 0.875em;'><span class='fcbprefix' style='color: #bcbcbc;'>Creado por:</span> <span class='fcbcontent'>Poppy Cogan</span></div>",
         fullcast: "<div class='fullcast' style='position: absolute; top: 1383px; text-align: left; padding-left: 32px; padding-right: 48px; font-size: 0.875em;'><span class='fcprefix' style='color: #bcbcbc;'>Elenco:</span> <span class='fccontent'>Emma Myers Zain Iqbal, Asha Banks, Raiko Gohara, Jude Morgan-Collie, Yali Topol Margalith, Yasmin Al-Khudhairi, Henry Ashton, Carla Woodcock, Mathew Baynton, Gary Beadle, Anna Maxwell Martin</span></div>",
@@ -287,27 +287,3 @@ function scrollToBottom() {
     // Desplazar el contenido del modal hasta la sección #about
     modalContent.scrollTop = aboutSection.offsetTop - modalContent.offsetTop;
 });
-
-      let videoUrl = '';
-      if (movieId === 'matiponcepeli') {
-        videoUrl = 'https://gitlab.com/solargentinotv/satvmoviesvideos/-/raw/main/MATIAS_PONCE_-_LA_PEL%C3%8DCULA__TR%C3%81ILER_OFICIAL_2022.webm';
-      } else if (movieId === '100lucha') {
-        videoUrl = 'https://gitlab.com/satv20251/p/-/raw/main/100_LUCHA_LA_PEL%C3%8DCULA__Tr%C3%A1iler__HD_.mp4';
-      } else if (movieId === 'app') {
-        videoUrl = 'https://gitlab.com/satv20251/p/-/raw/main/Asesinato_para_principiantes__Tr%C3%A1iler_oficial__Netflix.mp4';
-      }
-      new DPlayer({
-        container: document.getElementById(`dplayer-${movieId}`),
-        video: {
-          url: videoUrl,
-          type: 'auto',
-        },
-        autoplay: true,
-        loop: true,
-        screenshot: false,
-        hotkey: true,
-        preload: 'auto',
-        volume: 1,
-        mutex: true,
-        controls: false,
-      });
