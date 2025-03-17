@@ -9,7 +9,7 @@
     width: 0;
     opacity: 0;
     transform: scaleX(0);
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, width 0.3s ease-in-out;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -20,6 +20,12 @@
     width: 200px;
     opacity: 1;
     transform: scaleX(1);
+}
+
+.search-form.inactive input {
+    width: 0;
+    opacity: 0;
+    transform: scaleX(0);
 }
 
 .search-form button {

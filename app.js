@@ -9,15 +9,21 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
     });
 
-    // Alternar la barra de búsqueda
+    // Alternar la barra de búsqueda con animación de cierre
     searchButton.addEventListener('click', function(e) {
         e.preventDefault();
-        const isActive = searchForm.classList.toggle('active');
-        searchButton.setAttribute('aria-expanded', isActive);
-        
-        if (!isActive) {
+        if (searchForm.classList.contains('active')) {
+            searchForm.classList.remove('active');
+            searchForm.classList.add('inactive'); // Agrega animación de cierre
+            setTimeout(() => {
+                searchForm.classList.remove('inactive');
+            }, 300); // Espera el tiempo de la animación para limpiar la clase
             searchInput.value = "";
             filtrarPeliculas("");
+            searchButton.setAttribute('aria-expanded', "false");
+        } else {
+            searchForm.classList.add('active');
+            searchButton.setAttribute('aria-expanded', "true");
         }
     });
 
@@ -38,9 +44,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function(event) {
         if (!searchForm.contains(event.target) && searchForm.classList.contains('active')) {
             searchForm.classList.remove('active');
-            searchButton.setAttribute('aria-expanded', "false");
+            searchForm.classList.add('inactive'); // Agrega animación de cierre
+            setTimeout(() => {
+                searchForm.classList.remove('inactive');
+            }, 300); // Espera el tiempo de la animación para limpiar la clase
             searchInput.value = "";
             filtrarPeliculas("");
+            searchButton.setAttribute('aria-expanded', "false");
         }
     });
 });

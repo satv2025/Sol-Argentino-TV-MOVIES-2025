@@ -194,7 +194,8 @@ nav :hover {
     opacity: 1;
     visibility: visible;
     transition: width 0.5s ease, opacity 0.5s ease;
-    margin-right: -0.04em;
+    margin-right: -0.34em;
+    height: 2.9em;
 }
 
 /* Estilo para el placeholder */
