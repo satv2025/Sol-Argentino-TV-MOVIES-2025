@@ -1,8 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const searchForm = document.querySelector('.search-form');
+    const searchForm = document.getElementById('searchForm');
     const searchButton = document.getElementById('toggleSearch');
     const searchInput = document.getElementById('search');
     const peliculas = document.querySelectorAll('.pelicula');
+
+    // Prevenir que el formulario se envíe
+    searchForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+    });
 
     // Alternar la barra de búsqueda
     searchButton.addEventListener('click', function(e) {
