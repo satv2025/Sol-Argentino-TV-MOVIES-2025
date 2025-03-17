@@ -1,28 +1,41 @@
 document.addEventListener('DOMContentLoaded', function() {
     const searchForm = document.querySelector('.search-form');
-    const searchButton = searchForm.querySelector('button');
-    const searchInput = document.getElementById('search'); // Campo de búsqueda
-    const peliculas = document.querySelectorAll('.pelicula'); // Todas las películas en la página
+    const searchButton = document.getElementById('toggleSearch');
+    const searchInput = document.getElementById('search');
+    const peliculas = document.querySelectorAll('.pelicula');
 
-    // Función para alternar la barra de búsqueda
+    // Alternar la barra de búsqueda
     searchButton.addEventListener('click', function(e) {
-        e.preventDefault(); // Evita que el formulario se envíe
+        e.preventDefault();
+        const isActive = searchForm.classList.toggle('active');
+        searchButton.setAttribute('aria-expanded', isActive);
         
-        // Alternar la clase 'active' en el formulario
-        searchForm.classList.toggle('active');
-
-        // Si el campo de búsqueda está oculto, limpiamos su valor
-        if (!searchForm.classList.contains('active')) {
+        if (!isActive) {
             searchInput.value = "";
+            filtrarPeliculas("");
         }
     });
 
-    // Función para filtrar las películas en tiempo real
+    // Filtrar películas en tiempo real
     searchInput.addEventListener('input', function() {
-        const query = searchInput.value.toLowerCase();
+        filtrarPeliculas(searchInput.value.toLowerCase());
+    });
+
+    function filtrarPeliculas(query) {
         peliculas.forEach(pelicula => {
-            const title = pelicula.querySelector('h3').textContent.toLowerCase();
-            const description = pelicula.querySelector('p').textContent.toLowerCase();
+            const title = pelicula.querySelector('h3')?.textContent.toLowerCase() || "";
+            const description = pelicula.querySelector('p')?.textContent.toLowerCase() || "";
             pelicula.style.display = (title.includes(query) || description.includes(query)) ? 'block' : 'none';
         });
+    }
+
+    // Cerrar barra de búsqueda al hacer clic fuera
+    document.addEventListener('click', function(event) {
+        if (!searchForm.contains(event.target) && searchForm.classList.contains('active')) {
+            searchForm.classList.remove('active');
+            searchButton.setAttribute('aria-expanded', "false");
+            searchInput.value = "";
+            filtrarPeliculas("");
+        }
     });
+});

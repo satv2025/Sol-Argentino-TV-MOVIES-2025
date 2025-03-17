@@ -1,0 +1,36 @@
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+
+.search-form input {
+    width: 0;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-form.active input {
+    width: 200px;
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.search-form button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+}
