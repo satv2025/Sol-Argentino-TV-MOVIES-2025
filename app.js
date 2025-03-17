@@ -9,21 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
     });
 
-    // Alternar la barra de búsqueda con animación de cierre
+    // Alternar la barra de búsqueda con animación de cierre al presionar el botón nuevamente
     searchButton.addEventListener('click', function(e) {
         e.preventDefault();
-        if (searchForm.classList.contains('active')) {
-            searchForm.classList.remove('active');
-            searchForm.classList.add('inactive'); // Agrega animación de cierre
-            setTimeout(() => {
-                searchForm.classList.remove('inactive');
-            }, 300); // Espera el tiempo de la animación para limpiar la clase
-            searchInput.value = "";
-            filtrarPeliculas("");
-            searchButton.setAttribute('aria-expanded', "false");
-        } else {
-            searchForm.classList.add('active');
-            searchButton.setAttribute('aria-expanded', "true");
+        searchForm.classList.toggle('active');
+
+        if (!searchForm.classList.contains('active')) {
+            searchInput.value = ""; // Limpiar el campo de búsqueda
+            filtrarPeliculas(""); // Restaurar todas las películas
         }
     });
 
@@ -39,18 +32,4 @@ document.addEventListener('DOMContentLoaded', function() {
             pelicula.style.display = (title.includes(query) || description.includes(query)) ? 'block' : 'none';
         });
     }
-
-    // Cerrar barra de búsqueda al hacer clic fuera
-    document.addEventListener('click', function(event) {
-        if (!searchForm.contains(event.target) && searchForm.classList.contains('active')) {
-            searchForm.classList.remove('active');
-            searchForm.classList.add('inactive'); // Agrega animación de cierre
-            setTimeout(() => {
-                searchForm.classList.remove('inactive');
-            }, 300); // Espera el tiempo de la animación para limpiar la clase
-            searchInput.value = "";
-            filtrarPeliculas("");
-            searchButton.setAttribute('aria-expanded', "false");
-        }
-    });
 });
