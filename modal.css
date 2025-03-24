@@ -5,6 +5,8 @@ html {
 #about {
     margin-top: 20vh;
     height: 0vh;
+    position: relative;
+    top: -43em;
 }
 
 body.modal-open {
@@ -3870,7 +3872,7 @@ a.eplink {
 }
 
 .modal-fullcreatedBy { top: 47em; }
-.modal-cast {top: 32.6em;font-size: 0.875em;padding-left: 36.6em;padding-right: 4em;}
+.modal-cast {top: 32.6em;font-size: 0.875em;padding-left: 38.6em;padding-right: 4em;}
 
 .createdBy {
     position: absolute;
@@ -3887,8 +3889,8 @@ a.eplink {
 
 span.fcprefix {color: #bcbcbc;}
 .modal-script {top: 2em;left: -30.67em;}
-.modal-genres {top: 35.5em;font-size: 0.875em;padding-left: 36.6em;padding-right: 4em;}
-.modal-titleType {top: 38.4em;font-size: 0.875em;padding-left: 36.6em;padding-right: 4em;}
+.modal-genres {top: 35.5em;font-size: 0.875em;padding-left: 38.6em;padding-right: 4em;}
+.modal-titleType {top: 38.4em;font-size: 0.875em;padding-left: 38.6em;padding-right: 4em;}
 
 .modal-ageRating,
 .modal-description,
@@ -3905,7 +3907,7 @@ span.fcprefix {color: #bcbcbc;}
     border: 1px solid hsla(0, 0%, 100%, .4);
     padding: 0 .4em;
 }
-.modal-description {top: 38.5em;font-size: 0.875em;left: 1.8em;padding-right: 29em;}
+.modal-description {top: 33.8em;font-size: 16px;padding-right: 22em;font-family: 'Segoe UI';text-align: left;}
 .modal-curiosity {top: 27.4em;z-index: 1000;font-size: 1.17em;left: 0.8em;}
 
 .modal-curiosity p {
@@ -3956,7 +3958,7 @@ ul#episode-list {
     padding-left: 2em;
     padding-right: 3em;
     position: absolute;
-    top: 41em;
+    top: 43em;
 }
 
 ul#episode-list {
@@ -3969,10 +3971,9 @@ ul#episode-list {
     color: #fff;
     font-weight: 700;
     position: absolute;
-    top: 25.6em;
+    top: 27.4em;
     left: 2.2em;
     font-size: 1.5em;
-    
 }
 
 /* Overlay */
@@ -3991,7 +3992,7 @@ h1#modal-title {
     font-size: 1.5em;
     font-weight: bold;
     position: relative;
-    top: 987px;
+    top: 1010px;
     z-index: 1000;
     margin-left: -2.6em;
     padding-left: 2.2em;
