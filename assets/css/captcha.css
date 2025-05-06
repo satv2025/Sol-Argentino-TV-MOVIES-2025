@@ -5,15 +5,16 @@
     }
 
     body {
-      background: #fafafa;
+      background: #141414;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       font-family: 'Netflix Sans';
+      color: #fff;
     }
     .box {
-      background: #fff;
+      background: #222;
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
