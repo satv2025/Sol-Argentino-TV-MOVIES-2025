@@ -34,7 +34,7 @@ nav li {
 }
 
 nav a {
-    color: #007BFF; /* Azul para los enlaces */
+    color: #fff; /* Azul para los enlaces */
     text-decoration: none;
     font-weight: bold;
     font-size: 1.125em; /* 18px = 1.125em */
@@ -42,7 +42,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #005a9e; /* Azul más oscuro en hover */
+    color: #555; /* Azul más oscuro en hover */
 }
 
 .search-form {
@@ -57,7 +57,7 @@ nav a:hover {
 
 .logo {
     position: absolute;
-    color: #007BFF;
+    color: #fff !important;
     font-weight: 700;
     font-size: 2em;
     top: 0.3em;
@@ -128,7 +128,7 @@ h1 {
 }
 
 .serie-info {
-    background-color: #183347; /* Azul oscuro */
+    background-color: #181818; /* Azul oscuro */
     padding: 2em;
     border-radius: 0.3em;
     margin-bottom: 3em;
@@ -206,13 +206,13 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #183347; /* Fondo del contenedor del episodio */
+    background-color: #181818; /* Fondo del contenedor del episodio */
     color: white;
     padding: 0.75em; /* 12px = 0.75em */
 }
 
 .episodio-info:hover {
-    background-color: rgba(74, 91, 104, 0.719); /* Color más translúcido en hover */
+    background-color: #727272; /* Color más translúcido en hover */
     cursor: pointer;
 }
 

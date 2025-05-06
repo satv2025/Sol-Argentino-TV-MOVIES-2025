@@ -453,8 +453,7 @@ a.plyr__control::after,a.plyr__control::before {
 }
 
 .plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
-    background: #007BFF;
-    background: var(--plyr-control-toggle-checked-background,var(--plyr-color-main,var(--plyr-color-main,#007BFF)))
+    background: #f00;
 }
 
 .plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::after {
@@ -484,8 +483,7 @@ a.plyr__control::after,a.plyr__control::before {
     border: 0;
     border-radius: calc(13px * 2);
     border-radius: calc(var(--plyr-range-thumb-height,13px) * 2);
-    color: #007BFF;
-    color: var(--plyr-range-fill-background,var(--plyr-color-main,var(--plyr-color-main,#007BFF)));
+    color: #f00;
     display: block;
     height: calc((3px * 2) + 13px);
     height: calc((var(--plyr-range-thumb-active-shadow-width,3px) * 2) + var(--plyr-range-thumb-height,13px));
@@ -910,8 +908,8 @@ a.plyr__control::after,a.plyr__control::before {
 }
 
 .plyr__control.plyr__control--overlaid:hover {
-    background: #fff !important;
-    color: #007BFF !important;
+    background: #181818;
+    color: #fff;
 }
 
 /* Estilos para los controles de audio (sin afectar el botón overlaid) */
@@ -1028,19 +1026,16 @@ a.plyr__control::after,a.plyr__control::before {
 }
 
 .plyr--video .plyr__control.plyr__tab-focus,.plyr--video .plyr__control:hover,.plyr--video .plyr__control[aria-expanded=true] {
-    background: #007BFF;
-    background: var(--plyr-video-control-background-hover,var(--plyr-color-main,var(--plyr-color-main,#007BFF)));
+    background: #181818;
     color: #fff;
     color: var(--plyr-video-control-color-hover,#fff)
 }
 
 .plyr__control--overlaid {
-    background: #007BFF;
-    background: var(--plyr-video-control-background-hover,var(--plyr-color-main,var(--plyr-color-main,#007BFF)));
+    background: #fff;
     border: 0;
     border-radius: 100%;
-    color: #fff;
-    color: var(--plyr-video-control-color,#fff);
+    color: #181818;
     display: none;
     left: 50%;
     opacity: .9;
