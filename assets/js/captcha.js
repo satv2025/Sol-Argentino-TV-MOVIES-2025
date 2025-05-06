@@ -10,7 +10,7 @@ function checkCaptcha() {
     accessBtn.disabled = false;
     accessBtn.classList.add('enabled');
     accessBtn.onclick = () => {
-      window.location.href = "/inicio.html";
+      window.location.href = "/inicio";
     };
   }
 }
