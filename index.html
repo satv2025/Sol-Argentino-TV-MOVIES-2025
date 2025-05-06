@@ -39,25 +39,17 @@
       </div>
     </div>
 
-    <button class="help-btn" onclick="alert('Si tenés problemas con los captchas, actualizá la página o contactá soporte.')">
-      <i class="icon" data-lucide="help-circle"></i>
-      ¿Necesitás ayuda?
-    </button>
+<!-- Botón de ayuda -->
+<button class="help-btn" onclick="alert('Si tenés problemas con los captchas, actualizá la página o contactá soporte.')">
+  <i class="icon" data-lucide="help-circle"></i>
+  ¿Necesitás ayuda?
+</button>
+
+<!-- Botón de ingreso (desactivado hasta completar los captchas) -->
+<button id="access-btn" class="access-btn" disabled>
+  Ingresar al sitio
+</button>
   </main>
-
-  <script>
-    // Inicializar íconos Lucide
-    lucide.createIcons();
-
-    // Verifica si ambos captchas fueron completados
-    function checkCaptcha() {
-      const recaptchaResponse = grecaptcha.getResponse();
-      const turnstileResponse = document.querySelector('input[name="cf-turnstile-response"]')?.value;
-
-      if (recaptchaResponse && turnstileResponse) {
-        window.location.href = "/inicio.html";
-      }
-    }
-  </script>
+  <script src="/assets/js/captcha.js"></script>
 </body>
 </html>
