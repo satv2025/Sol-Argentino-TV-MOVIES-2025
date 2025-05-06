@@ -21,7 +21,7 @@ function changeSeason(season) {
                 title: 'Pelicula',
                 description: 'Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de youtube, o como el lo llama "Yutun", desatando una hilarante y absurda aventura.',
                 videoPath: 'https://download1580.mediafire.com/e08upjh7oxvg7OsYrd_egq4UDyw1gb_VCqWtbVim6uzNLbyslf3U921OIVhB8k_OrR-h5CvmrR0LDl3e_lZKirdUGD79zUaRXWsH1GDOhx9_F9_f6aMJBzh6FvxWAe5t-S4426mh9dP1_uTZXQYsCKY-PoQOt8FsZD96TQb6YK7M1xc/66l6oz150o04fff/MATIAS+PONCE++LA+PEL%C3%8DCULA.webm',
-                image: 'https://th4.pcloud.com/tLZU2ggUGZOsj7Z9EWM7ZZCfLuXkZdIRZJZZohZUzZjYZK8ZBRZkb8rdGkwMmXGQc8AE5lIC77586a7/maxresdefault.jpg',
+                image: 'https://movies.solargentinotv.com.ar/assets/media/images/maxresdefault.jpg',
                 duration: '60 min' // Duración actualizada
             },
         ],
