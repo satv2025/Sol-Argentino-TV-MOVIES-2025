@@ -1,0 +1,31 @@
+@import url('https://fuentes.solargentinotv.com.ar/netflixsans.css');
+
+    * {
+        font-family: 'Netflix Sans';
+    }
+
+    body {
+      background: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Netflix Sans';
+    }
+    .box {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 320px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+          
+    .g-recaptcha {
+    margin-left: 0.6em;
+}
