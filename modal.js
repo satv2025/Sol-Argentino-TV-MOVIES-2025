@@ -11,12 +11,12 @@ const peliculas = {
         ageRating: "<span class='age'>16+</span> adolescentes, adultos, lenguaje inapropiado, delirante",
         background: "maxresdefault.jpg",
         link: "<a id='watch-button' href='https://movies.solargentinotv.com.ar/matiponcepeli' target='_self'>▶ Reproducir</a>",
-        createdBy: "<div class='modal-createdBy' style='position: absolute; top: 1360px; padding-left: 2.2em; font-size: 0.875em;'><span class='fcbprefix' style='color: #bcbcbc;'>Creado por:</span> <span class='fcbcontent'>Matías Ponce</span></div>",
-        fullcast: "<div class='fullcast' style='position: absolute; top: 1382px; text-align: left; padding-left: 2.2em; padding-right: 3em; font-size: 0.875em;'><span class='fcprefix' style='color: #bcbcbc;'>Elenco:</span> <span class='fccontent'>Matías Ponce, Santino Ponce, Indio Ponce, Antonella Ponce, Valeria Volpi, Julieta</span></div>", 
-        fullscript: "<div class='fullscript' style='position: absolute; top: 1403px; padding-left: 2.2em; padding-right: 2em; font-size: 0.875em;'><span class='fsprefix' style='color: #bcbcbc;'>Guión:</span> <span class='fscontent'>Matías Ponce</span></div>", 
-        fullgenres: "<div class='fullgenres' style='position: absolute; top: 1424.8px; padding-left: 2.2em; text-align: left; padding-right: 3em; font-size: 0.875em;'><span class='fgprefix' style='color: #bcbcbc;'>Géneros:</span><span class='fgcontent'> Humor, humor absurdo, hackers, fama, grandes élites, paranoia, haters, YouTube</span></div>", 
-        fulltitletype: "<div class='fulltitletype' style='position: absolute; top: 1445px; text-align: left; padding-left: 2.2em; padding-right: 3em; font-size: 0.875em;'><span class='fttprefix' style='color: #bcbcbc;'>Este titulo es:</span> <span class='fttcontent'> Original, delirante</span></div>", 
-        fullage: "<div class='fullage' style='position: absolute; top: 1466.6px; text-align: left; padding-right: 3em; padding-left: 2.2em; font-size: 0.875em;'><span class='faprefix' style='color: #bcbcbc;'>Clasificación por edad: </span> <span class='facontent'><span class='age'>12+</span> adolescentes, adultos, lenguaje inapropiado, delirante</span> <span class='facontent2'>Apta para mayores de 12 años</span></div>"
+        createdBy: "<div class='modal-createdBy'><span class='fcbprefix'>Creado por:</span> <span class='fcbcontent'>Matías Ponce</span></div>",
+        fullcast: "<div class='fullcast'><span class='fcprefix'>Elenco:</span> <span class='fccontent'>Matías Ponce, Santino Ponce, Indio Ponce, Antonella Ponce, Valeria Volpi, Julieta</span></div>", 
+        fullscript: "<div class='fullscript'><span class='fsprefix'>Guión:</span> <span class='fscontent'>Matías Ponce</span></div>", 
+        fullgenres: "<div class='fullgenres'><span class='fgprefix'>Géneros:</span><span class='fgcontent'> Humor, humor absurdo, hackers, fama, grandes élites, paranoia, haters, YouTube</span></div>", 
+        fulltitletype: "<div class='fulltitletype'><span class='fttprefix'>Este titulo es:</span> <span class='fttcontent'> Original, delirante</span></div>", 
+        fullage: "<div class='fullage'><span class='faprefix'>Clasificación por edad: </span> <span class='facontent'><span class='age'>12+</span> adolescentes, adultos, lenguaje inapropiado, delirante</span> <span class='facontent2'>Apta para mayores de 12 años</span></div>"
     },
     cienporcientolucha: {
         year: "2008-09",
@@ -30,12 +30,12 @@ const peliculas = {
         ageRating: "<span class='age'>12+</span> lenguaje inapropiado, daños físicos, humor absurdo",
         background: "https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6",
         link: "<a id='watch-button' href='https://movies.solargentinotv.com.ar/cienporcientolucha' target='_self'>▶ Reproducir</a>",
-        createdBy: "<div class='modal-createdBy' style='position: absolute; top: 1360px; padding-left: 32px; font-size: 0.875em;'><span class='fcbprefix' style='color: #bcbcbc;'>Creado por:</span> <span class='fcbcontent'>Eduardo Husni</span></div>",
-        fullcast: "<div class='fullcast' style='position: absolute; top: 1382px; text-align: left; padding-left: 32px; padding-right: 48px; font-size: 0.875em;'><span class='fcprefix' style='color: #bcbcbc;'>Elenco:</span> <span class='fccontent'>Maria Fernanda Neil, Carlos Kaspar, Daniel Garcilazo, Paulo Giardina, Gabriel Emanuelli, Norberto Adrián Fernandez, Marcelo Benítez, Miguel Ángel Wellington, Rubén Piuselli, Leonardo Montero, Eduardo Husni, Osvaldo Principi, Julio Mario Sibara (Turco Naím), Cecilia Bonelli, Delfina Gérez Bosco</span></div>",
-        fullscript: "<div class='fullscript' style='position: absolute; top: 1440px; padding-left: 32px; padding-right: 32px; font-size: 0.875em;'><span class='fsprefix' style='color: #bcbcbc;'>Guión:</span> <span class='fscontent'>CineAR</span></div>",
-        fullgenres: "<div class='fullgenres' style='position: absolute; top: 1461px; padding-left: 32px; text-align: left; padding-right: 48px; font-size: 0.875em;'><span class='fgprefix' style='color: #bcbcbc;'>Géneros:</span><span class='fgcontent'> Humor, Lucha Libre, Luchas Clandestinas, Apuestas, Secuestros, Traiciones</span></div>",
-        fulltitletype: "<div class='fulltitletype' style='position: absolute; top: 1482px; text-align: left; padding-left: 32px; padding-right: 48px; font-size: 0.875em;'><span class='fttprefix' style='color: #bcbcbc;'>Este titulo es:</span> <span class='fttcontent'> Intenso, Íntimo, Delirante, Divertido</span></div>",
-        fullage: "<div class='fullage' style='position: absolute; top: 1503px; text-align: left; padding-right: 48px; padding-left: 32px; font-size: 0.875em;'><span class='faprefix' style='color: #bcbcbc;'>Clasificación por edad: </span> <span class='facontent'><span class='age'>12+</span> lenguaje inapropiado, daños físicos, humor absurdo</span> <span class='facontent2'>Apta para mayores de 16 años</span></div>"
+        createdBy: "<div class='modal-createdBy'><span class='fcbprefix'>Creado por:</span> <span class='fcbcontent'>Eduardo Husni</span></div>",
+        fullcast: "<div class='fullcast'><span class='fcprefix'>Elenco:</span> <span class='fccontent'>Maria Fernanda Neil, Carlos Kaspar, Daniel Garcilazo, Paulo Giardina, Gabriel Emanuelli, Norberto Adrián Fernandez, Marcelo Benítez, Miguel Ángel Wellington, Rubén Piuselli, Leonardo Montero, Eduardo Husni, Osvaldo Principi, Julio Mario Sibara (Turco Naím), Cecilia Bonelli, Delfina Gérez Bosco</span></div>",
+        fullscript: "<div class='fullscript'><span class='fsprefix'>Guión:</span> <span class='fscontent'>CineAR</span></div>",
+        fullgenres: "<div class='fullgenres'><span class='fgprefix'>Géneros:</span><span class='fgcontent'> Humor, Lucha Libre, Luchas Clandestinas, Apuestas, Secuestros, Traiciones</span></div>",
+        fulltitletype: "<div class='fulltitletype'><span class='fttprefix'>Este titulo es:</span> <span class='fttcontent'> Intenso, Íntimo, Delirante, Divertido</span></div>",
+        fullage: "<div class='fullage'><span class='faprefix'>Clasificación por edad: </span> <span class='facontent'><span class='age'>12+</span> lenguaje inapropiado, daños físicos, humor absurdo</span> <span class='facontent2'>Apta para mayores de 16 años</span></div>"
     },
     app: {
         year: "2024",
@@ -50,22 +50,32 @@ const peliculas = {
         curiosity: "<strong class='curiosidad'>Es oficial: Se estrenará otra temporada</strong>",
         background: "https://occ-0-2443-1380.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABVp5EI24Pn-MhqBfRt6inhEm3YWfGw1YvxCWHJG7OhVZ9_F_9fV814k46BJ6cRj99iPL2YS_FxacJ6-qFRBAs-yS6ktTfnrTAYFh.webp?r=d16",
         link: "<a id='watch-button' href='https://movies.solargentinotv.com.ar/app' target='_self'>▶ Reproducir</a>",
-        createdBy: "<div class='modal-createdBy' style='position: absolute; top: 1360px; padding-left: 32px; font-size: 0.875em;'><span class='fcbprefix' style='color: #bcbcbc;'>Creado por:</span> <span class='fcbcontent'>Poppy Cogan</span></div>",
-        fullcast: "<div class='fullcast' style='position: absolute; top: 1383px; text-align: left; padding-left: 32px; padding-right: 48px; font-size: 0.875em;'><span class='fcprefix' style='color: #bcbcbc;'>Elenco:</span> <span class='fccontent'>Emma Myers Zain Iqbal, Asha Banks, Raiko Gohara, Jude Morgan-Collie, Yali Topol Margalith, Yasmin Al-Khudhairi, Henry Ashton, Carla Woodcock, Mathew Baynton, Gary Beadle, Anna Maxwell Martin</span></div>",
-        fullscript: "<div class='fullscript' style='position: absolute; top: 1423px; padding-left: 32px; padding-right: 32px; font-size: 0.875em;'><span class='fsprefix' style='color: #bcbcbc;'>Guión:</span> <span class='fscontent'>Poppy Cogan, Ruby Thomas, Zia Ahmed, Ajoke Ibironke</span></div>",
-        fullgenres: "<div class='fullgenres' style='position: absolute; top: 1445px; padding-left: 32px; text-align: left; padding-right: 48px; font-size: 0.875em;'><span class='fgprefix' style='color: #bcbcbc;'>Géneros:</span><span class='fgcontent'> Series dramáticas, De Gran Bretaña, Series basadas en libros, Series de adolescentes, Series de misterio</span></div>",
-        fulltitletype: "<div class='fulltitletype' style='position: absolute; top: 1467px; text-align: left; padding-left: 32px; padding-right: 48px; font-size: 0.875em;'><span class='fttprefix' style='color: #bcbcbc;'>Este titulo es:</span> <span class='fttcontent'>Íntimo, Sombrío, De suspenso</span></div>",
-        fullage: "<div class='fullage' style='position: absolute; top: 1488px; text-align: left; padding-right: 48px; padding-left: 32px; font-size: 0.875em;'><span class='faprefix' style='color: #bcbcbc;'>Clasificación por edad: </span> <span class='facontent'><span class='age'>16+</span> lenguaje inapropiado, drogas, violencia sexual</span> <span class='facontent2'>Apta para mayores de 16 años</span></div>",
+        createdBy: "<div class='modal-createdBy app-createdBy'><span class='fcbprefix app-fcbprefix'>Creado por:</span> <span class='fcbcontent app-fcbcontent'>Poppy Cogan</span></div>",
+        fullcast: "<div class='fullcast app-fullcast'><span class='fcprefix app-fcprefix'>Elenco:</span> <span class='fccontent app-fccontent'>Emma Myers Zain Iqbal, Asha Banks, Raiko Gohara, Jude Morgan-Collie, Yali Topol Margalith, Yasmin Al-Khudhairi, Henry Ashton, Carla Woodcock, Mathew Baynton, Gary Beadle, Anna Maxwell Martin</span></div>",
+        fullscript: "<div class='fullscript app-fullscript'><span class='fsprefix app-fsprefix'>Guión:</span> <span class='fscontent app-fscontent'>Poppy Cogan, Ruby Thomas, Zia Ahmed, Ajoke Ibironke</span></div>",
+        fullgenres: "<div class='fullgenres app-fullgenres'><span class='fgprefix app-fgprefix'>Géneros:</span><span class='fgcontent app-fgcontent'>Series dramáticas, De Gran Bretaña, Series basadas en libros, Series de adolescentes, Series de misterio</span></div>",
+        fulltitletype: "<div class='fulltitletype app-fulltitletype'><span class='fttprefix app-fttprefix'>Este titulo es:</span> <span class='fttcontent app-fttcontent'>Íntimo, Sombrío, De suspenso</span></div>",
+        fullage: "<div class='fullage app-fullage'><span class='faprefix app-faprefix'>Clasificación por edad: </span> <span class='facontent app-facontent'><span class='age app-age'>16+</span> lenguaje inapropiado, drogas, violencia sexual</span> <span class='facontent2 app-facontent2'>Apta para mayores de 16 años</span></div>",
         seasons: `
-            <div class="season-dropdown">
-                <button class="dropdown-button">Seleccionar Temporada</button>
-                <div class="dropdown-content">
-                    <button class="texto" onclick="changeSeason(1)"><span>Temporada 1</span></button>
-                    <span class="episode-count">6 episodios</span>
-                    <button class="texto" onclick="changeSeason(2)"><span>Temporada 2</span></button>
-                    <span class="episode-count">Coming Soon</span>
-                </div>
-            </div>
+<div class="season-dropdown">
+  <button class="dropdown-button" id="seasonToggle">
+    Temporada 1
+  </button>
+
+  <div class="dropdown-content" id="seasonMenu">
+    <div class="season-option">
+      <button class="texto t1" onclick="changeSeason(1)">Temporada 1<span class="episode-count ep1">(6 episodios)</span></button>
+    </div>
+    <div class="season-option">
+      <button class="texto t2" onclick="changeSeason(2)">Temporada 2 <span class="episode-count ep2">(1 episodio)</span></button>
+    </div>
+    <div class="sepaoption">
+    </div>
+        <div class="season-option">
+      <button class="texto vtle" onclick="changeSeason(3)">Ver todos los episodios</button>
+    </div>
+  </div>
+</div>
             <div class="episodios">
                 <h2>Lista de Episodios</h2>
                 <ul id="episode-list"></ul>
@@ -135,10 +145,9 @@ const episodios = {
         }
     ]
 };
-
 // Detectar clic en los botones "Más Información"
 document.querySelectorAll(".moreinfobutton").forEach(button => {
-    button.addEventListener("click", function(event) {
+    button.addEventListener("click", function () {
         const movieKey = this.getAttribute("data-movie");
         openModal(movieKey);
     });
@@ -151,7 +160,7 @@ function openModal(movieKey) {
 
     if (!movie) return;
 
-    // Cargar los datos de la película o serie en el modal
+    // Cargar los datos en el modal
     document.getElementById("modal-background").src = movie.background;
     document.getElementById("modal-title").innerHTML = movie.title;
     document.getElementById("modal-year").innerHTML = movie.year;
@@ -165,7 +174,7 @@ function openModal(movieKey) {
     document.getElementById("modal-episodelist").innerHTML = movie.episodelist || "";
     document.getElementById("modal-seasons").innerHTML = movie.seasons || "";
     document.getElementById("modal-createdBy").innerHTML = movie.createdBy;
-    document.getElementById("modal-fullcast").innerHTML = movie.fullcast
+    document.getElementById("modal-fullcast").innerHTML = movie.fullcast;
     document.getElementById("modal-fullscript").innerHTML = movie.fullscript;
     document.getElementById("modal-fullgenres").innerHTML = movie.fullgenres;
     document.getElementById("modal-fulltitletype").innerHTML = movie.fulltitletype;
@@ -176,23 +185,19 @@ function openModal(movieKey) {
     modal.style.display = "block";
     document.body.classList.add("modal-open");
 
-    // Solo cargar episodios si la serie es "app" (Asesinato Para Principiantes)
+    // Si es "app", cargar temporada 1
     if (movieKey === "app") {
-        // Cargar episodios de la temporada 1 por defecto
         changeSeason(1);
     } else {
-        // Limpiar la lista de episodios para películas y otras series
-        const episodeList = document.getElementById("episode-list");
-        episodeList.innerHTML = ""; // Limpia la lista de episodios
+        document.getElementById("episode-list").innerHTML = "";
     }
 }
 
-// Función para cambiar la lista de episodios según la temporada seleccionada
+// Función global para cambiar temporada
 function changeSeason(season) {
     const episodeList = document.getElementById("episode-list");
-    episodeList.innerHTML = ""; // Limpiar lista de episodios antes de agregar nuevos
+    episodeList.innerHTML = "";
 
-    // Verifica si la temporada existe en el objeto 'episodios'
     if (episodios[season]) {
         episodios[season].forEach(ep => {
             const li = document.createElement("li");
@@ -202,39 +207,39 @@ function changeSeason(season) {
                     <h3>${ep.title}</h3>
                     <p>${ep.description}</p>
                     <span>${ep.duration}</span>
-                    <div>${ep.number}</div> <!-- Aquí se insertará el 'number' -->
-        </div>
+                    <div>${ep.number}</div>
+                </div>
             `;
             episodeList.appendChild(li);
         });
     } else {
-        // Si no se encuentra la temporada, muestra un mensaje
         const li = document.createElement("li");
         li.innerText = "No hay episodios disponibles para esta temporada.";
         episodeList.appendChild(li);
     }
 }
 
-// Función para cerrar el modal al hacer clic en el botón de cierre
+// Cerrar modal con botón
 document.querySelector(".close-button").addEventListener("click", () => {
     const modal = document.getElementById("infoModal");
     modal.style.display = "none";
     document.body.classList.remove("modal-open");
 });
 
-// Función para cerrar el modal al hacer clic fuera de la caja de contenido
+// Cerrar modal al hacer clic fuera del contenido
 document.addEventListener("click", (event) => {
     const modal = document.getElementById("infoModal");
     const modalContent = document.querySelector(".modal-content");
 
-    // Solo cerrar el modal si el clic es fuera de la caja de contenido y el modal está abierto
-    if (modal.style.display === "block" && !modalContent.contains(event.target) && !event.target.closest(".moreinfobutton")) {
+    if (modal.style.display === "block" &&
+        !modalContent.contains(event.target) &&
+        !event.target.closest(".moreinfobutton")) {
         modal.style.display = "none";
         document.body.classList.remove("modal-open");
     }
 });
 
-// Función para cerrar el modal al presionar la tecla Esc
+// Cerrar modal con tecla Escape
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
         const modal = document.getElementById("infoModal");
@@ -243,47 +248,17 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
-const modal = document.getElementById('modal');
+// Dropdown para temporadas
+document.addEventListener('DOMContentLoaded', () => {
+    const dropdown = document.querySelector('.season-dropdown');
+    if (!dropdown) return;
 
-modal.addEventListener('hidden.bs.modal', () => {
-  // Resetear todos los campos que mencionaste
-  document.getElementById("modal-background").src = '';  // Imagen de fondo
-  document.getElementById("modal-title").innerHTML = '';  // Título
-  document.getElementById("modal-year").innerHTML = '';  // Año
-  document.getElementById("modal-description").innerText = '';  // Descripción
-  document.getElementById("modal-cast").innerHTML = '';  // Elenco
-  document.getElementById("modal-genres").innerHTML = '';  // Géneros
-  document.getElementById("modal-titleType").innerHTML = '';  // Tipo de título
-  document.getElementById("modal-ageRating").innerHTML = '';  // Clasificación por edad
-  document.getElementById("modal-curiosity").innerHTML = '';  // Curiosidad
-  document.getElementById("modal-duration").innerText = '';  // Duración
-  document.getElementById("modal-episodelist").innerHTML = '';  // Lista de episodios
-  document.getElementById("modal-seasons").innerHTML = '';  // Temporadas
-  document.getElementById("watch-button").href = '#';  // Enlace para ver
-  document.getElementById("modal-createdBy").innerHTML = '';  // Creador
-  document.getElementById("modal-fullcast").innerHTML = '';  // Elenco completo
-  document.getElementById("modal-fullscript").innerHTML = '';  // Guion completo
-  document.getElementById("modal-fullgenres").innerHTML = '';  // Géneros completos
-  document.getElementById("modal-fulltitletype").innerHTML = '';  // Tipo de título completo
-  document.getElementById("modal-fullage").innerHTML = '';  // Clasificación por edad completa
-});
+    const button = dropdown.querySelector('.dropdown-button');
+    const arrow = button.querySelector('span');
+    const seasonMenu = document.getElementById('seasonMenu');
 
-function scrollToBottom() {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: 'smooth' // Hace el scroll de forma suave
+    button.addEventListener('click', () => {
+        seasonMenu.classList.toggle('show');
+        arrow.classList.toggle('rotate');
     });
-  }
-
-  document.querySelector('a[href="#about"]').addEventListener('click', function (e) {
-    e.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
-    
-    // Obtener el contenedor del modal
-    const modalContent = document.querySelector('.modal-content');
-
-    // Obtener el elemento al que deseas hacer scroll (el #about)
-    const aboutSection = document.querySelector('#about');
-
-    // Desplazar el contenido del modal hasta la sección #about
-    modalContent.scrollTop = aboutSection.offsetTop - modalContent.offsetTop;
 });

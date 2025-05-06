@@ -4,7 +4,6 @@
     <title>Sol Argentino TV MOVIES</title>
     <link rel="stylesheet" href="search.css">
     <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="slidebar.css">
     <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
@@ -105,18 +104,9 @@
             <p id="modal-fullage" class="fullage"></p>
             </div>
             <!-- Episodios y temporadas -->
-            <div class="season-dropdown">
-                <button class="dropdown-button">Seleccionar Temporada</button>
-                <div class="dropdown-content">
-                    <button class="texto" onclick="changeSeason(1)"><span>Temporada 1</span></button>
-                    <span class="episode-count">6 episodios</span>
-                    <button class="texto" onclick="changeSeason(2)"><span>Temporada 2</span></button>
-                    <span class="episode-count">Coming Soon</span>
-                </div>
+            <div class="season-dropdown" id="modal-seasons">
             </div>
-
             <div class="episodios">
-                <h2>Lista de Episodios</h2>
                 <ul id="episode-list"></ul>
             </div>
         </div>
@@ -154,9 +144,6 @@
 <footer>
     <p>Sol Argentino TV MOVIES 2025 © - Todos Los Derechos Reservados</p>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
-<script src="slidebar.js"></script>
 <script src="modal.js"></script>
-<script src="app.js"></script>
 </body>
 </html>

@@ -13,54 +13,47 @@ body.modal-open {
 
 body.modal-open {}
 /* Estilos del modal */
-.modal {
-    display: none;
-    position: absolute;
-    z-index: 1000;
-    left: -1em;
-    top: -3.7em;
-    width: 102.1%;
-    height: 145%;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow-y: auto;
-}
 
 /* Cuando el modal está visible, ocultar el scroll del body */
 .modal-open {
     overflow: auto;
 }
 
-a#watch-button, a#watch-button:visited, a#watch-button:hover, a#watch-button:focus {
+a#watch-button, a#watch-button:visited, a#watch-button:hover, a#watch-button:focus, a#watch-button:active {
     text-decoration: none !important;
+    color: #000;
 }
-
-#infoModal {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vw;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-}
-
 
 /* Contenido del modal */
 .modal-content {
     background-color: #181818;
     color: white;
     margin: 5% auto;
+    margin-bottom: -41px !important;
     padding: 1.25em;
     width: 43%;
     top: -2.6em;
-    border-radius: 0.7em;
+    border-top-left-radius: 0.7em;
+    border-top-right-radius: 0.7em;
     position: relative;
-    height: 268vh;
+    height: calc(36.8em + 62em); /* o sumás lo que ocupa el resto de contenido */
 }
 
-.modal-info {
+/* Ajuste de la clase .modal */
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#infoModal {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .close-button svg {
@@ -153,115 +146,133 @@ a#watch-button, a#watch-button:visited, a#watch-button:hover, a#watch-button:foc
 .season-dropdown {
     position: relative;
     display: inline-block;
-    margin-top: 1em;
-    width: 100%;
-    max-width: 300px; /* Ajusta el ancho máximo */
-    z-index: 1000;
+    font-size: 18px;
 }
 
-/* Contenedor del dropdown con la clase activa */
-.season-dropdown.active .dropdown-content {
-    display: block;
-}
-
-/* Estilos del botón del dropdown */
+/* Botón principal */
 .dropdown-button {
-    background-color: #282c34;
+    background-color: rgb(36, 36, 36);
     color: white;
     border: 0.1em solid rgb(77, 77, 77);
     padding: 0.8em 1.2em;
     font-size: 1em;
     border-radius: 0.2em;
     cursor: pointer;
-    width: 63%;
+    width: 11em;
     text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    left: 21.4em;
-    top: 9em;
-    opacity: 0;
+    left: 10.1em;
+    top: 7em;
+    opacity: 1;
+    font-weight: 700;
+    height: 2.4em;
 }
 
 .dropdown-button::after {
-    content: "▼"; /* Flecha indicando que se despliega */
-    font-size: 0.8em;
+    content: "▼";
+    margin-left: 1.5em;
+    transition: transform 0.3s ease;
+    font-size: 12px;
+    margin-top: -0.02em;
 }
 
-.dropdown.active .dropdown-button::after {
-    transform: rotate(180deg); /* Rota la flecha hacia arriba */
+/* Gira la flecha cuando el menú está abierto */
+.season-dropdown.show .dropdown-button::after {
+    transform: rotate(180deg);
 }
 
-/* Estilos del contenido desplegable */
+/* Menú desplegable */
 .dropdown-content {
-     /* Asegura que se despliegue justo debajo del botón */
-     
-      /* Asegura que esté por encima de otros elementos */
-     position: absolute;
-     top: 12em;
-     left: 18.91em;
-     background-color: #282c34;
-     border: 0.1em solid rgb(77, 77, 77);
-     width: 76%;
-     z-index: 100;
-     overflow: hidden;
-     visibility: initial;
-     transition: opacity 0.3s ease, visibility 0.3s ease;
-     height: 7em;
-     opacity: 0;
+    position: absolute;
+    background-color: rgb(36, 36, 36);
+    color: white;
+    width: 236px;
+    border: 0.1em solid rgb(77, 77, 77);
+    margin-top: 172px;
+    z-index: 10;
+    font-size: 1em;
+    font-family: 'Netflix Sans', sans-serif;
+     /* Inicialmente oculto */
+    margin-left: 8em;
+    height: 9.2em;
+    overflow-y: auto;
+    overflow-x: clip;
+    display: none;
 }
 
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-    opacity: 1;
-    visibility: visible;
+#seasonMenu {
+    display: none; /* Inicialmente oculto */
 }
 
-/* Estilos de los botones dentro del dropdown */
-.dropdown-content button {
+#seasonMenu.show {
+    display: block; /* Cuando se activa 'show', se muestra */
+}
+
+/* Cada opción de temporada */
+.season-option {
+     /* Aumenta el área clickeable */
+     width: 100%;
+}
+
+/* Botones dentro del menú */
+.season-option .texto {
     background: none;
     border: none;
-    width: 100%;
-    padding: 0.8em 1em;
-    position: absolute;
-    left: 0em;
-    text-align: left;
     font-size: 1em;
+    color: white;
     cursor: pointer;
-    transition: background 0.3s ease;
-    color: #fff;
-    align-content: center;
-    align-items: center;
-    display: grid;
+    padding: 0.5em; /* Espaciado alrededor del texto */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    text-align: left;
+    font-family: 'Netflix Sans', sans-serif;
+    transition: color 0.2s ease;
+    padding-left: 0.7em;
+    display: block; /* Asegura que se comporta como un bloque, para que ocupe toda el área */
+    font-weight: 700;
 }
 
-button.texto {
-    padding-left: 1em !important;!i;!;
+button.texto.vtle {
+    margin-top: -5px;
+    margin-bottom: 10px;
 }
 
+.sepaoption {
+    border-top: 1px solid rgb(77, 77, 77);
+    margin: 1rem 0.8em;
+}
+
+.t1 {
+    margin-top: 10px;
+    padding-bottom: 0.6em !important;
+}
+
+.t2 {
+    margin-bottom: -5px;
+}
+
+/* Texto de cantidad de episodios */
 .episode-count {
-    !i;!;
-    padding-left: 2em;
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Netflix Sans', sans-serif;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    margin-left: 8.8em;
+    font-weight: 500;
 }
 
-#texto1 {
-    position: absolute;
-    top: 1.15em;
-    height: 2.2em;
-    padding-left: 2em;
+/* Clases individuales para estilo adicional o separación */
+.ep1 {
+    margin-top: -1.5em;
 }
 
-#texto2 {
-    position: absolute;
-    top: 3.4em;
-    height: 2.2em;
-    padding-left: 2em;
+.ep2 {
+    margin-top: -1.4em;
 }
-
-.texto {
-}
-
+  
 strong.epnumber1 {
     color: #bcbcbc !important;
     position: absolute;
@@ -414,28 +425,6 @@ button.text:hover {
     background-color: #f0f0f0;
 }
 
-/* Información de los episodios */
-.episode-count {
-    display: block;
-    padding: 0.5em 0em;
-    font-size: 0.9em;
-    color: #ffffff;
-    z-index: 1000;
-    position: absolute;
-    top: 1.4em;
-    left: 10em;
-    font-weight: 300;
-}
-
-#episode-count1 {
-    top: 0.1em;
-    left: 8.8em;!i;!;
-}
-
-#episode-count2 {
-    top: 0.07em;
-    left: 8.8em;
-}
 
 #episode-list li {
     display: flex;
@@ -619,122 +608,6 @@ button.text:hover {
 .modal-title {
     position: absolute;
     top: 2em;
-}
-
-/* Contenedor principal del dropdown */
-.season-dropdown {
-    position: relative;
-    display: inline-block;
-    margin-top: 1em;
-    width: 100%;
-    max-width: 300px; /* Ajusta el ancho máximo */
-    z-index: 1000;
-}
-
-/* Contenedor del dropdown con la clase activa */
-.season-dropdown.active .dropdown-content {
-    display: block;
-}
-
-/* Estilos del botón del dropdown */
-.dropdown-button {
-    background-color: #282c34;
-    color: white;
-    border: 0.1em solid rgb(77, 77, 77);
-    padding: 0.8em 1.2em;
-    font-size: 1em;
-    border-radius: 0.2em;
-    cursor: pointer;
-    width: 63%;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    left: 21.4em;
-    top: 9em;
-    opacity: 0;
-}
-
-.dropdown-button::
-    after {
-    content: "▼"; /* Flecha indicando que se despliega */
-    font-size: 0.8em;
-}
-
-.dropdown.active .dropdown-button::
-    after {
-    transform: rotate(180deg); /* Rota la flecha hacia arriba */
-}
-
-/* Estilos del contenido desplegable */
-.dropdown-content {
-     /* Asegura que se despliegue justo debajo del botón */
-     
-      /* Asegura que esté por encima de otros elementos */
-    position: absolute;
-    top: 12em;
-    left: 18.91em;
-    background-color: #282c34;
-    border: 0.1em solid rgb(77, 77, 77);
-    width: 76%;
-    z-index: 100;
-    overflow: hidden;
-    visibility: initial;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    height: 7em;
-    opacity: 0;
-}
-
-.dropdown:
-    hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Estilos de los botones dentro del dropdown */
-.dropdown-content
-    button {
-    background: none;
-    border: none;
-    width: 100%;
-    padding: 0.8em 1em;
-    position: absolute;
-    left: 0em;
-    text-align: left;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    color: #fff;
-    align-content: center;
-    align-items: center;
-    display: grid;
-}
-    button.texto {
-    padding-left: 1em !important;!i;!;
-}
-
-.episode-count {
-    !i;!;
-    padding-left: 2em;
-}
-
-#texto1 {
-    position: absolute;
-    top: 1.15em;
-    height: 2.2em;
-    padding-left: 2em;
-}
-
-#texto2 {
-    position: absolute;
-    top: 3.4em;
-    height: 2.2em;
-    padding-left: 2em;
-}
-
-.texto {
 }
     strong.epnumber1 {
     color: #bcbcbc !important;
@@ -1452,122 +1325,6 @@ position: absolute;
     position: absolute;
     top: 2em;
 }
-
-/* Contenedor principal del dropdown */
-.season-dropdown {
-    position: relative;
-    display: inline-block;
-    margin-top: 1em;
-    width: 100%;
-    max-width: 300px; /* Ajusta el ancho máximo */
-    z-index: 1000;
-}
-
-/* Contenedor del dropdown con la clase activa */
-.season-dropdown.active .dropdown-content {
-    display: block;
-}
-
-/* Estilos del botón del dropdown */
-.dropdown-button {
-    background-color: #282c34;
-    color: white;
-    border: 0.1em solid rgb(77, 77, 77);
-    padding: 0.8em 1.2em;
-    font-size: 1em;
-    border-radius: 0.2em;
-    cursor: pointer;
-    width: 63%;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    left: 21.4em;
-    top: 9em;
-    opacity: 0;
-}
-
-.dropdown-button::
-    after {
-    content: "▼"; /* Flecha indicando que se despliega */
-    font-size: 0.8em;
-}
-
-.dropdown.active .dropdown-button::
-    after {
-    transform: rotate(180deg); /* Rota la flecha hacia arriba */
-}
-
-/* Estilos del contenido desplegable */
-.dropdown-content {
-     /* Asegura que se despliegue justo debajo del botón */
-     
-      /* Asegura que esté por encima de otros elementos */
-    position: absolute;
-    top: 12em;
-    left: 18.91em;
-    background-color: #282c34;
-    border: 0.1em solid rgb(77, 77, 77);
-    width: 76%;
-    z-index: 100;
-    overflow: hidden;
-    visibility: initial;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    height: 7em;
-    opacity: 0;
-}
-
-.dropdown:
-    hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Estilos de los botones dentro del dropdown */
-.dropdown-content
-    button {
-    background: none;
-    border: none;
-    width: 100%;
-    padding: 0.8em 1em;
-    position: absolute;
-    left: 0em;
-    text-align: left;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    color: #fff;
-    align-content: center;
-    align-items: center;
-    display: grid;
-}
-    button.texto {
-    padding-left: 1em !important;!i;!;
-}
-
-.episode-count {
-    !i;!;
-    padding-left: 2em;
-}
-
-#texto1 {
-    position: absolute;
-    top: 1.15em;
-    height: 2.2em;
-    padding-left: 2em;
-}
-
-#texto2 {
-    position: absolute;
-    top: 3.4em;
-    height: 2.2em;
-    padding-left: 2em;
-}
-
-.texto {
-}
     strong.epnumber1 {
     color: #bcbcbc !important;
     position: absolute;
@@ -2285,121 +2042,6 @@ position: absolute;
     top: 2em;
 }
 
-/* Contenedor principal del dropdown */
-.season-dropdown {
-    position: relative;
-    display: inline-block;
-    margin-top: 1em;
-    width: 100%;
-    max-width: 300px; /* Ajusta el ancho máximo */
-    z-index: 1000;
-}
-
-/* Contenedor del dropdown con la clase activa */
-.season-dropdown.active .dropdown-content {
-    display: block;
-}
-
-/* Estilos del botón del dropdown */
-.dropdown-button {
-    background-color: #282c34;
-    color: white;
-    border: 0.1em solid rgb(77, 77, 77);
-    padding: 0.8em 1.2em;
-    font-size: 1em;
-    border-radius: 0.2em;
-    cursor: pointer;
-    width: 63%;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    left: 21.4em;
-    top: 9em;
-    opacity: 0;
-}
-
-.dropdown-button::
-    after {
-    content: "▼"; /* Flecha indicando que se despliega */
-    font-size: 0.8em;
-}
-
-.dropdown.active .dropdown-button::
-    after {
-    transform: rotate(180deg); /* Rota la flecha hacia arriba */
-}
-
-/* Estilos del contenido desplegable */
-.dropdown-content {
-     /* Asegura que se despliegue justo debajo del botón */
-     
-      /* Asegura que esté por encima de otros elementos */
-    position: absolute;
-    top: 12em;
-    left: 18.91em;
-    background-color: #282c34;
-    border: 0.1em solid rgb(77, 77, 77);
-    width: 76%;
-    z-index: 100;
-    overflow: hidden;
-    visibility: initial;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    height: 7em;
-    opacity: 0;
-}
-
-.dropdown:
-    hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Estilos de los botones dentro del dropdown */
-.dropdown-content
-    button {
-    background: none;
-    border: none;
-    width: 100%;
-    padding: 0.8em 1em;
-    position: absolute;
-    left: 0em;
-    text-align: left;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    color: #fff;
-    align-content: center;
-    align-items: center;
-    display: grid;
-}
-    button.texto {
-    padding-left: 1em !important;!i;!;
-}
-
-.episode-count {
-    !i;!;
-    padding-left: 2em;
-}
-
-#texto1 {
-    position: absolute;
-    top: 1.15em;
-    height: 2.2em;
-    padding-left: 2em;
-}
-
-#texto2 {
-    position: absolute;
-    top: 3.4em;
-    height: 2.2em;
-    padding-left: 2em;
-}
-
-.texto {
-}
     strong.epnumber1 {
     color: #bcbcbc !important;
     position: absolute;
@@ -3117,121 +2759,6 @@ position: absolute;
     top: 2em;
 }
 
-/* Contenedor principal del dropdown */
-.season-dropdown {
-    position: relative;
-    display: inline-block;
-    margin-top: 1em;
-    width: 100%;
-    max-width: 300px; /* Ajusta el ancho máximo */
-    z-index: 1000;
-}
-
-/* Contenedor del dropdown con la clase activa */
-.season-dropdown.active .dropdown-content {
-    display: block;
-}
-
-/* Estilos del botón del dropdown */
-.dropdown-button {
-    background-color: #282c34;
-    color: white;
-    border: 0.1em solid rgb(77, 77, 77);
-    padding: 0.8em 1.2em;
-    font-size: 1em;
-    border-radius: 0.2em;
-    cursor: pointer;
-    width: 63%;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    left: 21.4em;
-    top: 9em;
-    opacity: 0;
-}
-
-.dropdown-button::
-    after {
-    content: "▼"; /* Flecha indicando que se despliega */
-    font-size: 0.8em;
-}
-
-.dropdown.active .dropdown-button::
-    after {
-    transform: rotate(180deg); /* Rota la flecha hacia arriba */
-}
-
-/* Estilos del contenido desplegable */
-.dropdown-content {
-     /* Asegura que se despliegue justo debajo del botón */
-     
-      /* Asegura que esté por encima de otros elementos */
-    position: absolute;
-    top: 12em;
-    left: 18.91em;
-    background-color: #282c34;
-    border: 0.1em solid rgb(77, 77, 77);
-    width: 76%;
-    z-index: 100;
-    overflow: hidden;
-    visibility: initial;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    height: 7em;
-    opacity: 0;
-}
-
-.dropdown:
-    hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Estilos de los botones dentro del dropdown */
-.dropdown-content
-    button {
-    background: none;
-    border: none;
-    width: 100%;
-    padding: 0.8em 1em;
-    position: absolute;
-    left: 0em;
-    text-align: left;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    color: #fff;
-    align-content: center;
-    align-items: center;
-    display: grid;
-}
-    button.texto {
-    padding-left: 1em !important;!i;!;
-}
-
-.episode-count {
-    !i;!;
-    padding-left: 2em;
-}
-
-#texto1 {
-    position: absolute;
-    top: 1.15em;
-    height: 2.2em;
-    padding-left: 2em;
-}
-
-#texto2 {
-    position: absolute;
-    top: 3.4em;
-    height: 2.2em;
-    padding-left: 2em;
-}
-
-.texto {
-}
     strong.epnumber1 {
     color: #bcbcbc !important;
     position: absolute;
@@ -3921,6 +3448,8 @@ span.fcprefix {color: #bcbcbc;}
 
 .facontent2 {
     margin-left: 1.1em;
+    width: 14em;
+    position: absolute;
 }
 
 .modal-cast strong, .modal-genres strong, .modal-titleType strong {
@@ -3948,21 +3477,16 @@ span.faprefix {
     color: #bcbcbc;
 }
 
-.fullcreatedBy.fc {}
-
-button.texto:hover {background: #424242;border-radius: 0em;}
+button.texto:hover {
+    background: #424242;
+    border-radius: 0em;
+}
 
 ul#episode-list {
     padding-left: 2em;
     padding-right: 3em;
     position: absolute;
     top: 41em;
-}
-
-ul#episode-list {
-    
-    
-    !em;!e;!;
 }
 
 .modal strong.eplist {
@@ -3985,16 +3509,6 @@ ul#episode-list {
 .overlay h1 {
     font-size: 2em;
     font-weight: bold;
-}
-
-h1#modal-title {
-    font-size: 1.5em;
-    font-weight: bold;
-    position: relative;
-    top: 987px;
-    z-index: 1000;
-    margin-left: -2.6em;
-    padding-left: 2.2em;
 }
 
 strong.titulo {
@@ -4142,3 +3656,121 @@ span.about {
         border-top-right-radius: 11.2px;
     }
 }
+
+/* Contenedor principal */
+.modal-container {
+    display: flex;
+    flex-direction: column;  /* Asegura que los elementos se apilen verticalmente */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    justify-content: flex-start;  /* Asegura que los elementos se alineen desde el principio */
+    padding: 1em;
+}
+
+/* Título */
+h1#modal-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 36.8em; /* Un pequeño margen superior */
+    margin-left: -2.6em;
+    padding-left: 2em;
+    width: 20.4em;
+    color: white;
+    text-align: left;
+    margin-bottom: 0.5em; /* Un margen inferior para separar del siguiente bloque */
+    z-index: 1000;
+    position: absolute;
+}
+
+/* Estilo específico para el primer bloque, .modal-createdBy */
+.modal-createdBy {
+    font-size: 14px;
+    padding-left: 1em;
+    padding-right: 3em;
+    color: #fff;
+    text-align: left;
+    margin-top: 1.5em;  /* Este margen solo es para .modal-createdBy */
+    margin-bottom: 0.5em; /* Margen inferior para separar los bloques */
+    line-height: 1.4em; /* Espaciado de línea para mejorar la legibilidad */
+}
+
+/* Estilos generales para los otros bloques */
+.modal-createdBy, .fullcast, .fullscript, .fullgenres, .fulltitletype, .fullage {
+    font-size: 14px;
+    padding-left: 1em;
+    padding-right: 3em;
+    color: #fff;
+    text-align: left;
+    margin-top: 0.5em;  /* Margen superior variable */
+    margin-bottom: 0.5em; /* Margen inferior */
+    line-height: 1.4em; /* Espaciado de línea para mejorar la legibilidad */
+    top: 24.8em;
+    position: relative;
+}
+
+/* Prefijos */
+.fcbprefix, .fcprefix, .fsprefix, .fgprefix, .fttprefix, .faprefix {
+    color: #bcbcbc;
+}
+
+/* Contenido */
+.fccontent, .fscontent, .fgcontent, .fttcontent, .facontent, .facontent2 {
+    color: #fff;
+}
+
+/* Edad */
+.age {
+    font-weight: bold;
+}
+
+/* Estilo específico para el primer bloque con prefijo .app- */
+.app-createdBy {
+    font-size: 14px;
+    padding-left: 1em;
+    padding-right: 3em;
+    color: #fff;
+    text-align: left;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.4em;
+}
+
+/* Estilos generales para los otros bloques con prefijo .app- */
+.app-createdBy, .app-fullcast, .app-fullscript, .app-fullgenres, .app-fulltitletype, .app-fullage {
+    font-size: 14px;
+    padding-left: 1em;
+    padding-right: 3em;
+    color: #fff;
+    text-align: left;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.4em;
+    top: 23em;
+}
+
+/* Prefijos con prefijo .app- */
+.app-fcbprefix, .app-fcprefix, .app-fsprefix, .app-fgprefix, .app-fttprefix, .app-faprefix {
+    color: #bcbcbc;
+}
+
+/* Contenido con prefijo .app- */
+.app-fccontent, .app-fscontent, .app-fgcontent, .app-fttcontent, .app-facontent, .app-facontent2 {
+    color: #fff;
+}
+
+/* Edad con prefijo .app- */
+.app-age {
+    font-weight: bold;
+}
+
+.dropdown-content::-webkit-scrollbar {
+    width: 8px;
+}
+  
+  .dropdown-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgb(128, 128, 128);
+  }
+  
+  .dropdown-content::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(204, 204, 204);
+  }
