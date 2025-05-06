@@ -1,0 +1,7 @@
+    <!-- Película 2 -->
+    <div class="pelicula">
+        <button class="moreinfobutton" data-movie="cienporcientolucha">
+        <span class="sevapronto" id="act">Se va pronto</span>
+    <img src="https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6" alt="Pelicula 10">
+    </button>
+</div>
