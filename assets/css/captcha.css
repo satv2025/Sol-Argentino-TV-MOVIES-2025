@@ -5,7 +5,7 @@
     }
 
     body {
-      background: #141414;
+      background: #000;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -14,7 +14,7 @@
       color: #fff;
     }
     .box {
-      background: #222;
+      background: #181818;
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -29,4 +29,9 @@
           
     .g-recaptcha {
     margin-left: 0.6em;
+}
+
+.satvsec {
+    color: #fff;
+    font-size: 2em;
 }
