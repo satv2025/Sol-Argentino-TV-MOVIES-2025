@@ -5,45 +5,50 @@
   <title>SATV Security</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Estilos -->
   <link rel="stylesheet" href="/assets/css/captcha.css">
 
-  <!-- reCAPTCHA -->
+  <!-- reCAPTCHA de Google -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <!-- Turnstile -->
+
+  <!-- Turnstile de Cloudflare -->
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
-<header>
-  <h1 class="satvsec">SATV Security</h1>
-</header>
 <body>
+  <header>
+    <h1 class="satvsec">SATV Security</h1>
+  </header>
 
-<div class="box">
-  <h2>Bienvenido</h2>
+  <main class="box">
+    <h2>Bienvenido</h2>
+    <p>Por favor completa ambos captchas para acceder al sitio.</p>
 
-  <p>Por favor completa ambos captchas para acceder al sitio.</p>
+    <!-- reCAPTCHA -->
+    <div class="g-recaptcha" 
+         data-sitekey="6LcLHyYrAAAAAPR8omDIapLgUgTO3iTwP8AXz_U8" 
+         data-callback="checkCaptcha">
+    </div>
 
-  <!-- reCAPTCHA -->
-  <div class="g-recaptcha" data-sitekey="6LcLHyYrAAAAAPR8omDIapLgUgTO3iTwP8AXz_U8" data-callback="checkCaptcha"></div>
+    <br>
 
-  <br>
+    <!-- Turnstile -->
+    <div class="cf-turnstile" 
+         data-sitekey="0x4AAAAAABU4zoWCagVPZDcN" 
+         data-callback="checkCaptcha">
+    </div>
+  </main>
 
-  <!-- Turnstile -->
-  <div class="cf-turnstile" data-sitekey="0x4AAAAAABU4zoWCagVPZDcN" data-callback="checkCaptcha"></div>
-</div>
+  <script>
+    // Verifica si ambos captchas fueron completados
+    function checkCaptcha() {
+      const recaptchaResponse = grecaptcha.getResponse(); // Google
+      const turnstileResponse = document.querySelector('input[name="cf-turnstile-response"]')?.value; // Cloudflare
 
-<script>
-// Función para verificar si ambos captchas fueron completados
-function checkCaptcha() {
-  const recaptchaResponse = grecaptcha.getResponse(); // Google
-  const turnstileResponse = document.querySelector('input[name="cf-turnstile-response"]')?.value; // Cloudflare
-
-  // Verificar si ambos captchas fueron completados
-  if (recaptchaResponse && turnstileResponse) {
-    // Redirigir al usuario a "inicio.html" si ambos captchas están completos
-    window.location.href = "/inicio.html"; // Aquí va la URL de tu página de inicio
-  }
-}
-</script>
-
+      if (recaptchaResponse && turnstileResponse) {
+        // Redirección si ambos captchas están completos
+        window.location.href = "/inicio.html";
+      }
+    }
+  </script>
 </body>
 </html>

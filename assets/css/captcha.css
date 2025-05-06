@@ -1,40 +1,54 @@
 @import url('https://fuentes.solargentinotv.com.ar/netflixsans.css');
 
-    * {
-        font-family: 'Netflix Sans';
-    }
+:root {
+  --font-main: 'Netflix Sans', sans-serif;
+  --bg-color: #000;
+  --box-bg: #181818;
+  --text-color: #fff;
+}
 
-    body {
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: 'Netflix Sans';
-      color: #fff;
-    }
-    .box {
-      background: #181818;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-      width: 320px;
-    }
-    p {
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
+* {
+  box-sizing: border-box;
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+}
 
-          
-    .g-recaptcha {
-    margin-left: 0.6em;
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+header {
+  margin-bottom: 1.5rem;
 }
 
 .satvsec {
-    color: #fff;
-    font-size: 2em;
-    position: relative;
-    margin-left: 1em;
-    margin-top: 0.5em;
+  font-size: 2em;
+  text-align: center;
+}
+
+.box {
+  background-color: var(--box-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 350px;
+  width: 100%;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.g-recaptcha {
+  margin-left: 0.6em;
 }
