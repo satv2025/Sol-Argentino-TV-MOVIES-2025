@@ -34,4 +34,7 @@
 .satvsec {
     color: #fff;
     font-size: 2em;
+    position: relative;
+    margin-left: 1em;
+    margin-top: 0.5em;
 }
