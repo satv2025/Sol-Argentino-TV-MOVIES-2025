@@ -4,6 +4,13 @@
     display: inline-block;
 }
 
+.texto2 {
+}
+
+texto2 {
+    position: absolute;
+}
+
 .dropdown-button {
     font-family: 'Netflix Sans';
     margin-top: 2.3em;
@@ -56,6 +63,7 @@
     border-radius: 0 !important;
     margin-top: 0.6em;
     text-align: left; /* Cambiar de justify a left */
+    height: 6.3em;
 }
 
 button.texto {
@@ -75,14 +83,17 @@ button.texto {
 
 .textotemp {
     flex: 1;
+    margin-left: 0.3em;
 }
 
 .episode-count {
     font-weight: 100;
     font-size: 0.8em;
     color: #ccc;
-    margin-left: 1em;
+    margin-left: 3em;
     white-space: nowrap;
+    margin-top: 1.66em;
+    position: absolute;
 }
 
 #textotemp {
@@ -99,12 +110,20 @@ button.texto {
     text-decoration: none;
     display: block;
     border: none;
-    width: 17.9em; /* 238px a 14.875em */
+    width: 14.9em; /* 238px a 14.875em */
     cursor: pointer;
     text-align: justify;
     position: relative;
     left: -0.72em;
     margin-bottom: -1.4em;
+}
+
+.texto2 {
+    margin-top: 1.4em;
+}
+
+.texto {
+    margin-left: 0.1em;
 }
 
 .dropdown-content button:hover {
