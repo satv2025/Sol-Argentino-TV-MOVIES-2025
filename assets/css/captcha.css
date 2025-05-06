@@ -81,7 +81,7 @@ p {
 }
 
 .help-btn {
-  margin-top: 3.5rem;
+  margin-top: 7rem;
   background: none;
   border: 1px solid var(--accent);
   color: var(--accent);
@@ -94,7 +94,7 @@ p {
   font-weight: 700;
   font-size: 1.5em;
   position: absolute;
-  margin-left: -5em;
+  margin-left: -5.4em;
   background: #333;
   padding-left: 1em;
   padding-right: 1em;
@@ -115,9 +115,9 @@ p {
 
 .access-btn {
     margin-top: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    color: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #22222257;
+    color: #ff000057;
+    border: 1px solid #ff000057;
     padding: 0.6em 1.2em;
     border-radius: 8px;
     font-family: 'Netflix Sans';
@@ -126,6 +126,8 @@ p {
     cursor: not-allowed;
     transition: background 0.3s, color 0.3s;
   }
+
+.access-btn:hover {background: #ff000057;color: #ffffff57;}
   
   .access-btn.enabled {
     background: var(--accent);
@@ -136,4 +138,4 @@ p {
   
   .access-btn.enabled:hover {
     background: #ff1f2e;
-  }  
+  }
