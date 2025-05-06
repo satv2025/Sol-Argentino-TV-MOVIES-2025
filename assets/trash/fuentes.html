@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Tipografía: Popular</title>
+    <style>
+        @import url(https://movies.solargentinotv.com.ar/popular.css);
+        body {
+            font-family: Popular;
+            background-color: #f0f0f000;
+            margin: 2em;
+            font-size: 1em;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        .header p {
+            font-size: 1.1em;
+            margin: 0.5em 0;
+        }
+        .container {
+            margin-bottom: 1.5em;
+            padding: 2em 3em; /* Aumento del padding lateral */
+            background-color: #ffffff00;
+            border-radius: 0.5em;
+        }
+        .container h2 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+            margin-top: -1em;
+        }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1em;
+            margin-bottom: -3.5em;
+        }
+        .input-container input {
+            padding: 0.6em;
+            font-size: 1.8em;
+            margin-bottom: 0.2em;
+            border: none;
+            background-color: transparent;
+            width: 100%;
+            outline: none;
+        }
+        .container p {
+            margin: 0.5em 0;
+            font-size: 1em;
+        }
+        hr {
+            border: 0;
+            border-top: 0.05em solid #ccc;
+            margin: -1;
+            margin-left: 3em;
+            margin-right: 3em;
+        }
+        .download-button {
+            display: block;
+            margin-top: 2em;
+            padding: 0.8em;
+            background-color: #fff;
+            border: solid 0.1em #007bff;
+            color: #007bff;
+            text-align: center;
+            border-radius: 0.3em;
+            text-decoration: none;
+            font-weight: 700;
+            width: 14em;
+            margin: 0 auto;
+            font-size: 1.4em
+        }
+        .download-button:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 37.5em) {
+            body {
+                margin: 1.5em;
+            }
+            .container {
+                padding: 0.5em;
+            }
+            .container h2 {
+                font-size: 1.3em;
+            }
+            .input-container input {
+                font-size: 1.1em;
+            }
+            .download-button {
+                width: 100%;
+                padding: 1em;
+            }
+        }
+
+        /* Estilos para navegadores basados en WebKit (Chrome, Safari) */
+/* Estilo para el scrollbar en navegadores WebKit (Chrome, Brave, Safari, Opera, Opera GX, Edge) */
+::-webkit-scrollbar {
+  width: 1em; /* Usamos 'em' en lugar de 'px' */
+}
+
+::-webkit-scrollbar-track {
+  background: #fff0; /* Fondo oscuro para la pista */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b0c4de; /* Color del pulgar de la barra */
+  border-radius: 0.5em; /* Bordes redondeados */
+  border: 0.2em solid transparent; /* Bordes transparentes */
+  background-clip: padding-box; /* Evita que el borde se mezcle con el color */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #81aadf; /* Color al pasar el ratón */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 0.8em; /* Reduce el ancho del scrollbar */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0.4em; /* Bordes más pequeños */
+  }
+}
+
+/* Media query para pantallas extra pequeñas */
+@media (max-width: 480px) {
+  ::-webkit-scrollbar {
+    width: 0.6em; /* Scrollbar aún más fino */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0.3em;
+  }
+}
+
+/* Firefox - Estilo alternativo para scrollbars en Firefox */
+scrollbar {
+  width: 1em;
+}
+
+scrollbar-track {
+  background: #fff0;
+}
+
+scrollbar-thumb {
+  background-color: #b0c4de;
+  border-radius: 0.5em;
+  border: 0.2em solid transparent;
+  background-clip: padding-box;
+}
+
+scrollbar-thumb:hover {
+  background-color: #81aadf;
+}
+
+/* Internet Explorer y Edge Legacy */
+::-ms-scrollbar {
+  width: 1em;
+}
+
+::-ms-scrollbar-track {
+  background: #fff0;
+}
+
+::-ms-scrollbar-thumb {
+  background-color: #b0c4de;
+  border-radius: 0.5em;
+  border: 0.2em solid transparent;
+  background-clip: padding-box;
+}
+
+::-ms-scrollbar-thumb:hover {
+  background-color: #81aadf;
+}
+
+        /* Ocultamos el texto original para mostrar solo el nuevo texto visualmente */
+        #title {
+            position: relative;
+        }
+
+        #title::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: black; /* Cambiar color si es necesario */
+        }
+
+        #title span {
+            visibility: hidden; /* Este es el texto original que queremos ocultar */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Información sobre la tipografía -->
+<div class="header">  
+    <h1>Popular</h1>  
+    <p><strong>Creador:</strong> Christian Schwartz (Orange Italic / Type Network)</p>  
+    <p><strong>Descripción:</strong> Popular es una tipografía sans-serif diseñada para ser accesible, moderna y versátil. Su estructura equilibrada y geométrica le otorga una gran legibilidad, manteniendo un carácter distintivo y amigable. Su diseño busca capturar la esencia de las sans-serif funcionales del siglo XX, con un toque contemporáneo.</p>  
+    <p><strong>Usos comunes:</strong> Gracias a su diseño claro y flexible, Popular es ideal para branding, diseño editorial, publicidad, interfaces digitales y materiales impresos. Su versatilidad la hace adecuada para proyectos que requieren una apariencia moderna pero accesible.</p>  
+    <p><strong>Uso en Telefe:</strong> Telefe, un canal de televisión argentino, ha incorporado la tipografía <strong style="font-family: Popular; font-weight: 700;">Popular</strong> en su noticiero "El Noticiero De La Gente"</p>  
+    <p><strong>Licencia:</strong> Popular es una tipografía comercial, por lo que su uso requiere la compra de una licencia a través de Type Network.</p>  
+    <p><strong>Más información:</strong> Puedes ver y adquirir la tipografía en su página oficial en Type Network:  
+    <a href="https://store.typenetwork.com/foundry/orangeitalic/fonts/popular" target="_blank">https://store.typenetwork.com/foundry/orangeitalic/fonts/popular</a></p>  
+</div>
+
+<div class="container">
+    <h2 id="title">
+        PÁGINAS QUE USAN LA TIPOGRAFÍA: %fontjsonid%
+    </h2>
+
+    <script>
+        window.onload = function() {
+            // Obtenemos el título por su id
+            var titleElement = document.getElementById('title');
+
+            // Si el contenido tiene %fontjsonid%, lo reemplazamos visualmente
+            if (titleElement.innerHTML.includes('%fontjsonid%')) {
+                titleElement.innerHTML = titleElement.innerHTML.replace('%fontjsonid%', 'Popular');
+            }
+        }
+    </script>
+
+    <ul>
+        <li><a href="https://solargentinotv.com.ar" target="_blank">Sol Argentino TV, Canal De TV Por YT</a></li>
+        <li><a href="https://www.rickmanarchitecture.com" target="_blank">Rickman Architecture + Design</a></li>
+        <li><a href="https://www.alicek.com" target="_blank">Alice K</a></li>
+        <li><a href="https://www.whangai.com" target="_blank">Whangai</a></li>
+        <li><a href="https://www.designupsagency.com" target="_blank">DesignUps Agency</a></li>
+        <li><a href="https://www.momenthum.com" target="_blank">Momenthum</a></li>
+        <li><a href="https://www.diagnosteamgroup.com" target="_blank">Diagnosteam Group</a></li>
+        <li><a href="https://www.adeltagency.com" target="_blank">Adelt Agency</a></li>
+        <li><a href="https://www.natalieherzeldentalclinic.com" target="_blank">Natalie Herzel Dental Clinic</a></li>
+        <li><a href="https://www.gravityforms.com" target="_blank">Gravity Forms</a></li>
+        <li><a href="https://www.eurotechconseil.com" target="_blank">Euro Tech Conseil</a></li>
+    </ul>
+</div>
+
+
+<hr>
+
+<!-- Thin 100 -->
+<div class="container">
+    <h2>Thin 100</h2>
+    <p>Texto de ejemplo en español: Este es un ejemplo de texto con el peso Thin (100).</p>
+    <div class="input-container">
+        <input type="text" placeholder="¿Listo para probar? Letras como a, b, c, d, e y números como 123, 456, 789. Además, no olvides los acentos: á, é, í, ó, ú, ñ.:" style="font-family: Popular; font-weight: 100;">
+    </div>
+</div>
+
+<hr>
+<!-- Thin 100 Italic -->
+<div class="container">
+    <h2>Thin 100 Italic</h2>
+    <p>Texto de ejemplo en español: Este es un ejemplo de texto con el peso Thin Italic (100).</p>
+    <div class="input-container">
+        <input type="text" placeholder="¿Listo para probar? Letras como a, b, c, d, e y números como 123, 456, 789. Además, no olvides los acentos: á, é, í, ó, ú, ñ.:"  style="font-family: Popular; font-weight: 100; font-style: italic;">
+    </div>
+</div>
+<hr>
+
+<!-- Extra Light 200 -->
+<div class="container">
+    <h2>Extra Light 200</h2>
+    <p>Texto de ejemplo en español: Este es un ejemplo de texto con el peso Extra Light (200).</p>
+    <div class="input-container">
+        <input type="text" placeholder="¿Listo para probar? Letras como a, b, c, d, e y números como 123, 456, 789. Además, no olvides los acentos: á, é, í, ó, ú, ñ.:"  style="font-family: Popular; font-weight: 200;">
+    </div>
+</div>
+
+<hr>
+<!-- Extra Light 200 Italic -->
+<div class="container">
+    <h2>Extra Light 200 Italic</h2>
+    <p>Texto de ejemplo en español: Este es un ejemplo de texto con el peso Extra Light Italic (200).</p>
+    <div class="input-container">
+        <input type="text" placeholder="¿Listo para probar? Letras como a, b, c, d, e y números como 123, 456, 789. Además, no olvides los acentos: á, é, í, ó, ú, ñ.:"  style="font-family: Popular; font-weight: 200; font-style: italic;">
+    </div>
+</div>
+<hr>
+
+<!-- Light 300 -->
+<div class="container">
+    <h2>Light 300</h2>
+    <p>Texto de ejemplo en español: Este es un ejemplo de texto con el peso Light (300).</p>
+    <div class="input-container">
+        <input type="text" placeholder="¿Listo para probar? Letras como a, b, c, d, e y números como 123, 456, 789. Además, no olvides los acentos: á, é, í, ó, ú, ñ.:"  style="font-family: Popular; font-weight: 300;">
+    </div>
+</div>
+
+<hr>
+<!-- Light 300 Italic -->
+<div class="container">
+    <h2>Light 300 Italic</h2>
+    <p>Texto de ejemplo en español: Este es un ejemplo de texto con el peso Light Italic (300).</p>
+    <div class="input-container">
+        <input type="text" placeholder="¿Listo para probar? Letras como a, b, c, d, e y números como 123, 456, 789. Además, no olvides los acentos: á, é, í, ó, ú, ñ.:"  style="font-family: Popular; font-weight: 300; font-style: italic;">
+    </div>
+</div>
+<hr>
+
+<!-- Regular 400 -->
+<div class="container">
+    <h2>Regular 400</h2>
+    <p>Texto de ejemplo en español: Este es un ejemplo de texto con el peso Regular (400).</p>
+    <div class="input-container">
+        <input type="text" placeholder="¿Listo para probar? Letras como a, b, c, d, e y números como 123, 456, 789. Además, no olvides los acentos: á, é, í, ó, ú, ñ.:"  style="font-family: Popular; font-weight: 400;">
+    </div>
+</div>
+
+<hr>
+<!-- Regular 400 Italic -->
+<div class="container">
+    <h2>Regular 400 Italic</h2>
+    <p>Texto de ejemplo en español: Este es un ejemplo de texto con el peso Regular Italic (400).</p>
+    <div class="input-container">
+        <input type="text" placeholder="¿Listo para probar? Letras como a, b, c, d, e y números como 123, 456, 789. Además, no olvides los acentos: á, é, í, ó, ú, ñ.:"  style="font-family: Popular; font-weight: 400; font-style: italic;">
+    </div>
+</div>
+<hr>
+
+<!-- Medium 500 -->
+<div class="container">
+    <h2>Medium 500</h2>
+    <p>Texto de ejemplo en español: Este es un ejemplo de texto con el peso Medium (500).</p>
+    <div class="input-container">
+        <input type="text" placeholder="¿Listo para probar? Letras como a, b, c, d, e y números como 123, 456, 789. Además, no olvides los acentos: á, é, í, ó, ú, ñ.:"  style="font-family: Popular; font-weight: 500;">
+    </div>
+</div>
+
+<hr>
+<!-- Medium 500 Italic -->
+<div class="container">
+    <h2>Medium 500 Italic</h2>
+    <p>Texto de ejemplo en español: Este es un ejemplo de texto con el peso Medium Italic (500).</p>
+    <div class="input-container">
+        <input type="text" placeholder="¿Listo para probar? Letras como a, b, c, d, e y números como 123, 456, 789. Además, no olvides los acentos: á, é, í, ó, ú, ñ.:"  style="font-family: Popular; font-weight: 500; font-style: italic;">
+    </div>
+</div>
+<hr>
+
+<!-- Bold 700 -->
+<div class="container">
+    <h2>Bold 700</h2>
+    <p>Texto de ejemplo en español: Este es un ejemplo de texto con el peso Bold (700).</p>
+    <div class="input-container">
+        <input type="text" placeholder="¿Listo para probar? Letras como a, b, c, d, e y números como 123, 456, 789. Además, no olvides los acentos: á, é, í, ó, ú, ñ.:"  style="font-family: Popular; font-weight: 700;">
+    </div>
+</div>
+
+<hr>
+<!-- Bold 700 Italic -->
+<div class="container">
+    <h2>Bold 700 Italic</h2>
+    <p>Texto de ejemplo en español: Este es un ejemplo de texto con el peso Bold Italic (700).</p>
+    <div class="input-container">
+        <input type="text" placeholder="¿Listo para probar? Letras como a, b, c, d, e y números como 123, 456, 789. Además, no olvides los acentos: á, é, í, ó, ú, ñ.:"  style="font-family: Popular; font-weight: 700; font-style: italic;">
+    </div>
+</div>
+
+<hr>
+<!-- Black 900 -->
+<div class="container">
+    <h2>Black 900</h2>
+    <p>Texto de ejemplo en español: Este es un ejemplo de texto con el peso Black (900).</p>
+    <div class="input-container">
+        <input type="text" placeholder="¿Listo para probar? Letras como a, b, c, d, e y números como 123, 456, 789. Además, no olvides los acentos: á, é, í, ó, ú, ñ.:"  style="font-family: Popular; font-weight: 900;">
+    </div>
+</div>
+
+<hr>
+<!-- Black 900 Italic -->
+<div class="container">
+    <h2>Black 900 Italic</h2>
+    <p>Texto de ejemplo en español: Este es un ejemplo de texto con el peso Black Italic (900).</p>
+    <div class="input-container">
+        <input type="text" placeholder="¿Listo para probar? Letras como a, b, c, d, e y números como 123, 456, 789. Además, no olvides los acentos: á, é, í, ó, ú, ñ.:"  style="font-family: Popular; font-weight: 900; font-style: italic;">
+    </div>
+</div>
+
+    <!-- Botón de descarga -->
+    <a href="https://movies.solargentinotv.com.ar/Popular%20FONT.rar" class="download-button" target="_blank">Descargar Tipografía</a>
+
+</body>
+</html>
