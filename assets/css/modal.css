@@ -36,7 +36,7 @@ a#watch-button, a#watch-button:visited, a#watch-button:hover, a#watch-button:foc
     border-top-left-radius: 0.7em;
     border-top-right-radius: 0.7em;
     position: relative;
-    height: calc(36.8em + 62em); /* o sumás lo que ocupa el resto de contenido */
+    height: calc(39.4em + 62em); /* o sumás lo que ocupa el resto de contenido */
 }
 
 /* Ajuste de la clase .modal */
