@@ -20,42 +20,42 @@ function changeSeason(season) {
             {
                 title: 'Episodio 1',
                 description: 'Pip elige un caso de homicidio para su proyecto escolar. Pero cuando empieza a investigar, descubre que para algunas personas era mejor dejarlo enterrado para siempre.',
-                videoPath: 'http://181.24.209.242:8080/videos/Asesinato%20Para%20Principiantes%20-%20T1%20E1.mp4',
+                videoPath: 'https://download1523.mediafire.com/umf09001ul3gIqdSXJzckPC4USK-EDZ_WPQmU1iHilIMdkiFS3pEnRqK0mvX2V33QTQKR7x1jGhzNhiax5SLdjFOy6QMjg-XH1X0sj-F5y7c7rVJf4RhHjEJ2ZhWEh00pYrHBaXNBHOl3H9kdSqFCeBG3x-n4zw2TEn6qi8fjBXu9OQ/9iq2gagcr345fac/Asesinato+Para+Principiantes+-+T1+E1.mp4',
                 image: 'https://www.mediafire.com/convkey/8ebd/67e8toxnggmojw09g.jpg',
                 duration: '43 min'
             },
             {
                 title: 'Episodio 2',
                 description: 'Luego de entrevistar a las mejores amigas de Andie, Pip tiene una idea más clara de quién era la víctima, pero tras reorganizar fotos viejas empieza a comprender mejor todo.',
-                videoPath: 'http://192.168.1.41:8080/videos/Asesinato%20Para%20Principiantes%20-%20T1%20E2.mkv',
+                videoPath: 'https://download847.mediafire.com/s4np6sy8l3egNXfvxxSs9h1ow2sTftW3ebewUxuWatXLkx5ys_bZXIicl9yG0kQcyV9Dvfip94Qag9UqCGj1hkKui4ucIVt22g5_Y-NEffFnxvKkBvYxWGv5sHI4CJ6U2MQh8L1wu66jsWIxjbajj4JqW_IM5jtah1YGW8wHFkPnFxg/xof6urhwtqlrmwz/Asesinato+Para+Principiantes+-+T1+E2.mkv',
                 image: 'https://www.mediafire.com/convkey/88d0/o7ja6efkgc857oo9g.jpg',
                 duration: '44 min'
             },
             {
                 title: 'Episodio 3',
                 description: 'Pip descubre por primera vez en su vida el lado oscuro cuando va a una fiesta clandestina. Y su siguiente pista la lleva a territorio aún más peligroso.',
-                videoPath: 'http://192.168.1.41:8080/videos/Asesinato%20Para%20Principiantes%20-%20T1%20E3.mkv',
+                videoPath: 'https://download1588.mediafire.com/5cdn7384qjugYOXWwnE3DeZXV6Ne1u6Z2ykQaG19KIxATpb5ryMvaG8YN1Z_dlZ0ub-5nnrrKmSLFITgDCUcGtVLWmWhWkM5K23y8IyWh24tcSKpWvwIFF9T9DAz_xYPI32odVxSPEzRBe2Wb5U6JyQ2KfvOd1tOL_KdFwiQhSXzsyU/1txzus4x64ah3pl/Asesinato+Para+Principiantes+-+T1+E3.mkv',
                 image: 'https://www.mediafire.com/convkey/6ed1/6870czca0karqn29g.jpg',
                 duration: '43 min'
             },
             {
                 title: 'Episodio 4',
                 description: 'Pip y Ravi siguen una nueva pista que los lleva lejos de Little Kilton. Allí, descubren una valiosa prueba... y una desagradable sorpresa.',
-                videoPath: 'http://192.168.1.41:8080/videos/Asesinato%20Para%20Principiantes%20-%20T1%20E4.mkv',
+                videoPath: 'https://download943.mediafire.com/ben9hun0g4agCNaroFy0MCKTvS40HkW-omHas9tLrFuX3TTbaERBiYYENFtr1PYSwrqub8H9qlM8aa_qWSjCeE6oFGA7K0mAs_ym23npSgc1WxgTM2Dcuk6l5wxUgBEybpeHJdcEeUDp11oIZSsDW7nsTToYue6E_i7wonZYZ9-FXqg/40wq8vf50141yhy/Asesinato+Para+Principiantes+-+T1+E4.mkv',
                 image: 'https://www.mediafire.com/convkey/0de9/czivzlrwjyr2rlj9g.jpg',
                 duration: '44 min'
             },
             {
                 title: 'Episodio 5',
                 description: 'Una impactante confesión arroja luz en la investigación. Antes de que Pip pueda decidir qué hacer, recibe otro mensaje amenazador.',
-                videoPath: 'https://download948.mediafire.com/4oce9wz5mmwgAx-nHSPA3XdV-EOzYmZSSLgCT9OEO5WokzQDg__5zk9UoBLuqGHO0bfXfnwzglJi9k2QOXG3xaWmn9VcV9W_24ZBERepKQqp_SbHZVzm0Vhjm5C6FWNFGKhUYKHVWUdMLuEVylmJCfnvqJyag8wa-sRFjKjMx5mBwFw/396alkj4s2sacta/Asesinato+Para+Principiantes+-+T1+E5.mkv',
+                videoPath: 'https://download1526.mediafire.com/w0akk40idzugrDV_W0c969Q3ps5XmCpsVSKqihzo0MvXT4OVZl_CehnuHQt4YJ0gb0hYjRmyvN1ymP9J3bWunmBOeSjQA74RYOz7xh2h9CuA2jWdKr3h_s60xT4qwcz0-gEFjIAnRg65LitYrJ0QOVShsT8ia1kchbFhPnpYPVVMygg/396alkj4s2sacta/Asesinato+Para+Principiantes+-+T1+E5.mkv',
                 image: 'https://occ-0-2442-1380.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABeED_UJixLwFl5Ln39ljb3EY3B-_bE2aisB_eLtQVDlnZTf_vQ3hbjJseEWVQtQR3_xSoTLDsQaJqB20WoXVRq4ALdwp2VwxqDgvq9ssa8GfB9Ed925tZ5zk.jpg?r=2f5',
                 duration: '50 min'
             },
             {
                 title: 'Episodio 6',
                 description: 'La policía hace un arresto, pero Pip no está segura de que el caso esté solucionado, así que va a visitar a la única persona que podría tener respuestas.',
-                videoPath: 'http://192.168.1.41:8080/videos/Asesinato%20Para%20Principiantes%20-%20T1%20E6.mkv',
+                videoPath: 'https://download1589.mediafire.com/uhzd8h8hryugYMcmqFogWFVm5aRtlRIEzCeBkU0_ljEm1WlS5HcmVA00epICZDDk5W07xXzez_aFYAJrc9NORoYq3yHQ-CIMMHvkwrxgOzeU9B9-CfGiT6JUmrw9XmBBN9gaYN3vvZF2Dzbqj0opU53J-WtVGf3e0fjNagAptzOsrhw/hwv0ozye7p0g7s4/Asesinato+Para+Principiantes+-+T1+E6.mkv',
                 image: 'https://www.mediafire.com/convkey/0869/05fmkuq6l9kj4159g.jpg',
                 duration: '51 min'
             }

@@ -18,9 +18,9 @@ function changeSeason(season) {
     const episodes = {
         1: [
             {
-                title: 'Pelicula',
+                title: 'Matias Ponce, La Película',
                 description: 'Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de youtube, o como el lo llama "Yutun", desatando una hilarante y absurda aventura.',
-                videoPath: 'https://download1580.mediafire.com/e08upjh7oxvg7OsYrd_egq4UDyw1gb_VCqWtbVim6uzNLbyslf3U921OIVhB8k_OrR-h5CvmrR0LDl3e_lZKirdUGD79zUaRXWsH1GDOhx9_F9_f6aMJBzh6FvxWAe5t-S4426mh9dP1_uTZXQYsCKY-PoQOt8FsZD96TQb6YK7M1xc/66l6oz150o04fff/MATIAS+PONCE++LA+PEL%C3%8DCULA.webm',
+                videoPath: 'https://download1580.mediafire.com/p5nzu3tvxtvgkGQ_qZYuWJn0V7YD3EqDdtlqljDsURQ1yM3bzg3OZJmSbP3anLekS2njexeFHtmHty9jgBSP-060uS8ju2risrM0RoZwzSDLjbO5lNpYUCX60WamHleE5HnikMyp7dXLqOxejKeBmT06vKZidUEmyqfmkMx3cOduqG0/66l6oz150o04fff/MATIAS+PONCE++LA+PEL%C3%8DCULA.webm',
                 image: 'https://movies.solargentinotv.com.ar/assets/media/images/maxresdefault.jpg',
                 duration: '60 min' // Duración actualizada
             },
