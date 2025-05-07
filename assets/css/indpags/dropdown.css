@@ -68,6 +68,7 @@ texto2 {
     overflow-x: hidden;
     max-height: 12em; /* Altura para 4 ítems aprox. */
     margin-left: -2em;
+    height: 6.3em;
 }
 
 .dropdown-content > div {
@@ -99,7 +100,7 @@ button.texto {
     font-weight: 100;
     font-size: 0.8em;
     color: #ccc;
-    margin-left: 3em;
+    margin-left: 6em;
     white-space: nowrap;
     margin-top: 1.66em;
     position: absolute;
