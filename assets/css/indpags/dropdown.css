@@ -58,13 +58,20 @@ texto2 {
     color: white;
     border: 0.1em solid rgb(77, 77, 77);
     padding: 0.625em;
-    width: 15em;
+    width: 15.4em;
     z-index: 1;
     box-shadow: 0px 0.5em 1em rgba(0, 0, 0, 0.2);
     border-radius: 0 !important;
     margin-top: 0.6em;
-    text-align: left; /* Cambiar de justify a left */
-    height: 6.3em;
+    text-align: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 12em; /* Altura para 4 ítems aprox. */
+}
+
+.dropdown-content > div {
+    padding: 0.5em 0;
+    height: 3em; /* opcional para consistencia visual */
 }
 
 button.texto {
@@ -177,7 +184,8 @@ button.texto {
   
   .dropdown-content::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: rgb(128, 128, 128);
+    background-color: rgb(128,128,128);
+    border: none;
   }
   
   .dropdown-content::-webkit-scrollbar-thumb:hover {
