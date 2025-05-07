@@ -58,7 +58,7 @@ texto2 {
     color: white;
     border: 0.1em solid rgb(77, 77, 77);
     padding: 0.625em;
-    width: 15.4em;
+    width: 17em;
     z-index: 1;
     box-shadow: 0px 0.5em 1em rgba(0, 0, 0, 0.2);
     border-radius: 0 !important;
@@ -67,6 +67,7 @@ texto2 {
     overflow-y: auto;
     overflow-x: hidden;
     max-height: 12em; /* Altura para 4 ítems aprox. */
+    margin-left: -2em;
 }
 
 .dropdown-content > div {
@@ -91,7 +92,7 @@ button.texto {
 
 .textotemp {
     flex: 1;
-    margin-left: 0.3em;
+    margin-left: 0.9em;
 }
 
 .episode-count {
@@ -118,7 +119,7 @@ button.texto {
     text-decoration: none;
     display: block;
     border: none;
-    width: 14.9em; /* 238px a 14.875em */
+    width: 2000%; /* 238px a 14.875em */
     cursor: pointer;
     text-align: justify;
     position: relative;
