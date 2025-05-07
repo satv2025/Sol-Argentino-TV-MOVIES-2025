@@ -187,6 +187,10 @@ button.texto {
     background-color: rgb(128,128,128);
     border: none;
   }
+
+  .dropdown-content::-webkit-scrollbar-track {
+    background: #242424;  
+}
   
   .dropdown-content::-webkit-scrollbar-thumb:hover {
     background-color: rgb(204, 204, 204);
