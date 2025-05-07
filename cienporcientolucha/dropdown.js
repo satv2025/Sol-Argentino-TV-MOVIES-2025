@@ -19,7 +19,7 @@ function changeSeason(season) {
             {
                 title: 'Koshe Plostenko',
                 description: 'Koshe Plostenko, un mafioso implacable, dirige un club de lucha clandestino. Para alimentar su negocio, decide secuestrar a los luchadores de 100% Lucha y obligarlos a pelear bajo sus reglas.',
-                videoPath: 'https://download850.mediafire.com/s6g00vpifpygJGVuUOVRbc-uJwH4A_Gd2SeNExUusiW_Z52Azm9Ow5PLazZQ7aBuLeWoVm_GWbxy4j3Eb_EZKh1jCPEecciZ3lBrN5GRn5_CI8MetBE8A4JcRSPr1NP46Q96Zb6kpi7JCVrlggdecnkvT_qmn1S9kZuV4BZ6L4D6CEA/zugv2rkie3aj2l7/100%25+Lucha+La+Pel%C3%ADcula.mp4',
+                videoPath: 'https://download850.mediafire.com/ilgyf2r1jk2gXuBmXIvjyQ0WMOO9oUV4_H_nKmMiaP4O7B795E7B4MhAn8Qpl82Y90c8_bL6m8KV2fCMJ3CrlchY3-h6l6oX26HEKnkFzNRYfd5AIIsS58rOXXR5gFCqlpePb5x14dcwx2dhR5NmPeetZ2i2Q0Nx30NySUub9rXkwPI/zugv2rkie3aj2l7/100%25+Lucha+La+Pel%C3%ADcula.mp4',
                 image: 'https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6',
                 duration: '80 min' // Duración actualizada
             },
@@ -28,8 +28,8 @@ function changeSeason(season) {
             {
                 title: 'El Amo De Los Clones',
                 description: 'Damián Castillo, un doctor en biotecnología, odia a su vecino Vicente Viloni. Cansado de su fama, decide crear clones de los luchadores de 100% Lucha para destruir la imagen de su ídolo de la infancia.',
-                videoPath: 'https://download1509.mediafire.com/kr7oym4cf9cg_nmKU7SoZB1n-1BGlTHAq0oFpRLUl0-0X4zST6E7OtAufJAS9Z95tphFQXrgPRjt752oXKzkTNPQRmAFCI3U_lKGez5bLHMEYy3h2CMLoXq7FbL5i8Ba0Iz1HKoFX8tBiakPCnmAO8SLpt4gfc4IAl4PF1kk6LrqYo8/x6mhhs8q3s7m7a2/100%25+Lucha+El+Amo+de+los+Clones.mp4', // Ruta del video para la temporada 2
-                image: 'https://download947.mediafire.com/z9nladnl1tygmxvTNWlnXB6BlW_ivVznof5PFchv5lwxT4R5JtKKD-IK56o2d6Fm2K6ZLFcoAfBTXrzOm_EprjORbYcritMgfLEHb7yV_YjOUXqCn04OhyA5c6DBlhk743kHB5WJPX-v3Uc-F2roYcM3UQtgmo7r7wSDFs-bhxnmx2M/492wl1oh8fakveb/lucha.webp', // Imagen para la temporada 2
+                videoPath: 'https://download1509.mediafire.com/sw50qtglrucg5jXvjupv9CQ7iZCpso1bh0WOFy6zqhSVztLaCmSBWpxKJOUr_4khuD0vHNHxlnLYD_31vFfZhQYl_aV3P_co85XpQNld3mADYXVYA_osvtJ6RqYx_4UBBf1qk8Q_Nm_fZWkKaibIw30iugm9Ky9301EEz0U77nJ7VsU/x6mhhs8q3s7m7a2/100%25+Lucha+El+Amo+de+los+Clones.mp4', // Ruta del video para la temporada 2
+                image: 'https://www.mediafire.com/file/492wl1oh8fakveb/lucha.webp/file', // Imagen para la temporada 2
                 duration: '85 min' // Duración para el episodio de la temporada 2
             }
         ]
