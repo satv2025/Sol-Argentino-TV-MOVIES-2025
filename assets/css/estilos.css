@@ -854,3 +854,36 @@ footer p {
       font-size: 1em; /* Ajustar el tamaño del botón */
     }
   }
+
+  .acercadecont {
+    background-color: #181818; /* Fondo blanco para los items */
+    border-radius: 0.3em; /* Bordes redondeados */
+    width: 100%;
+    max-width: 60em; /* 240px = 15em */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.25em; /* 20px = 1.25em */
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.3); /* Sombra negra notable en los items */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.acercadecont p {
+    font-size: 0.875em; /* 14px = 0.875em */
+    color: #fff; /* Gris oscuro para el texto */
+    margin-bottom: 1.25em; /* 20px = 1.25em */
+    text-align: justify;
+    padding: 0.9em;
+    flex-grow: 1; /* Permite que la sinopsis ocupe el espacio restante */
+    overflow: hidden; /* Evita que el texto se desborde si es muy largo */
+}
+
+.acercadecont h1 {
+    margin-top: 0.65em;
+    margin-bottom: 0.3em;
+}
