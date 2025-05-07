@@ -37,9 +37,7 @@ svg {
 
 body, html {
     font-family: 'Netflix Sans', sans-serif;
-    background-image: url('https://movies.solargentinotv.com.ar/—Pngtree—black background texture advertising_1911402.png');
-    background-size: cover;
-    background-position: center;
+    background: #141414;
     color: #fff;
     font-size: 1rem; /* Base font size = 16px */
     height: 100%; /* Asegura que ocupe todo el alto de la pantalla */
