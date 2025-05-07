@@ -27,6 +27,7 @@ texto2 {
     text-align: left;
     font-weight: 700;
     position: relative;
+    margin-top: 5em;
 }
 
 .dropdown-button::after {
