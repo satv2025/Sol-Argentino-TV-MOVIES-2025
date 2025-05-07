@@ -1,0 +1,362 @@
+/* Importamos la tipografía 'Netflix Sans' desde Sol Argentino TV Fuentes */
+@import url('https://fuentes.solargentinotv.com.ar/netflixsans.css');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Netflix Sans';
+    color: white;
+    font-size: 1rem; /* Base font size = 16px */
+    background-color: #000;
+    background-size: cover;
+}
+
+header {
+    
+     /* Asegura que la imagen cubra todo el header */
+    background-position: center; /* Centra la imagen */
+    padding: 1.25em; /* Espaciado dentro del header */
+    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    background-color: #121212;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* Centra los elementos del menú */
+    list-style: none; /* Elimina los puntos de lista */
+    top: -0.2em;
+    position: relative;
+}
+
+nav li {
+    margin: 0 1.25em; /* 20px = 1.25em */
+}
+
+nav a {
+    color: #fff; /* Azul para los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.125em; /* 18px = 1.125em */
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #555; /* Azul más oscuro en hover */
+}
+
+.search-form {
+    display: flex;
+    justify-content: right; /* Alinea la barra de búsqueda a la derecha */
+    margin-top: 0.9em; /* Espaciado superior */
+    position: absolute; /* Cambiar a absolute */
+    top: -0.1em;
+    right: 2em; /* Añadir un margen para que no se pegue al borde derecho */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+.logo {
+    position: absolute;
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 2em;
+    top: 0.3em;
+    left: 0.78em;
+}
+
+.search-form input[type="text"] {
+    width: 250px;
+    font-family: 'Netflix Sans';
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-weight: 700;
+}
+
+.search-form input[type="text"]::placeholder {
+    color: #007bff;
+}
+
+.search-form input[type="text"]:focus {
+    border-color: #007bff; /* Cambia el borde a azul cuando se enfoca */
+}
+
+.search-form button {
+    font-family: 'Netflix Sans';
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border-left: #fff;
+    border-top: 2px solid #007bff;
+    border-right: 2px solid #007bff;
+    border-bottom: 2px solid #007bff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.search-form button:hover {
+    background-color: #0056b3; /* Fondo azul más oscuro al pasar el ratón */
+}
+
+.search-form button:focus {
+    outline: none; /* Elimina el borde del botón al hacer clic */
+}
+
+main {
+    text-align: center;
+    padding: 3.125em; /* 50px = 3.125em */
+}
+
+h1 {
+    font-size: 2.25em; /* 36px = 2.25em */
+    bottom: -0.4em; /* 40px = 2.5em */
+    color: white;
+    position: relative;
+}
+
+#player-container {
+    margin-bottom: 2.5em;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #00000000; /* Fondo negro para el reproductor */
+    border-radius: 1.25em;
+}
+
+.serie-info {
+    background-color: #181818; /* Azul oscuro */
+    padding: 2em;
+    border-radius: 0.3em;
+    margin-bottom: 3em;
+    color: white;
+    width: 90%; /* Usamos porcentaje para que se ajuste al tamaño de la pantalla */
+    max-width: 71.6em; /* Establecemos un ancho máximo */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/* Ajustes para pantallas más pequeñas (móviles) */
+@media (max-width: 48em) { /* 768px = 48em */
+    .serie-info {
+        padding: 1.5em;
+        width: 90%; /* Asegura que el contenedor ocupe el 90% del ancho */
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+/* Ajustes para pantallas medianas */
+@media (max-width: 64em) { /* 1024px = 64em */
+    .serie-info {
+        width: 80%; /* Ajustamos el ancho a un 80% en pantallas medianas */
+    }
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 48.063em) { /* 769px = 48.063em */
+    .serie-info {
+        width: 70%; /* Mantener un ancho más pequeño en pantallas grandes */
+    }
+}
+
+.serie-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    text-decoration: underline;
+}
+
+.serie-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+    color: #ccc;
+}
+
+.serie-info li {
+    font-size: 1.125em; /* Tamaño de texto de los detalles */
+    margin-bottom: 0.75em;
+}
+
+.serie-info li strong {
+    color: #fff;
+}
+
+.episodios {
+    margin-top: 2.5em;
+}
+
+.episodios ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.episodio-info {
+    flex-direction: row;
+    width: 46em;
+    margin: 0 auto;
+    margin-bottom: 0.7em;
+    height: 7em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #181818; /* Fondo del contenedor del episodio */
+    color: white;
+    padding: 0.75em; /* 12px = 0.75em */
+}
+
+.episodio-info:hover {
+    background-color: #727272; /* Color más translúcido en hover */
+    cursor: pointer;
+}
+
+.episodio-img {
+    flex: 1;
+    padding-right: 1.5em; /* Espacio entre imagen y texto */
+    max-width: 6em; /* Reducimos el tamaño de la imagen */
+}
+
+.episodio-img img {
+    width: 10em;
+    height: auto;
+    border-radius: 0.3em;
+    margin-top: 0.25em;
+    margin-left: -0.1em;
+}
+
+.episodio-text {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    padding-left: 4.7em;
+    padding-right: 0.3em;
+}
+
+.episodio-text h3 {
+    font-size: 1.125em; /* 18px = 1.125em */
+    margin-bottom: 0.5em;
+}
+
+.episodio-text p {
+    font-size: 0.875em; /* 14px = 0.875em */
+    color: #eee;
+    line-height: 1.4;
+}
+
+button.episodio {
+    background: #ffffff00;
+    box-shadow: 0px;
+    border: 0px;
+    border-radius: 0.3em;
+    font-family: 'Netflix Sans';
+}
+
+footer {
+    text-align: center;
+    padding: 1.25em; /* 20px = 1.25em */
+    margin-top: 2.5em; /* 40px = 2.5em */
+    background-color: #121212;
+}
+
+footer p {
+    font-size: 0.875em; /* 14px = 0.875em */
+    color: #fff;
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 48em) { /* 768px = 48em */
+    h1 {
+        font-size: 1.75em; /* 28px = 1.75em */
+    }
+
+    .serie-info {
+        padding: 1.5em;
+    }
+
+    .episodio-info {
+        flex-direction: column;
+        height: auto; /* Deja que el contenedor se ajuste según el contenido */
+        width: 90%; /* Ajusta el tamaño de los botones para móviles */
+        margin: 1em auto;
+    }
+
+    .episodio-img {
+        padding-right: 0;
+        margin-bottom: 1em;
+    }
+
+    .episodio-text {
+        padding-left: 0;
+    }
+
+    button.episodio {
+        border-radius: 0.3em;
+    }
+}
+
+/* Ajustes para pantallas más grandes */
+@media (min-width: 48.063em) { /* 769px = 48.063em */
+    #player-container {
+        width: 80%;
+    }
+
+    .episodio-info {
+        flex-direction: row;
+        width: 55em;
+        margin: 0 auto;
+        margin-bottom: 0.7em;
+        height: 7em;
+        border-radius: 0.3em;
+    }
+    button.episodio {
+        border-radius: 0.3em;
+    }
+}
+
+#player-container {
+    width: 1280px;
+    height: 720px;
+    border-radius: 0.3em;
+    overflow: hidden; /* Para evitar que el video sobresalga del contenedor */
+}
+
+#videoPlayer {
+    width: 100%; /* Hace que el video ocupe todo el ancho del contenedor */
+    height: 100%; /* Hace que el video ocupe toda la altura del contenedor */
+    object-fit: cover; /* Asegura que el video cubra completamente el área sin distorsionarse */
+}
+
+/* Eliminar el border-radius en pantalla completa */
+.plyr--fullscreen #videoPlayer {
+    border-radius: 0 !important;
+}
+
+.plyr--fullscreen #player-container {
+    border-radius: 0 !important;
+}
+
+
+#plauer-container:fullscreen {
+    border-radius: 0 !important;
+}
+
+/* Estilo para el contador de episodios */
+.episode-count {
+    font-weight: 100;
+    font-size: 0.8em;
+    margin-left: 10em;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    top: -0.7em;
+}
