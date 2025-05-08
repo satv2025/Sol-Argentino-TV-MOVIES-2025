@@ -1,3 +1,6 @@
+// Inicializar Plyr
+const player = new Plyr('#videoPlayer');
+
 // Función para cargar los episodios según la temporada seleccionada
 function changeSeason(season) {
     const episodeList = document.getElementById('episode-list');
@@ -71,19 +74,18 @@ function changeSeason(season) {
             {
                 title: 'Próxima temporada',
                 description: 'Otra temporada está por llegar...',
-                videoPath: '#', // No hay video para la temporada 2
-                image: '', // Imagen vacía
-                duration: '' // No hay duración para la próxima temporada
+                videoPath: '#',
+                image: '',
+                duration: ''
             }
         ]
     };
 
-    // Si la temporada es la 2, mostramos un mensaje
-    if (season == 2) {
+    if (season === 2) {
         const messageItem = document.createElement('li');
         const messageDiv = document.createElement('div');
         messageDiv.classList.add('episodio-info');
-        
+
         const messageText = document.createElement('div');
         messageText.classList.add('episodio-text');
         const h3 = document.createElement('h3');
@@ -93,15 +95,12 @@ function changeSeason(season) {
 
         messageText.appendChild(h3);
         messageText.appendChild(p);
-
         messageDiv.appendChild(messageText);
         messageItem.appendChild(messageDiv);
         episodeList.appendChild(messageItem);
     } else {
-        // Obtener los episodios de la temporada seleccionada
         const selectedEpisodes = episodes[season];
 
-        // Crear la lista de episodios
         selectedEpisodes.forEach(episode => {
             const episodeItem = document.createElement('li');
             const episodeButton = document.createElement('button');
@@ -110,12 +109,12 @@ function changeSeason(season) {
 
             const episodeInfo = document.createElement('div');
             episodeInfo.classList.add('episodio-info');
-            episodeInfo.style.position = 'relative'; // Asegurarse de que el contenedor tenga posición relativa
+            episodeInfo.style.position = 'relative';
 
             const episodeImg = document.createElement('div');
             episodeImg.classList.add('episodio-img');
             const img = document.createElement('img');
-            img.src = episode.image || 'default_image.jpg'; // Imagen por defecto si no hay imagen
+            img.src = episode.image || 'default_image.jpg';
             img.alt = episode.title;
             episodeImg.appendChild(img);
 
@@ -126,42 +125,62 @@ function changeSeason(season) {
             const p = document.createElement('p');
             p.textContent = episode.description;
 
-            // Crear el contenedor para la duración
             const durationDiv = document.createElement('div');
             durationDiv.classList.add('episodio-duration');
-            durationDiv.style.position = 'absolute'; // Hacer que la duración esté en posición absoluta
-            durationDiv.style.top = '10px'; // Ubicación en la parte superior
-            durationDiv.style.right = '10px'; // Alineado a la derecha
-            durationDiv.style.color = '#fff'; // Establecer color de la duración
+            durationDiv.style.position = 'absolute';
+            durationDiv.style.top = '10px';
+            durationDiv.style.right = '10px';
+            durationDiv.style.color = '#fff';
             durationDiv.style.backgroundColor = '#ffffff00';
-            durationDiv.style.padding = '2px 5px'; // Un pequeño padding para la duración
-            durationDiv.textContent = episode.duration || 'N/A'; // Duración del episodio o "N/A" si no hay duración
+            durationDiv.style.padding = '2px 5px';
+            durationDiv.textContent = episode.duration || 'N/A';
 
             episodeText.appendChild(h3);
             episodeText.appendChild(p);
-
-            // Agregar la duración al lado derecho arriba
             episodeText.appendChild(durationDiv);
 
             episodeInfo.appendChild(episodeImg);
             episodeInfo.appendChild(episodeText);
             episodeButton.appendChild(episodeInfo);
-
             episodeItem.appendChild(episodeButton);
             episodeList.appendChild(episodeItem);
         });
     }
 
-    // Cerrar el dropdown después de seleccionar una temporada
     dropdownContent.style.display = 'none';
     dropdownButton.classList.remove('open');
 }
 
-// Función para cargar un episodio
+// ✅ Función para cargar un episodio con soporte para .m3u8 y Plyr
 function loadEpisode(videoPath) {
     const video = document.querySelector('#videoPlayer');
-    video.src = videoPath;
-    video.play();
+
+    // Detener cualquier reproducción y limpiar fuente anterior
+    if (window.hls) {
+        window.hls.destroy();
+        window.hls = null;
+    }
+
+    if (videoPath.endsWith('.m3u8')) {
+        if (Hls.isSupported()) {
+            const hls = new Hls();
+            hls.loadSource(videoPath);
+            hls.attachMedia(video);
+            window.hls = hls;
+            hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                video.play();
+            });
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = videoPath;
+            video.addEventListener('loadedmetadata', () => video.play());
+        } else {
+            alert('Este navegador no soporta video HLS.');
+        }
+    } else {
+        video.src = videoPath;
+        video.load();
+        video.play();
+    }
 }
 
 // Inicializar el texto del botón como "Seleccionar Temporada"
@@ -171,27 +190,16 @@ document.querySelector('.dropdown-button').textContent = "Seleccionar Temporada"
 changeSeason(1);
 
 // Manejo del dropdown
-document.querySelector('.dropdown-button').addEventListener('click', function() {
-    var dropdownContent = document.querySelector('.dropdown-content');
-    var button = this;
-
-    // Alterna la clase "open" para el botón
-    button.classList.toggle('open');
-
-    // Alterna la visibilidad del dropdown
-    if (dropdownContent.style.display === 'block') {
-        dropdownContent.style.display = 'none';
-    } else {
-        dropdownContent.style.display = 'block';
-    }
+document.querySelector('.dropdown-button').addEventListener('click', function () {
+    const dropdownContent = document.querySelector('.dropdown-content');
+    this.classList.toggle('open');
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
 });
 
 // Cerrar el dropdown si se hace clic fuera de él
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     const dropdownContent = document.querySelector('.dropdown-content');
     const dropdownButton = document.querySelector('.dropdown-button');
-
-    // Verifica si el clic fue fuera del menú desplegable
     if (!dropdownContent.contains(event.target) && !dropdownButton.contains(event.target)) {
         dropdownContent.style.display = 'none';
         dropdownButton.classList.remove('open');
