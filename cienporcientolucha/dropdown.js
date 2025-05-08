@@ -21,7 +21,7 @@ function changeSeason(season) {
                 description: 'Koshe Plostenko, un mafioso implacable, dirige un club de lucha clandestino. Para alimentar su negocio, decide secuestrar a los luchadores de 100% Lucha y obligarlos a pelear bajo sus reglas.',
                 videoPath: 'https://download850.mediafire.com/ilgyf2r1jk2gXuBmXIvjyQ0WMOO9oUV4_H_nKmMiaP4O7B795E7B4MhAn8Qpl82Y90c8_bL6m8KV2fCMJ3CrlchY3-h6l6oX26HEKnkFzNRYfd5AIIsS58rOXXR5gFCqlpePb5x14dcwx2dhR5NmPeetZ2i2Q0Nx30NySUub9rXkwPI/zugv2rkie3aj2l7/100%25+Lucha+La+Pel%C3%ADcula.mp4',
                 image: 'https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6',
-                duration: '80 min' // Duración actualizada
+                duration: '1 h 20 min' // Duración actualizada
             },
         ],
         2: [
@@ -30,7 +30,7 @@ function changeSeason(season) {
                 description: 'Damián Castillo, un doctor en biotecnología, odia a su vecino Vicente Viloni. Cansado de su fama, decide crear clones de los luchadores de 100% Lucha para destruir la imagen de su ídolo de la infancia.',
                 videoPath: 'https://download1509.mediafire.com/oe4snii0833gCDSOi9fiEJKEFgXv5sFspK8gRDYmik2JY7_0oNyG5XhOAZWRfx44NySd5KSS-rcufhuyWOtGTr6M5u-TYo-sZRkacHh2HiwzZvs9VhOpEcF9j1v-J6Gu7-iawNABV8IaARdWDO3JaVLRyJPoOPaxwOUVE1as_pTvo2I/x6mhhs8q3s7m7a2/100%25+Lucha+El+Amo+de+los+Clones.mp4', // Ruta del video para la temporada 2
                 image: 'https://media.minutouno.com/p/8f27c301f5e629ec8dab0477e7a75ae0/adjuntos/150/imagenes/026/947/0026947782/1200x675/smart/lucha.png', // Imagen para la temporada 2
-                duration: '85 min' // Duración para el episodio de la temporada 2
+                duration: '1 h 25 min' // Duración para el episodio de la temporada 2
             }
         ]
     };
