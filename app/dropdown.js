@@ -60,7 +60,7 @@ function changeSeason(season) {
                 duration: '51 min'
             },
             {
-                title: 'Episodio 7 - El Crímen',
+                title: 'Episodio 7',
                 description: 'La policía hace un arresto, pero Pip no está segura de que el caso esté solucionado, así que va a visitar a la única persona que podría tener respuestas.',
                 videoPath: 'https://codeberg.org/skb10x/mediatest/src/commit/6fda2256881d8d193daa5a7ce825a5796f248480/REITE666%20T1%20E3.m3u8',
                 image: 'https://www.mediafire.com/convkey/0869/05fmkuq6l9kj4159g.jpg',
