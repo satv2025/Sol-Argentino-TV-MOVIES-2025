@@ -23,42 +23,41 @@ function changeSeason(season) {
             {
                 title: 'Episodio 1',
                 description: 'Pip elige un caso de homicidio para su proyecto escolar. Pero cuando empieza a investigar, descubre que para algunas personas era mejor dejarlo enterrado para siempre.',
-                videoPath: 'https://download1523.mediafire.com/umf09001ul3gIqdSXJzckPC4USK-EDZ_WPQmU1iHilIMdkiFS3pEnRqK0mvX2V33QTQKR7x1jGhzNhiax5SLdjFOy6QMjg-XH1X0sj-F5y7c7rVJf4RhHjEJ2ZhWEh00pYrHBaXNBHOl3H9kdSqFCeBG3x-n4zw2TEn6qi8fjBXu9OQ/9iq2gagcr345fac/Asesinato+Para+Principiantes+-+T1+E1.mp4',
+                videoPath: 'https://movies.solargentinotv.com.ar/assets/media/videos/app/e1/Asesinato-Para-Principiantes-T1-E1.m3u8',
                 image: 'https://www.mediafire.com/convkey/8ebd/67e8toxnggmojw09g.jpg',
                 duration: '43 min'
             },
             {
                 title: 'Episodio 2',
                 description: 'Luego de entrevistar a las mejores amigas de Andie, Pip tiene una idea más clara de quién era la víctima, pero tras reorganizar fotos viejas empieza a comprender mejor todo.',
-                videoPath: 'https://download847.mediafire.com/s4np6sy8l3egNXfvxxSs9h1ow2sTftW3ebewUxuWatXLkx5ys_bZXIicl9yG0kQcyV9Dvfip94Qag9UqCGj1hkKui4ucIVt22g5_Y-NEffFnxvKkBvYxWGv5sHI4CJ6U2MQh8L1wu66jsWIxjbajj4JqW_IM5jtah1YGW8wHFkPnFxg/xof6urhwtqlrmwz/Asesinato+Para+Principiantes+-+T1+E2.mkv',
-                image: 'https://www.mediafire.com/convkey/88d0/o7ja6efkgc857oo9g.jpg',
+                videoPath: 'https://movies.solargentinotv.com.ar/assets/media/videos/app/e2/Asesinato-Para-Principiantes-T1-E2.m3u8',
                 duration: '44 min'
             },
             {
                 title: 'Episodio 3 (test)',
                 description: 'Pip descubre por primera vez en su vida el lado oscuro cuando va a una fiesta clandestina. Y su siguiente pista la lleva a territorio aún más peligroso.',
-                videoPath: 'https://movies.solargentinotv.com.ar/assets/media/videos/app/e1/Asesinato-Para-Principiantes-T1-E3.m3u8',
+                videoPath: 'https://movies.solargentinotv.com.ar/assets/media/videos/app/e3/Asesinato-Para-Principiantes-T1-E3.m3u8',
                 image: 'https://www.mediafire.com/convkey/6ed1/6870czca0karqn29g.jpg',
                 duration: '43 min'
             },
             {
                 title: 'Episodio 4',
                 description: 'Pip y Ravi siguen una nueva pista que los lleva lejos de Little Kilton. Allí, descubren una valiosa prueba... y una desagradable sorpresa.',
-                videoPath: 'https://codeberg.org/skb10x/mediatest/src/commit/f9b03305f65e938f77336c6290287a4fbadf65f7/Asesinato-Para-Principiantes-T1-E3.m3u8',
+                videoPath: 'https://movies.solargentinotv.com.ar/assets/media/videos/app/e4/Asesinato-Para-Principiantes-T1-E4.m3u8',
                 image: 'https://www.mediafire.com/convkey/0de9/czivzlrwjyr2rlj9g.jpg',
                 duration: '44 min'
             },
             {
                 title: 'Episodio 5',
                 description: 'Una impactante confesión arroja luz en la investigación. Antes de que Pip pueda decidir qué hacer, recibe otro mensaje amenazador.',
-                videoPath: 'https://codeberg.org/skb10x/mediatest/raw/branch/main/Asesinato-Para-Principiantes-T1-E3.m3u8',
+                videoPath: 'https://movies.solargentinotv.com.ar/assets/media/videos/app/e5/Asesinato-Para-Principiantes-T1-E5.m3u8',
                 image: 'https://occ-0-2442-1380.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABeED_UJixLwFl5Ln39ljb3EY3B-_bE2aisB_eLtQVDlnZTf_vQ3hbjJseEWVQtQR3_xSoTLDsQaJqB20WoXVRq4ALdwp2VwxqDgvq9ssa8GfB9Ed925tZ5zk.jpg?r=2f5',
                 duration: '50 min'
             },
             {
                 title: 'Episodio 6',
                 description: 'La policía hace un arresto, pero Pip no está segura de que el caso esté solucionado, así que va a visitar a la única persona que podría tener respuestas.',
-                videoPath: 'https://download1589.mediafire.com/uhzd8h8hryugYMcmqFogWFVm5aRtlRIEzCeBkU0_ljEm1WlS5HcmVA00epICZDDk5W07xXzez_aFYAJrc9NORoYq3yHQ-CIMMHvkwrxgOzeU9B9-CfGiT6JUmrw9XmBBN9gaYN3vvZF2Dzbqj0opU53J-WtVGf3e0fjNagAptzOsrhw/hwv0ozye7p0g7s4/Asesinato+Para+Principiantes+-+T1+E6.mkv',
+                videoPath: 'https://movies.solargentinotv.com.ar/assets/media/videos/app/e6/Asesinato-Para-Principiantes-T1-E6.m3u8',
                 image: 'https://www.mediafire.com/convkey/0869/05fmkuq6l9kj4159g.jpg',
                 duration: '51 min'
             }
