@@ -1,0 +1,156 @@
+<html lang="es"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sol Argentino TV MOVIES</title>
+    <link rel="stylesheet" href="https://movies.solargentinotv.com.ar/assets/css/search.css">
+    <link rel="stylesheet" href="https://movies.solargentinotv.com.ar//assets/css/estilos.css">
+    <link rel="stylesheet" href="https://movies.solargentinotv.com.ar//assets/css/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
+    <link rel="icon" href="https://movies.solargentinotv.com.ar/assets/media/images/SolArgentinoTVMOVIES.ico" type="image/x-icon">
+  </head>
+  <body class="">
+    <header>
+      <div class="content" id="scroll-container-header">
+    <nav>
+      <ul>
+        <li><a href="index" class="active">Inicio</a></li>
+        <li><a href="proximamente">Próximamente</a></li>
+        <li><a href="acercade">Acerca De</a></li>
+      </ul>
+      <form action="#" method="get" class="search-form" id="searchForm">
+        <input type="text" id="search" name="search" placeholder="Buscar película o serie...">
+        <button type="button" id="toggleSearch" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" class="search-icon">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10ZM15.6177 17.0319C14.078 18.2635 12.125 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10C19 12.125 18.2635 14.078 17.0319 15.6177L22.7071 21.2929L21.2929 22.7071L15.6177 17.0319Z" fill="currentColor"></path>
+            </svg>
+        </button>          
+    </form>
+    </nav>
+ </div>
+</header>
+
+<a class="logo" href="index" style="color: #007BFF; text-decoration: none;" onmouseover="this.style.color='#007BFF';" onmouseout="this.style.color='#007BFF';">SATVMOVIES</a>
+
+    <div class="content" id="scroll-container-body">
+        <span class="prontodis"><strong class="sprontodis">Marzo 2025:</strong> Un nuevo diseño se acerca</span>
+<main>
+    <div class="desc">
+        <h1>Bienvenidos a Sol Argentino TV MOVIES</h1>
+        <p>¿Alguna vez buscaste películas o series gratis por internet? Bueno, llegó Sol Argentino TV MOVIES, un servicio de streaming completamente gratis, con series y películas nuevas, innovadoras y algunas conocidas.</p>
+    </div>
+
+    <h4><strong>Estrenos Marzo 2025:</strong> Gladiador [Saga Completa], Círculo, De noche con el diablo, Lo que hay dentro y Club De Buceo. Más contenido en marzo, junio y noviembre.</h4>
+
+    <section class="catalogo">
+    <!-- Película 1 -->
+    <div class="pelicula">
+        <button class="moreinfobutton" data-movie="matiponcepeli">
+        <img src="../../assets/media/images/maxresdefault.jpg" alt="Pelicula 1">
+        </button>
+    </div>
+
+        <!-- Película 2 -->
+        <div class="pelicula">
+            <button class="moreinfobutton" data-movie="cienporcientolucha">
+            <img src="https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6" alt="Pelicula 1">
+            </button>
+        </div>
+
+    <!-- Película 3 -->
+    <div class="pelicula">
+        <button class="moreinfobutton" data-movie="app">
+        <img src="https://occ-0-2443-1380.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABV49h2p_wFt9RivpBgzsM0pn-ZS2h5nvMqui5jO51hkP9AWarS0zwUOQkNanG-xrFl5IgD9YPbdFhzeJMV8mI6Q41I93tkSGU4F1zTxLTCduZfutFdaGKhnCEJ-HkwQZvYtg.jpg?r=77b" alt="Pelicula 8">
+        </button>
+    </div>
+
+<!-- Contenedor del Modal -->
+<div id="infoModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="close-button">
+            <span class="close-icon" data-uia="previewModal-closebtn" role="button" aria-label="close" tabindex="0" title="close">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5858 12L2.29291 3.70706L3.70712 2.29285L12 10.5857L20.2929 2.29285L21.7071 3.70706L13.4142 12L21.7071 20.2928L20.2929 21.7071L12 13.4142L3.70712 21.7071L2.29291 20.2928L10.5858 12Z" fill="currentColor"></path>
+                </svg>
+            </span>
+        </div>
+        
+        <!-- Imagen de fondo -->
+        <div class="modal-header">
+            <div class="dplayer" id="dplayer-app"></div>
+            <img id="modal-background" src="" alt="Fondo">
+            <div class="overlay">
+                <h1 id="modal-title"><span class="about">Acerca de</span> <strong class="titulo"></strong></h1>
+                <p id="modal-tagline"></p>
+            </div>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="modal-actions">
+            <a id="watch-button" class="watch-button" href="#" target="_blank">▶ Reproducir</a>
+        </div>
+
+        <!-- Información adicional -->
+        <div class="modal-info">
+            <p id="modal-year" class="modal-year"></p>
+            <p id="modal-duration" class="modal-duration"></p>
+            <p id="modal-cast" class="modal-cast"></p>
+            <p id="modal-genres" class="modal-genres"></p>
+            <p id="modal-titleType" class="modal-titleType"></p>
+            <p id="modal-ageRating" class="modal-ageRating"></p>
+            <p id="modal-description" class="modal-description"></p>
+            <p id="modal-curiosity" class="modal-curiosity"></p>
+            <p id="modal-episodelist" class="modal-episodelist"></p>
+            <p id="modal-seasons" class="modal-seasons"></p>
+            <div id="about">
+            <p id="modal-createdBy" class="modal-createdBy"></p>
+            <p id="modal-fullcast" class="fullcast"></p>
+            <p id="modal-fullscript" class="fullscript"></p>
+            <p id="modal-fullgenres" class="fullgenres"></p>
+            <p id="modal-fulltitletype" class="fulltitletype"></p>
+            <p id="modal-fullage" class="fullage"></p>
+            </div>
+            <!-- Episodios y temporadas -->
+            <div class="season-dropdown" id="modal-seasons">
+            </div>
+            <div class="episodios">
+                <ul id="episode-list"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="pelicula" id="gdiv">
+          <span class="sevapronto">Próximamente</span>
+          <img class="gladiadorimg" src="https://occ-0-2443-1380.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZ-sqCYUEBKZbS7KFKZusK3GrGEVSo1AGVm4hZXnnslIUhpeeEauLWC0HyTSWIf0tT7FL3Daq-M0SW7wvLUxF-nBaC7-u7SXMAk.webp?r=39a" alt="Gladiador">
+      </div>
+      
+      <div class="pelicula" data-pelicula="Circulo">
+          <span class="sevapronto" id="cirsvp">Próximamente</span>
+          <img class="cir" src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWkKaNnH12cA-5dPbSUFVwXAIpVj2k-lkjr7n-qs0nwDQtsYtBTeCVVXryp55cUvU-lVUFU6y1sX_2Zi4GpdOmX45TSbSp68KaI.webp?r=c8c" alt="Circulo">
+      </div>
+      
+      <div class="pelicula" data-pelicula="DeNocheConElDiablo">
+          <span class="sevapronto">Próximamente</span>
+          <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSL6xo1_leIgcK23yxF8HomLRG-7qauDtwCIh9E4lohN-OtCrapYkbN7cygU68rDXbm0sYyQ8anNahb4-1BOrK9SWTpXXf65lNA.webp?r=156" alt="De Noche Con El Diablo">
+      </div>
+      
+      <div class="pelicula" data-pelicula="LoQueHayDentro">
+          <span class="sevapronto">Próximamente</span>
+          <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABUmsZa7Q2fTKckLzs3bp0NF1ldVM9mUFPv7SAddwMCBO_VT1Um3fw95qhSVtx24rZAvOZksZmoOz6adFIb8bH98goefawrf3P3S6JIiY9uilt-3CDC3saqPxMtqDKtPC6CDF.jpg?r=53f" alt="Lo Que Hay Dentro">
+      </div>
+      
+      <div class="pelicula" data-pelicula="ClubDeBuceo">
+          <span class="sevapronto">Próximamente</span>
+          <img src="https://occ-0-2442-1740.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZh5RY7tYs_2iPCgrBOQ-uPdlZqVxTnbHqlBjBg0ro_fWrMNMZw6hhMwQML9RZ6gFILLyYq27jYgSd8nrH3-PMQwB_PWUCNE38BgYhe1dXqjOISN0xRE5aiFzGVKTYHF43r6.jpg?r=f2e" alt="Club De Buceo">
+      </div>      
+      </section>
+      </main>
+    </div>
+
+<footer>
+    <p>Sol Argentino TV MOVIES 2025 © - Todos Los Derechos Reservados</p>
+</footer>
+<script src="https://movies.solargentinotv.com.ar/assets/js/modal.js"></script>
+</body>
+</html>
