@@ -61,7 +61,7 @@ function changeSeason(season) {
                 videoPath: 'https://download1589.mediafire.com/uhzd8h8hryugYMcmqFogWFVm5aRtlRIEzCeBkU0_ljEm1WlS5HcmVA00epICZDDk5W07xXzez_aFYAJrc9NORoYq3yHQ-CIMMHvkwrxgOzeU9B9-CfGiT6JUmrw9XmBBN9gaYN3vvZF2Dzbqj0opU53J-WtVGf3e0fjNagAptzOsrhw/hwv0ozye7p0g7s4/Asesinato+Para+Principiantes+-+T1+E6.mkv',
                 image: 'https://www.mediafire.com/convkey/0869/05fmkuq6l9kj4159g.jpg',
                 duration: '51 min'
-            },
+            }
         ],
         2: [
             {
