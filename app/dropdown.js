@@ -23,7 +23,7 @@ function changeSeason(season) {
             {
                 title: 'Episodio 1',
                 description: 'Pip elige un caso de homicidio para su proyecto escolar. Pero cuando empieza a investigar, descubre que para algunas personas era mejor dejarlo enterrado para siempre.',
-                videoPath: 'https://movies.solargentinotv.com.ar/assets/media/videos/app/e1/Asesinato-Para-Principiantes-T1-E1.m3u8',
+                videoPath: 'https://movies.solargentinotv.com.ar/assets/media/videos/app/e1/Asesinato Para Principiantes - T1 E1.m3u8',
                 image: 'https://www.mediafire.com/convkey/8ebd/67e8toxnggmojw09g.jpg',
                 duration: '43 min'
             },
