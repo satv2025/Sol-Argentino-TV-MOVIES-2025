@@ -28,8 +28,8 @@ function changeSeason(season) {
             {
                 title: 'El Amo De Los Clones',
                 description: 'Damián Castillo, un doctor en biotecnología, odia a su vecino Vicente Viloni. Cansado de su fama, decide crear clones de los luchadores de 100% Lucha para destruir la imagen de su ídolo de la infancia.',
-                videoPath: 'https://download1509.mediafire.com/sw50qtglrucg5jXvjupv9CQ7iZCpso1bh0WOFy6zqhSVztLaCmSBWpxKJOUr_4khuD0vHNHxlnLYD_31vFfZhQYl_aV3P_co85XpQNld3mADYXVYA_osvtJ6RqYx_4UBBf1qk8Q_Nm_fZWkKaibIw30iugm9Ky9301EEz0U77nJ7VsU/x6mhhs8q3s7m7a2/100%25+Lucha+El+Amo+de+los+Clones.mp4', // Ruta del video para la temporada 2
-                image: 'https://www.mediafire.com/file/492wl1oh8fakveb/lucha.webp/file', // Imagen para la temporada 2
+                videoPath: 'https://download1509.mediafire.com/oe4snii0833gCDSOi9fiEJKEFgXv5sFspK8gRDYmik2JY7_0oNyG5XhOAZWRfx44NySd5KSS-rcufhuyWOtGTr6M5u-TYo-sZRkacHh2HiwzZvs9VhOpEcF9j1v-J6Gu7-iawNABV8IaARdWDO3JaVLRyJPoOPaxwOUVE1as_pTvo2I/x6mhhs8q3s7m7a2/100%25+Lucha+El+Amo+de+los+Clones.mp4', // Ruta del video para la temporada 2
+                image: 'https://m.media-amazon.com/images/M/MV5BMDg5ZjQ2YWMtMjFhNi00MTg5LWJmZWYtOTc4NTlmMzJlMGRlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', // Imagen para la temporada 2
                 duration: '85 min' // Duración para el episodio de la temporada 2
             }
         ]
