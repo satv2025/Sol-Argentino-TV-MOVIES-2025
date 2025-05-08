@@ -62,7 +62,7 @@ header {
   max-width: 450px;
   width: 100%;
   margin-left: 38%;
-  border: 0.1em solid rgb(77, 77, 77);
+  border: 0.1em solid rgba(77, 77, 77);
 }
 
 p {

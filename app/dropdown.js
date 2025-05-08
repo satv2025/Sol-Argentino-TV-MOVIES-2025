@@ -35,9 +35,9 @@ function changeSeason(season) {
                 duration: '44 min'
             },
             {
-                title: 'Episodio 3',
+                title: 'Episodio 3 (test)',
                 description: 'Pip descubre por primera vez en su vida el lado oscuro cuando va a una fiesta clandestina. Y su siguiente pista la lleva a territorio aún más peligroso.',
-                videoPath: 'https://codeberg.org/skb10x/mediatest/src/branch/main/Asesinato-Para-Principiantes-T1-E3.m3u8',
+                videoPath: 'https://movies.solargentinotv.com.ar/assets/media/videos/Asesinato-Para-Principiantes-T1-E3.m3u8',
                 image: 'https://www.mediafire.com/convkey/6ed1/6870czca0karqn29g.jpg',
                 duration: '43 min'
             },
