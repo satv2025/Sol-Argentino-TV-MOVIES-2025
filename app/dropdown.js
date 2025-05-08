@@ -31,6 +31,7 @@ function changeSeason(season) {
                 title: 'Episodio 2',
                 description: 'Luego de entrevistar a las mejores amigas de Andie, Pip tiene una idea más clara de quién era la víctima, pero tras reorganizar fotos viejas empieza a comprender mejor todo.',
                 videoPath: 'https://movies.solargentinotv.com.ar/assets/media/videos/app/e2/Asesinato-Para-Principiantes-T1-E2.m3u8',
+                image: 'https://www.mediafire.com/convkey/88d0/o7ja6efkgc857oo9g.jpg',
                 duration: '44 min'
             },
             {
