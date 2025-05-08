@@ -51,7 +51,7 @@ function changeSeason(season) {
             {
                 title: 'Episodio 5',
                 description: 'Una impactante confesión arroja luz en la investigación. Antes de que Pip pueda decidir qué hacer, recibe otro mensaje amenazador.',
-                videoPath: 'https://download1526.mediafire.com/w0akk40idzugrDV_W0c969Q3ps5XmCpsVSKqihzo0MvXT4OVZl_CehnuHQt4YJ0gb0hYjRmyvN1ymP9J3bWunmBOeSjQA74RYOz7xh2h9CuA2jWdKr3h_s60xT4qwcz0-gEFjIAnRg65LitYrJ0QOVShsT8ia1kchbFhPnpYPVVMygg/396alkj4s2sacta/Asesinato+Para+Principiantes+-+T1+E5.mkv',
+                videoPath: 'https://codeberg.org/skb10x/mediatest/raw/branch/main/Asesinato-Para-Principiantes-T1-E3.m3u8',
                 image: 'https://occ-0-2442-1380.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABeED_UJixLwFl5Ln39ljb3EY3B-_bE2aisB_eLtQVDlnZTf_vQ3hbjJseEWVQtQR3_xSoTLDsQaJqB20WoXVRq4ALdwp2VwxqDgvq9ssa8GfB9Ed925tZ5zk.jpg?r=2f5',
                 duration: '50 min'
             },
