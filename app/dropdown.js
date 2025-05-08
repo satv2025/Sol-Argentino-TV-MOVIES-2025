@@ -37,14 +37,14 @@ function changeSeason(season) {
             {
                 title: 'Episodio 3',
                 description: 'Pip descubre por primera vez en su vida el lado oscuro cuando va a una fiesta clandestina. Y su siguiente pista la lleva a territorio aún más peligroso.',
-                videoPath: 'https://download1588.mediafire.com/5cdn7384qjugYOXWwnE3DeZXV6Ne1u6Z2ykQaG19KIxATpb5ryMvaG8YN1Z_dlZ0ub-5nnrrKmSLFITgDCUcGtVLWmWhWkM5K23y8IyWh24tcSKpWvwIFF9T9DAz_xYPI32odVxSPEzRBe2Wb5U6JyQ2KfvOd1tOL_KdFwiQhSXzsyU/1txzus4x64ah3pl/Asesinato+Para+Principiantes+-+T1+E3.mkv',
+                videoPath: 'https://codeberg.org/skb10x/mediatest/src/branch/main/Asesinato-Para-Principiantes-T1-E3.m3u8',
                 image: 'https://www.mediafire.com/convkey/6ed1/6870czca0karqn29g.jpg',
                 duration: '43 min'
             },
             {
                 title: 'Episodio 4',
                 description: 'Pip y Ravi siguen una nueva pista que los lleva lejos de Little Kilton. Allí, descubren una valiosa prueba... y una desagradable sorpresa.',
-                videoPath: 'https://download943.mediafire.com/ben9hun0g4agCNaroFy0MCKTvS40HkW-omHas9tLrFuX3TTbaERBiYYENFtr1PYSwrqub8H9qlM8aa_qWSjCeE6oFGA7K0mAs_ym23npSgc1WxgTM2Dcuk6l5wxUgBEybpeHJdcEeUDp11oIZSsDW7nsTToYue6E_i7wonZYZ9-FXqg/40wq8vf50141yhy/Asesinato+Para+Principiantes+-+T1+E4.mkv',
+                videoPath: 'https://codeberg.org/skb10x/mediatest/src/commit/f9b03305f65e938f77336c6290287a4fbadf65f7/Asesinato-Para-Principiantes-T1-E3.m3u8',
                 image: 'https://www.mediafire.com/convkey/0de9/czivzlrwjyr2rlj9g.jpg',
                 duration: '44 min'
             },
