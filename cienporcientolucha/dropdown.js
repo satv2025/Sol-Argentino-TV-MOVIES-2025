@@ -19,7 +19,7 @@ function changeSeason(season) {
             {
                 title: 'Koshe Plostenko',
                 description: 'Koshe Plostenko, un mafioso implacable, dirige un club de lucha clandestino. Para alimentar su negocio, decide secuestrar a los luchadores de 100% Lucha y obligarlos a pelear bajo sus reglas.',
-                videoPath: 'https://movies.solargentinotv.com.ar/assets/media/videos/koshep/100-Lucha-La-Película.m3u8',
+                videoPath: 'https://codeberg.org/skb10x/mediatest/raw/branch/main/assets/media/videos/cpcl/koshep/100-Lucha-La-Pel%C3%ADcula.m3u8',
                 image: 'https://www.mediafire.com/convkey/4a6d/478xmus1d6v68eh9g.jpg?size_id=6',
                 duration: '1 h 20 min' // Duración actualizada
             },
@@ -28,7 +28,7 @@ function changeSeason(season) {
             {
                 title: 'El Amo De Los Clones',
                 description: 'Damián Castillo, un doctor en biotecnología, odia a su vecino Vicente Viloni. Cansado de su fama, decide crear clones de los luchadores de 100% Lucha para destruir la imagen de su ídolo de la infancia.',
-                videoPath: 'https://movies.solargentinotv.com.ar/assets/media/videos/damianc/100Lucha El Amo de los Clones.m3u8', // Ruta del video para la temporada 2
+                videoPath: 'https://codeberg.org/skb10x/mediatest/raw/branch/main/assets/media/videos/cpcl/damianc/100Lucha%20El%20Amo%20de%20los%20Clones.m3u8', // Ruta del video para la temporada 2
                 image: 'https://media.minutouno.com/p/8f27c301f5e629ec8dab0477e7a75ae0/adjuntos/150/imagenes/026/947/0026947782/1200x675/smart/lucha.png', // Imagen para la temporada 2
                 duration: '1 h 25 min' // Duración para el episodio de la temporada 2
             }
